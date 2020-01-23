@@ -1,0 +1,15 @@
+c:\users\redroom\documents\visual studio 2015\Projects\GalimbertiHMIgl\GalimbertiHMIgl\bin\Debug\GalimbertiHMIgl.exe.config
+c:\users\redroom\documents\visual studio 2015\Projects\GalimbertiHMIgl\GalimbertiHMIgl\obj\Debug\GalimbertiHMIgl.csprojResolveAssemblyReference.cache
+c:\users\redroom\documents\visual studio 2015\Projects\GalimbertiHMIgl\GalimbertiHMIgl\obj\Debug\GalimbertiHMIgl.Properties.Resources.resources
+c:\users\redroom\documents\visual studio 2015\Projects\GalimbertiHMIgl\GalimbertiHMIgl\obj\Debug\GalimbertiHMIgl.csproj.GenerateResource.Cache
+c:\users\redroom\documents\visual studio 2015\Projects\GalimbertiHMIgl\GalimbertiHMIgl\bin\Debug\GalimbertiHMIgl.exe
+c:\users\redroom\documents\visual studio 2015\Projects\GalimbertiHMIgl\GalimbertiHMIgl\bin\Debug\GalimbertiHMIgl.pdb
+c:\users\redroom\documents\visual studio 2015\Projects\GalimbertiHMIgl\GalimbertiHMIgl\obj\Debug\GalimbertiHMIgl.exe
+c:\users\redroom\documents\visual studio 2015\Projects\GalimbertiHMIgl\GalimbertiHMIgl\obj\Debug\GalimbertiHMIgl.pdb
+c:\users\redroom\documents\visual studio 2015\Projects\GalimbertiHMIgl\GalimbertiHMIgl\obj\Debug\GalimbertiHMIgl.Form1.resources
+C:\Users\RedRoom\Documents\Visual Studio 2015\Projects\GalimbertiHMIgl\GalimbertiHMIgl\obj\Debug\GalimbertiHMIgl.exe.licenses
+C:\Users\RedRoom\Documents\Visual Studio 2015\Projects\GalimbertiHMIgl\GalimbertiHMIgl\bin\Debug\HmiControls.dll
+C:\Users\RedRoom\Documents\Visual Studio 2015\Projects\GalimbertiHMIgl\GalimbertiHMIgl\bin\Debug\HmiControls.pdb
+C:\Users\RedRoom\Documents\Visual Studio 2015\Projects\GalimbertiHMIgl\GalimbertiHMIgl\bin\Debug\TwinCAT.Ads.dll
+C:\Users\RedRoom\Documents\Visual Studio 2015\Projects\GalimbertiHMIgl\GalimbertiHMIgl\bin\Debug\TwinCAT.Ads.xml
+C:\Users\RedRoom\Documents\Visual Studio 2015\Projects\GalimbertiHMIgl\GalimbertiHMIgl\bin\Debug\FontAwesome.Sharp.dll

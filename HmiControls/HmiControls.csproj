@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3EFF43DD-8893-438C-ADE7-28590D2D220E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HmiControls</RootNamespace>
+    <AssemblyName>HmiControls</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Asse.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Asse.Designer.cs">
+      <DependentUpon>Asse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PLC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PLC.Designer.cs">
+      <DependentUpon>PLC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PLCBooleanArea.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PLCBooleanArea.Designer.cs">
+      <DependentUpon>PLCBooleanArea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PLCBooleanButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PLCBooleanButton.Designer.cs">
+      <DependentUpon>PLCBooleanButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PLCBoolean.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PLCBoolean.Designer.cs">
+      <DependentUpon>PLCBoolean.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PLCBooleanSwitchSimple.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PLCBooleanSwitchSimple.Designer.cs">
+      <DependentUpon>PLCBooleanSwitchSimple.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PLCBooleanSwitch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PLCBooleanSwitch.Designer.cs">
+      <DependentUpon>PLCBooleanSwitch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PLCControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PLCInt16.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PLCInt16.Designer.cs">
+      <DependentUpon>PLCInt16.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PLCNumber.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PLCNumber.Designer.cs">
+      <DependentUpon>PLCNumber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PLCInt16Edit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PLCInt16Edit.Designer.cs">
+      <DependentUpon>PLCInt16Edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PLCNumberEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PLCNumberEdit.Designer.cs">
+      <DependentUpon>PLCNumberEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Zona1Layout.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Zona1Layout.Designer.cs">
+      <DependentUpon>Zona1Layout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TrackingItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TrackingItem.Designer.cs">
+      <DependentUpon>TrackingItem.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Asse.resx">
+      <DependentUpon>Asse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PLC.resx">
+      <DependentUpon>PLC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PLCBooleanArea.resx">
+      <DependentUpon>PLCBooleanArea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PLCBooleanButton.resx">
+      <DependentUpon>PLCBooleanButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PLCBoolean.resx">
+      <DependentUpon>PLCBoolean.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PLCBooleanSwitchSimple.resx">
+      <DependentUpon>PLCBooleanSwitchSimple.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PLCBooleanSwitch.resx">
+      <DependentUpon>PLCBooleanSwitch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PLCControl.resx">
+      <DependentUpon>PLCControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PLCInt16.resx">
+      <DependentUpon>PLCInt16.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PLCNumber.resx">
+      <DependentUpon>PLCNumber.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PLCInt16Edit.resx">
+      <DependentUpon>PLCInt16Edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PLCNumberEdit.resx">
+      <DependentUpon>PLCNumberEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Zona1Layout.resx">
+      <DependentUpon>Zona1Layout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrackingItem.resx">
+      <DependentUpon>TrackingItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
