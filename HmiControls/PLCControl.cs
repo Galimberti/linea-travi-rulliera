@@ -28,6 +28,8 @@ namespace GalimbertiHMIgl
 
             set
             {
+
+                
                 if (this._value.Equals(value))
                     return;
 

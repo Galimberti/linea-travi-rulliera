@@ -131,7 +131,6 @@
             this.plcBoolean65 = new GalimbertiHMIgl.PLCBoolean();
             this.groupBox20 = new System.Windows.Forms.GroupBox();
             this.plcNumber11 = new GalimbertiHMIgl.PLCNumber();
-            this.plcNumber6 = new GalimbertiHMIgl.PLCNumber();
             this.plcNumber7 = new GalimbertiHMIgl.PLCNumber();
             this.plcNumber8 = new GalimbertiHMIgl.PLCNumber();
             this.plcNumber9 = new GalimbertiHMIgl.PLCNumber();
@@ -210,6 +209,8 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage10 = new System.Windows.Forms.TabPage();
             this.groupBox44 = new System.Windows.Forms.GroupBox();
+            this.plcNumberEdit7 = new GalimbertiHMIgl.PLCNumberEdit();
+            this.plcNumberEdit4 = new GalimbertiHMIgl.PLCNumberEdit();
             this.plcNumberEdit51 = new GalimbertiHMIgl.PLCNumberEdit();
             this.plcNumberEdit52 = new GalimbertiHMIgl.PLCNumberEdit();
             this.plcNumberEdit53 = new GalimbertiHMIgl.PLCNumberEdit();
@@ -233,8 +234,8 @@
             this.plcConnessioneAsp = new GalimbertiHMIgl.PLCBoolean();
             this.plcConnessione = new GalimbertiHMIgl.PLCBoolean();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.plcNumberEdit4 = new GalimbertiHMIgl.PLCNumberEdit();
-            this.plcNumberEdit7 = new GalimbertiHMIgl.PLCNumberEdit();
+            this.plcNumberEdit8 = new GalimbertiHMIgl.PLCNumberEdit();
+            this.plcNumberEdit32 = new GalimbertiHMIgl.PLCNumberEdit();
             tabControlAsp = new System.Windows.Forms.TabControl();
             tabControlAsp.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -316,7 +317,7 @@
             this.tabPage2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage2.Size = new System.Drawing.Size(1727, 847);
+            this.tabPage2.Size = new System.Drawing.Size(192, 71);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Zona 1";
             // 
@@ -331,7 +332,7 @@
             this.tabControl3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabControl3.Name = "tabControl3";
             this.tabControl3.SelectedIndex = 0;
-            this.tabControl3.Size = new System.Drawing.Size(1721, 843);
+            this.tabControl3.Size = new System.Drawing.Size(186, 67);
             this.tabControl3.TabIndex = 1;
             // 
             // Sinottico
@@ -343,7 +344,7 @@
             this.Sinottico.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Sinottico.Name = "Sinottico";
             this.Sinottico.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Sinottico.Size = new System.Drawing.Size(1713, 814);
+            this.Sinottico.Size = new System.Drawing.Size(178, 38);
             this.Sinottico.TabIndex = 3;
             this.Sinottico.Text = "Sinottico";
             // 
@@ -359,7 +360,7 @@
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 110F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1707, 810);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(172, 34);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
             // panel3
@@ -372,7 +373,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(3, 3);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1701, 104);
+            this.panel3.Size = new System.Drawing.Size(166, 104);
             this.panel3.TabIndex = 1;
             // 
             // groupBox23
@@ -531,7 +532,7 @@
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(1701, 694);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(166, 1);
             this.tableLayoutPanel3.TabIndex = 2;
             // 
             // panel2
@@ -544,7 +545,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(214, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1484, 688);
+            this.panel2.Size = new System.Drawing.Size(1, 1);
             this.panel2.TabIndex = 1;
             // 
             // panel6
@@ -1542,7 +1543,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(3, 3);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(205, 688);
+            this.panel4.Size = new System.Drawing.Size(205, 1);
             this.panel4.TabIndex = 2;
             // 
             // groupBox22
@@ -1717,7 +1718,6 @@
             // groupBox20
             // 
             this.groupBox20.Controls.Add(this.plcNumber11);
-            this.groupBox20.Controls.Add(this.plcNumber6);
             this.groupBox20.Controls.Add(this.plcNumber7);
             this.groupBox20.Controls.Add(this.plcNumber8);
             this.groupBox20.Controls.Add(this.plcNumber9);
@@ -1741,18 +1741,7 @@
             this.plcNumber11.Size = new System.Drawing.Size(187, 33);
             this.plcNumber11.TabIndex = 5;
             this.plcNumber11.VariableName = "RULLI_CENTRO_TAGLI.Act_Step_Ciclo_Rulliera_R1";
-            // 
-            // plcNumber6
-            // 
-            this.plcNumber6.Location = new System.Drawing.Point(5, 153);
-            this.plcNumber6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.plcNumber6.Name = "plcNumber6";
-            this.plcNumber6.PLCDescription = "Step 1";
-            this.plcNumber6.PLCValue = 0D;
-            this.plcNumber6.Size = new System.Drawing.Size(187, 33);
-            this.plcNumber6.TabIndex = 4;
-            this.plcNumber6.VariableName = "RULLI_CENTRO_TAGLI.Act_Step_Ciclo_R1_Rotaz_Auto";
-            // 
+                   // 
             // plcNumber7
             // 
             this.plcNumber7.Location = new System.Drawing.Point(5, 121);
@@ -2612,7 +2601,7 @@
             this.tabPage7.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage7.Name = "tabPage7";
             this.tabPage7.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage7.Size = new System.Drawing.Size(1727, 847);
+            this.tabPage7.Size = new System.Drawing.Size(192, 71);
             this.tabPage7.TabIndex = 2;
             this.tabPage7.Text = "Allarmi";
             this.tabPage7.UseVisualStyleBackColor = true;
@@ -2650,9 +2639,12 @@
             this.tabPage10.Size = new System.Drawing.Size(1713, 812);
             this.tabPage10.TabIndex = 2;
             this.tabPage10.Text = "Impostazioni";
+            this.tabPage10.Click += new System.EventHandler(this.tabPage10_Click);
             // 
             // groupBox44
             // 
+            this.groupBox44.Controls.Add(this.plcNumberEdit32);
+            this.groupBox44.Controls.Add(this.plcNumberEdit8);
             this.groupBox44.Controls.Add(this.plcNumberEdit7);
             this.groupBox44.Controls.Add(this.plcNumberEdit4);
             this.groupBox44.Controls.Add(this.plcNumberEdit51);
@@ -2665,17 +2657,39 @@
             this.groupBox44.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox44.Name = "groupBox44";
             this.groupBox44.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox44.Size = new System.Drawing.Size(380, 373);
+            this.groupBox44.Size = new System.Drawing.Size(380, 391);
             this.groupBox44.TabIndex = 4;
             this.groupBox44.TabStop = false;
             this.groupBox44.Text = "Velocità motori";
+            // 
+            // plcNumberEdit7
+            // 
+            this.plcNumberEdit7.Location = new System.Drawing.Point(6, 268);
+            this.plcNumberEdit7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.plcNumberEdit7.Name = "plcNumberEdit7";
+            this.plcNumberEdit7.PLCDescription = "Valvola Ciclone";
+            this.plcNumberEdit7.PLCValue = 0D;
+            this.plcNumberEdit7.Size = new System.Drawing.Size(352, 30);
+            this.plcNumberEdit7.TabIndex = 8;
+            this.plcNumberEdit7.VariableName = ".Valvola_Ciclone_Set_Speed";
+            // 
+            // plcNumberEdit4
+            // 
+            this.plcNumberEdit4.Location = new System.Drawing.Point(5, 234);
+            this.plcNumberEdit4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.plcNumberEdit4.Name = "plcNumberEdit4";
+            this.plcNumberEdit4.PLCDescription = "Nastro Evac. Bricchetti";
+            this.plcNumberEdit4.PLCValue = 0D;
+            this.plcNumberEdit4.Size = new System.Drawing.Size(352, 30);
+            this.plcNumberEdit4.TabIndex = 7;
+            this.plcNumberEdit4.VariableName = ".Evacuazione_Bricchetti_Set_Speed";
             // 
             // plcNumberEdit51
             // 
             this.plcNumberEdit51.Location = new System.Drawing.Point(6, 166);
             this.plcNumberEdit51.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.plcNumberEdit51.Name = "plcNumberEdit51";
-            this.plcNumberEdit51.PLCDescription = "Coclea Bricchettatrice";
+            this.plcNumberEdit51.PLCDescription = "Coclea Inclinata Bricch.";
             this.plcNumberEdit51.PLCValue = 0D;
             this.plcNumberEdit51.Size = new System.Drawing.Size(352, 30);
             this.plcNumberEdit51.TabIndex = 6;
@@ -2686,7 +2700,7 @@
             this.plcNumberEdit52.Location = new System.Drawing.Point(6, 132);
             this.plcNumberEdit52.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.plcNumberEdit52.Name = "plcNumberEdit52";
-            this.plcNumberEdit52.PLCDescription = "Valvola Stellare";
+            this.plcNumberEdit52.PLCDescription = "Valvola Stellare Filtro";
             this.plcNumberEdit52.PLCValue = 0D;
             this.plcNumberEdit52.Size = new System.Drawing.Size(352, 30);
             this.plcNumberEdit52.TabIndex = 5;
@@ -2697,7 +2711,7 @@
             this.plcNumberEdit53.Location = new System.Drawing.Point(6, 200);
             this.plcNumberEdit53.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.plcNumberEdit53.Name = "plcNumberEdit53";
-            this.plcNumberEdit53.PLCDescription = "Aspirazione";
+            this.plcNumberEdit53.PLCDescription = "Ciclone";
             this.plcNumberEdit53.PLCValue = 0D;
             this.plcNumberEdit53.Size = new System.Drawing.Size(352, 30);
             this.plcNumberEdit53.TabIndex = 4;
@@ -2708,7 +2722,7 @@
             this.plcNumberEdit54.Location = new System.Drawing.Point(5, 98);
             this.plcNumberEdit54.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.plcNumberEdit54.Name = "plcNumberEdit54";
-            this.plcNumberEdit54.PLCDescription = "Coclea";
+            this.plcNumberEdit54.PLCDescription = "Coclea Filtro";
             this.plcNumberEdit54.PLCValue = 0D;
             this.plcNumberEdit54.Size = new System.Drawing.Size(352, 30);
             this.plcNumberEdit54.TabIndex = 3;
@@ -2960,27 +2974,27 @@
             this.timer1.Enabled = true;
             this.timer1.Interval = 300;
             // 
-            // plcNumberEdit4
+            // plcNumberEdit8
             // 
-            this.plcNumberEdit4.Location = new System.Drawing.Point(5, 234);
-            this.plcNumberEdit4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.plcNumberEdit4.Name = "plcNumberEdit4";
-            this.plcNumberEdit4.PLCDescription = "Evac. Bricchetti";
-            this.plcNumberEdit4.PLCValue = 0D;
-            this.plcNumberEdit4.Size = new System.Drawing.Size(352, 30);
-            this.plcNumberEdit4.TabIndex = 7;
-            this.plcNumberEdit4.VariableName = ".Evacuazione_Bricchetti_Set_Speed";
+            this.plcNumberEdit8.Location = new System.Drawing.Point(5, 313);
+            this.plcNumberEdit8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.plcNumberEdit8.Name = "plcNumberEdit8";
+            this.plcNumberEdit8.PLCDescription = "Tempo On Puliz. Filtri";
+            this.plcNumberEdit8.PLCValue = 0D;
+            this.plcNumberEdit8.Size = new System.Drawing.Size(352, 30);
+            this.plcNumberEdit8.TabIndex = 9;
+            this.plcNumberEdit8.VariableName = "MAIN.HMI_Tempo_Lavoro_Pulizia_Filtri";
             // 
-            // plcNumberEdit7
+            // plcNumberEdit32
             // 
-            this.plcNumberEdit7.Location = new System.Drawing.Point(6, 268);
-            this.plcNumberEdit7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.plcNumberEdit7.Name = "plcNumberEdit7";
-            this.plcNumberEdit7.PLCDescription = "Valvola Ciclone";
-            this.plcNumberEdit7.PLCValue = 0D;
-            this.plcNumberEdit7.Size = new System.Drawing.Size(352, 30);
-            this.plcNumberEdit7.TabIndex = 8;
-            this.plcNumberEdit7.VariableName = ".Valvola_Ciclone_Set_Speed";
+            this.plcNumberEdit32.Location = new System.Drawing.Point(6, 347);
+            this.plcNumberEdit32.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.plcNumberEdit32.Name = "plcNumberEdit32";
+            this.plcNumberEdit32.PLCDescription = "Tempo Off Puliz. Filtri";
+            this.plcNumberEdit32.PLCValue = 0D;
+            this.plcNumberEdit32.Size = new System.Drawing.Size(352, 30);
+            this.plcNumberEdit32.TabIndex = 10;
+            this.plcNumberEdit32.VariableName = "MAIN.HMI_Tempo_Pausa_Pulizia_Filtri";
             // 
             // Form1
             // 
@@ -3180,7 +3194,7 @@
         private PLCBoolean plcBoolean65;
         private System.Windows.Forms.GroupBox groupBox20;
         private PLCNumber plcNumber11;
-        private PLCNumber plcNumber6;
+
         private PLCNumber plcNumber7;
         private PLCNumber plcNumber8;
         private PLCNumber plcNumber9;
@@ -3249,6 +3263,8 @@
         private PLCBoolean plcCiclicaAsp;
         private PLCNumberEdit plcNumberEdit7;
         private PLCNumberEdit plcNumberEdit4;
+        private PLCNumberEdit plcNumberEdit8;
+        private PLCNumberEdit plcNumberEdit32;
     }
 }
 
