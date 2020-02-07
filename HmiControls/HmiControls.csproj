@@ -120,6 +120,12 @@
       <DependentUpon>PLCNumberEdit.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DUT_Motori.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DUT_Motori.Designer.cs">
+      <DependentUpon>DUT_Motori.cs</DependentUpon>
+    </Compile>
     <Compile Include="Zona1Layout.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -177,6 +183,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="DUT_Motori.resx">
+      <DependentUpon>DUT_Motori.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Zona1Layout.resx">
       <DependentUpon>Zona1Layout.cs</DependentUpon>
     </EmbeddedResource>

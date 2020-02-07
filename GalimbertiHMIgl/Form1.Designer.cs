@@ -208,6 +208,8 @@
             this.Aspirazione = new System.Windows.Forms.TabPage();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage10 = new System.Windows.Forms.TabPage();
+            this.plcBooleanSwitchSimple4 = new GalimbertiHMIgl.PLCBooleanSwitchSimple();
+            this.plcBooleanSwitchSimple1 = new GalimbertiHMIgl.PLCBooleanSwitchSimple();
             this.groupBox44 = new System.Windows.Forms.GroupBox();
             this.plcNumberEdit7 = new GalimbertiHMIgl.PLCNumberEdit();
             this.plcNumberEdit4 = new GalimbertiHMIgl.PLCNumberEdit();
@@ -217,6 +219,15 @@
             this.plcNumberEdit54 = new GalimbertiHMIgl.PLCNumberEdit();
             this.plcNumberEdit55 = new GalimbertiHMIgl.PLCNumberEdit();
             this.plcNumberEdit56 = new GalimbertiHMIgl.PLCNumberEdit();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.duT_Motori8 = new HmiControls.DUT_Motori();
+            this.duT_Motori7 = new HmiControls.DUT_Motori();
+            this.duT_Motori6 = new HmiControls.DUT_Motori();
+            this.duT_Motori5 = new HmiControls.DUT_Motori();
+            this.duT_Motori4 = new HmiControls.DUT_Motori();
+            this.duT_Motori3 = new HmiControls.DUT_Motori();
+            this.duT_Motori2 = new HmiControls.DUT_Motori();
+            this.duT_Motori1 = new HmiControls.DUT_Motori();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
@@ -234,8 +245,13 @@
             this.plcConnessioneAsp = new GalimbertiHMIgl.PLCBoolean();
             this.plcConnessione = new GalimbertiHMIgl.PLCBoolean();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.plcNumberEdit8 = new GalimbertiHMIgl.PLCNumberEdit();
+            this.plcBooleanSwitchSimple5 = new GalimbertiHMIgl.PLCBooleanSwitchSimple();
+            this.plcBooleanSwitchSimple6 = new GalimbertiHMIgl.PLCBooleanSwitchSimple();
+            this.plcBooleanButton11 = new GalimbertiHMIgl.PLCBooleanButton();
+            this.plcBooleanButton16 = new GalimbertiHMIgl.PLCBooleanButton();
+            this.groupBox24 = new System.Windows.Forms.GroupBox();
             this.plcNumberEdit32 = new GalimbertiHMIgl.PLCNumberEdit();
+            this.plcNumberEdit8 = new GalimbertiHMIgl.PLCNumberEdit();
             tabControlAsp = new System.Windows.Forms.TabControl();
             tabControlAsp.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -275,6 +291,7 @@
             this.tabControl1.SuspendLayout();
             this.tabPage10.SuspendLayout();
             this.groupBox44.SuspendLayout();
+            this.tabPage4.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox8.SuspendLayout();
@@ -282,6 +299,7 @@
             this.groupBox13.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.groupBox24.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControlAsp
@@ -1741,7 +1759,7 @@
             this.plcNumber11.Size = new System.Drawing.Size(187, 33);
             this.plcNumber11.TabIndex = 5;
             this.plcNumber11.VariableName = "RULLI_CENTRO_TAGLI.Act_Step_Ciclo_Rulliera_R1";
-                   // 
+            // 
             // plcNumber7
             // 
             this.plcNumber7.Location = new System.Drawing.Point(5, 121);
@@ -2620,6 +2638,8 @@
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage10);
+            this.tabControl1.Controls.Add(this.tabPage4);
+            this.tabControl1.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(3, 3);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -2631,6 +2651,13 @@
             // tabPage10
             // 
             this.tabPage10.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage10.Controls.Add(this.groupBox24);
+            this.tabPage10.Controls.Add(this.plcBooleanButton16);
+            this.tabPage10.Controls.Add(this.plcBooleanButton11);
+            this.tabPage10.Controls.Add(this.plcBooleanSwitchSimple6);
+            this.tabPage10.Controls.Add(this.plcBooleanSwitchSimple5);
+            this.tabPage10.Controls.Add(this.plcBooleanSwitchSimple4);
+            this.tabPage10.Controls.Add(this.plcBooleanSwitchSimple1);
             this.tabPage10.Controls.Add(this.groupBox44);
             this.tabPage10.Location = new System.Drawing.Point(4, 25);
             this.tabPage10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -2641,10 +2668,34 @@
             this.tabPage10.Text = "Impostazioni";
             this.tabPage10.Click += new System.EventHandler(this.tabPage10_Click);
             // 
+            // plcBooleanSwitchSimple4
+            // 
+            this.plcBooleanSwitchSimple4.DescriptionOff = "Man Mode OFF";
+            this.plcBooleanSwitchSimple4.DescriptionOn = "Man Mode ON";
+            this.plcBooleanSwitchSimple4.Location = new System.Drawing.Point(6, 66);
+            this.plcBooleanSwitchSimple4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.plcBooleanSwitchSimple4.Name = "plcBooleanSwitchSimple4";
+            this.plcBooleanSwitchSimple4.PLCDescription = "Man Mode";
+            this.plcBooleanSwitchSimple4.PLCValue = false;
+            this.plcBooleanSwitchSimple4.Size = new System.Drawing.Size(233, 30);
+            this.plcBooleanSwitchSimple4.TabIndex = 6;
+            this.plcBooleanSwitchSimple4.VariableName = ".HMI_Sel_Man_Mode";
+            // 
+            // plcBooleanSwitchSimple1
+            // 
+            this.plcBooleanSwitchSimple1.DescriptionOff = "Auto Mode OFF";
+            this.plcBooleanSwitchSimple1.DescriptionOn = "Auto Mode ON";
+            this.plcBooleanSwitchSimple1.Location = new System.Drawing.Point(6, 32);
+            this.plcBooleanSwitchSimple1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.plcBooleanSwitchSimple1.Name = "plcBooleanSwitchSimple1";
+            this.plcBooleanSwitchSimple1.PLCDescription = "Auto Mode";
+            this.plcBooleanSwitchSimple1.PLCValue = false;
+            this.plcBooleanSwitchSimple1.Size = new System.Drawing.Size(233, 30);
+            this.plcBooleanSwitchSimple1.TabIndex = 5;
+            this.plcBooleanSwitchSimple1.VariableName = ".HMI_Sel_Auto_Mode";
+            // 
             // groupBox44
             // 
-            this.groupBox44.Controls.Add(this.plcNumberEdit32);
-            this.groupBox44.Controls.Add(this.plcNumberEdit8);
             this.groupBox44.Controls.Add(this.plcNumberEdit7);
             this.groupBox44.Controls.Add(this.plcNumberEdit4);
             this.groupBox44.Controls.Add(this.plcNumberEdit51);
@@ -2653,11 +2704,11 @@
             this.groupBox44.Controls.Add(this.plcNumberEdit54);
             this.groupBox44.Controls.Add(this.plcNumberEdit55);
             this.groupBox44.Controls.Add(this.plcNumberEdit56);
-            this.groupBox44.Location = new System.Drawing.Point(5, 14);
+            this.groupBox44.Location = new System.Drawing.Point(6, 113);
             this.groupBox44.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox44.Name = "groupBox44";
             this.groupBox44.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox44.Size = new System.Drawing.Size(380, 391);
+            this.groupBox44.Size = new System.Drawing.Size(380, 297);
             this.groupBox44.TabIndex = 4;
             this.groupBox44.TabStop = false;
             this.groupBox44.Text = "Velocità motori";
@@ -2749,6 +2800,96 @@
             this.plcNumberEdit56.Size = new System.Drawing.Size(352, 30);
             this.plcNumberEdit56.TabIndex = 1;
             this.plcNumberEdit56.VariableName = ".Ventilatore_Aspirazione1_Set_Speed";
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage4.Controls.Add(this.duT_Motori8);
+            this.tabPage4.Controls.Add(this.duT_Motori7);
+            this.tabPage4.Controls.Add(this.duT_Motori6);
+            this.tabPage4.Controls.Add(this.duT_Motori5);
+            this.tabPage4.Controls.Add(this.duT_Motori4);
+            this.tabPage4.Controls.Add(this.duT_Motori3);
+            this.tabPage4.Controls.Add(this.duT_Motori2);
+            this.tabPage4.Controls.Add(this.duT_Motori1);
+            this.tabPage4.Location = new System.Drawing.Point(4, 25);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(1713, 812);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Motori";
+            // 
+            // duT_Motori8
+            // 
+            this.duT_Motori8.Label = "Valvola_Ciclone";
+            this.duT_Motori8.Location = new System.Drawing.Point(170, 401);
+            this.duT_Motori8.Name = "duT_Motori8";
+            this.duT_Motori8.Size = new System.Drawing.Size(157, 189);
+            this.duT_Motori8.TabIndex = 18;
+            this.duT_Motori8.VariableName = "MAIN.Valvola_Ciclone";
+            // 
+            // duT_Motori7
+            // 
+            this.duT_Motori7.Label = "Evac Bricchetti";
+            this.duT_Motori7.Location = new System.Drawing.Point(7, 401);
+            this.duT_Motori7.Name = "duT_Motori7";
+            this.duT_Motori7.Size = new System.Drawing.Size(157, 189);
+            this.duT_Motori7.TabIndex = 17;
+            this.duT_Motori7.VariableName = "MAIN.Evacuazione_Bricchetti";
+            // 
+            // duT_Motori6
+            // 
+            this.duT_Motori6.Label = "Aspirazione";
+            this.duT_Motori6.Location = new System.Drawing.Point(333, 206);
+            this.duT_Motori6.Name = "duT_Motori6";
+            this.duT_Motori6.Size = new System.Drawing.Size(157, 189);
+            this.duT_Motori6.TabIndex = 16;
+            this.duT_Motori6.VariableName = "MAIN.Aspirazione";
+            // 
+            // duT_Motori5
+            // 
+            this.duT_Motori5.Label = "Coclea Bricch.";
+            this.duT_Motori5.Location = new System.Drawing.Point(170, 206);
+            this.duT_Motori5.Name = "duT_Motori5";
+            this.duT_Motori5.Size = new System.Drawing.Size(157, 189);
+            this.duT_Motori5.TabIndex = 15;
+            this.duT_Motori5.VariableName = "MAIN.Coclea_Bricchettatrice";
+            // 
+            // duT_Motori4
+            // 
+            this.duT_Motori4.Label = "Valvola Stellare Bag";
+            this.duT_Motori4.Location = new System.Drawing.Point(7, 206);
+            this.duT_Motori4.Name = "duT_Motori4";
+            this.duT_Motori4.Size = new System.Drawing.Size(157, 189);
+            this.duT_Motori4.TabIndex = 14;
+            this.duT_Motori4.VariableName = "MAIN.Valvola_Stellare_Bag";
+            // 
+            // duT_Motori3
+            // 
+            this.duT_Motori3.Label = "Coclea Estrazione";
+            this.duT_Motori3.Location = new System.Drawing.Point(333, 11);
+            this.duT_Motori3.Name = "duT_Motori3";
+            this.duT_Motori3.Size = new System.Drawing.Size(157, 189);
+            this.duT_Motori3.TabIndex = 13;
+            this.duT_Motori3.VariableName = "MAIN.Coclea_Estrazione";
+            // 
+            // duT_Motori2
+            // 
+            this.duT_Motori2.Label = "Ventilatore Asp 2";
+            this.duT_Motori2.Location = new System.Drawing.Point(170, 11);
+            this.duT_Motori2.Name = "duT_Motori2";
+            this.duT_Motori2.Size = new System.Drawing.Size(157, 189);
+            this.duT_Motori2.TabIndex = 12;
+            this.duT_Motori2.VariableName = "MAIN.Ventilatore_Aspirazione2";
+            // 
+            // duT_Motori1
+            // 
+            this.duT_Motori1.Label = "Ventilatore Asp 1";
+            this.duT_Motori1.Location = new System.Drawing.Point(7, 11);
+            this.duT_Motori1.Name = "duT_Motori1";
+            this.duT_Motori1.Size = new System.Drawing.Size(157, 189);
+            this.duT_Motori1.TabIndex = 11;
+            this.duT_Motori1.VariableName = "MAIN.Ventilatore_Aspirazione1";
             // 
             // tableLayoutPanel1
             // 
@@ -2974,27 +3115,90 @@
             this.timer1.Enabled = true;
             this.timer1.Interval = 300;
             // 
-            // plcNumberEdit8
+            // plcBooleanSwitchSimple5
             // 
-            this.plcNumberEdit8.Location = new System.Drawing.Point(5, 313);
-            this.plcNumberEdit8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.plcNumberEdit8.Name = "plcNumberEdit8";
-            this.plcNumberEdit8.PLCDescription = "Tempo On Puliz. Filtri";
-            this.plcNumberEdit8.PLCValue = 0D;
-            this.plcNumberEdit8.Size = new System.Drawing.Size(352, 30);
-            this.plcNumberEdit8.TabIndex = 9;
-            this.plcNumberEdit8.VariableName = "MAIN.HMI_Tempo_Lavoro_Pulizia_Filtri";
+            this.plcBooleanSwitchSimple5.DescriptionOff = "Scaric. Container";
+            this.plcBooleanSwitchSimple5.DescriptionOn = "Scaric. Container";
+            this.plcBooleanSwitchSimple5.Location = new System.Drawing.Point(280, 32);
+            this.plcBooleanSwitchSimple5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.plcBooleanSwitchSimple5.Name = "plcBooleanSwitchSimple5";
+            this.plcBooleanSwitchSimple5.PLCDescription = "Man Mode";
+            this.plcBooleanSwitchSimple5.PLCValue = false;
+            this.plcBooleanSwitchSimple5.Size = new System.Drawing.Size(253, 30);
+            this.plcBooleanSwitchSimple5.TabIndex = 7;
+            this.plcBooleanSwitchSimple5.VariableName = ".HMI_Sel_Scarico_In_Container";
+            // 
+            // plcBooleanSwitchSimple6
+            // 
+            this.plcBooleanSwitchSimple6.DescriptionOff = "Scaric. Bricchettatrice";
+            this.plcBooleanSwitchSimple6.DescriptionOn = "Man Mode ON";
+            this.plcBooleanSwitchSimple6.Location = new System.Drawing.Point(280, 66);
+            this.plcBooleanSwitchSimple6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.plcBooleanSwitchSimple6.Name = "plcBooleanSwitchSimple6";
+            this.plcBooleanSwitchSimple6.PLCDescription = "Man Mode";
+            this.plcBooleanSwitchSimple6.PLCValue = false;
+            this.plcBooleanSwitchSimple6.Size = new System.Drawing.Size(253, 30);
+            this.plcBooleanSwitchSimple6.TabIndex = 8;
+            this.plcBooleanSwitchSimple6.VariableName = ".HMI_Sel_Scarico_In_Bricchettatrice";
+            // 
+            // plcBooleanButton11
+            // 
+            this.plcBooleanButton11.GreenMode = true;
+            this.plcBooleanButton11.Location = new System.Drawing.Point(539, 32);
+            this.plcBooleanButton11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.plcBooleanButton11.Name = "plcBooleanButton11";
+            this.plcBooleanButton11.NotMode = false;
+            this.plcBooleanButton11.PLCDescription = "Forza Manuale";
+            this.plcBooleanButton11.PLCValue = false;
+            this.plcBooleanButton11.Size = new System.Drawing.Size(149, 29);
+            this.plcBooleanButton11.TabIndex = 9;
+            this.plcBooleanButton11.VariableName = "";
+            // 
+            // plcBooleanButton16
+            // 
+            this.plcBooleanButton16.GreenMode = true;
+            this.plcBooleanButton16.Location = new System.Drawing.Point(539, 67);
+            this.plcBooleanButton16.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.plcBooleanButton16.Name = "plcBooleanButton16";
+            this.plcBooleanButton16.NotMode = false;
+            this.plcBooleanButton16.PLCDescription = "Forza Manuale";
+            this.plcBooleanButton16.PLCValue = false;
+            this.plcBooleanButton16.Size = new System.Drawing.Size(149, 29);
+            this.plcBooleanButton16.TabIndex = 10;
+            this.plcBooleanButton16.VariableName = "";
+            // 
+            // groupBox24
+            // 
+            this.groupBox24.Controls.Add(this.plcNumberEdit32);
+            this.groupBox24.Controls.Add(this.plcNumberEdit8);
+            this.groupBox24.Location = new System.Drawing.Point(6, 416);
+            this.groupBox24.Name = "groupBox24";
+            this.groupBox24.Size = new System.Drawing.Size(380, 112);
+            this.groupBox24.TabIndex = 11;
+            this.groupBox24.TabStop = false;
+            this.groupBox24.Text = "Tempi Motori";
             // 
             // plcNumberEdit32
             // 
-            this.plcNumberEdit32.Location = new System.Drawing.Point(6, 347);
+            this.plcNumberEdit32.Location = new System.Drawing.Point(6, 58);
             this.plcNumberEdit32.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.plcNumberEdit32.Name = "plcNumberEdit32";
             this.plcNumberEdit32.PLCDescription = "Tempo Off Puliz. Filtri";
             this.plcNumberEdit32.PLCValue = 0D;
             this.plcNumberEdit32.Size = new System.Drawing.Size(352, 30);
-            this.plcNumberEdit32.TabIndex = 10;
-            this.plcNumberEdit32.VariableName = "MAIN.HMI_Tempo_Pausa_Pulizia_Filtri";
+            this.plcNumberEdit32.TabIndex = 12;
+            this.plcNumberEdit32.VariableName = ".HMI_Tempo_Pausa_Pulizia_Filtri";
+            // 
+            // plcNumberEdit8
+            // 
+            this.plcNumberEdit8.Location = new System.Drawing.Point(5, 24);
+            this.plcNumberEdit8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.plcNumberEdit8.Name = "plcNumberEdit8";
+            this.plcNumberEdit8.PLCDescription = "Tempo On Puliz. Filtri";
+            this.plcNumberEdit8.PLCValue = 0D;
+            this.plcNumberEdit8.Size = new System.Drawing.Size(352, 30);
+            this.plcNumberEdit8.TabIndex = 11;
+            this.plcNumberEdit8.VariableName = ".HMI_Tempo_Lavoro_Pulizia_Filtri";
             // 
             // Form1
             // 
@@ -3044,6 +3248,7 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage10.ResumeLayout(false);
             this.groupBox44.ResumeLayout(false);
+            this.tabPage4.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.groupBox8.ResumeLayout(false);
@@ -3052,6 +3257,7 @@
             this.groupBox13.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
+            this.groupBox24.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -3263,8 +3469,24 @@
         private PLCBoolean plcCiclicaAsp;
         private PLCNumberEdit plcNumberEdit7;
         private PLCNumberEdit plcNumberEdit4;
-        private PLCNumberEdit plcNumberEdit8;
+        private System.Windows.Forms.TabPage tabPage4;
+        private HmiControls.DUT_Motori duT_Motori8;
+        private HmiControls.DUT_Motori duT_Motori7;
+        private HmiControls.DUT_Motori duT_Motori6;
+        private HmiControls.DUT_Motori duT_Motori5;
+        private HmiControls.DUT_Motori duT_Motori4;
+        private HmiControls.DUT_Motori duT_Motori3;
+        private HmiControls.DUT_Motori duT_Motori2;
+        private HmiControls.DUT_Motori duT_Motori1;
+        private PLCBooleanSwitchSimple plcBooleanSwitchSimple4;
+        private PLCBooleanSwitchSimple plcBooleanSwitchSimple1;
+        private PLCBooleanSwitchSimple plcBooleanSwitchSimple6;
+        private PLCBooleanSwitchSimple plcBooleanSwitchSimple5;
+        private PLCBooleanButton plcBooleanButton16;
+        private PLCBooleanButton plcBooleanButton11;
+        private System.Windows.Forms.GroupBox groupBox24;
         private PLCNumberEdit plcNumberEdit32;
+        private PLCNumberEdit plcNumberEdit8;
     }
 }
 

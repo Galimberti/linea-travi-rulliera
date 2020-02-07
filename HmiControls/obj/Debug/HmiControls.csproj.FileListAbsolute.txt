@@ -20,3 +20,4 @@ C:\Users\RedRoom\Documents\Visual Studio 2015\Projects\GalimbertiHMIgl\HmiContro
 C:\Users\RedRoom\Documents\Visual Studio 2015\Projects\GalimbertiHMIgl\HmiControls\obj\Debug\GalimbertiHMIgl.PLCBooleanButton.resources
 C:\Users\RedRoom\Documents\Visual Studio 2015\Projects\GalimbertiHMIgl\HmiControls\obj\Debug\HmiControls.Zona1Layout.resources
 C:\Users\RedRoom\Documents\Visual Studio 2015\Projects\GalimbertiHMIgl\HmiControls\obj\Debug\GalimbertiHMIgl.PLCBooleanArea.resources
+C:\Users\RedRoom\Documents\Visual Studio 2015\Projects\GalimbertiHMIgl\HmiControls\obj\Debug\HmiControls.DUT_Motori.resources
