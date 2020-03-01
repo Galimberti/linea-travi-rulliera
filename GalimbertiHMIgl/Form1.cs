@@ -27,6 +27,7 @@ namespace GalimbertiHMIgl
     {
         private readonly CommunicationManager plcRulliera = new CommunicationManager();
         private readonly CommunicationManager plcAspirazione = new CommunicationManager();
+        private readonly PlcAlarmListAspirazione plcAlarmListAspirazione = new PlcAlarmListAspirazione();
 
         public Form1()
         {
@@ -71,11 +72,17 @@ namespace GalimbertiHMIgl
                 this.plcRulliera.Register(control as Control);
             }
 
-            foreach (var control in GetAll(this.tabControl1, null))
+            foreach (var control in GetAll(this.Valvole, null))
             {
                 this.plcAspirazione.Register(control as Control);
             }
 
+            this.plcAlarmListAspirazione.comm = this.plcAspirazione;
+            this.plcAlarmListAspirazione.init();
+
+            listView1.View = View.Details;
+            listView1.Columns.Add("Allarme");
+            listView1.GridLines = true;
 
 
             timer = new System.Timers.Timer();
@@ -338,7 +345,7 @@ namespace GalimbertiHMIgl
             }
             catch (Exception ex)
             {
-                this.plcAnomaliaAsp.InvokeOn(() => this.plcAnomaliaAsp.PLCValue = true);
+                this.plcAnomaliaAsp.InvokeOn(() =>this.plcAnomaliaAsp.PLCValue = true);
             }
             finally
             {
@@ -352,6 +359,13 @@ namespace GalimbertiHMIgl
                 }
                 this.plcCiclicaAsp.InvokeOn(() => this.plcCiclicaAsp.PLCValue = false);
             }
+
+            listView1.Items.Clear();
+            foreach(var al in plcAlarmListAspirazione.activeAlarms)
+            {
+                listView1.Items.Add(new ListViewItem(new string[] { al.Value }));
+            }
+
 
         }
 
@@ -433,6 +447,11 @@ namespace GalimbertiHMIgl
         }
 
         private void tabPage10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage4_Click(object sender, EventArgs e)
         {
 
         }

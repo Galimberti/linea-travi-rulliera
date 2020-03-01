@@ -21,3 +21,6 @@ C:\Users\RedRoom\Documents\Visual Studio 2015\Projects\GalimbertiHMIgl\HmiContro
 C:\Users\RedRoom\Documents\Visual Studio 2015\Projects\GalimbertiHMIgl\HmiControls\obj\Debug\HmiControls.Zona1Layout.resources
 C:\Users\RedRoom\Documents\Visual Studio 2015\Projects\GalimbertiHMIgl\HmiControls\obj\Debug\GalimbertiHMIgl.PLCBooleanArea.resources
 C:\Users\RedRoom\Documents\Visual Studio 2015\Projects\GalimbertiHMIgl\HmiControls\obj\Debug\HmiControls.DUT_Motori.resources
+C:\Users\RedRoom\Documents\Visual Studio 2015\Projects\GalimbertiHMIgl\HmiControls\obj\Debug\HmiControls.DUT_Filtri.resources
+C:\Users\RedRoom\Documents\Visual Studio 2015\Projects\GalimbertiHMIgl\HmiControls\obj\Debug\HmiControls.DUT_Puliz_Filtro.resources
+C:\Users\RedRoom\Documents\Visual Studio 2015\Projects\GalimbertiHMIgl\HmiControls\obj\Debug\HmiControls.DUT_Asp_Comandi.resources

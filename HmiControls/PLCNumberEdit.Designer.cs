@@ -47,27 +47,31 @@
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(398, 33);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(421, 67);
             this.tableLayoutPanel1.TabIndex = 6;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(341, 0);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 0, 3, 3);
+            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.Location = new System.Drawing.Point(364, 0);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(54, 30);
+            this.button1.Size = new System.Drawing.Size(57, 30);
             this.button1.TabIndex = 7;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(221, 3);
+            this.textBox1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.textBox1.Location = new System.Drawing.Point(244, 3);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 3, 0, 0);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(109, 22);
+            this.textBox1.Size = new System.Drawing.Size(117, 22);
             this.textBox1.TabIndex = 6;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
             this.textBox1.Leave += new System.EventHandler(this.textBox1_Leave);
@@ -75,10 +79,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Location = new System.Drawing.Point(3, 0);
+            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label1.Location = new System.Drawing.Point(0, 5);
+            this.label1.Margin = new System.Windows.Forms.Padding(0, 5, 0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(212, 33);
+            this.label1.Size = new System.Drawing.Size(241, 17);
             this.label1.TabIndex = 4;
             this.label1.Text = "label1";
             // 
@@ -88,7 +93,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "PLCNumberEdit";
-            this.Size = new System.Drawing.Size(398, 33);
+            this.Size = new System.Drawing.Size(421, 67);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);

@@ -9,12 +9,12 @@ using TwinCAT.Ads;
 
 namespace GalimbertiHMIgl
 {
-    class CommunicationManager : IDisposable
+    public class CommunicationManager : IDisposable
     {
         public int port = 851;
         public string host = "5.55.57.104.1.1";
         private readonly TcAdsClient client = new TcAdsClient();
-        private readonly List<Action> pollActions  = new List<Action>();
+        public  readonly List<Action> pollActions  = new List<Action>();
         private readonly Dictionary<string, DateTime> readWriteErrors = new Dictionary<string, DateTime>();
         private bool connected;
         private DateTime? lastErrorTime = null;
@@ -126,7 +126,7 @@ namespace GalimbertiHMIgl
                    indicator.InvokeOn(() => indicator.PLCValue = value);
                 }, indicator.VariableName);
             });
-
+             
             indicator.OnUIChanges += (s, e) =>
             {
                 this.doWithClient(c =>
@@ -137,6 +137,7 @@ namespace GalimbertiHMIgl
                 }, indicator.VariableName);
             };
         }
+
 
         private void register(PLCControl<Int16> indicator)
         {
@@ -212,23 +213,7 @@ namespace GalimbertiHMIgl
                 try
                 {
                     this.client.Connect(this.host, this.port);
-                    //this.client.Connect(this.port);
                     this.connected = this.client.IsConnected;
-
-                /*
-                    SymbolLoaderSettings settings = new SymbolLoaderSettings(TwinCAT.SymbolsLoadMode.Flat);
-                    var loader = this.client.CreateSymbolLoader(this.client.Session, settings);
-                    foreach (var s in loader.Symbols)
-                    {
-                        Console.WriteLine(s.InstanceName);
-                        Console.WriteLine(s.InstancePath);
-                        Console.WriteLine();
-                        Console.WriteLine();
-                        Console.WriteLine();
-
-                    }
-                   */
-
                 }
                 catch (AdsException)
                 {

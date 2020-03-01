@@ -56,6 +56,24 @@
     <Compile Include="Asse.Designer.cs">
       <DependentUpon>Asse.cs</DependentUpon>
     </Compile>
+    <Compile Include="DUT_Filtri.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DUT_Filtri.Designer.cs">
+      <DependentUpon>DUT_Filtri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DUT_Asp_Comandi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DUT_Asp_Comandi.Designer.cs">
+      <DependentUpon>DUT_Asp_Comandi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DUT_Puliz_Filtro.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DUT_Puliz_Filtro.Designer.cs">
+      <DependentUpon>DUT_Puliz_Filtro.cs</DependentUpon>
+    </Compile>
     <Compile Include="PLC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -140,6 +158,15 @@
     </Compile>
     <EmbeddedResource Include="Asse.resx">
       <DependentUpon>Asse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DUT_Filtri.resx">
+      <DependentUpon>DUT_Filtri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DUT_Asp_Comandi.resx">
+      <DependentUpon>DUT_Asp_Comandi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DUT_Puliz_Filtro.resx">
+      <DependentUpon>DUT_Puliz_Filtro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PLC.resx">
       <DependentUpon>PLC.cs</DependentUpon>

@@ -137,6 +137,8 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="GoogleSheetLog.cs" />
+    <Compile Include="PlcAlarmList.cs" />
+    <Compile Include="PlcAlarmListAspirazione.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">

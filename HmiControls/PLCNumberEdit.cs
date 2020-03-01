@@ -55,7 +55,7 @@ namespace GalimbertiHMIgl
         public void refreshTouched()
         {
             if (this._touched)
-                this.textBox1.BackColor = Color.LightYellow;
+                this.textBox1.BackColor = Color.Yellow;
             else
                 this.textBox1.BackColor = Color.FromArgb(255,255,255,255);
 
