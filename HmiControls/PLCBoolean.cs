@@ -40,7 +40,7 @@ namespace GalimbertiHMIgl
             var control = sender as Control;
             using (Pen pen = new Pen(border, 3))
             {
-                Rectangle rectangle = new Rectangle(1, 1, 15, 15);
+                Rectangle rectangle = new Rectangle(1, 3, 15, 15);
                 e.Graphics.DrawEllipse(pen, rectangle);
                 e.Graphics.FillEllipse(new SolidBrush(main), rectangle);
                 //e.Graphics.DrawString(count.ToString(), new Font(new FontFamily("Arial"), 8), new SolidBrush(Color.White),

@@ -63,6 +63,8 @@ namespace GalimbertiHMIgl
             this.plcAspirazione.port = int.Parse(ConfigurationSettings.AppSettings.Get("AmsPort_A"));
             this.plcAspirazione.tryConnect();
 
+            this.plcAspirazione.Register(plcBooleanAspAlarm);
+
             foreach (var control in GetAll(this.tabControl3,null))
             {
                 this.plcRulliera.Register(control as Control);
@@ -83,7 +85,9 @@ namespace GalimbertiHMIgl
             listView1.View = View.Details;
             listView1.Columns.Add("Allarme");
             listView1.GridLines = true;
-
+            listView1.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
+            listView1.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
+            listView1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
 
             timer = new System.Timers.Timer();
             timer.Interval = 500;
@@ -360,15 +364,25 @@ namespace GalimbertiHMIgl
                 this.plcCiclicaAsp.InvokeOn(() => this.plcCiclicaAsp.PLCValue = false);
             }
 
-            listView1.Items.Clear();
-            foreach(var al in plcAlarmListAspirazione.activeAlarms)
-            {
-                listView1.Items.Add(new ListViewItem(new string[] { al.Value }));
-            }
+            this.listView1.Invoke(new Action(
+    () =>
+    {
+        aggiornaAllarmi();
+    }
+));
 
 
         }
 
+
+        public void aggiornaAllarmi()
+        {
+            listView1.Items.Clear();
+            foreach (var al in plcAlarmListAspirazione.activeAlarms)
+            {
+                listView1.Items.Add(new ListViewItem(new string[] { al.Value }));
+            }
+        }
 
         public static bool IsFileReady(string filename)
         {

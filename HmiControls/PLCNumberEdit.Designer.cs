@@ -57,6 +57,7 @@
             // button1
             // 
             this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.Image = global::HmiControls.Properties.Resources.icons8_edit_50;
             this.button1.Location = new System.Drawing.Point(364, 0);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.button1.Name = "button1";

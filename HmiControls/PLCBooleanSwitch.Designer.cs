@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.plcBooleanOff = new GalimbertiHMIgl.PLCBoolean();
             this.plcBooleanOn = new GalimbertiHMIgl.PLCBoolean();
             this.tableLayoutPanel1.SuspendLayout();
@@ -54,6 +54,17 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(274, 62);
             this.tableLayoutPanel1.TabIndex = 3;
             // 
+            // button1
+            // 
+            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.Image = global::HmiControls.Properties.Resources.icons8_available_updates_50;
+            this.button1.Location = new System.Drawing.Point(217, 0);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(57, 53);
+            this.button1.TabIndex = 3;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.plcBooleanOff);
@@ -64,16 +75,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(214, 62);
             this.panel1.TabIndex = 0;
-            // 
-            // button1
-            // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.Location = new System.Drawing.Point(217, 0);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(57, 53);
-            this.button1.TabIndex = 3;
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // plcBooleanOff
             // 

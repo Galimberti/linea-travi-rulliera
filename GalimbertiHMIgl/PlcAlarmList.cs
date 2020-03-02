@@ -38,11 +38,21 @@ namespace GalimbertiHMIgl
 
                     foreach (KeyValuePair<string, string> al in alarms)
                     {
-                        bool value = (bool)c.ReadSymbol(
-                             al.Key, typeof(bool), reloadSymbolInfo: false);
+                        try
+                        {
+                            bool value = (bool)c.ReadSymbol(
+                                                       al.Key, typeof(bool), reloadSymbolInfo: false);
+                            if (value)
+                                newList.Add(al);
 
-                        if (value)
-                            newList.Add(al);
+
+                        } catch (Exception  ex)
+                        {
+                            Console.WriteLine("Allarme -->" + al.Key);
+                        }
+                      
+
+                        
 
                     }
 

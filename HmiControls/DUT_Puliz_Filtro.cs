@@ -35,9 +35,12 @@ namespace HmiControls
             set
             {
                 this._variableName = value;
-                this.btnApri.VariableName = ".HMI_PB_Man_Pulizia_Filtro_" + _variableName + "_AP";
-                this.btnChiudi.VariableName = ".HMI_PB_Man_Pulizia_Filtro_" + _variableName + "_CH";
-                this.abilita.VariableName = ".Pulizia_Filtro_" + _variableName + "_Man_Cmd_On";
+                if (this._variableName == null || this._variableName == "")
+                    return;
+
+                this.btnApri.VariableName = "MAIN.HMI_PB_Man_Pulizia_Filtro_" + _variableName + "_AP";
+                this.btnChiudi.VariableName = "MAIN.HMI_PB_Man_Pulizia_Filtro_" + _variableName + "_CH";
+                this.abilita.VariableName = "MAIN.Pulizia_Filtro_" + _variableName + "_Man_Cmd_On";
 
                 this.groupBox1.Text = "Pulizia Filtro: " + value;
             }

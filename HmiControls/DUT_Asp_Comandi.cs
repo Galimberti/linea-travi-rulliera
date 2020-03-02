@@ -35,6 +35,10 @@ namespace HmiControls
             set
             {
                 this._variableName = value;
+
+                if (this._variableName == null || this._variableName == "")
+                    return;
+
                 this.btnApri.VariableName = ".HMI_PB_Man_Pulizia_Filtro_" + _variableName + "_AP";
                 this.btnChiudi.VariableName = ".HMI_PB_Man_Pulizia_Filtro_" + _variableName + "_CH";
                 this.abilita.VariableName = ".Pulizia_Filtro_" + _variableName + "_Man_Cmd_On";

@@ -12,13 +12,13 @@ namespace GalimbertiHMIgl
 
         public new void registerAlarm(string var)
         {
-            string al = "." + var.Trim();
+            string al = "MAIN." + var.Trim();
             base.registerAlarm(al);
         }
 
         public new void init()
         {
-            this.registerAlarm("Alarm_On");
+
             this.registerAlarm("Alr_Emergenza                                                                ");
             this.registerAlarm("Alr_Ripari1_Filtro                                                        ");
             this.registerAlarm("Alr_Ripari2_Filtro                                                        ");

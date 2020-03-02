@@ -80,8 +80,11 @@ namespace GalimbertiHMIgl
                     {
                         return;
                     }
+                    Console.WriteLine("");
+                    Console.WriteLine("");
+                    Console.WriteLine("VAR : " + indicator.VariableName);
                     double value = (double)c.ReadSymbol(
-                        indicator.VariableName, typeof(double),
+                        indicator.VariableName.Trim(), typeof(double),
                         reloadSymbolInfo: false);
 
                     indicator.InvokeOn(() => indicator.PLCValue = value);
@@ -119,8 +122,13 @@ namespace GalimbertiHMIgl
                         return;
                     }
 
+                    Console.WriteLine("");
+                    Console.WriteLine("");
+                    Console.WriteLine("VAR : " + indicator.VariableName);
+
+
                     bool value = (bool)c.ReadSymbol(
-                        indicator.VariableName, typeof(bool),
+                        indicator.VariableName.Trim(), typeof(bool),
                         reloadSymbolInfo: false);
 
                    indicator.InvokeOn(() => indicator.PLCValue = value);
@@ -157,8 +165,11 @@ namespace GalimbertiHMIgl
                         return;
                     }
 
+                    Console.WriteLine("");
+                    Console.WriteLine("");
+                    Console.WriteLine("VAR : " + indicator.VariableName);
                     short value = (short)c.ReadSymbol(
-                        indicator.VariableName, typeof(short),
+                        indicator.VariableName.Trim(), typeof(short),
                         reloadSymbolInfo: false);
 
                    indicator.InvokeOn(() => indicator.PLCValue = value);

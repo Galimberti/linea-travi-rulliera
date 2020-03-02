@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.plcBooleanOn = new GalimbertiHMIgl.PLCBoolean();
             this.button1 = new System.Windows.Forms.Button();
+            this.plcBooleanOn = new GalimbertiHMIgl.PLCBoolean();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,6 +50,16 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(145, 41);
             this.tableLayoutPanel1.TabIndex = 3;
             // 
+            // button1
+            // 
+            this.button1.Image = global::HmiControls.Properties.Resources.icons8_available_updates_50;
+            this.button1.Location = new System.Drawing.Point(88, 0);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(57, 30);
+            this.button1.TabIndex = 3;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // plcBooleanOn
             // 
             this.plcBooleanOn.BackColor = System.Drawing.Color.Transparent;
@@ -64,15 +74,6 @@
             this.plcBooleanOn.Size = new System.Drawing.Size(85, 41);
             this.plcBooleanOn.TabIndex = 1;
             this.plcBooleanOn.VariableName = null;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(88, 0);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(57, 30);
-            this.button1.TabIndex = 3;
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // PLCBooleanSwitchSimple
             // 
