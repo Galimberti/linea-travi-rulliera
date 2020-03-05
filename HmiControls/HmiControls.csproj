@@ -74,12 +74,6 @@
     <Compile Include="DUT_Puliz_Filtro.Designer.cs">
       <DependentUpon>DUT_Puliz_Filtro.cs</DependentUpon>
     </Compile>
-    <Compile Include="PLC.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="PLC.Designer.cs">
-      <DependentUpon>PLC.cs</DependentUpon>
-    </Compile>
     <Compile Include="PLCBooleanArea.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -113,6 +107,7 @@
     <Compile Include="PLCControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="PLCControlUtils.cs" />
     <Compile Include="PLCInt16.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -172,9 +167,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DUT_Puliz_Filtro.resx">
       <DependentUpon>DUT_Puliz_Filtro.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PLC.resx">
-      <DependentUpon>PLC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PLCBooleanArea.resx">
       <DependentUpon>PLCBooleanArea.cs</DependentUpon>
@@ -238,6 +230,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-available-updates-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PLCDrivers\PLCDrivers.csproj">
+      <Project>{e96dd6bd-4c44-4b3f-a3dc-dd1f7ff34103}</Project>
+      <Name>PLCDrivers</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

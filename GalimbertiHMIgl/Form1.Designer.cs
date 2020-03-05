@@ -250,6 +250,7 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.plcBooleanAspAlarm = new GalimbertiHMIgl.PLCBoolean();
             this.plcAnomaliaAsp = new GalimbertiHMIgl.PLCBoolean();
             this.plcCiclicaAsp = new GalimbertiHMIgl.PLCBoolean();
             this.groupBox25 = new System.Windows.Forms.GroupBox();
@@ -264,7 +265,7 @@
             this.plcConnessioneAsp = new GalimbertiHMIgl.PLCBoolean();
             this.plcConnessione = new GalimbertiHMIgl.PLCBoolean();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.plcBooleanAspAlarm = new GalimbertiHMIgl.PLCBoolean();
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
             tabControlAsp = new System.Windows.Forms.TabControl();
             tabControlAsp.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -2647,7 +2648,7 @@
             this.Aspirazione.Location = new System.Drawing.Point(4, 25);
             this.Aspirazione.Name = "Aspirazione";
             this.Aspirazione.Padding = new System.Windows.Forms.Padding(3);
-            this.Aspirazione.Size = new System.Drawing.Size(1727, 847);
+            this.Aspirazione.Size = new System.Drawing.Size(192, 71);
             this.Aspirazione.TabIndex = 3;
             this.Aspirazione.Text = "Aspirazione";
             this.Aspirazione.UseVisualStyleBackColor = true;
@@ -2665,7 +2666,7 @@
             this.Valvole.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Valvole.Name = "Valvole";
             this.Valvole.SelectedIndex = 0;
-            this.Valvole.Size = new System.Drawing.Size(1721, 841);
+            this.Valvole.Size = new System.Drawing.Size(186, 65);
             this.Valvole.TabIndex = 2;
             // 
             // tabPage10
@@ -2684,7 +2685,7 @@
             this.tabPage10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage10.Name = "tabPage10";
             this.tabPage10.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage10.Size = new System.Drawing.Size(1713, 812);
+            this.tabPage10.Size = new System.Drawing.Size(178, 36);
             this.tabPage10.TabIndex = 2;
             this.tabPage10.Text = "Impostazioni";
             this.tabPage10.Click += new System.EventHandler(this.tabPage10_Click);
@@ -3177,6 +3178,20 @@
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Ciclica Aspiraz.";
             // 
+            // plcBooleanAspAlarm
+            // 
+            this.plcBooleanAspAlarm.BackColor = System.Drawing.Color.Transparent;
+            this.plcBooleanAspAlarm.GreenMode = false;
+            this.plcBooleanAspAlarm.Location = new System.Drawing.Point(5, 66);
+            this.plcBooleanAspAlarm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.plcBooleanAspAlarm.Name = "plcBooleanAspAlarm";
+            this.plcBooleanAspAlarm.NotMode = false;
+            this.plcBooleanAspAlarm.PLCDescription = "Allarme";
+            this.plcBooleanAspAlarm.PLCValue = false;
+            this.plcBooleanAspAlarm.Size = new System.Drawing.Size(113, 26);
+            this.plcBooleanAspAlarm.TabIndex = 8;
+            this.plcBooleanAspAlarm.VariableName = "MAIN.Alarm_On";
+            // 
             // plcAnomaliaAsp
             // 
             this.plcAnomaliaAsp.BackColor = System.Drawing.Color.Transparent;
@@ -3351,21 +3366,12 @@
             // timer1
             // 
             this.timer1.Enabled = true;
-            this.timer1.Interval = 300;
+            this.timer1.Interval = 50;
             // 
-            // plcBooleanAspAlarm
+            // timer2
             // 
-            this.plcBooleanAspAlarm.BackColor = System.Drawing.Color.Transparent;
-            this.plcBooleanAspAlarm.GreenMode = false;
-            this.plcBooleanAspAlarm.Location = new System.Drawing.Point(5, 66);
-            this.plcBooleanAspAlarm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.plcBooleanAspAlarm.Name = "plcBooleanAspAlarm";
-            this.plcBooleanAspAlarm.NotMode = false;
-            this.plcBooleanAspAlarm.PLCDescription = "Allarme";
-            this.plcBooleanAspAlarm.PLCValue = false;
-            this.plcBooleanAspAlarm.Size = new System.Drawing.Size(113, 26);
-            this.plcBooleanAspAlarm.TabIndex = 8;
-            this.plcBooleanAspAlarm.VariableName = "MAIN.Alarm_On";
+            this.timer2.Enabled = true;
+            this.timer2.Interval = 50;
             // 
             // Form1
             // 
@@ -3671,6 +3677,7 @@
         private System.Windows.Forms.TabPage tabPage11;
         private System.Windows.Forms.ListView listView1;
         private PLCBoolean plcBooleanAspAlarm;
+        private System.Windows.Forms.Timer timer2;
     }
 }
 

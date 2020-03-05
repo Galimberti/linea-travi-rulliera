@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PLCDrivers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,7 +10,7 @@ namespace GalimbertiHMIgl
     public class PlcAlarmList
     {
 
-        public CommunicationManager comm;
+        public PLC comm;
 
         public  List<KeyValuePair<string,string>>  alarms = new List<KeyValuePair<string, string>>();
         public  List<KeyValuePair<string, string>> activeAlarms = new List<KeyValuePair<string, string>>();
@@ -32,7 +33,7 @@ namespace GalimbertiHMIgl
         {
             comm.pollActions.Add(() =>
             {
-                comm.doWithClient(c =>
+                comm.doWithPLC(c =>
                 {
                     List<KeyValuePair<string, string>> newList = new List<KeyValuePair<string, string>>();
 
@@ -40,25 +41,19 @@ namespace GalimbertiHMIgl
                     {
                         try
                         {
-                            bool value = (bool)c.ReadSymbol(
-                                                       al.Key, typeof(bool), reloadSymbolInfo: false);
+                            bool value = c.readBool(al.Key);
                             if (value)
                                 newList.Add(al);
-
 
                         } catch (Exception  ex)
                         {
                             Console.WriteLine("Allarme -->" + al.Key);
                         }
-                      
-
-                        
-
                     }
 
                     this.activeAlarms = newList;
 
-                }, "alarms");
+                });
             });
 
         }

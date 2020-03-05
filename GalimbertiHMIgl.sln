@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GalimbertiHMIgl", "Galimber
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HmiControls", "HmiControls\HmiControls.csproj", "{3EFF43DD-8893-438C-ADE7-28590D2D220E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PLCDrivers", "PLCDrivers\PLCDrivers.csproj", "{E96DD6BD-4C44-4B3F-A3DC-DD1F7FF34103}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +43,18 @@ Global
 		{3EFF43DD-8893-438C-ADE7-28590D2D220E}.Release|x64.Build.0 = Release|Any CPU
 		{3EFF43DD-8893-438C-ADE7-28590D2D220E}.Release|x86.ActiveCfg = Release|Any CPU
 		{3EFF43DD-8893-438C-ADE7-28590D2D220E}.Release|x86.Build.0 = Release|Any CPU
+		{E96DD6BD-4C44-4B3F-A3DC-DD1F7FF34103}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E96DD6BD-4C44-4B3F-A3DC-DD1F7FF34103}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E96DD6BD-4C44-4B3F-A3DC-DD1F7FF34103}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{E96DD6BD-4C44-4B3F-A3DC-DD1F7FF34103}.Debug|x64.Build.0 = Debug|Any CPU
+		{E96DD6BD-4C44-4B3F-A3DC-DD1F7FF34103}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{E96DD6BD-4C44-4B3F-A3DC-DD1F7FF34103}.Debug|x86.Build.0 = Debug|Any CPU
+		{E96DD6BD-4C44-4B3F-A3DC-DD1F7FF34103}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E96DD6BD-4C44-4B3F-A3DC-DD1F7FF34103}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E96DD6BD-4C44-4B3F-A3DC-DD1F7FF34103}.Release|x64.ActiveCfg = Release|Any CPU
+		{E96DD6BD-4C44-4B3F-A3DC-DD1F7FF34103}.Release|x64.Build.0 = Release|Any CPU
+		{E96DD6BD-4C44-4B3F-A3DC-DD1F7FF34103}.Release|x86.ActiveCfg = Release|Any CPU
+		{E96DD6BD-4C44-4B3F-A3DC-DD1F7FF34103}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

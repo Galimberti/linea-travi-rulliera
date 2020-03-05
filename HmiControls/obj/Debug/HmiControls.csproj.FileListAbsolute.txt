@@ -5,7 +5,6 @@ C:\Users\RedRoom\Documents\Visual Studio 2015\Projects\GalimbertiHMIgl\HmiContro
 C:\Users\RedRoom\Documents\Visual Studio 2015\Projects\GalimbertiHMIgl\HmiControls\obj\Debug\HmiControls.DUT_Filtri.resources
 C:\Users\RedRoom\Documents\Visual Studio 2015\Projects\GalimbertiHMIgl\HmiControls\obj\Debug\HmiControls.DUT_Asp_Comandi.resources
 C:\Users\RedRoom\Documents\Visual Studio 2015\Projects\GalimbertiHMIgl\HmiControls\obj\Debug\HmiControls.DUT_Puliz_Filtro.resources
-C:\Users\RedRoom\Documents\Visual Studio 2015\Projects\GalimbertiHMIgl\HmiControls\obj\Debug\GalimbertiHMIgl.PLC.resources
 C:\Users\RedRoom\Documents\Visual Studio 2015\Projects\GalimbertiHMIgl\HmiControls\obj\Debug\GalimbertiHMIgl.PLCBooleanArea.resources
 C:\Users\RedRoom\Documents\Visual Studio 2015\Projects\GalimbertiHMIgl\HmiControls\obj\Debug\GalimbertiHMIgl.PLCBooleanButton.resources
 C:\Users\RedRoom\Documents\Visual Studio 2015\Projects\GalimbertiHMIgl\HmiControls\obj\Debug\GalimbertiHMIgl.PLCBoolean.resources
@@ -23,3 +22,8 @@ C:\Users\RedRoom\Documents\Visual Studio 2015\Projects\GalimbertiHMIgl\HmiContro
 C:\Users\RedRoom\Documents\Visual Studio 2015\Projects\GalimbertiHMIgl\HmiControls\obj\Debug\HmiControls.csproj.GenerateResource.Cache
 C:\Users\RedRoom\Documents\Visual Studio 2015\Projects\GalimbertiHMIgl\HmiControls\obj\Debug\HmiControls.dll
 C:\Users\RedRoom\Documents\Visual Studio 2015\Projects\GalimbertiHMIgl\HmiControls\obj\Debug\HmiControls.pdb
+C:\Users\RedRoom\Documents\Visual Studio 2015\Projects\GalimbertiHMIgl\HmiControls\obj\Debug\HmiControls.csprojResolveAssemblyReference.cache
+C:\Users\RedRoom\Documents\Visual Studio 2015\Projects\GalimbertiHMIgl\HmiControls\bin\Debug\PLCDrivers.dll
+C:\Users\RedRoom\Documents\Visual Studio 2015\Projects\GalimbertiHMIgl\HmiControls\bin\Debug\TwinCAT.Ads.dll
+C:\Users\RedRoom\Documents\Visual Studio 2015\Projects\GalimbertiHMIgl\HmiControls\bin\Debug\PLCDrivers.pdb
+C:\Users\RedRoom\Documents\Visual Studio 2015\Projects\GalimbertiHMIgl\HmiControls\bin\Debug\TwinCAT.Ads.xml

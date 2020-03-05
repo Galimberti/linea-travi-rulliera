@@ -177,6 +177,10 @@
       <Project>{3eff43dd-8893-438c-ade7-28590d2d220e}</Project>
       <Name>HmiControls</Name>
     </ProjectReference>
+    <ProjectReference Include="..\PLCDrivers\PLCDrivers.csproj">
+      <Project>{e96dd6bd-4c44-4b3f-a3dc-dd1f7ff34103}</Project>
+      <Name>PLCDrivers</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="G_Zona1.PNG" />

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PLCDrivers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,19 +8,18 @@ using System.Windows.Forms;
 
 namespace GalimbertiHMIgl
 {
-    public class PLCControl<T> : UserControl
+    public class PLCControl<T> : UserControl  
     {
 
         public event EventHandler OnSomethingChanges;
 
         public delegate void UIChangesEventHandler(PLCControl<T> control, T e);
         public event UIChangesEventHandler OnUIChanges;
-
-
         protected T _value;
         protected string _description;
+        protected PLC _plc;
 
-        public  T PLCValue
+        public T PLCValue
         {
             get
             {
@@ -28,8 +28,6 @@ namespace GalimbertiHMIgl
 
             set
             {
-
-                
                 if (this._value.Equals(value))
                     return;
 
@@ -69,6 +67,11 @@ namespace GalimbertiHMIgl
 
         }
 
+        public void RegisterAll(PLC plcRulliera, TabControl tabControl3)
+        {
+            throw new NotImplementedException();
+        }
+
         private void PLCControl_Load(object sender, EventArgs e)
         {
 
@@ -93,11 +96,98 @@ namespace GalimbertiHMIgl
                 this.OnSomethingChanges(this, null);
         }
 
-        public void InvokeOn(Action Action)
+        public void doWithUI(Action Action)
         {
             this.Invoke(Action);
         }
 
+    
+        protected void writeToPLC(T e)
+        {
+            this._plc.doWithPLC(c =>
+            {
+                if (string.IsNullOrWhiteSpace(this.VariableName))
+                    return;
 
+                try
+                {
+
+
+                    if (this is PLCControl<Boolean>)
+                    {
+                        var value = Convert.ToBoolean((object)e);
+                        this._plc.driver.writeBool(VariableName, value);
+                    }
+                    else if (this is PLCControl<Double>)
+                    {
+                        var value = Convert.ToDouble((object)e);
+                        this._plc.driver.writeDouble(VariableName, value);
+                    }
+                    else if (this is PLCControl<Int16>)
+                    {
+                        var value = Convert.ToInt16((object)e);
+                        this._plc.driver.writeInt16(VariableName, value);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    this._plc.readWriteError("WRITE ERROR: " + VariableName + " : " + ex.Message);
+                }
+
+            });
+        }
+
+        protected void readFromPLC()
+        {
+            this._plc.doWithPLC(c =>
+            {
+
+                if (string.IsNullOrWhiteSpace(this.VariableName))
+                    return;
+
+                try
+                {
+                    Object result = null;
+                    if (this is PLCControl<Boolean>)
+                    {
+                        result = this._plc.driver.readBool(this.VariableName);
+                    }
+                    else if (this is PLCControl<Double>)
+                    {
+                        result = this._plc.driver.readDouble(this.VariableName);
+                    }
+                    else if (this is PLCControl<Int16>)
+                    {
+                        result = this._plc.driver.readInt16(this.VariableName);
+                    }
+
+                    if (result != null)
+                        this.doWithUI(() => PLCValue = (T)result);
+
+                }
+                catch (Exception ex)
+                {
+                    this._plc.readWriteError("READING ERROR: " + VariableName + " : " + ex.Message);
+                }
+
+            });
+        }
+
+        public void register(PLC plc)
+        {
+            this._plc = plc;
+
+            this._plc.pollActions.Add(() =>
+            {
+                this.readFromPLC();
+            });
+
+            this.OnUIChanges += (s, e) =>
+            {
+                this.writeToPLC(e);
+                this.readFromPLC();
+            };
+
+        }
     }
 }

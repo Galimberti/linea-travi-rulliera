@@ -19,14 +19,16 @@ using Google.Apis.Auth.OAuth2;
 using Google.Apis.Sheets.v4.Data;
 using Google.Apis.Services;
 using Google.Apis.Util.Store;
-
+using PLCDrivers;
+using PLCDrivers.Beckhoff;
+using HmiControls;
 
 namespace GalimbertiHMIgl
 {
     public partial class Form1 : Form
     {
-        private readonly CommunicationManager plcRulliera = new CommunicationManager();
-        private readonly CommunicationManager plcAspirazione = new CommunicationManager();
+        private PLC plcRulliera;
+        private PLC plcAspirazione;
         private readonly PlcAlarmListAspirazione plcAlarmListAspirazione = new PlcAlarmListAspirazione();
 
         public Form1()
@@ -35,49 +37,27 @@ namespace GalimbertiHMIgl
             InitializeComponent();
         }
 
-
-
-        public IEnumerable<Control> GetAll(Control control, Type type)
-        {
-            var controls = control.Controls.Cast<Control>();
-
-            return controls.SelectMany(ctrl => GetAll(ctrl, type))
-                                      .Concat(controls);
-        }
-
-
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-        System.Timers.Timer timer = null;
+        System.Timers.Timer timerRulliera = null;
+        System.Timers.Timer timerAspirazione = null;
         private void Form1_Load(object sender, EventArgs ev)
         {
 
-            this.plcRulliera.host = ConfigurationSettings.AppSettings.Get("AmsNetId");
-            this.plcRulliera.port = int.Parse(ConfigurationSettings.AppSettings.Get("AmsPort"));
+            this.plcRulliera = new PLC(new DriverBeckhoff(ConfigurationSettings.AppSettings.Get("AmsNetId"), int.Parse(ConfigurationSettings.AppSettings.Get("AmsPort"))));
             this.plcRulliera.tryConnect();
 
-            this.plcAspirazione.host = ConfigurationSettings.AppSettings.Get("AmsNetId_A");
-            this.plcAspirazione.port = int.Parse(ConfigurationSettings.AppSettings.Get("AmsPort_A"));
+            this.plcAspirazione = new PLC(new DriverBeckhoff(ConfigurationSettings.AppSettings.Get("AmsNetId_A"), int.Parse(ConfigurationSettings.AppSettings.Get("AmsPort_A"))));
             this.plcAspirazione.tryConnect();
 
-            this.plcAspirazione.Register(plcBooleanAspAlarm);
+            plcBooleanAspAlarm.register(this.plcAspirazione);
 
-            foreach (var control in GetAll(this.tabControl3,null))
-            {
-                this.plcRulliera.Register(control as Control);
-            }
-            foreach (var control in GetAll(this.groupBox25, null))
-            {
-                this.plcRulliera.Register(control as Control);
-            }
-
-            foreach (var control in GetAll(this.Valvole, null))
-            {
-                this.plcAspirazione.Register(control as Control);
-            }
+            PLCControlUtils.RegisterAll(this.plcRulliera, this.tabControl3);
+            PLCControlUtils.RegisterAll(this.plcRulliera, this.groupBox25);
+            PLCControlUtils.RegisterAll(this.plcAspirazione, this.Valvole);
 
             this.plcAlarmListAspirazione.comm = this.plcAspirazione;
             this.plcAlarmListAspirazione.init();
@@ -89,18 +69,28 @@ namespace GalimbertiHMIgl
             listView1.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
             listView1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
 
-            timer = new System.Timers.Timer();
-            timer.Interval = 500;
-            timer.Elapsed += (s, e) =>
+            timerRulliera = new System.Timers.Timer();
+            timerRulliera.Interval = 50;
+            timerRulliera.Elapsed += (s, e) =>
             {
-                timer.Enabled = false;
+                timerRulliera.Enabled = false;
                 doLoopRulliera();
-                doLoopAspirazione();
                 this.cycle();
                 this.cycle_alarms();
-                timer.Enabled = true;
+                timerRulliera.Enabled = true;
             };
-            timer.Start();
+            timerRulliera.Start();
+
+
+            timerAspirazione = new System.Timers.Timer();
+            timerAspirazione.Interval = 50;
+            timerAspirazione.Elapsed += (s, e) =>
+            {
+                timerAspirazione.Enabled = false;
+                doLoopAspirazione();
+                timerAspirazione.Enabled = true;
+            };
+            timerAspirazione.Start();
 
 
             var _watcher = new FileSystemWatcher();
@@ -124,7 +114,7 @@ namespace GalimbertiHMIgl
         private void cycle_alarms()
         {
           
-            this.plcRulliera.doWithClient(c =>
+            this.plcRulliera.doWithPLC(c =>
             {
                 this.plcAlarm.PLCValue = false;
                 this.plcAlarm.PLCDescription = "";
@@ -154,16 +144,14 @@ namespace GalimbertiHMIgl
 
                 }
 
-            }, "");
+            });
 
-
-          
         }
 
 
-        private static void checkAlarm (TcAdsClient c,  String variable)
+        private static void checkAlarm (IPlcDriver c,  String variable)
         {
-            bool presenza =  (bool)c.ReadSymbol("RULLI_CENTRO_TAGLI.RD_Anticipo_Pz_Da_Hundegger", typeof(bool), reloadSymbolInfo: false);
+            bool presenza =  (bool)c.readBool("RULLI_CENTRO_TAGLI.RD_Anticipo_Pz_Da_Hundegger");
 
             if (presenza)
                 throw new Exception(variable);
@@ -174,40 +162,29 @@ namespace GalimbertiHMIgl
         private void cycle()
         {
 
-            this.plcRulliera.doWithClient(c =>
+            this.plcRulliera.doWithPLC(c =>
             {
-                bool presenza = (bool)c.ReadSymbol("RULLI_CENTRO_TAGLI.RD_Anticipo_Pz_Da_Hundegger", typeof(bool),
-                         reloadSymbolInfo: false);
-
-                bool presenzaAck = (bool)c.ReadSymbol("RULLI_CENTRO_TAGLI.WR_En_Anticipo_Pz_Hundegger", typeof(bool),
-                        reloadSymbolInfo: false);
+                bool presenza = c.readBool("RULLI_CENTRO_TAGLI.RD_Anticipo_Pz_Da_Hundegger");
+                bool presenzaAck = c.readBool("RULLI_CENTRO_TAGLI.WR_En_Anticipo_Pz_Hundegger");
 
                 if (presenza && presenzaAck)
                 {
-                    c.WriteSymbol("RULLI_CENTRO_TAGLI.RD_Anticipo_Pz_Da_Hundegger", false,
-                      reloadSymbolInfo: false);
+                    c.writeBool("RULLI_CENTRO_TAGLI.RD_Anticipo_Pz_Da_Hundegger", false);
                 }
-
-            }, "");
-
+            });
 
 
-            this.plcRulliera.doWithClient(c =>
+
+            this.plcRulliera.doWithPLC(c =>
             {
 
-                bool presenza = (bool) c.ReadSymbol("RULLI_CENTRO_TAGLI.RD_Presenza_Pz_Da_Hundegger", typeof(bool),
-                        reloadSymbolInfo: false);
-
-                bool presenzaAck = (bool) c.ReadSymbol("RULLI_CENTRO_TAGLI.WR_En_Scarico_Hundegger", typeof(bool),
-                        reloadSymbolInfo: false);
-
+                bool presenza = c.readBool("RULLI_CENTRO_TAGLI.RD_Presenza_Pz_Da_Hundegger");
+                bool presenzaAck = c.readBool("RULLI_CENTRO_TAGLI.WR_En_Scarico_Hundegger");
                 if (presenza && presenzaAck)
                 {
-                    c.WriteSymbol("RULLI_CENTRO_TAGLI.RD_Presenza_Pz_Da_Hundegger", false,
-                      reloadSymbolInfo: false);
+                    c.writeBool("RULLI_CENTRO_TAGLI.RD_Presenza_Pz_Da_Hundegger", false);
                 }
-
-            }, "");
+            });
         }
 
 
@@ -232,21 +209,17 @@ namespace GalimbertiHMIgl
                 return;
 
 
-            this.plcRulliera.doWithClient(c =>
+            this.plcRulliera.doWithPLC(c =>
             {
-                c.WriteSymbol("RULLI_CENTRO_TAGLI.RD_Larghezza_Pz_Da_Hundegger",y,
-                    reloadSymbolInfo: false);
+                c.writeDouble("RULLI_CENTRO_TAGLI.RD_Larghezza_Pz_Da_Hundegger",y);
 
-                c.WriteSymbol("RULLI_CENTRO_TAGLI.RD_Altezza_Pz_Da_Hundegger", z,
-                  reloadSymbolInfo: false);
+                c.writeDouble("RULLI_CENTRO_TAGLI.RD_Altezza_Pz_Da_Hundegger", z);
 
-                c.WriteSymbol("RULLI_CENTRO_TAGLI.RD_Rotazione_Pz_Da_Hundegger", getRotation(doc),
-                  reloadSymbolInfo: false);
+                c.writeDouble("RULLI_CENTRO_TAGLI.RD_Rotazione_Pz_Da_Hundegger", getRotation(doc));
 
-                c.WriteSymbol("RULLI_CENTRO_TAGLI.RD_Presenza_Pz_Da_Hundegger", true,
-                    reloadSymbolInfo: false);
+                c.writeBool("RULLI_CENTRO_TAGLI.RD_Presenza_Pz_Da_Hundegger", true);
 
-            }, "");
+            });
 
         }
 
@@ -271,21 +244,15 @@ namespace GalimbertiHMIgl
                 return;
 
 
-            this.plcRulliera.doWithClient(c =>
+            this.plcRulliera.doWithPLC(c =>
             {
-                c.WriteSymbol("RULLI_CENTRO_TAGLI.RD_Larghezza_Anticipo_Pz_Da_Hundegger", y,
-                    reloadSymbolInfo: false);
+                c.writeDouble("RULLI_CENTRO_TAGLI.RD_Larghezza_Anticipo_Pz_Da_Hundegger", y);
 
-                c.WriteSymbol("RULLI_CENTRO_TAGLI.RD_Altezza_Anticipo_Pz_Da_Hundegger", z,
-                  reloadSymbolInfo: false);
+                c.writeDouble("RULLI_CENTRO_TAGLI.RD_Altezza_Anticipo_Pz_Da_Hundegger", z);
 
-                 //c.WriteSymbol("RULLI_CENTRO_TAGLI.RD_Rotazione_Pz_Da_Hundegger", getRotation(doc),
-                 //   reloadSymbolInfo: false);
+                c.writeBool("RULLI_CENTRO_TAGLI.RD_Anticipo_Pz_Da_Hundegger", true);
 
-                c.WriteSymbol("RULLI_CENTRO_TAGLI.RD_Anticipo_Pz_Da_Hundegger", true,
-                    reloadSymbolInfo: false);
-
-            }, "");
+            });
 
         }
 
@@ -313,16 +280,16 @@ namespace GalimbertiHMIgl
 
         private void doLoopRulliera()
         {
-            this.plcConnessione.InvokeOn( () => this.plcConnessione.PLCValue = this.plcRulliera.IsConnected);
-            this.plcCiclica.InvokeOn(() => this.plcCiclica.PLCValue = true);
-            this.plcAnomalia.InvokeOn(() => this.plcAnomalia.PLCValue = false);
+            this.plcConnessione.doWithUI( () => this.plcConnessione.PLCValue = this.plcRulliera.IsConnected);
+            this.plcCiclica.doWithUI(() => this.plcCiclica.PLCValue = true);
+            this.plcAnomalia.doWithUI(() => this.plcAnomalia.PLCValue = false);
             try
             {
                 this.plcRulliera.Poll();
 
             } catch (Exception ex)
             {
-                this.plcAnomalia.InvokeOn(() => this.plcAnomalia.PLCValue = true);
+                this.plcAnomalia.doWithUI(() => this.plcAnomalia.PLCValue = true);
             } finally
             {
                 if (this.plcRulliera.GetReadWriteErrors().Count > 0)
@@ -331,25 +298,25 @@ namespace GalimbertiHMIgl
                     {
                         Console.WriteLine("PLC ERROR : " + err);
                     }
-                    this.plcAnomalia.InvokeOn(() => this.plcAnomalia.PLCValue = true);
+                    this.plcAnomalia.doWithUI(() => this.plcAnomalia.PLCValue = true);
                 }
-                this.plcCiclica.InvokeOn(() => this.plcCiclica.PLCValue = false);
+                this.plcCiclica.doWithUI(() => this.plcCiclica.PLCValue = false);
             }
            
         }
 
         private void doLoopAspirazione()
         {
-            this.plcConnessioneAsp.InvokeOn(() => this.plcConnessioneAsp.PLCValue = this.plcAspirazione.IsConnected);
-            this.plcCiclicaAsp.InvokeOn(() => this.plcCiclicaAsp.PLCValue = true);
-            this.plcAnomaliaAsp.InvokeOn(() => this.plcAnomaliaAsp.PLCValue = false);
+            this.plcConnessioneAsp.doWithUI(() => this.plcConnessioneAsp.PLCValue = this.plcAspirazione.IsConnected);
+            this.plcCiclicaAsp.doWithUI(() => this.plcCiclicaAsp.PLCValue = true);
+            this.plcAnomaliaAsp.doWithUI(() => this.plcAnomaliaAsp.PLCValue = false);
             try
             {
                 this.plcAspirazione.Poll();
             }
             catch (Exception ex)
             {
-                this.plcAnomaliaAsp.InvokeOn(() =>this.plcAnomaliaAsp.PLCValue = true);
+                this.plcAnomaliaAsp.doWithUI(() =>this.plcAnomaliaAsp.PLCValue = true);
             }
             finally
             {
@@ -359,9 +326,9 @@ namespace GalimbertiHMIgl
                     {
                         Console.WriteLine("PLC ASPIRAZIONE ERROR : " + err);
                     }
-                    this.plcAnomaliaAsp.InvokeOn(() => this.plcAnomaliaAsp.PLCValue = true);
+                    this.plcAnomaliaAsp.doWithUI(() => this.plcAnomaliaAsp.PLCValue = true);
                 }
-                this.plcCiclicaAsp.InvokeOn(() => this.plcCiclicaAsp.PLCValue = false);
+                this.plcCiclicaAsp.doWithUI(() => this.plcCiclicaAsp.PLCValue = false);
             }
 
             this.listView1.Invoke(new Action(

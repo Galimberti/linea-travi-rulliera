@@ -87,7 +87,7 @@ namespace GalimbertiHMIgl
                         indicator.VariableName.Trim(), typeof(double),
                         reloadSymbolInfo: false);
 
-                    indicator.InvokeOn(() => indicator.PLCValue = value);
+                    indicator.doWithUI(() => indicator.PLCValue = value);
 
                 }, indicator.VariableName);
             });
@@ -131,7 +131,7 @@ namespace GalimbertiHMIgl
                         indicator.VariableName.Trim(), typeof(bool),
                         reloadSymbolInfo: false);
 
-                   indicator.InvokeOn(() => indicator.PLCValue = value);
+                   indicator.doWithUI(() => indicator.PLCValue = value);
                 }, indicator.VariableName);
             });
              
@@ -172,7 +172,7 @@ namespace GalimbertiHMIgl
                         indicator.VariableName.Trim(), typeof(short),
                         reloadSymbolInfo: false);
 
-                   indicator.InvokeOn(() => indicator.PLCValue = value);
+                   indicator.doWithUI(() => indicator.PLCValue = value);
                 }, indicator.VariableName);
             });
 
