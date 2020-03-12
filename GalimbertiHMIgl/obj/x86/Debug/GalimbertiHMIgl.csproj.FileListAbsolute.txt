@@ -32,3 +32,4 @@ C:\Users\RedRoom\Documents\Visual Studio 2015\Projects\GalimbertiHMIgl\Galimbert
 C:\Users\RedRoom\Documents\Visual Studio 2015\Projects\GalimbertiHMIgl\GalimbertiHMIgl\obj\x86\Debug\GalimbertiHMIgl.pdb
 C:\Users\RedRoom\Documents\Visual Studio 2015\Projects\GalimbertiHMIgl\GalimbertiHMIgl\bin\x86\Debug\PLCDrivers.dll
 C:\Users\RedRoom\Documents\Visual Studio 2015\Projects\GalimbertiHMIgl\GalimbertiHMIgl\bin\x86\Debug\PLCDrivers.pdb
+C:\Users\RedRoom\Documents\Visual Studio 2015\Projects\GalimbertiHMIgl\GalimbertiHMIgl\bin\x86\Debug\EasyModbus.dll

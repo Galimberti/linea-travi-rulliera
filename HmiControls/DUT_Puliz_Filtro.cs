@@ -40,7 +40,7 @@ namespace HmiControls
 
                 this.btnApri.VariableName = "MAIN.HMI_PB_Man_Pulizia_Filtro_" + _variableName + "_AP";
                 this.btnChiudi.VariableName = "MAIN.HMI_PB_Man_Pulizia_Filtro_" + _variableName + "_CH";
-                this.abilita.VariableName = "MAIN.Pulizia_Filtro_" + _variableName + "_Man_Cmd_On";
+                this.plcBoolean1.VariableName = "MAIN.Pulizia_Filtro_" + _variableName + "_Man_Cmd_On";
 
                 this.groupBox1.Text = "Pulizia Filtro: " + value;
             }

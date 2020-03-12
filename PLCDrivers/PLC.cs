@@ -41,7 +41,6 @@ namespace PLCDrivers
            
         }
 
- 
 
         public void doWithPLC(Action<IPlcDriver> action)
         {

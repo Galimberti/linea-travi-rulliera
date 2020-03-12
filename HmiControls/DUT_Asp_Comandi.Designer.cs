@@ -152,7 +152,7 @@
             this.plcBooleanButton1.PLCValue = false;
             this.plcBooleanButton1.Size = new System.Drawing.Size(104, 33);
             this.plcBooleanButton1.TabIndex = 2;
-            //this.plcBooleanButton1.VariableName = "MAIN.HMI_PB_Man_Scarico2_Nastro_Bricc_IND";
+            this.plcBooleanButton1.VariableName = "MAIN.HMI_PB_Man_Scarico2_Nastro_Bricc_IND";
             // 
             // plcBooleanButton2
             // 
@@ -165,7 +165,7 @@
             this.plcBooleanButton2.PLCValue = false;
             this.plcBooleanButton2.Size = new System.Drawing.Size(104, 33);
             this.plcBooleanButton2.TabIndex = 1;
-            //this.plcBooleanButton2.VariableName = "MAIN.HMI_PB_Man_Scarico2_Nastro_Bricc_AV";
+            this.plcBooleanButton2.VariableName = "MAIN.HMI_PB_Man_Scarico2_Nastro_Bricc_AV";
             // 
             // plcBooleanSwitchSimple1
             // 
@@ -202,7 +202,7 @@
             this.plcBooleanButton6.PLCValue = false;
             this.plcBooleanButton6.Size = new System.Drawing.Size(214, 33);
             this.plcBooleanButton6.TabIndex = 1;
-            //this.plcBooleanButton6.VariableName = "MAIN.HMI_PB_Man_Serranda_Scarico_In_Bricc";
+            this.plcBooleanButton6.VariableName = "MAIN.HMI_PB_Man_Serranda_Scarico_In_Bricc";
             // 
             // plcBooleanSwitchSimple3
             // 
@@ -215,7 +215,7 @@
             this.plcBooleanSwitchSimple3.PLCValue = false;
             this.plcBooleanSwitchSimple3.Size = new System.Drawing.Size(214, 26);
             this.plcBooleanSwitchSimple3.TabIndex = 0;
-            //this.plcBooleanSwitchSimple3.VariableName = "MAIN.Serranda_Scarico_In_Bricc_Man_Cmd_On";
+            this.plcBooleanSwitchSimple3.VariableName = "MAIN.Serranda_Scarico_In_Bricc_Man_Cmd_On";
             // 
             // groupBox5
             // 
@@ -240,7 +240,7 @@
             this.plcBooleanButton5.PLCValue = false;
             this.plcBooleanButton5.Size = new System.Drawing.Size(104, 33);
             this.plcBooleanButton5.TabIndex = 2;
-            //this.plcBooleanButton5.VariableName = "MAIN.HMI_PB_Man_Serranda_Asp_Hundegger_CH";
+            this.plcBooleanButton5.VariableName = "MAIN.HMI_PB_Man_Serranda_Asp_Hundegger_CH";
             // 
             // plcBooleanButton7
             // 
@@ -253,7 +253,7 @@
             this.plcBooleanButton7.PLCValue = false;
             this.plcBooleanButton7.Size = new System.Drawing.Size(104, 33);
             this.plcBooleanButton7.TabIndex = 1;
-            //this.plcBooleanButton7.VariableName = "MAIN.HMI_PB_Man_Serranda_Asp_Hundegger_AP";
+            this.plcBooleanButton7.VariableName = "MAIN.HMI_PB_Man_Serranda_Asp_Hundegger_AP";
             // 
             // plcBooleanSwitchSimple4
             // 
@@ -266,7 +266,7 @@
             this.plcBooleanSwitchSimple4.PLCValue = false;
             this.plcBooleanSwitchSimple4.Size = new System.Drawing.Size(214, 26);
             this.plcBooleanSwitchSimple4.TabIndex = 0;
-            //this.plcBooleanSwitchSimple4.VariableName = "MAIN.Serranda_Asp_Hundegger_Man_Cmd_On";
+            this.plcBooleanSwitchSimple4.VariableName = "MAIN.Serranda_Asp_Hundegger_Man_Cmd_On";
             // 
             // groupBox6
             // 
@@ -290,7 +290,7 @@
             this.plcBooleanButton8.PLCValue = false;
             this.plcBooleanButton8.Size = new System.Drawing.Size(214, 33);
             this.plcBooleanButton8.TabIndex = 1;
-            //this.plcBooleanButton8.VariableName = "MAIN.HMI_PB_Man_Serranda_Scarico_In_Container";
+            this.plcBooleanButton8.VariableName = "MAIN.HMI_PB_Man_Serranda_Scarico_In_Container";
             // 
             // plcBooleanSwitchSimple5
             // 
@@ -303,7 +303,7 @@
             this.plcBooleanSwitchSimple5.PLCValue = false;
             this.plcBooleanSwitchSimple5.Size = new System.Drawing.Size(214, 26);
             this.plcBooleanSwitchSimple5.TabIndex = 0;
-            //this.plcBooleanSwitchSimple5.VariableName = "MAIN.Serranda_Scarico_In_Container_Man_Cmd_On";
+            this.plcBooleanSwitchSimple5.VariableName = "MAIN.Serranda_Scarico_In_Container_Man_Cmd_On";
             // 
             // groupBox7
             // 
@@ -328,7 +328,7 @@
             this.plcBooleanButton9.PLCValue = false;
             this.plcBooleanButton9.Size = new System.Drawing.Size(104, 33);
             this.plcBooleanButton9.TabIndex = 2;
-            //this.plcBooleanButton9.VariableName = "MAIN.HMI_PB_Man_Serranda_Asp_Multilame_CH";
+            this.plcBooleanButton9.VariableName = "MAIN.HMI_PB_Man_Serranda_Asp_Multilame_CH";
             // 
             // plcBooleanButton10
             // 
@@ -341,7 +341,7 @@
             this.plcBooleanButton10.PLCValue = false;
             this.plcBooleanButton10.Size = new System.Drawing.Size(104, 33);
             this.plcBooleanButton10.TabIndex = 1;
-            //this.plcBooleanButton10.VariableName = "MAIN.HMI_PB_Man_Serranda_Asp_Multilame_AP";
+            this.plcBooleanButton10.VariableName = "MAIN.HMI_PB_Man_Serranda_Asp_Multilame_AP";
             // 
             // plcBooleanSwitchSimple6
             // 
@@ -354,7 +354,7 @@
             this.plcBooleanSwitchSimple6.PLCValue = false;
             this.plcBooleanSwitchSimple6.Size = new System.Drawing.Size(214, 26);
             this.plcBooleanSwitchSimple6.TabIndex = 0;
-            //this.plcBooleanSwitchSimple6.VariableName = "MAIN.Serranda_Asp_Multilame_Man_Cmd_On";
+            this.plcBooleanSwitchSimple6.VariableName = "MAIN.Serranda_Asp_Multilame_Man_Cmd_On";
             // 
             // groupBox8
             // 
@@ -366,7 +366,7 @@
             this.groupBox8.Size = new System.Drawing.Size(228, 88);
             this.groupBox8.TabIndex = 10;
             this.groupBox8.TabStop = false;
-           // this.groupBox8.Text = "Serranda Asp. Scorniciatrice";
+             this.groupBox8.Text = "Serranda Asp.Scorniciatrice";
             // 
             // plcBooleanButton11
             // 
@@ -379,7 +379,7 @@
             this.plcBooleanButton11.PLCValue = false;
             this.plcBooleanButton11.Size = new System.Drawing.Size(104, 33);
             this.plcBooleanButton11.TabIndex = 2;
-            //this.plcBooleanButton11.VariableName = "MAIN.HMI_PB_Man_Serranda_Asp_Scorniciatrice_CH";
+            this.plcBooleanButton11.VariableName = "MAIN.HMI_PB_Man_Serranda_Asp_Scorniciatrice_CH";
             // 
             // plcBooleanButton12
             // 
@@ -392,7 +392,7 @@
             this.plcBooleanButton12.PLCValue = false;
             this.plcBooleanButton12.Size = new System.Drawing.Size(104, 33);
             this.plcBooleanButton12.TabIndex = 1;
-            //this.plcBooleanButton12.VariableName = "MAIN.HMI_PB_Man_Serranda_Asp_Scorniciatrice_AP";
+            this.plcBooleanButton12.VariableName = "MAIN.HMI_PB_Man_Serranda_Asp_Scorniciatrice_AP";
             // 
             // plcBooleanSwitchSimple7
             // 
@@ -405,7 +405,7 @@
             this.plcBooleanSwitchSimple7.PLCValue = false;
             this.plcBooleanSwitchSimple7.Size = new System.Drawing.Size(214, 26);
             this.plcBooleanSwitchSimple7.TabIndex = 0;
-            //this.plcBooleanSwitchSimple7.VariableName = "MAIN.Serranda_Asp_Scorniciatrice_Man_Cmd_On";
+            this.plcBooleanSwitchSimple7.VariableName = "MAIN.Serranda_Asp_Scorniciatrice_Man_Cmd_On";
             // 
             // groupBox9
             // 
@@ -417,7 +417,7 @@
             this.groupBox9.Size = new System.Drawing.Size(228, 88);
             this.groupBox9.TabIndex = 11;
             this.groupBox9.TabStop = false;
-            //this.groupBox9.Text = "Serranda Asp. Macinatore";
+            this.groupBox9.Text = "Serranda Asp. Macinatore";
             // 
             // plcBooleanButton13
             // 
@@ -430,7 +430,7 @@
             this.plcBooleanButton13.PLCValue = false;
             this.plcBooleanButton13.Size = new System.Drawing.Size(104, 33);
             this.plcBooleanButton13.TabIndex = 2;
-            //this.plcBooleanButton13.VariableName = "MAIN.HMI_PB_Man_Serranda_Asp_Macinatore_CH";
+            this.plcBooleanButton13.VariableName = "MAIN.HMI_PB_Man_Serranda_Asp_Macinatore_CH";
             // 
             // plcBooleanButton14
             // 
@@ -443,7 +443,7 @@
             this.plcBooleanButton14.PLCValue = false;
             this.plcBooleanButton14.Size = new System.Drawing.Size(104, 33);
             this.plcBooleanButton14.TabIndex = 1;
-            //this.plcBooleanButton14.VariableName = "MAIN.HMI_PB_Man_Serranda_Asp_Macinatore_AP";
+            this.plcBooleanButton14.VariableName = "MAIN.HMI_PB_Man_Serranda_Asp_Macinatore_AP";
             // 
             // plcBooleanSwitchSimple8
             // 
@@ -456,7 +456,7 @@
             this.plcBooleanSwitchSimple8.PLCValue = false;
             this.plcBooleanSwitchSimple8.Size = new System.Drawing.Size(214, 26);
             this.plcBooleanSwitchSimple8.TabIndex = 0;
-            //this.plcBooleanSwitchSimple8.VariableName = "MAIN.Serranda_Asp_Macinatore_Man_Cmd_On";
+            this.plcBooleanSwitchSimple8.VariableName = "MAIN.Serranda_Asp_Macinatore_Man_Cmd_On";
             // 
             // groupBox10
             // 
@@ -481,7 +481,7 @@
             this.plcBooleanButton15.PLCValue = false;
             this.plcBooleanButton15.Size = new System.Drawing.Size(104, 33);
             this.plcBooleanButton15.TabIndex = 2;
-            //this.plcBooleanButton15.VariableName = "MAIN.HMI_PB_Man_Serranda_Asp_Ventilatore1_CH";
+            this.plcBooleanButton15.VariableName = "MAIN.HMI_PB_Man_Serranda_Asp_Ventilatore1_CH";
             // 
             // plcBooleanButton16
             // 
@@ -494,7 +494,7 @@
             this.plcBooleanButton16.PLCValue = false;
             this.plcBooleanButton16.Size = new System.Drawing.Size(104, 33);
             this.plcBooleanButton16.TabIndex = 1;
-            //this.plcBooleanButton16.VariableName = "MAIN.HMI_PB_Man_Serranda_Asp_Ventilatore1_AP";
+            this.plcBooleanButton16.VariableName = "MAIN.HMI_PB_Man_Serranda_Asp_Ventilatore1_AP";
             // 
             // plcBooleanSwitchSimple9
             // 
@@ -507,7 +507,7 @@
             this.plcBooleanSwitchSimple9.PLCValue = false;
             this.plcBooleanSwitchSimple9.Size = new System.Drawing.Size(214, 26);
             this.plcBooleanSwitchSimple9.TabIndex = 0;
-            //this.plcBooleanSwitchSimple9.VariableName = "MAIN.Serranda_Asp_Ventilatore1_Man_Cmd_On";
+            this.plcBooleanSwitchSimple9.VariableName = "MAIN.Serranda_Asp_Ventilatore1_Man_Cmd_On";
             // 
             // groupBox11
             // 
@@ -532,7 +532,7 @@
             this.plcBooleanButton17.PLCValue = false;
             this.plcBooleanButton17.Size = new System.Drawing.Size(104, 33);
             this.plcBooleanButton17.TabIndex = 2;
-            //this.plcBooleanButton17.VariableName = "MAIN.HMI_PB_Man_Serranda_Asp_Ventilatore2_CH";
+            this.plcBooleanButton17.VariableName = "MAIN.HMI_PB_Man_Serranda_Asp_Ventilatore2_CH";
             // 
             // plcBooleanButton18
             // 
@@ -545,7 +545,7 @@
             this.plcBooleanButton18.PLCValue = false;
             this.plcBooleanButton18.Size = new System.Drawing.Size(104, 33);
             this.plcBooleanButton18.TabIndex = 1;
-            //this.plcBooleanButton18.VariableName = "MAIN.HMI_PB_Man_Serranda_Asp_Ventilatore2_AP";
+            this.plcBooleanButton18.VariableName = "MAIN.HMI_PB_Man_Serranda_Asp_Ventilatore2_AP";
             // 
             // plcBooleanSwitchSimple10
             // 
@@ -558,7 +558,7 @@
             this.plcBooleanSwitchSimple10.PLCValue = false;
             this.plcBooleanSwitchSimple10.Size = new System.Drawing.Size(214, 26);
             this.plcBooleanSwitchSimple10.TabIndex = 0;
-            //this.plcBooleanSwitchSimple10.VariableName = "MAIN.Serranda_Asp_Ventilatore2_Man_Cmd_On";
+            this.plcBooleanSwitchSimple10.VariableName = "MAIN.Serranda_Asp_Ventilatore2_Man_Cmd_On";
             // 
             // DUT_Asp_Comandi
             // 

@@ -28,12 +28,13 @@ namespace GalimbertiHMIgl
     public partial class Form1 : Form
     {
         private PLC plcRulliera;
+        private PLC plcBricc;
         private PLC plcAspirazione;
         private readonly PlcAlarmListAspirazione plcAlarmListAspirazione = new PlcAlarmListAspirazione();
 
         public Form1()
         {
-           
+
             InitializeComponent();
         }
 
@@ -44,6 +45,7 @@ namespace GalimbertiHMIgl
 
         System.Timers.Timer timerRulliera = null;
         System.Timers.Timer timerAspirazione = null;
+        System.Timers.Timer timerBricc = null;
         private void Form1_Load(object sender, EventArgs ev)
         {
 
@@ -53,11 +55,15 @@ namespace GalimbertiHMIgl
             this.plcAspirazione = new PLC(new DriverBeckhoff(ConfigurationSettings.AppSettings.Get("AmsNetId_A"), int.Parse(ConfigurationSettings.AppSettings.Get("AmsPort_A"))));
             this.plcAspirazione.tryConnect();
 
+            this.plcBricc = new PLC(new DriverModBus(ConfigurationSettings.AppSettings.Get("Bricc_IP"), int.Parse(ConfigurationSettings.AppSettings.Get("Bricc_Port"))));
+            this.plcBricc.tryConnect();
+
             plcBooleanAspAlarm.register(this.plcAspirazione);
 
             PLCControlUtils.RegisterAll(this.plcRulliera, this.tabControl3);
             PLCControlUtils.RegisterAll(this.plcRulliera, this.groupBox25);
             PLCControlUtils.RegisterAll(this.plcAspirazione, this.Valvole);
+            PLCControlUtils.RegisterAll(this.plcBricc, this.tabPage12);
 
             this.plcAlarmListAspirazione.comm = this.plcAspirazione;
             this.plcAlarmListAspirazione.init();
@@ -92,6 +98,16 @@ namespace GalimbertiHMIgl
             };
             timerAspirazione.Start();
 
+            timerBricc = new System.Timers.Timer();
+            timerBricc.Interval = 500;
+            timerBricc.Elapsed += (s, e) =>
+            {
+                timerBricc.Enabled = false;
+                doLoopBricc();
+                timerBricc.Enabled = true;
+            };
+            timerBricc.Start();
+
 
             var _watcher = new FileSystemWatcher();
             _watcher.Path = ConfigurationSettings.AppSettings.Get("Folder");
@@ -113,7 +129,7 @@ namespace GalimbertiHMIgl
 
         private void cycle_alarms()
         {
-          
+
             this.plcRulliera.doWithPLC(c =>
             {
                 this.plcAlarm.PLCValue = false;
@@ -137,7 +153,7 @@ namespace GalimbertiHMIgl
                     checkAlarm(c, "RULLI_CENTRO_TAGLI.All53_Drive_Rotazione_Catenaria_C2");
                     checkAlarm(c, "RULLI_CENTRO_TAGLI.All54_Drive_Rotazione_Rulliera_R1");
                     checkAlarm(c, "RULLI_CENTRO_TAGLI.All100_Emergenza");
-                } catch(Exception ex)
+                } catch (Exception ex)
                 {
                     this.plcAlarm.PLCValue = true;
                     this.plcAlarm.PLCDescription = ex.Message;
@@ -149,9 +165,9 @@ namespace GalimbertiHMIgl
         }
 
 
-        private static void checkAlarm (IPlcDriver c,  String variable)
+        private static void checkAlarm(IPlcDriver c, String variable)
         {
-            bool presenza =  (bool)c.readBool("RULLI_CENTRO_TAGLI.RD_Anticipo_Pz_Da_Hundegger");
+            bool presenza = (bool)c.readBool("RULLI_CENTRO_TAGLI.RD_Anticipo_Pz_Da_Hundegger");
 
             if (presenza)
                 throw new Exception(variable);
@@ -211,7 +227,7 @@ namespace GalimbertiHMIgl
 
             this.plcRulliera.doWithPLC(c =>
             {
-                c.writeDouble("RULLI_CENTRO_TAGLI.RD_Larghezza_Pz_Da_Hundegger",y);
+                c.writeDouble("RULLI_CENTRO_TAGLI.RD_Larghezza_Pz_Da_Hundegger", y);
 
                 c.writeDouble("RULLI_CENTRO_TAGLI.RD_Altezza_Pz_Da_Hundegger", z);
 
@@ -231,9 +247,9 @@ namespace GalimbertiHMIgl
             doc.Load(e.FullPath);
 
             XmlNode node = doc.DocumentElement.SelectSingleNode("/RectangularPart");
-           // Double x = Double.Parse(node.Attributes["DimensionX"]?.InnerText.Replace(".", ","));
-           // Double y = Double.Parse(node.Attributes["DimensionY"]?.InnerText.Replace(".", ","));
-           // Double z = Double.Parse(node.Attributes["DimensionZ"]?.InnerText.Replace(".", ","));
+            // Double x = Double.Parse(node.Attributes["DimensionX"]?.InnerText.Replace(".", ","));
+            // Double y = Double.Parse(node.Attributes["DimensionY"]?.InnerText.Replace(".", ","));
+            // Double z = Double.Parse(node.Attributes["DimensionZ"]?.InnerText.Replace(".", ","));
 
 
             Double x = Double.Parse(node.Attributes["DimensionX"]?.InnerText.Replace(".", "."));
@@ -266,7 +282,7 @@ namespace GalimbertiHMIgl
                 if (nodes.Count > 0)
                 {
                     int frame = int.Parse(nodes[0].Attributes["FrameId"].InnerText);
-                    String setting =  ConfigurationSettings.AppSettings.Get("FrameId"+frame);
+                    String setting = ConfigurationSettings.AppSettings.Get("FrameId" + frame);
                     return int.Parse(setting);
                 }
             }
@@ -280,7 +296,7 @@ namespace GalimbertiHMIgl
 
         private void doLoopRulliera()
         {
-            this.plcConnessione.doWithUI( () => this.plcConnessione.PLCValue = this.plcRulliera.IsConnected);
+            this.plcConnessione.doWithUI(() => this.plcConnessione.PLCValue = this.plcRulliera.IsConnected);
             this.plcCiclica.doWithUI(() => this.plcCiclica.PLCValue = true);
             this.plcAnomalia.doWithUI(() => this.plcAnomalia.PLCValue = false);
             try
@@ -302,7 +318,35 @@ namespace GalimbertiHMIgl
                 }
                 this.plcCiclica.doWithUI(() => this.plcCiclica.PLCValue = false);
             }
-           
+
+        }
+
+        private void doLoopBricc()
+        {
+            this.plcConnessioneBricc.doWithUI(() => this.plcConnessioneBricc.PLCValue = this.plcBricc.IsConnected);
+            this.plcCiclicaBricc.doWithUI(() => this.plcCiclicaBricc.PLCValue = true);
+            this.plcAnomaliaBricc.doWithUI(() => this.plcAnomaliaBricc.PLCValue = false);
+            try
+            {
+                this.plcBricc.Poll();
+            }
+            catch (Exception ex)
+            {
+                this.plcAnomaliaBricc.doWithUI(() => this.plcAnomaliaBricc.PLCValue = true);
+            }
+            finally
+            {
+                if (this.plcBricc.GetReadWriteErrors().Count > 0)
+                {
+                    foreach (var err in this.plcBricc.GetReadWriteErrors())
+                    {
+                        Console.WriteLine("PLC BRICCH. ERROR : " + err);
+                    }
+                    this.plcAnomaliaBricc.doWithUI(() => this.plcAnomaliaBricc.PLCValue = true);
+                }
+                this.plcCiclicaBricc.doWithUI(() => this.plcCiclicaBricc.PLCValue = false);
+            }
+
         }
 
         private void doLoopAspirazione()
@@ -433,6 +477,11 @@ namespace GalimbertiHMIgl
         }
 
         private void tabPage4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage12_Click(object sender, EventArgs e)
         {
 
         }

@@ -27,3 +27,4 @@ C:\Users\RedRoom\Documents\Visual Studio 2015\Projects\GalimbertiHMIgl\HmiContro
 C:\Users\RedRoom\Documents\Visual Studio 2015\Projects\GalimbertiHMIgl\HmiControls\bin\Debug\TwinCAT.Ads.dll
 C:\Users\RedRoom\Documents\Visual Studio 2015\Projects\GalimbertiHMIgl\HmiControls\bin\Debug\PLCDrivers.pdb
 C:\Users\RedRoom\Documents\Visual Studio 2015\Projects\GalimbertiHMIgl\HmiControls\bin\Debug\TwinCAT.Ads.xml
+C:\Users\RedRoom\Documents\Visual Studio 2015\Projects\GalimbertiHMIgl\HmiControls\bin\Debug\EasyModbus.dll
