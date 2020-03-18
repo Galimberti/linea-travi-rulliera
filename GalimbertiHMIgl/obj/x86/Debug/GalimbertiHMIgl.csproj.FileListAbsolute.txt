@@ -33,3 +33,14 @@ C:\Users\RedRoom\Documents\Visual Studio 2015\Projects\GalimbertiHMIgl\Galimbert
 C:\Users\RedRoom\Documents\Visual Studio 2015\Projects\GalimbertiHMIgl\GalimbertiHMIgl\bin\x86\Debug\PLCDrivers.dll
 C:\Users\RedRoom\Documents\Visual Studio 2015\Projects\GalimbertiHMIgl\GalimbertiHMIgl\bin\x86\Debug\PLCDrivers.pdb
 C:\Users\RedRoom\Documents\Visual Studio 2015\Projects\GalimbertiHMIgl\GalimbertiHMIgl\bin\x86\Debug\EasyModbus.dll
+C:\Users\RedRoom\Documents\Visual Studio 2015\Projects\GalimbertiHMIgl\GalimbertiHMIgl\bin\x86\Debug\DatabaseInterface.dll
+C:\Users\RedRoom\Documents\Visual Studio 2015\Projects\GalimbertiHMIgl\GalimbertiHMIgl\bin\x86\Debug\Npgsql.dll
+C:\Users\RedRoom\Documents\Visual Studio 2015\Projects\GalimbertiHMIgl\GalimbertiHMIgl\bin\x86\Debug\System.ValueTuple.dll
+C:\Users\RedRoom\Documents\Visual Studio 2015\Projects\GalimbertiHMIgl\GalimbertiHMIgl\bin\x86\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\RedRoom\Documents\Visual Studio 2015\Projects\GalimbertiHMIgl\GalimbertiHMIgl\bin\x86\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\RedRoom\Documents\Visual Studio 2015\Projects\GalimbertiHMIgl\GalimbertiHMIgl\bin\x86\Debug\DatabaseInterface.pdb
+C:\Users\RedRoom\Documents\Visual Studio 2015\Projects\GalimbertiHMIgl\GalimbertiHMIgl\bin\x86\Debug\Npgsql.pdb
+C:\Users\RedRoom\Documents\Visual Studio 2015\Projects\GalimbertiHMIgl\GalimbertiHMIgl\bin\x86\Debug\Npgsql.xml
+C:\Users\RedRoom\Documents\Visual Studio 2015\Projects\GalimbertiHMIgl\GalimbertiHMIgl\bin\x86\Debug\System.ValueTuple.xml
+C:\Users\RedRoom\Documents\Visual Studio 2015\Projects\GalimbertiHMIgl\GalimbertiHMIgl\bin\x86\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\RedRoom\Documents\Visual Studio 2015\Projects\GalimbertiHMIgl\GalimbertiHMIgl\bin\x86\Debug\System.Runtime.CompilerServices.Unsafe.xml

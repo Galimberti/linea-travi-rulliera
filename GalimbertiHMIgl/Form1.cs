@@ -22,6 +22,7 @@ using Google.Apis.Util.Store;
 using PLCDrivers;
 using PLCDrivers.Beckhoff;
 using HmiControls;
+using DatabaseInterface;
 
 namespace GalimbertiHMIgl
 {
@@ -46,6 +47,9 @@ namespace GalimbertiHMIgl
         System.Timers.Timer timerRulliera = null;
         System.Timers.Timer timerAspirazione = null;
         System.Timers.Timer timerBricc = null;
+        System.Timers.Timer timerDatabse = null;
+
+
         private void Form1_Load(object sender, EventArgs ev)
         {
 
@@ -74,6 +78,13 @@ namespace GalimbertiHMIgl
             listView1.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
             listView1.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
             listView1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
+
+            listView2.View = View.Details;
+            listView2.Columns.Add("Data");
+            listView2.Columns.Add("Allarme");
+            listView2.GridLines = true;
+            listView2.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
+            listView2.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
 
             timerRulliera = new System.Timers.Timer();
             timerRulliera.Interval = 50;
@@ -108,6 +119,8 @@ namespace GalimbertiHMIgl
             };
             timerBricc.Start();
 
+            plcAspSelManMode.OnUIChanges += PlcAspSelManMode_OnUIChanges;
+
 
             var _watcher = new FileSystemWatcher();
             _watcher.Path = ConfigurationSettings.AppSettings.Get("Folder");
@@ -124,8 +137,31 @@ namespace GalimbertiHMIgl
             _watcher_anticipo.Created += _watcher_Created_Anticipo;
             _watcher_anticipo.Error += new ErrorEventHandler((x, y) => Console.WriteLine("Error"));
             _watcher_anticipo.EnableRaisingEvents = true;
+
+
+            timerDatabse = new System.Timers.Timer();
+            timerDatabse.Interval = 60*1000;
+            timerDatabse.Elapsed += (s, e) =>
+            {
+                timerDatabse.Enabled = false;
+                this.listView1.Invoke(new Action(
+                  () =>
+                  {
+                      aggiornaStoricoAllarmi();
+                  }
+                ));
+                timerDatabse.Enabled = true;
+            };
+            timerDatabse.Start();
         }
 
+        private void PlcAspSelManMode_OnUIChanges(PLCControl<bool> control, bool e)
+        {
+            this.plcAspirazione.doWithPLC((plc) =>
+            {
+                plc.writeBool(".HMI_Sel_Man_Mode", !e);
+            });
+        }
 
         private void cycle_alarms()
         {
@@ -386,12 +422,37 @@ namespace GalimbertiHMIgl
         }
 
 
+
+        PostgresLog log = new PostgresLog();
+
         public void aggiornaAllarmi()
         {
+
+            foreach (var al in plcAlarmListAspirazione.newAlarms)
+            {
+                log.LogAspirazione("ALARM_ACTIVE", al.Value, new TimeSpan());
+
+            }
+
             listView1.Items.Clear();
+
             foreach (var al in plcAlarmListAspirazione.activeAlarms)
             {
-                listView1.Items.Add(new ListViewItem(new string[] { al.Value }));
+                var a = new ListViewItem(new string[] { al.Value });
+                listView1.Items.Add(a);
+            }
+        }
+
+
+        public void aggiornaStoricoAllarmi()
+        {
+
+            listView2.Items.Clear();
+
+            foreach (var al in this.log.GetLogAspirazione())
+            {
+                var a = new ListViewItem(al);
+                listView2.Items.Add(a);
             }
         }
 
@@ -435,8 +496,6 @@ namespace GalimbertiHMIgl
 
         }
 
-
-        GoogleSheetLog log = new GoogleSheetLog();
         private void plcBooleanButton11_Load(object sender, EventArgs e)
         {
            
@@ -453,23 +512,6 @@ namespace GalimbertiHMIgl
             
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            log.init();
-            List<object> l = new List<object>();
-            l.Add(DateTime.Now);
-            l.Add("t1");
-            l.Add("t2");
-            l.Add("t3");
-            l.Add("t4");
-            log.addLog(l);
-
-            String connString = "Host=172.104.249.180;Username=postgres;Password=Galpwd18!;Database=mydatabase";
-
-  
-
-
-        }
 
         private void tabPage10_Click(object sender, EventArgs e)
         {
@@ -482,6 +524,11 @@ namespace GalimbertiHMIgl
         }
 
         private void tabPage12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void plcBooleanSwitchSimple4_Load(object sender, EventArgs e)
         {
 
         }

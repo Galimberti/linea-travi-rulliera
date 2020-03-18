@@ -173,6 +173,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\Desktop\Galimberti\HundeggerMessagingIpcAsService\DatabaseInterface\DatabaseInterface.csproj">
+      <Project>{64df5189-4495-46de-9e7b-d02aee185ba8}</Project>
+      <Name>DatabaseInterface</Name>
+    </ProjectReference>
     <ProjectReference Include="..\HmiControls\HmiControls.csproj">
       <Project>{3eff43dd-8893-438c-ade7-28590d2d220e}</Project>
       <Name>HmiControls</Name>

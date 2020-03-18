@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DatabaseInterface;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,6 +10,7 @@ namespace GalimbertiHMIgl
     public class PlcAlarmListAspirazione : PlcAlarmList
     {
 
+      
 
         public new void registerAlarm(string var)
         {
@@ -69,6 +71,7 @@ namespace GalimbertiHMIgl
             this.registerAlarm("Alr_Timeout_Scarico_Bricchetti_3_Ind                ");
             this.registerAlarm("Alr_Bricchettatrice_Full                                        ");
             this.registerAlarm("Alr_Container_Full                                                        ");
+            this.registerAlarm("Alr_Tubo_Ciclone_Intasato");
 
             for (int i=1; i <=42; i++)
             {

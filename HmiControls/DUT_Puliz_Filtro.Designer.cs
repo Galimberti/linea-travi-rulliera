@@ -50,7 +50,7 @@
             // btnChiudi
             // 
             this.btnChiudi.GreenMode = true;
-            this.btnChiudi.Location = new System.Drawing.Point(116, 50);
+            this.btnChiudi.Location = new System.Drawing.Point(116, 48);
             this.btnChiudi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnChiudi.Name = "btnChiudi";
             this.btnChiudi.NotMode = false;
@@ -63,7 +63,7 @@
             // btnApri
             // 
             this.btnApri.GreenMode = true;
-            this.btnApri.Location = new System.Drawing.Point(6, 50);
+            this.btnApri.Location = new System.Drawing.Point(6, 48);
             this.btnApri.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnApri.Name = "btnApri";
             this.btnApri.NotMode = false;
@@ -81,7 +81,7 @@
             this.plcBoolean1.Margin = new System.Windows.Forms.Padding(0);
             this.plcBoolean1.Name = "plcBoolean1";
             this.plcBoolean1.NotMode = false;
-            this.plcBoolean1.PLCDescription = null;
+            this.plcBoolean1.PLCDescription = "Abilitazione Manuale";
             this.plcBoolean1.PLCValue = false;
             this.plcBoolean1.Size = new System.Drawing.Size(222, 30);
             this.plcBoolean1.TabIndex = 3;

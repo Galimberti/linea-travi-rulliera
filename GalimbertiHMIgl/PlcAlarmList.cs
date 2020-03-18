@@ -14,6 +14,7 @@ namespace GalimbertiHMIgl
 
         public  List<KeyValuePair<string,string>>  alarms = new List<KeyValuePair<string, string>>();
         public  List<KeyValuePair<string, string>> activeAlarms = new List<KeyValuePair<string, string>>();
+        public List<KeyValuePair<string, string>>  newAlarms = new List<KeyValuePair<string, string>>();
 
         public void registerAlarm(string var, string message)
         {
@@ -36,6 +37,7 @@ namespace GalimbertiHMIgl
                 comm.doWithPLC(c =>
                 {
                     List<KeyValuePair<string, string>> newList = new List<KeyValuePair<string, string>>();
+                    List<KeyValuePair<string, string>> newAlarms = new List<KeyValuePair<string, string>>();
 
                     foreach (KeyValuePair<string, string> al in alarms)
                     {
@@ -51,6 +53,16 @@ namespace GalimbertiHMIgl
                         }
                     }
 
+                    foreach (KeyValuePair<string, string> al in newList)
+                    {
+                        if (!this.activeAlarms.Exists(p => p.Key == al.Key))
+                        {
+                            newAlarms.Add(al);
+                        }
+                    }
+
+
+                    this.newAlarms = newAlarms;
                     this.activeAlarms = newList;
 
                 });
