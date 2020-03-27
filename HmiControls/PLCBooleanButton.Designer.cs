@@ -33,12 +33,11 @@
             // 
             // button1
             // 
-            this.button1.AutoSize = true;
             this.button1.Dock = System.Windows.Forms.DockStyle.Top;
             this.button1.Location = new System.Drawing.Point(0, 0);
             this.button1.Margin = new System.Windows.Forms.Padding(0);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(192, 30);
+            this.button1.Size = new System.Drawing.Size(161, 25);
             this.button1.TabIndex = 0;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
@@ -52,9 +51,8 @@
             this.Controls.Add(this.button1);
             this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "PLCBooleanButton";
-            this.Size = new System.Drawing.Size(192, 57);
+            this.Size = new System.Drawing.Size(161, 57);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

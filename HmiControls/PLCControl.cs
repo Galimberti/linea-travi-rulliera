@@ -17,7 +17,45 @@ namespace GalimbertiHMIgl
         public event UIChangesEventHandler OnUIChanges;
         protected T _value;
         protected string _description;
-        protected PLC _plc;
+        public PLC _plc;
+
+        protected bool _plcError;
+
+        public PLC PLC
+        {
+            get
+            {
+                return _plc;
+            }
+
+            set
+            {
+                this._plc = value;
+            }
+        }
+
+        public bool PLCError
+        {
+            get
+            {
+                return _plcError;
+            }
+
+            set
+            {
+                if (this._plcError == value)
+                    return;
+
+                this._plcError = value;
+                if (this._plcError)
+                {
+                    this.BorderStyle = BorderStyle.FixedSingle;
+                } else
+                {
+                    this.BorderStyle = BorderStyle.None;
+                }
+            }
+        }
 
         public T PLCValue
         {
@@ -60,6 +98,7 @@ namespace GalimbertiHMIgl
             // PLCControl
             // 
             this.BackColor = System.Drawing.Color.Transparent;
+            this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "PLCControl";
             this.Size = new System.Drawing.Size(153, 27);
             this.Load += new System.EventHandler(this.PLCControl_Load);
@@ -106,6 +145,8 @@ namespace GalimbertiHMIgl
         {
             this._plc.doWithPLC(c =>
             {
+
+                
                 if (string.IsNullOrWhiteSpace(this.VariableName))
                     return;
 
@@ -128,9 +169,13 @@ namespace GalimbertiHMIgl
                         var value = Convert.ToInt16((object)e);
                         this._plc.driver.writeInt16(VariableName, value);
                     }
+
+                    this.PLCError = false;
+
                 }
                 catch (Exception ex)
                 {
+                    this.PLCError = true;
                     this._plc.readWriteError("WRITE ERROR: " + VariableName + " : " + ex.Message);
                 }
 
@@ -142,6 +187,7 @@ namespace GalimbertiHMIgl
             this._plc.doWithPLC(c =>
             {
 
+            
                 if (string.IsNullOrWhiteSpace(this.VariableName))
                     return;
 
@@ -164,9 +210,13 @@ namespace GalimbertiHMIgl
                     if (result != null)
                         this.doWithUI(() => PLCValue = (T)result);
 
+                    this.PLCError = false;
+
+
                 }
                 catch (Exception ex)
                 {
+                    this.PLCError = true;
                     this._plc.readWriteError("READING ERROR: " + VariableName + " : " + ex.Message);
                 }
 

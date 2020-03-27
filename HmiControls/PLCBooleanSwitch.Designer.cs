@@ -82,13 +82,14 @@
             this.plcBooleanOff.BackColor = System.Drawing.Color.Transparent;
             this.plcBooleanOff.Dock = System.Windows.Forms.DockStyle.Top;
             this.plcBooleanOff.GreenMode = false;
-            this.plcBooleanOff.Location = new System.Drawing.Point(0, 23);
+            this.plcBooleanOff.Location = new System.Drawing.Point(0, 25);
             this.plcBooleanOff.Margin = new System.Windows.Forms.Padding(0);
             this.plcBooleanOff.Name = "plcBooleanOff";
             this.plcBooleanOff.NotMode = true;
             this.plcBooleanOff.PLCDescription = null;
+            this.plcBooleanOff.PLCError = false;
             this.plcBooleanOff.PLCValue = false;
-            this.plcBooleanOff.Size = new System.Drawing.Size(214, 24);
+            this.plcBooleanOff.Size = new System.Drawing.Size(214, 25);
             this.plcBooleanOff.TabIndex = 2;
             this.plcBooleanOff.VariableName = null;
             // 
@@ -102,8 +103,9 @@
             this.plcBooleanOn.Name = "plcBooleanOn";
             this.plcBooleanOn.NotMode = false;
             this.plcBooleanOn.PLCDescription = null;
+            this.plcBooleanOn.PLCError = false;
             this.plcBooleanOn.PLCValue = false;
-            this.plcBooleanOn.Size = new System.Drawing.Size(214, 23);
+            this.plcBooleanOn.Size = new System.Drawing.Size(214, 25);
             this.plcBooleanOn.TabIndex = 1;
             this.plcBooleanOn.VariableName = null;
             // 

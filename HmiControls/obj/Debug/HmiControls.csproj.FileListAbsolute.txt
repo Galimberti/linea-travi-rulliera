@@ -1,6 +1,12 @@
 C:\Users\RedRoom\Documents\Visual Studio 2015\Projects\GalimbertiHMIgl\HmiControls\bin\Debug\HmiControls.dll.config
 C:\Users\RedRoom\Documents\Visual Studio 2015\Projects\GalimbertiHMIgl\HmiControls\bin\Debug\HmiControls.dll
 C:\Users\RedRoom\Documents\Visual Studio 2015\Projects\GalimbertiHMIgl\HmiControls\bin\Debug\HmiControls.pdb
+C:\Users\RedRoom\Documents\Visual Studio 2015\Projects\GalimbertiHMIgl\HmiControls\bin\Debug\PLCDrivers.dll
+C:\Users\RedRoom\Documents\Visual Studio 2015\Projects\GalimbertiHMIgl\HmiControls\bin\Debug\TwinCAT.Ads.dll
+C:\Users\RedRoom\Documents\Visual Studio 2015\Projects\GalimbertiHMIgl\HmiControls\bin\Debug\EasyModbus.dll
+C:\Users\RedRoom\Documents\Visual Studio 2015\Projects\GalimbertiHMIgl\HmiControls\bin\Debug\PLCDrivers.pdb
+C:\Users\RedRoom\Documents\Visual Studio 2015\Projects\GalimbertiHMIgl\HmiControls\bin\Debug\TwinCAT.Ads.xml
+C:\Users\RedRoom\Documents\Visual Studio 2015\Projects\GalimbertiHMIgl\HmiControls\obj\Debug\HmiControls.csprojResolveAssemblyReference.cache
 C:\Users\RedRoom\Documents\Visual Studio 2015\Projects\GalimbertiHMIgl\HmiControls\obj\Debug\HmiControls.Asse.resources
 C:\Users\RedRoom\Documents\Visual Studio 2015\Projects\GalimbertiHMIgl\HmiControls\obj\Debug\HmiControls.DUT_Filtri.resources
 C:\Users\RedRoom\Documents\Visual Studio 2015\Projects\GalimbertiHMIgl\HmiControls\obj\Debug\HmiControls.DUT_Asp_Comandi.resources
@@ -11,6 +17,9 @@ C:\Users\RedRoom\Documents\Visual Studio 2015\Projects\GalimbertiHMIgl\HmiContro
 C:\Users\RedRoom\Documents\Visual Studio 2015\Projects\GalimbertiHMIgl\HmiControls\obj\Debug\GalimbertiHMIgl.PLCBooleanSwitchSimple.resources
 C:\Users\RedRoom\Documents\Visual Studio 2015\Projects\GalimbertiHMIgl\HmiControls\obj\Debug\GalimbertiHMIgl.PLCBooleanSwitch.resources
 C:\Users\RedRoom\Documents\Visual Studio 2015\Projects\GalimbertiHMIgl\HmiControls\obj\Debug\GalimbertiHMIgl.PLCControl.resources
+C:\Users\RedRoom\Documents\Visual Studio 2015\Projects\GalimbertiHMIgl\HmiControls\obj\Debug\GalimbertiHMIgl.PLCLayout.resources
+C:\Users\RedRoom\Documents\Visual Studio 2015\Projects\GalimbertiHMIgl\HmiControls\obj\Debug\GalimbertiHMIgl.PLCListTitled.resources
+C:\Users\RedRoom\Documents\Visual Studio 2015\Projects\GalimbertiHMIgl\HmiControls\obj\Debug\GalimbertiHMIgl.PLCList.resources
 C:\Users\RedRoom\Documents\Visual Studio 2015\Projects\GalimbertiHMIgl\HmiControls\obj\Debug\GalimbertiHMIgl.PLCInt16.resources
 C:\Users\RedRoom\Documents\Visual Studio 2015\Projects\GalimbertiHMIgl\HmiControls\obj\Debug\GalimbertiHMIgl.PLCNumber.resources
 C:\Users\RedRoom\Documents\Visual Studio 2015\Projects\GalimbertiHMIgl\HmiControls\obj\Debug\GalimbertiHMIgl.PLCInt16Edit.resources
@@ -22,9 +31,3 @@ C:\Users\RedRoom\Documents\Visual Studio 2015\Projects\GalimbertiHMIgl\HmiContro
 C:\Users\RedRoom\Documents\Visual Studio 2015\Projects\GalimbertiHMIgl\HmiControls\obj\Debug\HmiControls.csproj.GenerateResource.Cache
 C:\Users\RedRoom\Documents\Visual Studio 2015\Projects\GalimbertiHMIgl\HmiControls\obj\Debug\HmiControls.dll
 C:\Users\RedRoom\Documents\Visual Studio 2015\Projects\GalimbertiHMIgl\HmiControls\obj\Debug\HmiControls.pdb
-C:\Users\RedRoom\Documents\Visual Studio 2015\Projects\GalimbertiHMIgl\HmiControls\obj\Debug\HmiControls.csprojResolveAssemblyReference.cache
-C:\Users\RedRoom\Documents\Visual Studio 2015\Projects\GalimbertiHMIgl\HmiControls\bin\Debug\PLCDrivers.dll
-C:\Users\RedRoom\Documents\Visual Studio 2015\Projects\GalimbertiHMIgl\HmiControls\bin\Debug\TwinCAT.Ads.dll
-C:\Users\RedRoom\Documents\Visual Studio 2015\Projects\GalimbertiHMIgl\HmiControls\bin\Debug\PLCDrivers.pdb
-C:\Users\RedRoom\Documents\Visual Studio 2015\Projects\GalimbertiHMIgl\HmiControls\bin\Debug\TwinCAT.Ads.xml
-C:\Users\RedRoom\Documents\Visual Studio 2015\Projects\GalimbertiHMIgl\HmiControls\bin\Debug\EasyModbus.dll

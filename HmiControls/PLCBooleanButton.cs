@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PLCDrivers;
 
 namespace GalimbertiHMIgl
 {
     public partial class PLCBooleanButton : PLCControl<Boolean>
     {
+        public Action<IPlcDriver> onPress;
+        public Action<IPlcDriver> onRelease;
 
 
 
@@ -63,11 +66,17 @@ namespace GalimbertiHMIgl
 
         private void button1_MouseDown(object sender, MouseEventArgs e)
         {
+            if (this.onPress != null)
+                this.onPress(this._plc.driver);
+
             this.fireUIChanges(true);
         }
 
         private void button1_MouseUp(object sender, MouseEventArgs e)
         {
+            if (this.onRelease != null)
+                this.onRelease(this._plc.driver);
+
             this.fireUIChanges(false);
         }
     }

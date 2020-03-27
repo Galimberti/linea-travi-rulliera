@@ -31,10 +31,13 @@ namespace GalimbertiHMIgl
         private PLC plcRulliera;
         private PLC plcBricc;
         private PLC plcAspirazione;
+        private CycleHundegger hundegger = new CycleHundegger();
         private readonly PlcAlarmListAspirazione plcAlarmListAspirazione = new PlcAlarmListAspirazione();
+        private readonly TrackingCorrentiAspirazione plcTrackingAspirazione = new TrackingCorrentiAspirazione();
 
         public Form1()
         {
+            Font = new Font(Font.Name, 8.25f * 96f / CreateGraphics().DpiX, Font.Style, Font.Unit, Font.GdiCharSet, Font.GdiVerticalFont);
 
             InitializeComponent();
         }
@@ -50,6 +53,236 @@ namespace GalimbertiHMIgl
         System.Timers.Timer timerDatabse = null;
 
 
+        public void initIOAspirazione()
+        {
+
+            this.plcGridIOAsp.Vertical = false;
+
+            this.plcGridIOAsp.push(360, 800, true);
+            this.plcGridIOAsp.CurrList.addTitle("50A9");
+            this.plcGridIOAsp.CurrList.addBool(".I_Feedback_Contattore_55KM1");
+            this.plcGridIOAsp.CurrList.addBool(".I_Feedback_Contattore_55KM2");
+
+            /*
+            this.plcGridIOAsp.CurrList.addBoolSwitchSimple(".test");
+            this.plcGridIOAsp.CurrList.addNumber(".test");
+            this.plcGridIOAsp.CurrList.addNumberEdit(".test");
+            this.plcGridIOAsp.CurrList.addBoolSwitch("A","B", ".test");
+            */
+            this.plcGridIOAsp.CurrList.addBool(".I_Feedback_Contattore_55KM4");
+            this.plcGridIOAsp.CurrList.addBool(".I_Feedback_Contattore_56KM1");
+            this.plcGridIOAsp.CurrList.addBool(".I_Feedback_Contattore_56KM2");
+            this.plcGridIOAsp.CurrList.addBool(".I_Feedback_Contattore_55KM1");
+            this.plcGridIOAsp.CurrList.addBool(".I_Feedback_Contattore_56KM3");
+            this.plcGridIOAsp.CurrList.addBool(".I_Feedback_Contattore_56KM4");
+
+            this.plcGridIOAsp.CurrList.addBool(".I_Pls_Reset_Alr");
+            this.plcGridIOAsp.CurrList.addBool(".I_Stop_Impianto_61SB2");
+            this.plcGridIOAsp.CurrList.addBool(".I_Feedback_Contattore_57KM1");
+            this.plcGridIOAsp.CurrList.addBool(".I_Free_2");
+            this.plcGridIOAsp.CurrList.addBool(".I_Stato_Interruttore_Alim_Brichettatrice_20QF1");
+            this.plcGridIOAsp.CurrList.addBool(".I_Stato_Interruttore_Rilevat_Scintille_20QF2");
+            this.plcGridIOAsp.CurrList.addBool(".I_En_Scarico_Container");
+            this.plcGridIOAsp.CurrList.addBool(".I_Ripristino_Emergenza_61SB3");
+
+            this.plcGridIOAsp.CurrList.addTitle("50A10");
+            this.plcGridIOAsp.CurrList.addBool(".I_Temperatura_Motore_Ventilatore_Aspiraz_1");
+            this.plcGridIOAsp.CurrList.addBool(".I_Temperatura_Motore_Ventilatore_Aspiraz_2");
+            this.plcGridIOAsp.CurrList.addBool(".I_Temperatura_Motore_Coclea_Estrazione");
+            this.plcGridIOAsp.CurrList.addBool(".I_Temperatura_Motore_Valvola_Stellare_Filtro");
+            this.plcGridIOAsp.CurrList.addBool(".I_Temperatura_Motore_Coclea_Bricchettatrice");
+            this.plcGridIOAsp.CurrList.addBool(".I_Temperatura_Motore_Aspirazione_Ciclone");
+            this.plcGridIOAsp.CurrList.addBool(".I_Temperatura_Motore_Valvola_Stell_Ciclone");
+            this.plcGridIOAsp.CurrList.addBool(".I_Temperatura_Motore_Nastro_Evac_Bricchetti");
+            this.plcGridIOAsp.CurrList.addBool(".I_Px_Velocita_Coclea_Estrazione");
+            this.plcGridIOAsp.CurrList.addBool(".I_Pressostato_Linea_Aria");
+            this.plcGridIOAsp.CurrList.addBool(".I_Soglia_1_Temperatura_Filtro");
+            this.plcGridIOAsp.CurrList.addBool(".I_Soglia_2_Temperatura_Filtro");
+            this.plcGridIOAsp.CurrList.addBool(".I_Px_Velocita_Valvola_Stellare_Bag");
+            this.plcGridIOAsp.CurrList.addBool(".I_Soglia_U1_Controllo_Polvere");
+            this.plcGridIOAsp.CurrList.addBool(".I_Soglia_U2_Controllo_Polvere");
+            this.plcGridIOAsp.pop();
+
+            this.plcGridIOAsp.push(360, 800, true);
+            this.plcGridIOAsp.CurrList.addTitle("50A11");
+            this.plcGridIOAsp.CurrList.addBool(".I_Px_Velocita_Coclea_Bricchettatrice");
+            this.plcGridIOAsp.CurrList.addBool(".I_FC_Apertura_Coclea_Bricchettatrice");
+            this.plcGridIOAsp.CurrList.addBool(".I_Livello_Membrana_Bricchettatrice");
+            this.plcGridIOAsp.CurrList.addBool(".I_Px_Scarico_In_Bricchettatrice");
+            this.plcGridIOAsp.CurrList.addBool(".I_Px_Scarico_In_Container");
+            this.plcGridIOAsp.CurrList.addBool(".I_Proximity_Tubo_Scarico_Silos");
+            this.plcGridIOAsp.CurrList.addBool(".I_Free_4");
+            this.plcGridIOAsp.CurrList.addBool(".I_Free_5");
+            this.plcGridIOAsp.CurrList.addBool(".I_QE_Bricchettatrice_En_Carico");
+            this.plcGridIOAsp.CurrList.addBool(".I_QE_Bricchettatrice_Scarico_Run");
+            this.plcGridIOAsp.CurrList.addBool(".I_QE_Bricchettatrice_Ok");
+            this.plcGridIOAsp.CurrList.addBool(".I_Sensore_Serranda_Ventilatore_1_Aperto");
+            this.plcGridIOAsp.CurrList.addBool(".I_Sensore_Serranda_Ventilatore_1_Chiuso");
+            this.plcGridIOAsp.CurrList.addBool(".I_Sensore_Serranda_Ventilatore_2_Aperto");
+            this.plcGridIOAsp.CurrList.addBool(".I_Sensore_Serranda_Ventilatore_2_Chiuso");
+            this.plcGridIOAsp.CurrList.addBool(".I_QE_Bricchettatrice_All_Temperatura");
+
+            this.plcGridIOAsp.CurrList.addTitle("50A12");
+            this.plcGridIOAsp.CurrList.addBool(".I_Px_Velocita_Valvola_Stellare_Ciclone");
+            this.plcGridIOAsp.CurrList.addBool(".I_Sensore_Livello_Valvola_Stellare_Ciclone");
+            this.plcGridIOAsp.CurrList.addBool(".I_QE_Bricchettatrice_Livello_Max");
+            this.plcGridIOAsp.CurrList.addBool(".I_Px_Velocita_Nastro_Bricchetti");
+            this.plcGridIOAsp.CurrList.addBool(".I_Px_Espulsione_3_Nastro_Bricchetti_IND");
+            this.plcGridIOAsp.CurrList.addBool(".I_Px_Espulsione_3_Nastro_Bricchetti_AV");
+            this.plcGridIOAsp.CurrList.addBool(".I_Px_Espulsione_2_Nastro_Bricchetti_IND");
+            this.plcGridIOAsp.CurrList.addBool(".I_Px_Espulsione_2_Nastro_Bricchetti_AV");
+            this.plcGridIOAsp.CurrList.addBool(".I_QE_Rilevatore_Scintille_Stato_1");
+            this.plcGridIOAsp.CurrList.addBool(".I_QE_Rilevatore_Scintille_Stato_2");
+            this.plcGridIOAsp.CurrList.addBool(".I_QE_Rilevatore_Scintille_Stato_3");
+            this.plcGridIOAsp.CurrList.addBool(".I_Free_9");
+            this.plcGridIOAsp.CurrList.addBool(".I_Start_Da_Macinatore");
+            this.plcGridIOAsp.CurrList.addBool(".I_Start_Macinatore_Run");
+            this.plcGridIOAsp.CurrList.addBool(".I_Px_Espulsione_1_Nastro_Bricchetti_IND");
+            this.plcGridIOAsp.CurrList.addBool(".I_Px_Espulsione_1_Nastro_Bricchetti_AV");
+            this.plcGridIOAsp.pop();
+            this.plcGridIOAsp.push(360, 800, true);
+
+            this.plcGridIOAsp.CurrList.addTitle("50A23");
+            this.plcGridIOAsp.CurrList.addNumber(".I_Px_Velocita_Valvola_Stellare_Ciclone");
+            this.plcGridIOAsp.CurrList.addNumber(".I_Sensore_Livello_Valvola_Stellare_Ciclone");
+            this.plcGridIOAsp.CurrList.addNumber(".I_QE_Bricchettatrice_Livello_Max");
+
+            this.plcGridIOAsp.CurrList.addTitle("50A25");
+            this.plcGridIOAsp.CurrList.addNumber(".I_Temperatura_Act_Colcea_Bricc");
+            this.plcGridIOAsp.CurrList.addNumber(".I_Temperatura_Act_Silos");
+
+            this.plcGridIOAsp.CurrList.addTitle("50A22");
+            this.plcGridIOAsp.CurrList.addBool(".I_Px_Serranda_Scorniciatrice_Aperta");
+            this.plcGridIOAsp.CurrList.addBool(".I_Px_Serranda_Scorniciatrice_Chiusa");
+            this.plcGridIOAsp.CurrList.addBool(".I_Px_Serranda_Multilame_Aperta");
+            this.plcGridIOAsp.CurrList.addBool(".I_Px_Serranda_Multilame_Chiusa");
+            this.plcGridIOAsp.CurrList.addBool(".I_Px_Serranda_Hundegger_Aperta");
+            this.plcGridIOAsp.CurrList.addBool(".I_Px_Serranda_Hundegger_Chiusa");
+
+
+            this.plcGridIOAsp.CurrList.addTitle("50A22");
+            this.plcGridIOAsp.CurrList.addBool(".I_Px_Serranda_Scorniciatrice_Aperta");
+            this.plcGridIOAsp.CurrList.addBool(".I_Px_Serranda_Scorniciatrice_Chiusa");
+            this.plcGridIOAsp.CurrList.addBool(".I_Px_Serranda_Multilame_Aperta");
+            this.plcGridIOAsp.CurrList.addBool(".I_Px_Serranda_Multilame_Chiusa");
+            this.plcGridIOAsp.CurrList.addBool(".I_Px_Serranda_Hundegger_Aperta");
+            this.plcGridIOAsp.CurrList.addBool(".I_Px_Serranda_Hundegger_Chiusa");
+
+            this.plcGridIOAsp.CurrList.addTitle("60A10");
+            this.plcGridIOAsp.CurrList.addBool(".I_Troncactrice_Tetti_Run");
+            this.plcGridIOAsp.CurrList.addBool(".I_Aspirazione_Lower_Run");
+            this.plcGridIOAsp.CurrList.addBool(".I_Sega_Orizzontale_Run");
+            this.plcGridIOAsp.CurrList.addBool(".I_Pialla_Filo_Run");
+            this.plcGridIOAsp.CurrList.addBool(".I_Scorniciatrice_Run");
+            this.plcGridIOAsp.CurrList.addBool(".I_Pialla_Spessore_Run");
+            this.plcGridIOAsp.CurrList.addBool(".I_Refendino_Run");
+            this.plcGridIOAsp.CurrList.addBool(".I_Reinhardt_Run");
+
+
+            this.plcGridIOAsp.CurrList.addTitle("60A11");
+            this.plcGridIOAsp.CurrList.addBool(".I_Multilame_Run");
+            this.plcGridIOAsp.CurrList.addBool(".I_Aspirazione_Pavimenti_Run");
+            this.plcGridIOAsp.CurrList.addBool(".I_Scarico_Silos_Pavimenti");
+            this.plcGridIOAsp.CurrList.addBool(".I_Macchina_12_Run");
+
+        }
+
+        public void createTrackingItem(PLCList list, String baseVar, int number)
+        {
+            for (int i = 1; i <= number; i++)
+            {
+                String varB = baseVar + "[" + i + "]";
+                list.push(210, 220, true);
+                list.addBool("Busy", varB+ ".Busy");
+                list.addNumberEdit("R", varB+ ".Rotazione");
+                list.addNumberEdit("Z", varB + ".Larghezza");
+                list.addNumberEdit("Y", varB + ".Altezza");
+                list.addNumberEdit("L", varB + ".Lunghezza");
+                list.addNumberEdit("Scar", varB + ".Lato_scarico");
+                list.addButton("Reset", "").OnUIChanges += (control, e) =>
+                {
+                    control.PLC.doWithPLC((p) =>
+                    {
+                        p.writeBool(varB + ".Busy", false);
+                        p.writeInt16(varB + ".Rotazione", 0);
+                        p.writeDouble(varB + ".Larghezza", 0.0);
+                        p.writeDouble(varB + ".Altezza", 0.0);
+                        p.writeDouble(varB + ".Lunghezza", 0.0);
+                        p.writeInt16(varB + ".Rotazione", 0);
+                    });
+                };
+ 
+
+                 list.addButton("Set", "").OnUIChanges += (control, e) =>
+                 {
+                     control.PLC.doWithPLC((p) =>
+                     {
+                         p.writeBool(varB + ".Busy", true);
+                     });
+                 };
+                list.pop();
+            }
+        }
+
+        private void Form1_OnUIChanges(PLCControl<bool> control, bool e)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void initTrackingZ1()
+        {
+
+            this.plcTracking1.Vertical = true;
+            this.plcTracking1.push(1200, 240, false, "C1");
+            createTrackingItem(this.plcTracking1, ".Buffer_C1", 6);
+            this.plcTracking1.pop();
+
+            this.plcTracking1.push(1200, 240, false, "C2");
+            createTrackingItem(this.plcTracking1, ".Buffer_C2", 6);
+            this.plcTracking1.pop();
+
+            this.plcTracking1.push(1200, 240, false, "R1");
+            createTrackingItem(this.plcTracking1, ".Buffer_R1", 6);
+            this.plcTracking1.pop();
+         
+        }
+
+        public void initTrackingZ2()
+        {
+
+            this.plcTracking2.Vertical = true;
+
+            this.plcTracking2.push(1200, 260, false);
+                this.plcTracking2.push(600, 260, false, "R2");
+                    createTrackingItem(this.plcTracking2, ".Buffer_R2", 3);
+                this.plcTracking2.pop();
+                this.plcTracking2.push(600, 260, false, "R3");
+                    createTrackingItem(this.plcTracking2, ".Buffer_R3", 3);
+                this.plcTracking2.pop();
+            this.plcTracking2.pop();
+
+            this.plcTracking2.push(1200, 240, false, "C3");
+            createTrackingItem(this.plcTracking2, ".Buffer_C3", 6);
+            this.plcTracking2.pop();
+            this.plcTracking2.push(1200, 240, false, "C4");
+            createTrackingItem(this.plcTracking2, ".Buffer_C4", 6);
+            this.plcTracking2.pop();
+            this.plcTracking2.push(1200, 240, false, "C5");
+            createTrackingItem(this.plcTracking2, ".Buffer_C5", 6);
+            this.plcTracking2.pop();
+            this.plcTracking2.push(1200, 240, false, "C6");
+            createTrackingItem(this.plcTracking2, ".Buffer_C6", 6);
+            this.plcTracking2.pop();
+
+
+
+
+        }
+
+
+
+
+
         private void Form1_Load(object sender, EventArgs ev)
         {
 
@@ -63,14 +296,23 @@ namespace GalimbertiHMIgl
             this.plcBricc.tryConnect();
 
             plcBooleanAspAlarm.register(this.plcAspirazione);
+            this.initTrackingZ1();
+            this.initTrackingZ2();
+            this.initIOAspirazione();
+         
 
             PLCControlUtils.RegisterAll(this.plcRulliera, this.tabControl3);
+            PLCControlUtils.RegisterAll(this.plcRulliera, this.tabControl1);
             PLCControlUtils.RegisterAll(this.plcRulliera, this.groupBox25);
             PLCControlUtils.RegisterAll(this.plcAspirazione, this.Valvole);
             PLCControlUtils.RegisterAll(this.plcBricc, this.tabPage12);
 
             this.plcAlarmListAspirazione.comm = this.plcAspirazione;
             this.plcAlarmListAspirazione.init();
+
+            this.plcTrackingAspirazione.comm = this.plcAspirazione;
+            this.plcTrackingAspirazione.log = this.log;
+            this.plcTrackingAspirazione.Init();
 
             listView1.View = View.Details;
             listView1.Columns.Add("Allarme");
@@ -86,13 +328,14 @@ namespace GalimbertiHMIgl
             listView2.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
             listView2.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
 
+            this.hundegger.init(this.plcRulliera);
+
             timerRulliera = new System.Timers.Timer();
             timerRulliera.Interval = 50;
             timerRulliera.Elapsed += (s, e) =>
             {
                 timerRulliera.Enabled = false;
                 doLoopRulliera();
-                this.cycle();
                 this.cycle_alarms();
                 timerRulliera.Enabled = true;
             };
@@ -122,22 +365,7 @@ namespace GalimbertiHMIgl
             plcAspSelManMode.OnUIChanges += PlcAspSelManMode_OnUIChanges;
 
 
-            var _watcher = new FileSystemWatcher();
-            _watcher.Path = ConfigurationSettings.AppSettings.Get("Folder");
-            _watcher.NotifyFilter = NotifyFilters.LastWrite | NotifyFilters.FileName;
-            _watcher.Filter = "*_7.xml";
-            _watcher.Created += _watcher_Created;
-            _watcher.Error += new ErrorEventHandler((x, y) => Console.WriteLine("Error"));
-            _watcher.EnableRaisingEvents = true;
-
-            var _watcher_anticipo = new FileSystemWatcher();
-            _watcher_anticipo.Path = ConfigurationSettings.AppSettings.Get("Folder");
-            _watcher_anticipo.NotifyFilter = NotifyFilters.LastWrite | NotifyFilters.FileName;
-            _watcher_anticipo.Filter = "*_1.xml";
-            _watcher_anticipo.Created += _watcher_Created_Anticipo;
-            _watcher_anticipo.Error += new ErrorEventHandler((x, y) => Console.WriteLine("Error"));
-            _watcher_anticipo.EnableRaisingEvents = true;
-
+        
 
             timerDatabse = new System.Timers.Timer();
             timerDatabse.Interval = 60*1000;
@@ -148,6 +376,7 @@ namespace GalimbertiHMIgl
                   () =>
                   {
                       aggiornaStoricoAllarmi();
+                      
                   }
                 ));
                 timerDatabse.Enabled = true;
@@ -210,126 +439,7 @@ namespace GalimbertiHMIgl
 
         }
 
-        bool prev_WR_En_Anticipo_Hundegger = false;
-        private void cycle()
-        {
-
-            this.plcRulliera.doWithPLC(c =>
-            {
-                bool presenza = c.readBool("RULLI_CENTRO_TAGLI.RD_Anticipo_Pz_Da_Hundegger");
-                bool presenzaAck = c.readBool("RULLI_CENTRO_TAGLI.WR_En_Anticipo_Pz_Hundegger");
-
-                if (presenza && presenzaAck)
-                {
-                    c.writeBool("RULLI_CENTRO_TAGLI.RD_Anticipo_Pz_Da_Hundegger", false);
-                }
-            });
-
-
-
-            this.plcRulliera.doWithPLC(c =>
-            {
-
-                bool presenza = c.readBool("RULLI_CENTRO_TAGLI.RD_Presenza_Pz_Da_Hundegger");
-                bool presenzaAck = c.readBool("RULLI_CENTRO_TAGLI.WR_En_Scarico_Hundegger");
-                if (presenza && presenzaAck)
-                {
-                    c.writeBool("RULLI_CENTRO_TAGLI.RD_Presenza_Pz_Da_Hundegger", false);
-                }
-            });
-        }
-
-
-        private void _watcher_Created(object sender, FileSystemEventArgs e)
-        {
-
-            while (!IsFileReady(e.FullPath)) ;
-
-            XmlDocument doc = new XmlDocument();
-            doc.Load(e.FullPath);
-
-            XmlNode node = doc.DocumentElement.SelectSingleNode("/RectangularPart");
-            //Double x = Double.Parse(node.Attributes["DimensionX"]?.InnerText.Replace(".",","));
-            //Double y = Double.Parse(node.Attributes["DimensionY"]?.InnerText.Replace(".", ","));
-            //Double z = Double.Parse(node.Attributes["DimensionZ"]?.InnerText.Replace(".", ","));
-
-            Double x = Double.Parse(node.Attributes["DimensionX"]?.InnerText.Replace(".", "."));
-            Double y = Double.Parse(node.Attributes["DimensionY"]?.InnerText.Replace(".", "."));
-            Double z = Double.Parse(node.Attributes["DimensionZ"]?.InnerText.Replace(".", "."));
-
-            if (x < 500)
-                return;
-
-
-            this.plcRulliera.doWithPLC(c =>
-            {
-                c.writeDouble("RULLI_CENTRO_TAGLI.RD_Larghezza_Pz_Da_Hundegger", y);
-
-                c.writeDouble("RULLI_CENTRO_TAGLI.RD_Altezza_Pz_Da_Hundegger", z);
-
-                c.writeDouble("RULLI_CENTRO_TAGLI.RD_Rotazione_Pz_Da_Hundegger", getRotation(doc));
-
-                c.writeBool("RULLI_CENTRO_TAGLI.RD_Presenza_Pz_Da_Hundegger", true);
-
-            });
-
-        }
-
-        private void _watcher_Created_Anticipo(object sender, FileSystemEventArgs e)
-        {
-            while (!IsFileReady(e.FullPath)) ;
-
-            XmlDocument doc = new XmlDocument();
-            doc.Load(e.FullPath);
-
-            XmlNode node = doc.DocumentElement.SelectSingleNode("/RectangularPart");
-            // Double x = Double.Parse(node.Attributes["DimensionX"]?.InnerText.Replace(".", ","));
-            // Double y = Double.Parse(node.Attributes["DimensionY"]?.InnerText.Replace(".", ","));
-            // Double z = Double.Parse(node.Attributes["DimensionZ"]?.InnerText.Replace(".", ","));
-
-
-            Double x = Double.Parse(node.Attributes["DimensionX"]?.InnerText.Replace(".", "."));
-            Double y = Double.Parse(node.Attributes["DimensionY"]?.InnerText.Replace(".", "."));
-            Double z = Double.Parse(node.Attributes["DimensionZ"]?.InnerText.Replace(".", "."));
-
-            if (x < 500)
-                return;
-
-
-            this.plcRulliera.doWithPLC(c =>
-            {
-                c.writeDouble("RULLI_CENTRO_TAGLI.RD_Larghezza_Anticipo_Pz_Da_Hundegger", y);
-
-                c.writeDouble("RULLI_CENTRO_TAGLI.RD_Altezza_Anticipo_Pz_Da_Hundegger", z);
-
-                c.writeBool("RULLI_CENTRO_TAGLI.RD_Anticipo_Pz_Da_Hundegger", true);
-
-            });
-
-        }
-
-
-        public int getRotation(XmlDocument doc)
-        {
-            try
-            {
-                var nodes = doc.DocumentElement.SelectNodes("//StandardFrame[@Attributes='VisibleFace']");
-
-                if (nodes.Count > 0)
-                {
-                    int frame = int.Parse(nodes[0].Attributes["FrameId"].InnerText);
-                    String setting = ConfigurationSettings.AppSettings.Get("FrameId" + frame);
-                    return int.Parse(setting);
-                }
-            }
-            catch (Exception ex)
-            {
-
-            }
-            return 99;
-        }
-
-
+     
         private void doLoopRulliera()
         {
             this.plcConnessione.doWithUI(() => this.plcConnessione.PLCValue = this.plcRulliera.IsConnected);
@@ -402,7 +512,7 @@ namespace GalimbertiHMIgl
             {
                 if (this.plcAspirazione.GetReadWriteErrors().Count > 0)
                 {
-                    foreach (var err in this.plcAspirazione.GetReadWriteErrors())
+                    foreach (var err in this.plcAspirazione.GetReadWriteErrors().ToArray())
                     {
                         Console.WriteLine("PLC ASPIRAZIONE ERROR : " + err);
                     }
@@ -443,7 +553,6 @@ namespace GalimbertiHMIgl
             }
         }
 
-
         public void aggiornaStoricoAllarmi()
         {
 
@@ -456,21 +565,7 @@ namespace GalimbertiHMIgl
             }
         }
 
-        public static bool IsFileReady(string filename)
-        {
-            // If the file can be opened for exclusive access it means that the file
-            // is no longer locked by another process.
-            try
-            {
-                using (FileStream inputStream = File.Open(filename, FileMode.Open, FileAccess.Read, FileShare.None))
-                    return inputStream.Length > 0;
-            }
-            catch (Exception)
-            {
-                return false;
-            }
-        }
-
+      
         private void groupBox7_Enter(object sender, EventArgs e)
         {
 
@@ -529,6 +624,16 @@ namespace GalimbertiHMIgl
         }
 
         private void plcBooleanSwitchSimple4_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void plcBooleanSwitchSimple2_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void plcNumberEdit26_Load(object sender, EventArgs e)
         {
 
         }

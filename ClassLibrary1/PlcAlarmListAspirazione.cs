@@ -72,6 +72,8 @@ namespace GalimbertiHMIgl
             this.registerAlarm("Alr_Bricchettatrice_Full                                        ");
             this.registerAlarm("Alr_Container_Full                                                        ");
             this.registerAlarm("Alr_Tubo_Ciclone_Intasato");
+            this.registerAlarm("Alr_Compressore_Spento");
+            this.registerAlarm("Alr_Ev_Pulizia_Filtri_Bloccata_Aperta");
 
             for (int i=1; i <=42; i++)
             {

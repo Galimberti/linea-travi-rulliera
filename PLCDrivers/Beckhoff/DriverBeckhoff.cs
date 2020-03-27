@@ -104,6 +104,25 @@ namespace PLCDrivers.Beckhoff
             }
         }
 
+        public override int readInt32(string var)
+        {
+            lock (this.syncLock)
+            {
+                return (Int16)this.client.ReadSymbol(
+                   var, typeof(Int32),
+                   reloadSymbolInfo: false);
+            }
+        }
+
+        public override void writeInt32(string var, Int32 value)
+        {
+            lock (this.syncLock)
+            {
+                this.client.WriteSymbol(var,
+                    value,
+                     reloadSymbolInfo: false);
+            }
+        }
     }
    
 }

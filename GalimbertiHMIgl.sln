@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PLCDrivers", "PLCDrivers\PL
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseInterface", "..\..\..\..\Desktop\Galimberti\HundeggerMessagingIpcAsService\DatabaseInterface\DatabaseInterface.csproj", "{64DF5189-4495-46DE-9E7B-D02AEE185BA8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GalimbertiCycle", "ClassLibrary1\GalimbertiCycle.csproj", "{D626BB32-804B-48E6-A6CD-1D7A132C1452}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GalimbertiServerService", "GalimbertiServerService\GalimbertiServerService.csproj", "{D2F03699-B9D1-4D83-96EA-8B7F3B936985}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +73,30 @@ Global
 		{64DF5189-4495-46DE-9E7B-D02AEE185BA8}.Release|x64.Build.0 = Release|Any CPU
 		{64DF5189-4495-46DE-9E7B-D02AEE185BA8}.Release|x86.ActiveCfg = Release|Any CPU
 		{64DF5189-4495-46DE-9E7B-D02AEE185BA8}.Release|x86.Build.0 = Release|Any CPU
+		{D626BB32-804B-48E6-A6CD-1D7A132C1452}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D626BB32-804B-48E6-A6CD-1D7A132C1452}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D626BB32-804B-48E6-A6CD-1D7A132C1452}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{D626BB32-804B-48E6-A6CD-1D7A132C1452}.Debug|x64.Build.0 = Debug|Any CPU
+		{D626BB32-804B-48E6-A6CD-1D7A132C1452}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D626BB32-804B-48E6-A6CD-1D7A132C1452}.Debug|x86.Build.0 = Debug|Any CPU
+		{D626BB32-804B-48E6-A6CD-1D7A132C1452}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D626BB32-804B-48E6-A6CD-1D7A132C1452}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D626BB32-804B-48E6-A6CD-1D7A132C1452}.Release|x64.ActiveCfg = Release|Any CPU
+		{D626BB32-804B-48E6-A6CD-1D7A132C1452}.Release|x64.Build.0 = Release|Any CPU
+		{D626BB32-804B-48E6-A6CD-1D7A132C1452}.Release|x86.ActiveCfg = Release|Any CPU
+		{D626BB32-804B-48E6-A6CD-1D7A132C1452}.Release|x86.Build.0 = Release|Any CPU
+		{D2F03699-B9D1-4D83-96EA-8B7F3B936985}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2F03699-B9D1-4D83-96EA-8B7F3B936985}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2F03699-B9D1-4D83-96EA-8B7F3B936985}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{D2F03699-B9D1-4D83-96EA-8B7F3B936985}.Debug|x64.Build.0 = Debug|Any CPU
+		{D2F03699-B9D1-4D83-96EA-8B7F3B936985}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D2F03699-B9D1-4D83-96EA-8B7F3B936985}.Debug|x86.Build.0 = Debug|Any CPU
+		{D2F03699-B9D1-4D83-96EA-8B7F3B936985}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2F03699-B9D1-4D83-96EA-8B7F3B936985}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2F03699-B9D1-4D83-96EA-8B7F3B936985}.Release|x64.ActiveCfg = Release|Any CPU
+		{D2F03699-B9D1-4D83-96EA-8B7F3B936985}.Release|x64.Build.0 = Release|Any CPU
+		{D2F03699-B9D1-4D83-96EA-8B7F3B936985}.Release|x86.ActiveCfg = Release|Any CPU
+		{D2F03699-B9D1-4D83-96EA-8B7F3B936985}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

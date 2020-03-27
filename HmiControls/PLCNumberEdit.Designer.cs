@@ -93,6 +93,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.tableLayoutPanel1);
+            this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "PLCNumberEdit";
             this.Size = new System.Drawing.Size(421, 67);
             this.tableLayoutPanel1.ResumeLayout(false);

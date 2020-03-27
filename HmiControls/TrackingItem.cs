@@ -37,7 +37,6 @@ namespace HmiControls
                 // this.plcLargh.VariableName = this.VariableName + ".Rotazione";
                 this.plcLargh.VariableName = this._variableName + ".Larghezza";
                 this.plcAlt.VariableName = this._variableName + ".Altezza";
-               
             }
         }
 

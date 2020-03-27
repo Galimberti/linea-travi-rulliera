@@ -80,5 +80,15 @@ namespace PLCDrivers.Beckhoff
         {
             throw new NotImplementedException();
         }
+
+        public override int readInt32(string var)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void writeInt32(string var, int value)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

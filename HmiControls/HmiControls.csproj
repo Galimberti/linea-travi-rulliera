@@ -108,6 +108,24 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="PLCControlUtils.cs" />
+    <Compile Include="PLCLayout.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PLCLayout.Designer.cs">
+      <DependentUpon>PLCLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PLCListTitled.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PLCListTitled.Designer.cs">
+      <DependentUpon>PLCListTitled.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PLCList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PLCList.Designer.cs">
+      <DependentUpon>PLCList.cs</DependentUpon>
+    </Compile>
     <Compile Include="PLCInt16.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -185,6 +203,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PLCControl.resx">
       <DependentUpon>PLCControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PLCLayout.resx">
+      <DependentUpon>PLCLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PLCListTitled.resx">
+      <DependentUpon>PLCListTitled.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PLCList.resx">
+      <DependentUpon>PLCList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PLCInt16.resx">
       <DependentUpon>PLCInt16.cs</DependentUpon>
