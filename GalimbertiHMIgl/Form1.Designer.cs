@@ -36,7 +36,6 @@
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.groupBox23 = new System.Windows.Forms.GroupBox();
-            this.plcAlarm = new GalimbertiHMIgl.PLCBoolean();
             this.plcBooleanButton12 = new GalimbertiHMIgl.PLCBooleanButton();
             this.groupBox14 = new System.Windows.Forms.GroupBox();
             this.plcBooleanSwitch4 = new GalimbertiHMIgl.PLCBooleanSwitch();
@@ -134,6 +133,8 @@
             this.plcNumber8 = new GalimbertiHMIgl.PLCNumber();
             this.plcNumber9 = new GalimbertiHMIgl.PLCNumber();
             this.plcNumber10 = new GalimbertiHMIgl.PLCNumber();
+            this.Tracking = new System.Windows.Forms.TabPage();
+            this.plcTracking1 = new GalimbertiHMIgl.PLCList();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.groupBox19 = new System.Windows.Forms.GroupBox();
             this.plcNumberEdit29 = new GalimbertiHMIgl.PLCNumberEdit();
@@ -147,31 +148,6 @@
             this.plcNumberEdit27 = new GalimbertiHMIgl.PLCNumberEdit();
             this.plcNumberEdit28 = new GalimbertiHMIgl.PLCNumberEdit();
             this.plcBoolean60 = new GalimbertiHMIgl.PLCBoolean();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.plcBooleanButton3 = new GalimbertiHMIgl.PLCBooleanButton();
-            this.plcBooleanButton2 = new GalimbertiHMIgl.PLCBooleanButton();
-            this.plcBooleanButton1 = new GalimbertiHMIgl.PLCBooleanButton();
-            this.groupBox11 = new System.Windows.Forms.GroupBox();
-            this.trackingItem18 = new HmiControls.TrackingItem();
-            this.trackingItem13 = new HmiControls.TrackingItem();
-            this.trackingItem14 = new HmiControls.TrackingItem();
-            this.trackingItem15 = new HmiControls.TrackingItem();
-            this.trackingItem16 = new HmiControls.TrackingItem();
-            this.trackingItem17 = new HmiControls.TrackingItem();
-            this.groupBox10 = new System.Windows.Forms.GroupBox();
-            this.trackingItem12 = new HmiControls.TrackingItem();
-            this.trackingItem7 = new HmiControls.TrackingItem();
-            this.trackingItem8 = new HmiControls.TrackingItem();
-            this.trackingItem9 = new HmiControls.TrackingItem();
-            this.trackingItem10 = new HmiControls.TrackingItem();
-            this.trackingItem11 = new HmiControls.TrackingItem();
-            this.groupBox9 = new System.Windows.Forms.GroupBox();
-            this.trackingItem1 = new HmiControls.TrackingItem();
-            this.trackingItem6 = new HmiControls.TrackingItem();
-            this.trackingItem5 = new HmiControls.TrackingItem();
-            this.trackingItem4 = new HmiControls.TrackingItem();
-            this.trackingItem3 = new HmiControls.TrackingItem();
-            this.trackingItem2 = new HmiControls.TrackingItem();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.groupBox17 = new System.Windows.Forms.GroupBox();
             this.plcNumberEdit18 = new GalimbertiHMIgl.PLCNumberEdit();
@@ -203,17 +179,16 @@
             this.plcNumberEdit3 = new GalimbertiHMIgl.PLCNumberEdit();
             this.plcNumberEdit1 = new GalimbertiHMIgl.PLCNumberEdit();
             this.plcNumberEdit2 = new GalimbertiHMIgl.PLCNumberEdit();
-            this.tabPage17 = new System.Windows.Forms.TabPage();
-            this.plcTracking1 = new GalimbertiHMIgl.PLCList();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.listViewAlZ1 = new System.Windows.Forms.ListView();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tracking2 = new System.Windows.Forms.TabControl();
             this.tabPage13 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.groupBox32 = new System.Windows.Forms.GroupBox();
             this.plcBooleanButton20 = new GalimbertiHMIgl.PLCBooleanButton();
             this.groupBox31 = new System.Windows.Forms.GroupBox();
-            this.plcBoolean79 = new GalimbertiHMIgl.PLCBoolean();
             this.plcBooleanButton11 = new GalimbertiHMIgl.PLCBooleanButton();
             this.groupBox33 = new System.Windows.Forms.GroupBox();
             this.plcBoolean80 = new GalimbertiHMIgl.PLCBoolean();
@@ -227,46 +202,13 @@
             this.groupBox37 = new System.Windows.Forms.GroupBox();
             this.groupBox38 = new System.Windows.Forms.GroupBox();
             this.groupBox39 = new System.Windows.Forms.GroupBox();
-            this.tabPage15 = new System.Windows.Forms.TabPage();
-            this.groupBox40 = new System.Windows.Forms.GroupBox();
-            this.trackingItem31 = new HmiControls.TrackingItem();
-            this.trackingItem32 = new HmiControls.TrackingItem();
-            this.trackingItem33 = new HmiControls.TrackingItem();
-            this.groupBox36 = new System.Windows.Forms.GroupBox();
-            this.trackingItem43 = new HmiControls.TrackingItem();
-            this.trackingItem44 = new HmiControls.TrackingItem();
-            this.trackingItem45 = new HmiControls.TrackingItem();
-            this.trackingItem46 = new HmiControls.TrackingItem();
-            this.trackingItem47 = new HmiControls.TrackingItem();
-            this.trackingItem48 = new HmiControls.TrackingItem();
-            this.groupBox35 = new System.Windows.Forms.GroupBox();
-            this.trackingItem37 = new HmiControls.TrackingItem();
-            this.trackingItem38 = new HmiControls.TrackingItem();
-            this.trackingItem39 = new HmiControls.TrackingItem();
-            this.trackingItem40 = new HmiControls.TrackingItem();
-            this.trackingItem41 = new HmiControls.TrackingItem();
-            this.trackingItem42 = new HmiControls.TrackingItem();
-            this.groupBox42 = new System.Windows.Forms.GroupBox();
-            this.trackingItem19 = new HmiControls.TrackingItem();
-            this.trackingItem20 = new HmiControls.TrackingItem();
-            this.trackingItem21 = new HmiControls.TrackingItem();
-            this.trackingItem22 = new HmiControls.TrackingItem();
-            this.trackingItem23 = new HmiControls.TrackingItem();
-            this.trackingItem24 = new HmiControls.TrackingItem();
-            this.groupBox43 = new System.Windows.Forms.GroupBox();
-            this.trackingItem25 = new HmiControls.TrackingItem();
-            this.trackingItem26 = new HmiControls.TrackingItem();
-            this.trackingItem27 = new HmiControls.TrackingItem();
-            this.trackingItem28 = new HmiControls.TrackingItem();
-            this.trackingItem29 = new HmiControls.TrackingItem();
-            this.trackingItem30 = new HmiControls.TrackingItem();
-            this.groupBox45 = new System.Windows.Forms.GroupBox();
-            this.trackingItem34 = new HmiControls.TrackingItem();
-            this.trackingItem35 = new HmiControls.TrackingItem();
-            this.trackingItem36 = new HmiControls.TrackingItem();
+            this.tabPage18 = new System.Windows.Forms.TabPage();
+            this.plcTracking2 = new GalimbertiHMIgl.PLCList();
             this.tabPage16 = new System.Windows.Forms.TabPage();
             this.groupBox41 = new System.Windows.Forms.GroupBox();
             this.plcNumberEdit39 = new GalimbertiHMIgl.PLCNumberEdit();
+            this.tabPage15 = new System.Windows.Forms.TabPage();
+            this.listAlarmZ2 = new System.Windows.Forms.ListView();
             this.Aspirazione = new System.Windows.Forms.TabPage();
             this.Valvole = new System.Windows.Forms.TabControl();
             this.tabPage10 = new System.Windows.Forms.TabPage();
@@ -338,12 +280,14 @@
             this.plcInt161 = new GalimbertiHMIgl.PLCInt16();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.plcAllarBricch = new GalimbertiHMIgl.PLCBoolean();
+            this.plcAlarmAsp = new GalimbertiHMIgl.PLCBoolean();
+            this.plcAlarmZ2 = new GalimbertiHMIgl.PLCBoolean();
+            this.plcAlarmZ1 = new GalimbertiHMIgl.PLCBoolean();
             this.groupBox28 = new System.Windows.Forms.GroupBox();
-            this.plcAllarmeBricch = new GalimbertiHMIgl.PLCBoolean();
             this.plcAnomaliaBricc = new GalimbertiHMIgl.PLCBoolean();
             this.plcCiclicaBricc = new GalimbertiHMIgl.PLCBoolean();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.plcBooleanAspAlarm = new GalimbertiHMIgl.PLCBoolean();
             this.plcAnomaliaAsp = new GalimbertiHMIgl.PLCBoolean();
             this.plcCiclicaAsp = new GalimbertiHMIgl.PLCBoolean();
             this.groupBox25 = new System.Windows.Forms.GroupBox();
@@ -360,8 +304,10 @@
             this.plcConnessione = new GalimbertiHMIgl.PLCBoolean();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.tabPage18 = new System.Windows.Forms.TabPage();
-            this.plcTracking2 = new GalimbertiHMIgl.PLCList();
+            this.tabPage17 = new System.Windows.Forms.TabPage();
+            this.listViewStoricoAlarmZ1 = new System.Windows.Forms.ListView();
+            this.tabPage19 = new System.Windows.Forms.TabPage();
+            this.listViewStoricoAlarmZ2 = new System.Windows.Forms.ListView();
             tabControlAsp = new System.Windows.Forms.TabControl();
             tabControlAsp.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -383,13 +329,10 @@
             this.groupBox22.SuspendLayout();
             this.groupBox21.SuspendLayout();
             this.groupBox20.SuspendLayout();
+            this.Tracking.SuspendLayout();
             this.tabPage6.SuspendLayout();
             this.groupBox19.SuspendLayout();
             this.groupBox18.SuspendLayout();
-            this.tabPage3.SuspendLayout();
-            this.groupBox11.SuspendLayout();
-            this.groupBox10.SuspendLayout();
-            this.groupBox9.SuspendLayout();
             this.tabPage5.SuspendLayout();
             this.groupBox17.SuspendLayout();
             this.groupBox16.SuspendLayout();
@@ -397,9 +340,9 @@
             this.groupBox4.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox5.SuspendLayout();
-            this.tabPage17.SuspendLayout();
+            this.tabPage3.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.tabControl1.SuspendLayout();
+            this.tracking2.SuspendLayout();
             this.tabPage13.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -409,15 +352,10 @@
             this.groupBox34.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             this.panel11.SuspendLayout();
-            this.tabPage15.SuspendLayout();
-            this.groupBox40.SuspendLayout();
-            this.groupBox36.SuspendLayout();
-            this.groupBox35.SuspendLayout();
-            this.groupBox42.SuspendLayout();
-            this.groupBox43.SuspendLayout();
-            this.groupBox45.SuspendLayout();
+            this.tabPage18.SuspendLayout();
             this.tabPage16.SuspendLayout();
             this.groupBox41.SuspendLayout();
+            this.tabPage15.SuspendLayout();
             this.Aspirazione.SuspendLayout();
             this.Valvole.SuspendLayout();
             this.tabPage10.SuspendLayout();
@@ -442,7 +380,8 @@
             this.groupBox13.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.tabPage18.SuspendLayout();
+            this.tabPage17.SuspendLayout();
+            this.tabPage19.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControlAsp
@@ -474,9 +413,10 @@
             // tabControl3
             // 
             this.tabControl3.Controls.Add(this.Sinottico);
+            this.tabControl3.Controls.Add(this.Tracking);
             this.tabControl3.Controls.Add(this.tabPage6);
-            this.tabControl3.Controls.Add(this.tabPage3);
             this.tabControl3.Controls.Add(this.tabPage5);
+            this.tabControl3.Controls.Add(this.tabPage3);
             this.tabControl3.Controls.Add(this.tabPage17);
             this.tabControl3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl3.Location = new System.Drawing.Point(3, 2);
@@ -529,32 +469,15 @@
             // 
             // groupBox23
             // 
-            this.groupBox23.Controls.Add(this.plcAlarm);
             this.groupBox23.Controls.Add(this.plcBooleanButton12);
             this.groupBox23.Location = new System.Drawing.Point(732, 5);
             this.groupBox23.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox23.Name = "groupBox23";
             this.groupBox23.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox23.Size = new System.Drawing.Size(541, 91);
+            this.groupBox23.Size = new System.Drawing.Size(201, 91);
             this.groupBox23.TabIndex = 10;
             this.groupBox23.TabStop = false;
             this.groupBox23.Text = "Allarmi";
-            // 
-            // plcAlarm
-            // 
-            this.plcAlarm.BackColor = System.Drawing.Color.Transparent;
-            this.plcAlarm.GreenMode = false;
-            this.plcAlarm.Location = new System.Drawing.Point(15, 17);
-            this.plcAlarm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.plcAlarm.Name = "plcAlarm";
-            this.plcAlarm.NotMode = false;
-            this.plcAlarm.PLC = null;
-            this.plcAlarm.PLCDescription = "";
-            this.plcAlarm.PLCError = false;
-            this.plcAlarm.PLCValue = false;
-            this.plcAlarm.Size = new System.Drawing.Size(520, 26);
-            this.plcAlarm.TabIndex = 18;
-            this.plcAlarm.VariableName = "";
             // 
             // plcBooleanButton12
             // 
@@ -567,7 +490,7 @@
             this.plcBooleanButton12.PLCDescription = "Reset";
             this.plcBooleanButton12.PLCError = false;
             this.plcBooleanButton12.PLCValue = false;
-            this.plcBooleanButton12.Size = new System.Drawing.Size(520, 25);
+            this.plcBooleanButton12.Size = new System.Drawing.Size(167, 25);
             this.plcBooleanButton12.TabIndex = 15;
             this.plcBooleanButton12.VariableName = "RULLI_CENTRO_TAGLI.Hmi_Pls_Rst_Allarmi";
             // 
@@ -2107,6 +2030,27 @@
             this.plcNumber10.TabIndex = 0;
             this.plcNumber10.VariableName = "RULLI_CENTRO_TAGLI.Act_Step_Ciclo_C1_Polmone_Auto";
             // 
+            // Tracking
+            // 
+            this.Tracking.BackColor = System.Drawing.SystemColors.Control;
+            this.Tracking.Controls.Add(this.plcTracking1);
+            this.Tracking.Location = new System.Drawing.Point(4, 25);
+            this.Tracking.Name = "Tracking";
+            this.Tracking.Padding = new System.Windows.Forms.Padding(3);
+            this.Tracking.Size = new System.Drawing.Size(1713, 814);
+            this.Tracking.TabIndex = 5;
+            this.Tracking.Text = "Tracking";
+            // 
+            // plcTracking1
+            // 
+            this.plcTracking1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.plcTracking1.Location = new System.Drawing.Point(3, 3);
+            this.plcTracking1.Margin = new System.Windows.Forms.Padding(0);
+            this.plcTracking1.Name = "plcTracking1";
+            this.plcTracking1.Size = new System.Drawing.Size(1707, 808);
+            this.plcTracking1.TabIndex = 0;
+            this.plcTracking1.Vertical = false;
+            // 
             // tabPage6
             // 
             this.tabPage6.BackColor = System.Drawing.SystemColors.Control;
@@ -2293,281 +2237,6 @@
             this.plcBoolean60.Size = new System.Drawing.Size(302, 25);
             this.plcBoolean60.TabIndex = 5;
             this.plcBoolean60.VariableName = "RULLI_CENTRO_TAGLI.WR_En_Anticipo_Pz_Hundegger";
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage3.Controls.Add(this.plcBooleanButton3);
-            this.tabPage3.Controls.Add(this.plcBooleanButton2);
-            this.tabPage3.Controls.Add(this.plcBooleanButton1);
-            this.tabPage3.Controls.Add(this.groupBox11);
-            this.tabPage3.Controls.Add(this.groupBox10);
-            this.tabPage3.Controls.Add(this.groupBox9);
-            this.tabPage3.Location = new System.Drawing.Point(4, 25);
-            this.tabPage3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage3.Size = new System.Drawing.Size(1713, 814);
-            this.tabPage3.TabIndex = 1;
-            this.tabPage3.Text = "Tracking";
-            // 
-            // plcBooleanButton3
-            // 
-            this.plcBooleanButton3.GreenMode = true;
-            this.plcBooleanButton3.Location = new System.Drawing.Point(1001, 471);
-            this.plcBooleanButton3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.plcBooleanButton3.Name = "plcBooleanButton3";
-            this.plcBooleanButton3.NotMode = false;
-            this.plcBooleanButton3.PLC = null;
-            this.plcBooleanButton3.PLCDescription = "Reset R1";
-            this.plcBooleanButton3.PLCError = false;
-            this.plcBooleanButton3.PLCValue = false;
-            this.plcBooleanButton3.Size = new System.Drawing.Size(100, 86);
-            this.plcBooleanButton3.TabIndex = 13;
-            this.plcBooleanButton3.VariableName = null;
-            // 
-            // plcBooleanButton2
-            // 
-            this.plcBooleanButton2.GreenMode = true;
-            this.plcBooleanButton2.Location = new System.Drawing.Point(999, 284);
-            this.plcBooleanButton2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.plcBooleanButton2.Name = "plcBooleanButton2";
-            this.plcBooleanButton2.NotMode = false;
-            this.plcBooleanButton2.PLC = null;
-            this.plcBooleanButton2.PLCDescription = "Reset C2";
-            this.plcBooleanButton2.PLCError = false;
-            this.plcBooleanButton2.PLCValue = false;
-            this.plcBooleanButton2.Size = new System.Drawing.Size(100, 86);
-            this.plcBooleanButton2.TabIndex = 12;
-            this.plcBooleanButton2.VariableName = null;
-            // 
-            // plcBooleanButton1
-            // 
-            this.plcBooleanButton1.GreenMode = true;
-            this.plcBooleanButton1.Location = new System.Drawing.Point(999, 84);
-            this.plcBooleanButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.plcBooleanButton1.Name = "plcBooleanButton1";
-            this.plcBooleanButton1.NotMode = false;
-            this.plcBooleanButton1.PLC = null;
-            this.plcBooleanButton1.PLCDescription = "Reset C1";
-            this.plcBooleanButton1.PLCError = false;
-            this.plcBooleanButton1.PLCValue = false;
-            this.plcBooleanButton1.Size = new System.Drawing.Size(100, 86);
-            this.plcBooleanButton1.TabIndex = 11;
-            this.plcBooleanButton1.VariableName = null;
-            // 
-            // groupBox11
-            // 
-            this.groupBox11.Controls.Add(this.trackingItem18);
-            this.groupBox11.Controls.Add(this.trackingItem13);
-            this.groupBox11.Controls.Add(this.trackingItem14);
-            this.groupBox11.Controls.Add(this.trackingItem15);
-            this.groupBox11.Controls.Add(this.trackingItem16);
-            this.groupBox11.Controls.Add(this.trackingItem17);
-            this.groupBox11.Location = new System.Drawing.Point(8, 388);
-            this.groupBox11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox11.Name = "groupBox11";
-            this.groupBox11.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox11.Size = new System.Drawing.Size(987, 186);
-            this.groupBox11.TabIndex = 10;
-            this.groupBox11.TabStop = false;
-            this.groupBox11.Text = "Tracking R1";
-            // 
-            // trackingItem18
-            // 
-            this.trackingItem18.Location = new System.Drawing.Point(819, 21);
-            this.trackingItem18.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.trackingItem18.Name = "trackingItem18";
-            this.trackingItem18.Size = new System.Drawing.Size(157, 158);
-            this.trackingItem18.TabIndex = 7;
-            this.trackingItem18.VariableName = ".Buffer_R1[6]";
-            // 
-            // trackingItem13
-            // 
-            this.trackingItem13.Location = new System.Drawing.Point(659, 21);
-            this.trackingItem13.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.trackingItem13.Name = "trackingItem13";
-            this.trackingItem13.Size = new System.Drawing.Size(157, 158);
-            this.trackingItem13.TabIndex = 5;
-            this.trackingItem13.VariableName = ".Buffer_R1[5]";
-            // 
-            // trackingItem14
-            // 
-            this.trackingItem14.Location = new System.Drawing.Point(495, 21);
-            this.trackingItem14.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.trackingItem14.Name = "trackingItem14";
-            this.trackingItem14.Size = new System.Drawing.Size(157, 158);
-            this.trackingItem14.TabIndex = 4;
-            this.trackingItem14.VariableName = ".Buffer_R1[4]";
-            // 
-            // trackingItem15
-            // 
-            this.trackingItem15.Location = new System.Drawing.Point(332, 21);
-            this.trackingItem15.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.trackingItem15.Name = "trackingItem15";
-            this.trackingItem15.Size = new System.Drawing.Size(157, 158);
-            this.trackingItem15.TabIndex = 3;
-            this.trackingItem15.VariableName = ".Buffer_R1[3]";
-            // 
-            // trackingItem16
-            // 
-            this.trackingItem16.Location = new System.Drawing.Point(169, 21);
-            this.trackingItem16.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.trackingItem16.Name = "trackingItem16";
-            this.trackingItem16.Size = new System.Drawing.Size(157, 158);
-            this.trackingItem16.TabIndex = 2;
-            this.trackingItem16.VariableName = ".Buffer_R1[2]";
-            // 
-            // trackingItem17
-            // 
-            this.trackingItem17.Location = new System.Drawing.Point(5, 21);
-            this.trackingItem17.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.trackingItem17.Name = "trackingItem17";
-            this.trackingItem17.Size = new System.Drawing.Size(157, 158);
-            this.trackingItem17.TabIndex = 1;
-            this.trackingItem17.VariableName = ".Buffer_R1[1]";
-            // 
-            // groupBox10
-            // 
-            this.groupBox10.Controls.Add(this.trackingItem12);
-            this.groupBox10.Controls.Add(this.trackingItem7);
-            this.groupBox10.Controls.Add(this.trackingItem8);
-            this.groupBox10.Controls.Add(this.trackingItem9);
-            this.groupBox10.Controls.Add(this.trackingItem10);
-            this.groupBox10.Controls.Add(this.trackingItem11);
-            this.groupBox10.Location = new System.Drawing.Point(8, 196);
-            this.groupBox10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox10.Size = new System.Drawing.Size(987, 186);
-            this.groupBox10.TabIndex = 9;
-            this.groupBox10.TabStop = false;
-            this.groupBox10.Text = "Tracking C2";
-            // 
-            // trackingItem12
-            // 
-            this.trackingItem12.Location = new System.Drawing.Point(819, 30);
-            this.trackingItem12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.trackingItem12.Name = "trackingItem12";
-            this.trackingItem12.Size = new System.Drawing.Size(157, 158);
-            this.trackingItem12.TabIndex = 7;
-            this.trackingItem12.VariableName = ".Buffer_C2[6]";
-            // 
-            // trackingItem7
-            // 
-            this.trackingItem7.Location = new System.Drawing.Point(659, 23);
-            this.trackingItem7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.trackingItem7.Name = "trackingItem7";
-            this.trackingItem7.Size = new System.Drawing.Size(157, 158);
-            this.trackingItem7.TabIndex = 5;
-            this.trackingItem7.VariableName = ".Buffer_C2[5]";
-            // 
-            // trackingItem8
-            // 
-            this.trackingItem8.Location = new System.Drawing.Point(495, 23);
-            this.trackingItem8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.trackingItem8.Name = "trackingItem8";
-            this.trackingItem8.Size = new System.Drawing.Size(157, 158);
-            this.trackingItem8.TabIndex = 4;
-            this.trackingItem8.VariableName = ".Buffer_C2[4]";
-            // 
-            // trackingItem9
-            // 
-            this.trackingItem9.Location = new System.Drawing.Point(332, 23);
-            this.trackingItem9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.trackingItem9.Name = "trackingItem9";
-            this.trackingItem9.Size = new System.Drawing.Size(157, 158);
-            this.trackingItem9.TabIndex = 3;
-            this.trackingItem9.VariableName = ".Buffer_C2[3]";
-            // 
-            // trackingItem10
-            // 
-            this.trackingItem10.Location = new System.Drawing.Point(169, 23);
-            this.trackingItem10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.trackingItem10.Name = "trackingItem10";
-            this.trackingItem10.Size = new System.Drawing.Size(157, 158);
-            this.trackingItem10.TabIndex = 2;
-            this.trackingItem10.VariableName = ".Buffer_C2[2]";
-            // 
-            // trackingItem11
-            // 
-            this.trackingItem11.Location = new System.Drawing.Point(5, 23);
-            this.trackingItem11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.trackingItem11.Name = "trackingItem11";
-            this.trackingItem11.Size = new System.Drawing.Size(157, 158);
-            this.trackingItem11.TabIndex = 1;
-            this.trackingItem11.VariableName = ".Buffer_C2[1]";
-            // 
-            // groupBox9
-            // 
-            this.groupBox9.Controls.Add(this.trackingItem1);
-            this.groupBox9.Controls.Add(this.trackingItem6);
-            this.groupBox9.Controls.Add(this.trackingItem5);
-            this.groupBox9.Controls.Add(this.trackingItem4);
-            this.groupBox9.Controls.Add(this.trackingItem3);
-            this.groupBox9.Controls.Add(this.trackingItem2);
-            this.groupBox9.Location = new System.Drawing.Point(6, 4);
-            this.groupBox9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox9.Size = new System.Drawing.Size(987, 186);
-            this.groupBox9.TabIndex = 8;
-            this.groupBox9.TabStop = false;
-            this.groupBox9.Text = "Tracking C1";
-            // 
-            // trackingItem1
-            // 
-            this.trackingItem1.Location = new System.Drawing.Point(821, 21);
-            this.trackingItem1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.trackingItem1.Name = "trackingItem1";
-            this.trackingItem1.Size = new System.Drawing.Size(157, 158);
-            this.trackingItem1.TabIndex = 6;
-            this.trackingItem1.VariableName = ".Buffer_C1[6]";
-            // 
-            // trackingItem6
-            // 
-            this.trackingItem6.Location = new System.Drawing.Point(659, 21);
-            this.trackingItem6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.trackingItem6.Name = "trackingItem6";
-            this.trackingItem6.Size = new System.Drawing.Size(157, 158);
-            this.trackingItem6.TabIndex = 5;
-            this.trackingItem6.VariableName = ".Buffer_C1[5]";
-            // 
-            // trackingItem5
-            // 
-            this.trackingItem5.Location = new System.Drawing.Point(495, 21);
-            this.trackingItem5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.trackingItem5.Name = "trackingItem5";
-            this.trackingItem5.Size = new System.Drawing.Size(157, 158);
-            this.trackingItem5.TabIndex = 4;
-            this.trackingItem5.VariableName = ".Buffer_C1[4]";
-            // 
-            // trackingItem4
-            // 
-            this.trackingItem4.Location = new System.Drawing.Point(332, 21);
-            this.trackingItem4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.trackingItem4.Name = "trackingItem4";
-            this.trackingItem4.Size = new System.Drawing.Size(157, 158);
-            this.trackingItem4.TabIndex = 3;
-            this.trackingItem4.VariableName = ".Buffer_C1[3]";
-            // 
-            // trackingItem3
-            // 
-            this.trackingItem3.Location = new System.Drawing.Point(169, 21);
-            this.trackingItem3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.trackingItem3.Name = "trackingItem3";
-            this.trackingItem3.Size = new System.Drawing.Size(157, 158);
-            this.trackingItem3.TabIndex = 2;
-            this.trackingItem3.VariableName = ".Buffer_C1[2]";
-            // 
-            // trackingItem2
-            // 
-            this.trackingItem2.Location = new System.Drawing.Point(5, 21);
-            this.trackingItem2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.trackingItem2.Name = "trackingItem2";
-            this.trackingItem2.Size = new System.Drawing.Size(157, 158);
-            this.trackingItem2.TabIndex = 1;
-            this.trackingItem2.VariableName = ".Buffer_C1[1]";
             // 
             // tabPage5
             // 
@@ -2992,30 +2661,29 @@
             this.plcNumberEdit2.TabIndex = 1;
             this.plcNumberEdit2.VariableName = ".C1_Ribalta_Rot_0_Position";
             // 
-            // tabPage17
+            // tabPage3
             // 
-            this.tabPage17.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage17.Controls.Add(this.plcTracking1);
-            this.tabPage17.Location = new System.Drawing.Point(4, 25);
-            this.tabPage17.Name = "tabPage17";
-            this.tabPage17.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage17.Size = new System.Drawing.Size(1713, 814);
-            this.tabPage17.TabIndex = 5;
-            this.tabPage17.Text = "tabPage17";
+            this.tabPage3.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage3.Controls.Add(this.listViewAlZ1);
+            this.tabPage3.Location = new System.Drawing.Point(4, 25);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(1713, 814);
+            this.tabPage3.TabIndex = 7;
+            this.tabPage3.Text = "Allarmi";
             // 
-            // plcTracking1
+            // listViewAlZ1
             // 
-            this.plcTracking1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.plcTracking1.Location = new System.Drawing.Point(3, 3);
-            this.plcTracking1.Margin = new System.Windows.Forms.Padding(0);
-            this.plcTracking1.Name = "plcTracking1";
-            this.plcTracking1.Size = new System.Drawing.Size(1707, 808);
-            this.plcTracking1.TabIndex = 0;
-            this.plcTracking1.Vertical = false;
+            this.listViewAlZ1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listViewAlZ1.Location = new System.Drawing.Point(3, 3);
+            this.listViewAlZ1.Name = "listViewAlZ1";
+            this.listViewAlZ1.Size = new System.Drawing.Size(1707, 808);
+            this.listViewAlZ1.TabIndex = 0;
+            this.listViewAlZ1.UseCompatibleStateImageBehavior = false;
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.tabControl1);
+            this.tabPage1.Controls.Add(this.tracking2);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -3024,19 +2692,20 @@
             this.tabPage1.Text = "Zona 2";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // tabControl1
+            // tracking2
             // 
-            this.tabControl1.Controls.Add(this.tabPage13);
-            this.tabControl1.Controls.Add(this.tabPage15);
-            this.tabControl1.Controls.Add(this.tabPage16);
-            this.tabControl1.Controls.Add(this.tabPage18);
-            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Location = new System.Drawing.Point(3, 3);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1721, 841);
-            this.tabControl1.TabIndex = 2;
+            this.tracking2.Controls.Add(this.tabPage13);
+            this.tracking2.Controls.Add(this.tabPage18);
+            this.tracking2.Controls.Add(this.tabPage16);
+            this.tracking2.Controls.Add(this.tabPage15);
+            this.tracking2.Controls.Add(this.tabPage19);
+            this.tracking2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tracking2.Location = new System.Drawing.Point(3, 3);
+            this.tracking2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tracking2.Name = "tracking2";
+            this.tracking2.SelectedIndex = 0;
+            this.tracking2.Size = new System.Drawing.Size(1721, 841);
+            this.tracking2.TabIndex = 2;
             // 
             // tabPage13
             // 
@@ -3108,32 +2777,15 @@
             // 
             // groupBox31
             // 
-            this.groupBox31.Controls.Add(this.plcBoolean79);
             this.groupBox31.Controls.Add(this.plcBooleanButton11);
             this.groupBox31.Location = new System.Drawing.Point(731, 5);
             this.groupBox31.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox31.Name = "groupBox31";
             this.groupBox31.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox31.Size = new System.Drawing.Size(560, 91);
+            this.groupBox31.Size = new System.Drawing.Size(232, 91);
             this.groupBox31.TabIndex = 10;
             this.groupBox31.TabStop = false;
-            this.groupBox31.Text = " ";
-            // 
-            // plcBoolean79
-            // 
-            this.plcBoolean79.BackColor = System.Drawing.Color.Transparent;
-            this.plcBoolean79.GreenMode = false;
-            this.plcBoolean79.Location = new System.Drawing.Point(15, 22);
-            this.plcBoolean79.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.plcBoolean79.Name = "plcBoolean79";
-            this.plcBoolean79.NotMode = false;
-            this.plcBoolean79.PLC = null;
-            this.plcBoolean79.PLCDescription = "";
-            this.plcBoolean79.PLCError = false;
-            this.plcBoolean79.PLCValue = false;
-            this.plcBoolean79.Size = new System.Drawing.Size(520, 26);
-            this.plcBoolean79.TabIndex = 18;
-            this.plcBoolean79.VariableName = "";
+            this.groupBox31.Text = " Allarmi";
             // 
             // plcBooleanButton11
             // 
@@ -3146,7 +2798,7 @@
             this.plcBooleanButton11.PLCDescription = "Reset";
             this.plcBooleanButton11.PLCError = false;
             this.plcBooleanButton11.PLCValue = false;
-            this.plcBooleanButton11.Size = new System.Drawing.Size(520, 25);
+            this.plcBooleanButton11.Size = new System.Drawing.Size(202, 25);
             this.plcBooleanButton11.TabIndex = 15;
             this.plcBooleanButton11.VariableName = "RULLI_CENTRO_TAGLI.Hmi_Pls_Rst_Allarmi";
             // 
@@ -3256,7 +2908,7 @@
             // 
             this.panel8.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.panel8.BackgroundImage = global::GalimbertiHMIgl.Properties.Resources.ScarcioGalimbertiparte2;
-            this.panel8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.panel8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel8.Location = new System.Drawing.Point(214, 3);
             this.panel8.Name = "panel8";
@@ -3308,388 +2960,26 @@
             this.groupBox39.TabStop = false;
             this.groupBox39.Text = "Step Cicliche";
             // 
-            // tabPage15
-            // 
-            this.tabPage15.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage15.Controls.Add(this.groupBox40);
-            this.tabPage15.Controls.Add(this.groupBox36);
-            this.tabPage15.Controls.Add(this.groupBox35);
-            this.tabPage15.Controls.Add(this.groupBox42);
-            this.tabPage15.Controls.Add(this.groupBox43);
-            this.tabPage15.Controls.Add(this.groupBox45);
-            this.tabPage15.Location = new System.Drawing.Point(4, 25);
-            this.tabPage15.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage15.Name = "tabPage15";
-            this.tabPage15.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage15.Size = new System.Drawing.Size(178, 36);
-            this.tabPage15.TabIndex = 1;
-            this.tabPage15.Text = "Tracking";
-            // 
-            // groupBox40
-            // 
-            this.groupBox40.Controls.Add(this.trackingItem31);
-            this.groupBox40.Controls.Add(this.trackingItem32);
-            this.groupBox40.Controls.Add(this.trackingItem33);
-            this.groupBox40.Location = new System.Drawing.Point(511, 4);
-            this.groupBox40.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox40.Name = "groupBox40";
-            this.groupBox40.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox40.Size = new System.Drawing.Size(484, 150);
-            this.groupBox40.TabIndex = 16;
-            this.groupBox40.TabStop = false;
-            this.groupBox40.Text = "Tracking R3";
-            // 
-            // trackingItem31
-            // 
-            this.trackingItem31.Location = new System.Drawing.Point(332, 16);
-            this.trackingItem31.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.trackingItem31.Name = "trackingItem31";
-            this.trackingItem31.Size = new System.Drawing.Size(150, 130);
-            this.trackingItem31.TabIndex = 3;
-            this.trackingItem31.VariableName = ".Buffer_R3[3]";
-            // 
-            // trackingItem32
-            // 
-            this.trackingItem32.Location = new System.Drawing.Point(169, 16);
-            this.trackingItem32.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.trackingItem32.Name = "trackingItem32";
-            this.trackingItem32.Size = new System.Drawing.Size(150, 130);
-            this.trackingItem32.TabIndex = 2;
-            this.trackingItem32.VariableName = ".Buffer_C1[2]";
-            // 
-            // trackingItem33
-            // 
-            this.trackingItem33.Location = new System.Drawing.Point(5, 16);
-            this.trackingItem33.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.trackingItem33.Name = "trackingItem33";
-            this.trackingItem33.Size = new System.Drawing.Size(150, 130);
-            this.trackingItem33.TabIndex = 1;
-            this.trackingItem33.VariableName = ".Buffer_R3[1]";
-            // 
-            // groupBox36
-            // 
-            this.groupBox36.Controls.Add(this.trackingItem43);
-            this.groupBox36.Controls.Add(this.trackingItem44);
-            this.groupBox36.Controls.Add(this.trackingItem45);
-            this.groupBox36.Controls.Add(this.trackingItem46);
-            this.groupBox36.Controls.Add(this.trackingItem47);
-            this.groupBox36.Controls.Add(this.trackingItem48);
-            this.groupBox36.Location = new System.Drawing.Point(8, 629);
-            this.groupBox36.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox36.Name = "groupBox36";
-            this.groupBox36.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox36.Size = new System.Drawing.Size(987, 150);
-            this.groupBox36.TabIndex = 15;
-            this.groupBox36.TabStop = false;
-            this.groupBox36.Text = "Tracking C5";
-            // 
-            // trackingItem43
-            // 
-            this.trackingItem43.Location = new System.Drawing.Point(819, 17);
-            this.trackingItem43.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.trackingItem43.Name = "trackingItem43";
-            this.trackingItem43.Size = new System.Drawing.Size(150, 130);
-            this.trackingItem43.TabIndex = 7;
-            this.trackingItem43.VariableName = ".Buffer_C6[6]";
-            // 
-            // trackingItem44
-            // 
-            this.trackingItem44.Location = new System.Drawing.Point(659, 17);
-            this.trackingItem44.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.trackingItem44.Name = "trackingItem44";
-            this.trackingItem44.Size = new System.Drawing.Size(150, 130);
-            this.trackingItem44.TabIndex = 5;
-            this.trackingItem44.VariableName = ".Buffer_C6[5]";
-            // 
-            // trackingItem45
-            // 
-            this.trackingItem45.Location = new System.Drawing.Point(495, 17);
-            this.trackingItem45.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.trackingItem45.Name = "trackingItem45";
-            this.trackingItem45.Size = new System.Drawing.Size(150, 130);
-            this.trackingItem45.TabIndex = 4;
-            this.trackingItem45.VariableName = ".Buffer_C6[4]";
-            // 
-            // trackingItem46
-            // 
-            this.trackingItem46.Location = new System.Drawing.Point(332, 17);
-            this.trackingItem46.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.trackingItem46.Name = "trackingItem46";
-            this.trackingItem46.Size = new System.Drawing.Size(150, 130);
-            this.trackingItem46.TabIndex = 3;
-            this.trackingItem46.VariableName = ".Buffer_C6[3]";
-            // 
-            // trackingItem47
-            // 
-            this.trackingItem47.Location = new System.Drawing.Point(169, 17);
-            this.trackingItem47.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.trackingItem47.Name = "trackingItem47";
-            this.trackingItem47.Size = new System.Drawing.Size(150, 130);
-            this.trackingItem47.TabIndex = 2;
-            this.trackingItem47.VariableName = ".Buffer_C6[2]";
-            // 
-            // trackingItem48
-            // 
-            this.trackingItem48.Location = new System.Drawing.Point(5, 17);
-            this.trackingItem48.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.trackingItem48.Name = "trackingItem48";
-            this.trackingItem48.Size = new System.Drawing.Size(150, 130);
-            this.trackingItem48.TabIndex = 1;
-            this.trackingItem48.VariableName = ".Buffer_C6[1]";
-            // 
-            // groupBox35
-            // 
-            this.groupBox35.Controls.Add(this.trackingItem37);
-            this.groupBox35.Controls.Add(this.trackingItem38);
-            this.groupBox35.Controls.Add(this.trackingItem39);
-            this.groupBox35.Controls.Add(this.trackingItem40);
-            this.groupBox35.Controls.Add(this.trackingItem41);
-            this.groupBox35.Controls.Add(this.trackingItem42);
-            this.groupBox35.Location = new System.Drawing.Point(8, 475);
-            this.groupBox35.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox35.Name = "groupBox35";
-            this.groupBox35.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox35.Size = new System.Drawing.Size(987, 150);
-            this.groupBox35.TabIndex = 14;
-            this.groupBox35.TabStop = false;
-            this.groupBox35.Text = "Tracking C5";
-            // 
-            // trackingItem37
-            // 
-            this.trackingItem37.Location = new System.Drawing.Point(819, 17);
-            this.trackingItem37.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.trackingItem37.Name = "trackingItem37";
-            this.trackingItem37.Size = new System.Drawing.Size(150, 130);
-            this.trackingItem37.TabIndex = 7;
-            this.trackingItem37.VariableName = ".Buffer_C5[6]";
-            // 
-            // trackingItem38
-            // 
-            this.trackingItem38.Location = new System.Drawing.Point(659, 17);
-            this.trackingItem38.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.trackingItem38.Name = "trackingItem38";
-            this.trackingItem38.Size = new System.Drawing.Size(150, 130);
-            this.trackingItem38.TabIndex = 5;
-            this.trackingItem38.VariableName = ".Buffer_C5[5]";
-            // 
-            // trackingItem39
-            // 
-            this.trackingItem39.Location = new System.Drawing.Point(495, 17);
-            this.trackingItem39.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.trackingItem39.Name = "trackingItem39";
-            this.trackingItem39.Size = new System.Drawing.Size(150, 130);
-            this.trackingItem39.TabIndex = 4;
-            this.trackingItem39.VariableName = ".Buffer_C5[4]";
-            // 
-            // trackingItem40
-            // 
-            this.trackingItem40.Location = new System.Drawing.Point(332, 17);
-            this.trackingItem40.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.trackingItem40.Name = "trackingItem40";
-            this.trackingItem40.Size = new System.Drawing.Size(150, 130);
-            this.trackingItem40.TabIndex = 3;
-            this.trackingItem40.VariableName = ".Buffer_C5[3]";
-            // 
-            // trackingItem41
-            // 
-            this.trackingItem41.Location = new System.Drawing.Point(169, 17);
-            this.trackingItem41.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.trackingItem41.Name = "trackingItem41";
-            this.trackingItem41.Size = new System.Drawing.Size(150, 130);
-            this.trackingItem41.TabIndex = 2;
-            this.trackingItem41.VariableName = ".Buffer_C5[2]";
-            // 
-            // trackingItem42
-            // 
-            this.trackingItem42.Location = new System.Drawing.Point(5, 17);
-            this.trackingItem42.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.trackingItem42.Name = "trackingItem42";
-            this.trackingItem42.Size = new System.Drawing.Size(150, 130);
-            this.trackingItem42.TabIndex = 1;
-            this.trackingItem42.VariableName = ".Buffer_C5[1]";
-            // 
-            // groupBox42
-            // 
-            this.groupBox42.Controls.Add(this.trackingItem19);
-            this.groupBox42.Controls.Add(this.trackingItem20);
-            this.groupBox42.Controls.Add(this.trackingItem21);
-            this.groupBox42.Controls.Add(this.trackingItem22);
-            this.groupBox42.Controls.Add(this.trackingItem23);
-            this.groupBox42.Controls.Add(this.trackingItem24);
-            this.groupBox42.Location = new System.Drawing.Point(8, 321);
-            this.groupBox42.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox42.Name = "groupBox42";
-            this.groupBox42.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox42.Size = new System.Drawing.Size(987, 150);
-            this.groupBox42.TabIndex = 10;
-            this.groupBox42.TabStop = false;
-            this.groupBox42.Text = "Tracking C4";
-            // 
-            // trackingItem19
-            // 
-            this.trackingItem19.Location = new System.Drawing.Point(817, 17);
-            this.trackingItem19.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.trackingItem19.Name = "trackingItem19";
-            this.trackingItem19.Size = new System.Drawing.Size(150, 130);
-            this.trackingItem19.TabIndex = 7;
-            this.trackingItem19.VariableName = ".Buffer_C4[6]";
-            // 
-            // trackingItem20
-            // 
-            this.trackingItem20.Location = new System.Drawing.Point(657, 17);
-            this.trackingItem20.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.trackingItem20.Name = "trackingItem20";
-            this.trackingItem20.Size = new System.Drawing.Size(150, 130);
-            this.trackingItem20.TabIndex = 5;
-            this.trackingItem20.VariableName = ".Buffer_C4[5]";
-            // 
-            // trackingItem21
-            // 
-            this.trackingItem21.Location = new System.Drawing.Point(493, 17);
-            this.trackingItem21.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.trackingItem21.Name = "trackingItem21";
-            this.trackingItem21.Size = new System.Drawing.Size(150, 130);
-            this.trackingItem21.TabIndex = 4;
-            this.trackingItem21.VariableName = ".Buffer_C4[4]";
-            // 
-            // trackingItem22
-            // 
-            this.trackingItem22.Location = new System.Drawing.Point(330, 17);
-            this.trackingItem22.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.trackingItem22.Name = "trackingItem22";
-            this.trackingItem22.Size = new System.Drawing.Size(150, 130);
-            this.trackingItem22.TabIndex = 3;
-            this.trackingItem22.VariableName = ".Buffer_C4[3]";
-            // 
-            // trackingItem23
-            // 
-            this.trackingItem23.Location = new System.Drawing.Point(167, 17);
-            this.trackingItem23.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.trackingItem23.Name = "trackingItem23";
-            this.trackingItem23.Size = new System.Drawing.Size(150, 130);
-            this.trackingItem23.TabIndex = 2;
-            this.trackingItem23.VariableName = ".Buffer_C4[2]";
-            // 
-            // trackingItem24
-            // 
-            this.trackingItem24.Location = new System.Drawing.Point(3, 17);
-            this.trackingItem24.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.trackingItem24.Name = "trackingItem24";
-            this.trackingItem24.Size = new System.Drawing.Size(150, 130);
-            this.trackingItem24.TabIndex = 1;
-            this.trackingItem24.VariableName = ".Buffer_C4[1]";
-            // 
-            // groupBox43
-            // 
-            this.groupBox43.Controls.Add(this.trackingItem25);
-            this.groupBox43.Controls.Add(this.trackingItem26);
-            this.groupBox43.Controls.Add(this.trackingItem27);
-            this.groupBox43.Controls.Add(this.trackingItem28);
-            this.groupBox43.Controls.Add(this.trackingItem29);
-            this.groupBox43.Controls.Add(this.trackingItem30);
-            this.groupBox43.Location = new System.Drawing.Point(8, 158);
-            this.groupBox43.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox43.Name = "groupBox43";
-            this.groupBox43.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox43.Size = new System.Drawing.Size(987, 150);
-            this.groupBox43.TabIndex = 9;
-            this.groupBox43.TabStop = false;
-            this.groupBox43.Text = "Tracking C3";
-            // 
-            // trackingItem25
-            // 
-            this.trackingItem25.Location = new System.Drawing.Point(817, 16);
-            this.trackingItem25.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.trackingItem25.Name = "trackingItem25";
-            this.trackingItem25.Size = new System.Drawing.Size(150, 130);
-            this.trackingItem25.TabIndex = 7;
-            this.trackingItem25.VariableName = ".Buffer_C3[6]";
-            // 
-            // trackingItem26
-            // 
-            this.trackingItem26.Location = new System.Drawing.Point(657, 17);
-            this.trackingItem26.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.trackingItem26.Name = "trackingItem26";
-            this.trackingItem26.Size = new System.Drawing.Size(150, 130);
-            this.trackingItem26.TabIndex = 5;
-            this.trackingItem26.VariableName = ".Buffer_C3[5]";
-            // 
-            // trackingItem27
-            // 
-            this.trackingItem27.Location = new System.Drawing.Point(493, 17);
-            this.trackingItem27.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.trackingItem27.Name = "trackingItem27";
-            this.trackingItem27.Size = new System.Drawing.Size(150, 130);
-            this.trackingItem27.TabIndex = 4;
-            this.trackingItem27.VariableName = ".Buffer_C3[4]";
-            // 
-            // trackingItem28
-            // 
-            this.trackingItem28.Location = new System.Drawing.Point(330, 17);
-            this.trackingItem28.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.trackingItem28.Name = "trackingItem28";
-            this.trackingItem28.Size = new System.Drawing.Size(150, 130);
-            this.trackingItem28.TabIndex = 3;
-            this.trackingItem28.VariableName = ".Buffer_C3[3]";
-            // 
-            // trackingItem29
-            // 
-            this.trackingItem29.Location = new System.Drawing.Point(167, 17);
-            this.trackingItem29.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.trackingItem29.Name = "trackingItem29";
-            this.trackingItem29.Size = new System.Drawing.Size(150, 130);
-            this.trackingItem29.TabIndex = 2;
-            this.trackingItem29.VariableName = ".Buffer_C3[2]";
-            // 
-            // trackingItem30
-            // 
-            this.trackingItem30.Location = new System.Drawing.Point(3, 17);
-            this.trackingItem30.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.trackingItem30.Name = "trackingItem30";
-            this.trackingItem30.Size = new System.Drawing.Size(150, 130);
-            this.trackingItem30.TabIndex = 1;
-            this.trackingItem30.VariableName = ".Buffer_C3[1]";
-            // 
-            // groupBox45
-            // 
-            this.groupBox45.Controls.Add(this.trackingItem34);
-            this.groupBox45.Controls.Add(this.trackingItem35);
-            this.groupBox45.Controls.Add(this.trackingItem36);
-            this.groupBox45.Location = new System.Drawing.Point(6, 4);
-            this.groupBox45.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox45.Name = "groupBox45";
-            this.groupBox45.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox45.Size = new System.Drawing.Size(484, 150);
-            this.groupBox45.TabIndex = 8;
-            this.groupBox45.TabStop = false;
-            this.groupBox45.Text = "Tracking R2";
-            // 
-            // trackingItem34
-            // 
-            this.trackingItem34.Location = new System.Drawing.Point(332, 16);
-            this.trackingItem34.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.trackingItem34.Name = "trackingItem34";
-            this.trackingItem34.Size = new System.Drawing.Size(150, 130);
-            this.trackingItem34.TabIndex = 3;
-            this.trackingItem34.VariableName = ".Buffer_R2[3]";
-            // 
-            // trackingItem35
-            // 
-            this.trackingItem35.Location = new System.Drawing.Point(169, 16);
-            this.trackingItem35.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.trackingItem35.Name = "trackingItem35";
-            this.trackingItem35.Size = new System.Drawing.Size(150, 130);
-            this.trackingItem35.TabIndex = 2;
-            this.trackingItem35.VariableName = ".Buffer_R3[2]";
-            // 
-            // trackingItem36
-            // 
-            this.trackingItem36.Location = new System.Drawing.Point(5, 16);
-            this.trackingItem36.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.trackingItem36.Name = "trackingItem36";
-            this.trackingItem36.Size = new System.Drawing.Size(150, 130);
-            this.trackingItem36.TabIndex = 1;
-            this.trackingItem36.VariableName = ".Buffer_R2[1]";
+            // tabPage18
+            // 
+            this.tabPage18.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage18.Controls.Add(this.plcTracking2);
+            this.tabPage18.Location = new System.Drawing.Point(4, 25);
+            this.tabPage18.Name = "tabPage18";
+            this.tabPage18.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage18.Size = new System.Drawing.Size(1713, 812);
+            this.tabPage18.TabIndex = 4;
+            this.tabPage18.Text = "Tracking";
+            // 
+            // plcTracking2
+            // 
+            this.plcTracking2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.plcTracking2.Location = new System.Drawing.Point(3, 3);
+            this.plcTracking2.Margin = new System.Windows.Forms.Padding(0);
+            this.plcTracking2.Name = "plcTracking2";
+            this.plcTracking2.Size = new System.Drawing.Size(1707, 806);
+            this.plcTracking2.TabIndex = 1;
+            this.plcTracking2.Vertical = false;
             // 
             // tabPage16
             // 
@@ -3699,7 +2989,7 @@
             this.tabPage16.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage16.Name = "tabPage16";
             this.tabPage16.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage16.Size = new System.Drawing.Size(178, 36);
+            this.tabPage16.Size = new System.Drawing.Size(1713, 812);
             this.tabPage16.TabIndex = 2;
             this.tabPage16.Text = "Impostazioni";
             // 
@@ -3728,13 +3018,33 @@
             this.plcNumberEdit39.TabIndex = 1;
             this.plcNumberEdit39.VariableName = ".C5_Gap_Pezzi";
             // 
+            // tabPage15
+            // 
+            this.tabPage15.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage15.Controls.Add(this.listAlarmZ2);
+            this.tabPage15.Location = new System.Drawing.Point(4, 25);
+            this.tabPage15.Name = "tabPage15";
+            this.tabPage15.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage15.Size = new System.Drawing.Size(1713, 812);
+            this.tabPage15.TabIndex = 8;
+            this.tabPage15.Text = "Allarmi";
+            // 
+            // listAlarmZ2
+            // 
+            this.listAlarmZ2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listAlarmZ2.Location = new System.Drawing.Point(3, 3);
+            this.listAlarmZ2.Name = "listAlarmZ2";
+            this.listAlarmZ2.Size = new System.Drawing.Size(1707, 806);
+            this.listAlarmZ2.TabIndex = 0;
+            this.listAlarmZ2.UseCompatibleStateImageBehavior = false;
+            // 
             // Aspirazione
             // 
             this.Aspirazione.Controls.Add(this.Valvole);
             this.Aspirazione.Location = new System.Drawing.Point(4, 25);
             this.Aspirazione.Name = "Aspirazione";
             this.Aspirazione.Padding = new System.Windows.Forms.Padding(3);
-            this.Aspirazione.Size = new System.Drawing.Size(192, 71);
+            this.Aspirazione.Size = new System.Drawing.Size(1727, 847);
             this.Aspirazione.TabIndex = 3;
             this.Aspirazione.Text = "Aspirazione";
             this.Aspirazione.UseVisualStyleBackColor = true;
@@ -3754,7 +3064,7 @@
             this.Valvole.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Valvole.Name = "Valvole";
             this.Valvole.SelectedIndex = 0;
-            this.Valvole.Size = new System.Drawing.Size(186, 65);
+            this.Valvole.Size = new System.Drawing.Size(1721, 841);
             this.Valvole.TabIndex = 2;
             // 
             // tabPage10
@@ -3772,7 +3082,7 @@
             this.tabPage10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage10.Name = "tabPage10";
             this.tabPage10.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage10.Size = new System.Drawing.Size(178, 36);
+            this.tabPage10.Size = new System.Drawing.Size(1713, 812);
             this.tabPage10.TabIndex = 2;
             this.tabPage10.Text = "Impostazioni";
             this.tabPage10.Click += new System.EventHandler(this.tabPage10_Click);
@@ -4225,7 +3535,7 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 25);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(178, 36);
+            this.tabPage4.Size = new System.Drawing.Size(1713, 812);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Motori";
             this.tabPage4.Click += new System.EventHandler(this.tabPage4_Click);
@@ -4309,7 +3619,7 @@
             this.tabPage8.Location = new System.Drawing.Point(4, 25);
             this.tabPage8.Name = "tabPage8";
             this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage8.Size = new System.Drawing.Size(178, 36);
+            this.tabPage8.Size = new System.Drawing.Size(1713, 812);
             this.tabPage8.TabIndex = 4;
             this.tabPage8.Text = "Puliz Filtri";
             // 
@@ -4318,7 +3628,7 @@
             this.duT_Filtri1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.duT_Filtri1.Location = new System.Drawing.Point(3, 3);
             this.duT_Filtri1.Name = "duT_Filtri1";
-            this.duT_Filtri1.Size = new System.Drawing.Size(172, 30);
+            this.duT_Filtri1.Size = new System.Drawing.Size(1707, 806);
             this.duT_Filtri1.TabIndex = 0;
             // 
             // tabPage9
@@ -4328,7 +3638,7 @@
             this.tabPage9.Location = new System.Drawing.Point(4, 25);
             this.tabPage9.Name = "tabPage9";
             this.tabPage9.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage9.Size = new System.Drawing.Size(178, 36);
+            this.tabPage9.Size = new System.Drawing.Size(1713, 812);
             this.tabPage9.TabIndex = 5;
             this.tabPage9.Text = "Comandi Mauali";
             // 
@@ -4337,7 +3647,7 @@
             this.duT_Asp_Comandi1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.duT_Asp_Comandi1.Location = new System.Drawing.Point(3, 3);
             this.duT_Asp_Comandi1.Name = "duT_Asp_Comandi1";
-            this.duT_Asp_Comandi1.Size = new System.Drawing.Size(172, 30);
+            this.duT_Asp_Comandi1.Size = new System.Drawing.Size(1707, 806);
             this.duT_Asp_Comandi1.TabIndex = 0;
             this.duT_Asp_Comandi1.VariableName = "";
             // 
@@ -4348,7 +3658,7 @@
             this.tabPage11.Location = new System.Drawing.Point(4, 25);
             this.tabPage11.Name = "tabPage11";
             this.tabPage11.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage11.Size = new System.Drawing.Size(178, 36);
+            this.tabPage11.Size = new System.Drawing.Size(1713, 812);
             this.tabPage11.TabIndex = 6;
             this.tabPage11.Text = "Allarmi";
             // 
@@ -4357,7 +3667,7 @@
             this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listView1.Location = new System.Drawing.Point(3, 3);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(172, 30);
+            this.listView1.Size = new System.Drawing.Size(1707, 806);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             // 
@@ -4367,7 +3677,7 @@
             this.tabPage7.Location = new System.Drawing.Point(4, 25);
             this.tabPage7.Name = "tabPage7";
             this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage7.Size = new System.Drawing.Size(178, 36);
+            this.tabPage7.Size = new System.Drawing.Size(1713, 812);
             this.tabPage7.TabIndex = 7;
             this.tabPage7.Text = "Storico Allarmi";
             this.tabPage7.UseVisualStyleBackColor = true;
@@ -4377,7 +3687,7 @@
             this.listView2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listView2.Location = new System.Drawing.Point(3, 3);
             this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(172, 30);
+            this.listView2.Size = new System.Drawing.Size(1707, 806);
             this.listView2.TabIndex = 1;
             this.listView2.UseCompatibleStateImageBehavior = false;
             // 
@@ -4388,7 +3698,7 @@
             this.tabPage14.Location = new System.Drawing.Point(4, 25);
             this.tabPage14.Name = "tabPage14";
             this.tabPage14.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage14.Size = new System.Drawing.Size(178, 36);
+            this.tabPage14.Size = new System.Drawing.Size(1713, 812);
             this.tabPage14.TabIndex = 8;
             this.tabPage14.Text = "I/O";
             // 
@@ -4400,7 +3710,7 @@
             this.plcGridIOAsp.Location = new System.Drawing.Point(3, 3);
             this.plcGridIOAsp.Margin = new System.Windows.Forms.Padding(0);
             this.plcGridIOAsp.Name = "plcGridIOAsp";
-            this.plcGridIOAsp.Size = new System.Drawing.Size(172, 30);
+            this.plcGridIOAsp.Size = new System.Drawing.Size(1707, 806);
             this.plcGridIOAsp.TabIndex = 0;
             this.plcGridIOAsp.Vertical = false;
             // 
@@ -4658,6 +3968,10 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Control;
+            this.panel1.Controls.Add(this.plcAllarBricch);
+            this.panel1.Controls.Add(this.plcAlarmAsp);
+            this.panel1.Controls.Add(this.plcAlarmZ2);
+            this.panel1.Controls.Add(this.plcAlarmZ1);
             this.panel1.Controls.Add(this.groupBox28);
             this.panel1.Controls.Add(this.groupBox8);
             this.panel1.Controls.Add(this.groupBox25);
@@ -4671,9 +3985,74 @@
             this.panel1.Size = new System.Drawing.Size(1735, 96);
             this.panel1.TabIndex = 1;
             // 
+            // plcAllarBricch
+            // 
+            this.plcAllarBricch.BackColor = System.Drawing.Color.Transparent;
+            this.plcAllarBricch.GreenMode = false;
+            this.plcAllarBricch.Location = new System.Drawing.Point(1113, 34);
+            this.plcAllarBricch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.plcAllarBricch.Name = "plcAllarBricch";
+            this.plcAllarBricch.NotMode = false;
+            this.plcAllarBricch.PLC = null;
+            this.plcAllarBricch.PLCDescription = "Allarm. Bricch.";
+            this.plcAllarBricch.PLCError = false;
+            this.plcAllarBricch.PLCValue = false;
+            this.plcAllarBricch.Size = new System.Drawing.Size(147, 26);
+            this.plcAllarBricch.TabIndex = 13;
+            this.plcAllarBricch.VariableName = "MAIN.Alarm_On";
+            // 
+            // plcAlarmAsp
+            // 
+            this.plcAlarmAsp.BackColor = System.Drawing.Color.Transparent;
+            this.plcAlarmAsp.GreenMode = false;
+            this.plcAlarmAsp.Location = new System.Drawing.Point(1113, 12);
+            this.plcAlarmAsp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.plcAlarmAsp.Name = "plcAlarmAsp";
+            this.plcAlarmAsp.NotMode = false;
+            this.plcAlarmAsp.PLC = null;
+            this.plcAlarmAsp.PLCDescription = "Allarme Asp.";
+            this.plcAlarmAsp.PLCError = false;
+            this.plcAlarmAsp.PLCValue = false;
+            this.plcAlarmAsp.Size = new System.Drawing.Size(147, 26);
+            this.plcAlarmAsp.TabIndex = 12;
+            this.plcAlarmAsp.VariableName = "MAIN.Alarm_On";
+            // 
+            // plcAlarmZ2
+            // 
+            this.plcAlarmZ2.BackColor = System.Drawing.Color.Transparent;
+            this.plcAlarmZ2.GreenMode = false;
+            this.plcAlarmZ2.Location = new System.Drawing.Point(986, 34);
+            this.plcAlarmZ2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.plcAlarmZ2.Name = "plcAlarmZ2";
+            this.plcAlarmZ2.NotMode = false;
+            this.plcAlarmZ2.PLC = null;
+            this.plcAlarmZ2.PLCDescription = "Allarme Z2";
+            this.plcAlarmZ2.PLCError = false;
+            this.plcAlarmZ2.PLCValue = false;
+            this.plcAlarmZ2.Size = new System.Drawing.Size(121, 26);
+            this.plcAlarmZ2.TabIndex = 11;
+            this.plcAlarmZ2.VariableName = "MAIN.Alarm_On";
+            this.plcAlarmZ2.Load += new System.EventHandler(this.plcBoolean82_Load);
+            // 
+            // plcAlarmZ1
+            // 
+            this.plcAlarmZ1.BackColor = System.Drawing.Color.Transparent;
+            this.plcAlarmZ1.GreenMode = false;
+            this.plcAlarmZ1.Location = new System.Drawing.Point(986, 12);
+            this.plcAlarmZ1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.plcAlarmZ1.Name = "plcAlarmZ1";
+            this.plcAlarmZ1.NotMode = false;
+            this.plcAlarmZ1.PLC = null;
+            this.plcAlarmZ1.PLCDescription = "Allarme Z1";
+            this.plcAlarmZ1.PLCError = false;
+            this.plcAlarmZ1.PLCValue = false;
+            this.plcAlarmZ1.Size = new System.Drawing.Size(121, 26);
+            this.plcAlarmZ1.TabIndex = 10;
+            this.plcAlarmZ1.VariableName = "MAIN.Alarm_On";
+            this.plcAlarmZ1.Load += new System.EventHandler(this.plcBoolean81_Load);
+            // 
             // groupBox28
             // 
-            this.groupBox28.Controls.Add(this.plcAllarmeBricch);
             this.groupBox28.Controls.Add(this.plcAnomaliaBricc);
             this.groupBox28.Controls.Add(this.plcCiclicaBricc);
             this.groupBox28.Location = new System.Drawing.Point(410, 2);
@@ -4684,22 +4063,6 @@
             this.groupBox28.TabIndex = 8;
             this.groupBox28.TabStop = false;
             this.groupBox28.Text = "Ciclica Bricc.";
-            // 
-            // plcAllarmeBricch
-            // 
-            this.plcAllarmeBricch.BackColor = System.Drawing.Color.Transparent;
-            this.plcAllarmeBricch.GreenMode = false;
-            this.plcAllarmeBricch.Location = new System.Drawing.Point(5, 66);
-            this.plcAllarmeBricch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.plcAllarmeBricch.Name = "plcAllarmeBricch";
-            this.plcAllarmeBricch.NotMode = false;
-            this.plcAllarmeBricch.PLC = null;
-            this.plcAllarmeBricch.PLCDescription = "Allarme";
-            this.plcAllarmeBricch.PLCError = false;
-            this.plcAllarmeBricch.PLCValue = false;
-            this.plcAllarmeBricch.Size = new System.Drawing.Size(113, 26);
-            this.plcAllarmeBricch.TabIndex = 8;
-            this.plcAllarmeBricch.VariableName = "MAIN.Alarm_On";
             // 
             // plcAnomaliaBricc
             // 
@@ -4735,7 +4098,6 @@
             // 
             // groupBox8
             // 
-            this.groupBox8.Controls.Add(this.plcBooleanAspAlarm);
             this.groupBox8.Controls.Add(this.plcAnomaliaAsp);
             this.groupBox8.Controls.Add(this.plcCiclicaAsp);
             this.groupBox8.Location = new System.Drawing.Point(283, 2);
@@ -4746,22 +4108,6 @@
             this.groupBox8.TabIndex = 7;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Ciclica Aspiraz.";
-            // 
-            // plcBooleanAspAlarm
-            // 
-            this.plcBooleanAspAlarm.BackColor = System.Drawing.Color.Transparent;
-            this.plcBooleanAspAlarm.GreenMode = false;
-            this.plcBooleanAspAlarm.Location = new System.Drawing.Point(5, 66);
-            this.plcBooleanAspAlarm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.plcBooleanAspAlarm.Name = "plcBooleanAspAlarm";
-            this.plcBooleanAspAlarm.NotMode = false;
-            this.plcBooleanAspAlarm.PLC = null;
-            this.plcBooleanAspAlarm.PLCDescription = "Allarme";
-            this.plcBooleanAspAlarm.PLCError = false;
-            this.plcBooleanAspAlarm.PLCValue = false;
-            this.plcBooleanAspAlarm.Size = new System.Drawing.Size(113, 26);
-            this.plcBooleanAspAlarm.TabIndex = 8;
-            this.plcBooleanAspAlarm.VariableName = "MAIN.Alarm_On";
             // 
             // plcAnomaliaAsp
             // 
@@ -4976,26 +4322,45 @@
             this.timer2.Enabled = true;
             this.timer2.Interval = 50;
             // 
-            // tabPage18
+            // tabPage17
             // 
-            this.tabPage18.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage18.Controls.Add(this.plcTracking2);
-            this.tabPage18.Location = new System.Drawing.Point(4, 25);
-            this.tabPage18.Name = "tabPage18";
-            this.tabPage18.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage18.Size = new System.Drawing.Size(1713, 812);
-            this.tabPage18.TabIndex = 4;
-            this.tabPage18.Text = "tabPage18";
+            this.tabPage17.Controls.Add(this.listViewStoricoAlarmZ1);
+            this.tabPage17.Location = new System.Drawing.Point(4, 25);
+            this.tabPage17.Name = "tabPage17";
+            this.tabPage17.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage17.Size = new System.Drawing.Size(1713, 814);
+            this.tabPage17.TabIndex = 8;
+            this.tabPage17.Text = "Storico Allarmi";
+            this.tabPage17.UseVisualStyleBackColor = true;
             // 
-            // plcTracking2
+            // listViewStoricoAlarmZ1
             // 
-            this.plcTracking2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.plcTracking2.Location = new System.Drawing.Point(3, 3);
-            this.plcTracking2.Margin = new System.Windows.Forms.Padding(0);
-            this.plcTracking2.Name = "plcTracking2";
-            this.plcTracking2.Size = new System.Drawing.Size(1707, 806);
-            this.plcTracking2.TabIndex = 1;
-            this.plcTracking2.Vertical = false;
+            this.listViewStoricoAlarmZ1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listViewStoricoAlarmZ1.Location = new System.Drawing.Point(3, 3);
+            this.listViewStoricoAlarmZ1.Name = "listViewStoricoAlarmZ1";
+            this.listViewStoricoAlarmZ1.Size = new System.Drawing.Size(1707, 808);
+            this.listViewStoricoAlarmZ1.TabIndex = 1;
+            this.listViewStoricoAlarmZ1.UseCompatibleStateImageBehavior = false;
+            // 
+            // tabPage19
+            // 
+            this.tabPage19.Controls.Add(this.listViewStoricoAlarmZ2);
+            this.tabPage19.Location = new System.Drawing.Point(4, 25);
+            this.tabPage19.Name = "tabPage19";
+            this.tabPage19.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage19.Size = new System.Drawing.Size(1713, 812);
+            this.tabPage19.TabIndex = 9;
+            this.tabPage19.Text = "Storico Allarmi";
+            this.tabPage19.UseVisualStyleBackColor = true;
+            // 
+            // listViewStoricoAlarmZ2
+            // 
+            this.listViewStoricoAlarmZ2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listViewStoricoAlarmZ2.Location = new System.Drawing.Point(3, 3);
+            this.listViewStoricoAlarmZ2.Name = "listViewStoricoAlarmZ2";
+            this.listViewStoricoAlarmZ2.Size = new System.Drawing.Size(1707, 806);
+            this.listViewStoricoAlarmZ2.TabIndex = 1;
+            this.listViewStoricoAlarmZ2.UseCompatibleStateImageBehavior = false;
             // 
             // Form1
             // 
@@ -5028,13 +4393,10 @@
             this.groupBox22.ResumeLayout(false);
             this.groupBox21.ResumeLayout(false);
             this.groupBox20.ResumeLayout(false);
+            this.Tracking.ResumeLayout(false);
             this.tabPage6.ResumeLayout(false);
             this.groupBox19.ResumeLayout(false);
             this.groupBox18.ResumeLayout(false);
-            this.tabPage3.ResumeLayout(false);
-            this.groupBox11.ResumeLayout(false);
-            this.groupBox10.ResumeLayout(false);
-            this.groupBox9.ResumeLayout(false);
             this.tabPage5.ResumeLayout(false);
             this.groupBox17.ResumeLayout(false);
             this.groupBox16.ResumeLayout(false);
@@ -5042,9 +4404,9 @@
             this.groupBox4.ResumeLayout(false);
             this.groupBox6.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
-            this.tabPage17.ResumeLayout(false);
+            this.tabPage3.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            this.tabControl1.ResumeLayout(false);
+            this.tracking2.ResumeLayout(false);
             this.tabPage13.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
@@ -5054,15 +4416,10 @@
             this.groupBox34.ResumeLayout(false);
             this.tableLayoutPanel5.ResumeLayout(false);
             this.panel11.ResumeLayout(false);
-            this.tabPage15.ResumeLayout(false);
-            this.groupBox40.ResumeLayout(false);
-            this.groupBox36.ResumeLayout(false);
-            this.groupBox35.ResumeLayout(false);
-            this.groupBox42.ResumeLayout(false);
-            this.groupBox43.ResumeLayout(false);
-            this.groupBox45.ResumeLayout(false);
+            this.tabPage18.ResumeLayout(false);
             this.tabPage16.ResumeLayout(false);
             this.groupBox41.ResumeLayout(false);
+            this.tabPage15.ResumeLayout(false);
             this.Aspirazione.ResumeLayout(false);
             this.Valvole.ResumeLayout(false);
             this.tabPage10.ResumeLayout(false);
@@ -5088,7 +4445,8 @@
             this.groupBox13.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
-            this.tabPage18.ResumeLayout(false);
+            this.tabPage17.ResumeLayout(false);
+            this.tabPage19.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -5110,31 +4468,6 @@
         private System.Windows.Forms.GroupBox groupBox25;
         private PLCBooleanSwitch plcBooleanSwitch2;
         private System.Windows.Forms.TabControl tabControl3;
-        private System.Windows.Forms.TabPage tabPage3;
-        private PLCBooleanButton plcBooleanButton3;
-        private PLCBooleanButton plcBooleanButton2;
-        private PLCBooleanButton plcBooleanButton1;
-        private System.Windows.Forms.GroupBox groupBox11;
-        private HmiControls.TrackingItem trackingItem18;
-        private HmiControls.TrackingItem trackingItem13;
-        private HmiControls.TrackingItem trackingItem14;
-        private HmiControls.TrackingItem trackingItem15;
-        private HmiControls.TrackingItem trackingItem16;
-        private HmiControls.TrackingItem trackingItem17;
-        private System.Windows.Forms.GroupBox groupBox10;
-        private HmiControls.TrackingItem trackingItem12;
-        private HmiControls.TrackingItem trackingItem7;
-        private HmiControls.TrackingItem trackingItem8;
-        private HmiControls.TrackingItem trackingItem9;
-        private HmiControls.TrackingItem trackingItem10;
-        private HmiControls.TrackingItem trackingItem11;
-        private System.Windows.Forms.GroupBox groupBox9;
-        private HmiControls.TrackingItem trackingItem1;
-        private HmiControls.TrackingItem trackingItem6;
-        private HmiControls.TrackingItem trackingItem5;
-        private HmiControls.TrackingItem trackingItem4;
-        private HmiControls.TrackingItem trackingItem3;
-        private HmiControls.TrackingItem trackingItem2;
         private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.GroupBox groupBox17;
         private PLCNumberEdit plcNumberEdit18;
@@ -5280,7 +4613,6 @@
         private PLCBoolean plcBoolean57;
         private PLCBoolean plcBoolean58;
         private PLCBoolean plcBoolean59;
-        private PLCBoolean plcAlarm;
         private PLCBooleanButton plcBooleanButton13;
         private System.Windows.Forms.TabPage Aspirazione;
         private System.Windows.Forms.TabControl Valvole;
@@ -5321,11 +4653,9 @@
         private PLCNumber plcNumber1;
         private System.Windows.Forms.TabPage tabPage11;
         private System.Windows.Forms.ListView listView1;
-        private PLCBoolean plcBooleanAspAlarm;
         private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.TabPage tabPage12;
         private System.Windows.Forms.GroupBox groupBox28;
-        private PLCBoolean plcAllarmeBricch;
         private PLCBoolean plcAnomaliaBricc;
         private PLCBoolean plcCiclicaBricc;
         private PLCBoolean plcConnessioneBricc;
@@ -5361,12 +4691,11 @@
         private PLCBooleanSwitchSimple plcBooleanSwitchSimple6;
         private System.Windows.Forms.ListView listView2;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabControl tracking2;
         private System.Windows.Forms.TabPage tabPage13;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.GroupBox groupBox31;
-        private PLCBoolean plcBoolean79;
         private PLCBooleanButton plcBooleanButton11;
         private System.Windows.Forms.GroupBox groupBox33;
         private PLCBoolean plcBoolean80;
@@ -5380,54 +4709,29 @@
         private System.Windows.Forms.GroupBox groupBox37;
         private System.Windows.Forms.GroupBox groupBox38;
         private System.Windows.Forms.GroupBox groupBox39;
-        private System.Windows.Forms.TabPage tabPage15;
-        private System.Windows.Forms.GroupBox groupBox42;
-        private HmiControls.TrackingItem trackingItem19;
-        private HmiControls.TrackingItem trackingItem20;
-        private HmiControls.TrackingItem trackingItem21;
-        private HmiControls.TrackingItem trackingItem22;
-        private HmiControls.TrackingItem trackingItem23;
-        private HmiControls.TrackingItem trackingItem24;
-        private System.Windows.Forms.GroupBox groupBox43;
-        private HmiControls.TrackingItem trackingItem25;
-        private HmiControls.TrackingItem trackingItem26;
-        private HmiControls.TrackingItem trackingItem27;
-        private HmiControls.TrackingItem trackingItem28;
-        private HmiControls.TrackingItem trackingItem29;
-        private HmiControls.TrackingItem trackingItem30;
-        private System.Windows.Forms.GroupBox groupBox45;
-        private HmiControls.TrackingItem trackingItem34;
-        private HmiControls.TrackingItem trackingItem35;
-        private HmiControls.TrackingItem trackingItem36;
         private System.Windows.Forms.TabPage tabPage16;
         private System.Windows.Forms.GroupBox groupBox32;
         private PLCBooleanButton plcBooleanButton20;
-        private System.Windows.Forms.GroupBox groupBox35;
-        private HmiControls.TrackingItem trackingItem37;
-        private HmiControls.TrackingItem trackingItem38;
-        private HmiControls.TrackingItem trackingItem39;
-        private HmiControls.TrackingItem trackingItem40;
-        private HmiControls.TrackingItem trackingItem41;
-        private HmiControls.TrackingItem trackingItem42;
-        private System.Windows.Forms.GroupBox groupBox36;
-        private HmiControls.TrackingItem trackingItem43;
-        private HmiControls.TrackingItem trackingItem44;
-        private HmiControls.TrackingItem trackingItem45;
-        private HmiControls.TrackingItem trackingItem46;
-        private HmiControls.TrackingItem trackingItem47;
-        private HmiControls.TrackingItem trackingItem48;
-        private System.Windows.Forms.GroupBox groupBox40;
-        private HmiControls.TrackingItem trackingItem31;
-        private HmiControls.TrackingItem trackingItem32;
-        private HmiControls.TrackingItem trackingItem33;
         private System.Windows.Forms.GroupBox groupBox41;
         private PLCNumberEdit plcNumberEdit39;
         private System.Windows.Forms.TabPage tabPage14;
         private PLCList plcGridIOAsp;
-        private System.Windows.Forms.TabPage tabPage17;
+        private System.Windows.Forms.TabPage Tracking;
         private PLCList plcTracking1;
         private System.Windows.Forms.TabPage tabPage18;
         private PLCList plcTracking2;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.ListView listViewAlZ1;
+        private System.Windows.Forms.TabPage tabPage15;
+        private System.Windows.Forms.ListView listAlarmZ2;
+        private PLCBoolean plcAlarmZ1;
+        private PLCBoolean plcAllarBricch;
+        private PLCBoolean plcAlarmAsp;
+        private PLCBoolean plcAlarmZ2;
+        private System.Windows.Forms.TabPage tabPage17;
+        private System.Windows.Forms.ListView listViewStoricoAlarmZ1;
+        private System.Windows.Forms.TabPage tabPage19;
+        private System.Windows.Forms.ListView listViewStoricoAlarmZ2;
     }
 }
 

@@ -33,6 +33,9 @@ namespace GalimbertiHMIgl
         private PLC plcAspirazione;
         private CycleHundegger hundegger = new CycleHundegger();
         private readonly PlcAlarmListAspirazione plcAlarmListAspirazione = new PlcAlarmListAspirazione();
+        private readonly PlcAlarmListRulliera1 plcAlarmListRulliera1 = new PlcAlarmListRulliera1();
+        private readonly PlcAlarmListRulliera2 plcAlarmListRulliera2 = new PlcAlarmListRulliera2();
+
         private readonly TrackingCorrentiAspirazione plcTrackingAspirazione = new TrackingCorrentiAspirazione();
 
         public Form1()
@@ -51,7 +54,7 @@ namespace GalimbertiHMIgl
         System.Timers.Timer timerAspirazione = null;
         System.Timers.Timer timerBricc = null;
         System.Timers.Timer timerDatabse = null;
-
+        System.Timers.Timer timerDB = null;
 
         public void initIOAspirazione()
         {
@@ -295,20 +298,26 @@ namespace GalimbertiHMIgl
             this.plcBricc = new PLC(new DriverModBus(ConfigurationSettings.AppSettings.Get("Bricc_IP"), int.Parse(ConfigurationSettings.AppSettings.Get("Bricc_Port"))));
             this.plcBricc.tryConnect();
 
-            plcBooleanAspAlarm.register(this.plcAspirazione);
+            plcAlarmAsp.register(this.plcAspirazione);
             this.initTrackingZ1();
             this.initTrackingZ2();
             this.initIOAspirazione();
          
 
             PLCControlUtils.RegisterAll(this.plcRulliera, this.tabControl3);
-            PLCControlUtils.RegisterAll(this.plcRulliera, this.tabControl1);
+            PLCControlUtils.RegisterAll(this.plcRulliera, this.tracking2);
             PLCControlUtils.RegisterAll(this.plcRulliera, this.groupBox25);
             PLCControlUtils.RegisterAll(this.plcAspirazione, this.Valvole);
             PLCControlUtils.RegisterAll(this.plcBricc, this.tabPage12);
 
             this.plcAlarmListAspirazione.comm = this.plcAspirazione;
             this.plcAlarmListAspirazione.init();
+
+            this.plcAlarmListRulliera1.comm = this.plcRulliera;
+            this.plcAlarmListRulliera1.init();
+
+            this.plcAlarmListRulliera2.comm = this.plcRulliera;
+            this.plcAlarmListRulliera2.init();
 
             this.plcTrackingAspirazione.comm = this.plcAspirazione;
             this.plcTrackingAspirazione.log = this.log;
@@ -317,16 +326,51 @@ namespace GalimbertiHMIgl
             listView1.View = View.Details;
             listView1.Columns.Add("Allarme");
             listView1.GridLines = true;
+            listView1.Columns[0].Width = -1;
             listView1.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
             listView1.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
             listView1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
+
+            listViewAlZ1.View = View.Details;
+            listViewAlZ1.Columns.Add("Allarme");
+            listViewAlZ1.Columns[0].Width = -1;
+            listViewAlZ1.GridLines = true;
+            listViewAlZ1.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
+            listViewAlZ1.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
+            listViewAlZ1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
+
+
+            listAlarmZ2.View = View.Details;
+            listAlarmZ2.Columns.Add("Allarme");
+            listAlarmZ2.Columns[0].Width = -1;
+            listAlarmZ2.GridLines = true;
+            listAlarmZ2.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
+            listAlarmZ2.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
+            listAlarmZ2.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
 
             listView2.View = View.Details;
             listView2.Columns.Add("Data");
             listView2.Columns.Add("Allarme");
             listView2.GridLines = true;
             listView2.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
+            listView2.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
             listView2.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+
+            listViewStoricoAlarmZ1.View = View.Details;
+            listViewStoricoAlarmZ1.Columns.Add("Data");
+            listViewStoricoAlarmZ1.Columns.Add("Allarme");
+            listViewStoricoAlarmZ1.GridLines = true; 
+            listViewStoricoAlarmZ1.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
+            listViewStoricoAlarmZ1.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
+            listViewStoricoAlarmZ1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+
+            listViewStoricoAlarmZ2.View = View.Details;
+            listViewStoricoAlarmZ2.Columns.Add("Data");
+            listViewStoricoAlarmZ2.Columns.Add("Allarme");
+            listViewStoricoAlarmZ2.GridLines = true;
+            listViewStoricoAlarmZ2.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
+            listViewStoricoAlarmZ2.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
+            listViewStoricoAlarmZ2.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
 
             this.hundegger.init(this.plcRulliera);
 
@@ -336,7 +380,6 @@ namespace GalimbertiHMIgl
             {
                 timerRulliera.Enabled = false;
                 doLoopRulliera();
-                this.cycle_alarms();
                 timerRulliera.Enabled = true;
             };
             timerRulliera.Start();
@@ -361,6 +404,16 @@ namespace GalimbertiHMIgl
                 timerBricc.Enabled = true;
             };
             timerBricc.Start();
+
+            timerDB = new System.Timers.Timer();
+            timerDB.Interval = 500;
+            timerDB.Elapsed += (s, e) =>
+            {
+                timerDB.Enabled = false;
+                this.hundegger.processDB();
+                timerDB.Enabled = true;
+            };
+            timerDB.Start();
 
             plcAspSelManMode.OnUIChanges += PlcAspSelManMode_OnUIChanges;
 
@@ -392,43 +445,7 @@ namespace GalimbertiHMIgl
             });
         }
 
-        private void cycle_alarms()
-        {
-
-            this.plcRulliera.doWithPLC(c =>
-            {
-                this.plcAlarm.PLCValue = false;
-                this.plcAlarm.PLCDescription = "";
-                try
-                {
-                    checkAlarm(c, "RULLI_CENTRO_TAGLI.All1_Spazio_Scarico_Su_C1_Non_Suff");
-                    checkAlarm(c, "RULLI_CENTRO_TAGLI.All2_Timeout_Scarico_Pz_Da_Hundegger");
-                    checkAlarm(c, "RULLI_CENTRO_TAGLI.All3_Spazio_Scarico_Su_C2_Non_Suff");
-                    checkAlarm(c, "RULLI_CENTRO_TAGLI.All4_Ftc_Scarico_C1_Su_C2");
-                    checkAlarm(c, "RULLI_CENTRO_TAGLI.All5_Timeout_Scarico_Pz_Da_Catenaria_C1");
-                    checkAlarm(c, "RULLI_CENTRO_TAGLI.All6_Timeout_Scarico_Pz_Da_Catenaria_C2");
-                    checkAlarm(c, "RULLI_CENTRO_TAGLI.All7_Errore_Ftc_Scarico_C2_Su_R1");
-                    checkAlarm(c, "RULLI_CENTRO_TAGLI.All10_Presenza_Pezzo_Uscita_C1");
-                    checkAlarm(c, "RULLI_CENTRO_TAGLI.All11_Mancata_Lettura_Ftc_Rotaz");
-                    checkAlarm(c, "RULLI_CENTRO_TAGLI.All30_Sel_Tipo_Rotazione");
-                    checkAlarm(c, "RULLI_CENTRO_TAGLI.All50_Drive_Rotaz_Catenaria_C1");
-                    checkAlarm(c, "RULLI_CENTRO_TAGLI.All51_Drive_Solleva_Catenaria_C1");
-                    checkAlarm(c, "RULLI_CENTRO_TAGLI.All52_Drive_Ribalta_Catenaria_C1");
-
-                    checkAlarm(c, "RULLI_CENTRO_TAGLI.All53_Drive_Rotazione_Catenaria_C2");
-                    checkAlarm(c, "RULLI_CENTRO_TAGLI.All54_Drive_Rotazione_Rulliera_R1");
-                    checkAlarm(c, "RULLI_CENTRO_TAGLI.All100_Emergenza");
-                } catch (Exception ex)
-                {
-                    this.plcAlarm.PLCValue = true;
-                    this.plcAlarm.PLCDescription = ex.Message;
-
-                }
-
-            });
-
-        }
-
+      
 
         private static void checkAlarm(IPlcDriver c, String variable)
         {
@@ -464,6 +481,18 @@ namespace GalimbertiHMIgl
                 }
                 this.plcCiclica.doWithUI(() => this.plcCiclica.PLCValue = false);
             }
+
+            this.listViewAlZ1.Invoke(new Action(
+                () =>
+                {
+                    aggiornaAllarmiZ1();
+                }));
+
+            this.listAlarmZ2.Invoke(new Action(
+             () =>
+             {
+                 aggiornaAllarmiZ2();
+             }));
 
         }
 
@@ -551,18 +580,75 @@ namespace GalimbertiHMIgl
                 var a = new ListViewItem(new string[] { al.Value });
                 listView1.Items.Add(a);
             }
+            listView1.Columns[0].Width = -1;
+        }
+
+        public void aggiornaAllarmiZ1()
+        {
+
+            foreach (var al in this.plcAlarmListRulliera1.newAlarms)
+            {
+                log.LogRulliera("ALARM_ACTIVE", "1", al.Value, new TimeSpan());
+
+            }
+
+          
+            listViewAlZ1.Items.Clear();
+
+            foreach (var al in plcAlarmListRulliera1.activeAlarms)
+            {
+                var a = new ListViewItem(new string[] { al.Value });
+                listViewAlZ1.Items.Add(a);
+            }
+            listViewAlZ1.Columns[0].Width = -1;
+
+            this.plcAlarmZ1.PLCValue = plcAlarmListRulliera1.activeAlarms.Count > 0;
+
+        }
+
+        public void aggiornaAllarmiZ2()
+        {
+            foreach (var al in this.plcAlarmListRulliera2.newAlarms)
+            {
+                log.LogRulliera("ALARM_ACTIVE", "2", al.Value, new TimeSpan());
+
+            }
+
+            listAlarmZ2.Items.Clear();
+
+            foreach (var al in plcAlarmListRulliera2.activeAlarms)
+            {
+                var a = new ListViewItem(new string[] { al.Value });
+                listAlarmZ2.Items.Add(a);
+            }
+            listAlarmZ2.Columns[0].Width = -1;
+
+            this.plcAlarmZ2.PLCValue = plcAlarmListRulliera2.activeAlarms.Count > 0;
         }
 
         public void aggiornaStoricoAllarmi()
         {
-
+            listViewStoricoAlarmZ1.Items.Clear();
+            listViewStoricoAlarmZ2.Items.Clear();
             listView2.Items.Clear();
-
             foreach (var al in this.log.GetLogAspirazione())
             {
                 var a = new ListViewItem(al);
                 listView2.Items.Add(a);
             }
+            foreach (var al in this.log.GetLogRullieraZ1())
+            {
+                var a = new ListViewItem(al);
+                listViewStoricoAlarmZ1.Items.Add(a);
+            }
+            foreach (var al in this.log.GetLogRullieraZ2())
+            {
+                var a = new ListViewItem(al);
+                listViewStoricoAlarmZ2.Items.Add(a);
+            }
+            listViewStoricoAlarmZ1.Columns[0].Width = -1;
+            listViewStoricoAlarmZ2.Columns[0].Width = -1;
+            listView2.Columns[0].Width = -1;
         }
 
       
@@ -634,6 +720,16 @@ namespace GalimbertiHMIgl
         }
 
         private void plcNumberEdit26_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void plcBoolean81_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void plcBoolean82_Load(object sender, EventArgs e)
         {
 
         }

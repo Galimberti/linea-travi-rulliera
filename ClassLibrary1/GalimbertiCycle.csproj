@@ -46,6 +46,8 @@
   <ItemGroup>
     <Compile Include="CycleHundegger.cs" />
     <Compile Include="PlcAlarmList.cs" />
+    <Compile Include="PlcAlarmListRulliera2.cs" />
+    <Compile Include="PlcAlarmListRulliera1.cs" />
     <Compile Include="PlcAlarmListAspirazione.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Runner.cs" />

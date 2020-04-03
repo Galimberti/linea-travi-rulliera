@@ -1,4 +1,5 @@
-﻿using PLCDrivers;
+﻿using DatabaseInterface;
+using PLCDrivers;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -8,6 +9,7 @@ using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
+using static DatabaseInterface.RullieraDB;
 
 namespace GalimbertiHMIgl
 {
@@ -15,61 +17,14 @@ namespace GalimbertiHMIgl
     {
 
         private PLC plcRulliera;
+        PostgresLog log = new PostgresLog();
 
-
-        public void  cleanFiles()
-        {
-            var files = new DirectoryInfo(ConfigurationSettings.AppSettings.Get("Folder")).GetFiles("*.xml");
-            foreach (var file in files)
-            {
-                if (DateTime.UtcNow - file.CreationTimeUtc > TimeSpan.FromDays(1))
-                {
-                    File.Delete(file.FullName);
-                }
-            }
-        }
-
-
+      
 
         public void init(PLC plc)
         {
 
             this.plcRulliera = plc;
-
-            try
-            {
-                var _watcher_nesting = new FileSystemWatcher();
-                _watcher_nesting.Path = ConfigurationSettings.AppSettings.Get("Folder");
-                _watcher_nesting.NotifyFilter = NotifyFilters.LastWrite | NotifyFilters.FileName;
-                _watcher_nesting.Filter = "*_N.xml";
-                _watcher_nesting.Created += _watcher_Created_Nesting;
-                _watcher_nesting.Error += new ErrorEventHandler((x, y) => Console.WriteLine("Error"));
-                _watcher_nesting.EnableRaisingEvents = true;
-
-                var _watcher = new FileSystemWatcher();
-                _watcher.Path = ConfigurationSettings.AppSettings.Get("Folder");
-                _watcher.NotifyFilter = NotifyFilters.LastWrite | NotifyFilters.FileName;
-                _watcher.Filter = "*_7.xml";
-                _watcher.Created += _watcher_Created;
-                _watcher.Error += new ErrorEventHandler((x, y) => Console.WriteLine("Error"));
-                _watcher.EnableRaisingEvents = true;
-
-                var _watcher_anticipo = new FileSystemWatcher();
-                _watcher_anticipo.Path = ConfigurationSettings.AppSettings.Get("Folder");
-                _watcher_anticipo.NotifyFilter = NotifyFilters.LastWrite | NotifyFilters.FileName;
-                _watcher_anticipo.Filter = "*_1.xml";
-                _watcher_anticipo.Created += _watcher_Created_Anticipo;
-                _watcher_anticipo.Error += new ErrorEventHandler((x, y) => Console.WriteLine("Error"));
-                _watcher_anticipo.EnableRaisingEvents = true;
-
-            } catch (Exception ex)
-            {
-
-            }
-
-
-
-
 
             this.plcRulliera.pollActions.Add(
                 () => {
@@ -104,38 +59,64 @@ namespace GalimbertiHMIgl
 
         bool prev_WR_En_Anticipo_Hundegger = false;
 
-        private void _watcher_Created(object sender, FileSystemEventArgs e)
+        private void _watcher_Created(Event ev)
         {
 
-            while (!IsFileReady(e.FullPath)) ;
-
             XmlDocument doc = new XmlDocument();
-            doc.Load(e.FullPath);
+            doc.LoadXml(ev.xml);
 
             XmlNode node = doc.DocumentElement.SelectSingleNode("/RectangularPart");
-            //Double x = Double.Parse(node.Attributes["DimensionX"]?.InnerText.Replace(".",","));
-            //Double y = Double.Parse(node.Attributes["DimensionY"]?.InnerText.Replace(".", ","));
-            //Double z = Double.Parse(node.Attributes["DimensionZ"]?.InnerText.Replace(".", ","));
-
             Double x = Double.Parse(node.Attributes["DimensionX"]?.InnerText.Replace(".", "."));
             Double y = Double.Parse(node.Attributes["DimensionY"]?.InnerText.Replace(".", "."));
             Double z = Double.Parse(node.Attributes["DimensionZ"]?.InnerText.Replace(".", "."));
 
             String ordiginKey = node.Attributes["OriginKey"]?.InnerText;
 
+            log.LogRulliera("DEBUG_PART_FINISHED", "0", ev._id.ToString(), new TimeSpan());
 
-            if (x < 500)
+
+            if (x < 600)
+            {
+                log.LogRulliera("DEBUG_PART_BUCA", "0",ev._id.ToString(), new TimeSpan());
                 return;
+            }
+               
 
-            getRotation(doc, ordiginKey);
+            int rotation = 99;
+            if (x > 1600)
+            {
+                log.LogRulliera("DEBUG_PART_CALCOLO_ROTAZIONE", "0", ev._id.ToString(), new TimeSpan());
+                rotation = getRotation(doc, ordiginKey);
+            }
+
+            bool invertYZ = false;
+            var nesting = this.rullieraDB.getNesting(ordiginKey);
+            if (nesting != null)
+            {
+                var result = rotate(new Vector3(0, 0, 1), new Vector3(nesting.x, nesting.y, nesting.z));
+                if ( Math.Abs(Vector3.Dot(result, new Vector3(0, 0, 1))) > 0.9)
+                {
+                    invertYZ = false;
+                }else
+                {
+                    invertYZ = true;
+                }
+            }
 
             this.plcRulliera.doWithPLC(c =>
             {
-                c.writeDouble("RULLI_CENTRO_TAGLI.RD_Larghezza_Pz_Da_Hundegger", y);
+                c.writeDouble("RULLI_CENTRO_TAGLI.RD_Rotazione_Pz_Da_Hundegger", rotation);
 
-                c.writeDouble("RULLI_CENTRO_TAGLI.RD_Altezza_Pz_Da_Hundegger", z);
-
-                c.writeDouble("RULLI_CENTRO_TAGLI.RD_Rotazione_Pz_Da_Hundegger", getRotation(doc, ordiginKey));
+                if  (invertYZ)
+                {
+                    c.writeDouble("RULLI_CENTRO_TAGLI.RD_Larghezza_Pz_Da_Hundegger", y);
+                    c.writeDouble("RULLI_CENTRO_TAGLI.RD_Altezza_Pz_Da_Hundegger", z);
+                }
+                else
+                {
+                    c.writeDouble("RULLI_CENTRO_TAGLI.RD_Larghezza_Pz_Da_Hundegger", z);
+                    c.writeDouble("RULLI_CENTRO_TAGLI.RD_Altezza_Pz_Da_Hundegger", y);
+                }
 
                 c.writeBool("RULLI_CENTRO_TAGLI.RD_Presenza_Pz_Da_Hundegger", true);
 
@@ -143,55 +124,79 @@ namespace GalimbertiHMIgl
 
         }
 
+        RullieraDB rullieraDB = new RullieraDB();
+        public void processDB()
+        {
+           foreach(Event ev in rullieraDB.getEventsToProcess())
+           {
+                try
+                {
+                    if (ev.event_type == "N")
+                    {
+                        this._watcher_Created_Nesting(ev);
 
-        public Dictionary<String, Vector3> rotations = new Dictionary<string, Vector3>();
-        private void _watcher_Created_Nesting(object sender, FileSystemEventArgs e)
+                    }
+                    else if (ev.event_type == "1")
+                    {
+                        this._watcher_Created_Anticipo(ev);
+                    }
+                    else if (ev.event_type == "7")
+                    {
+                        this._watcher_Created(ev);
+                    }
+
+                    this.rullieraDB.markAsProcessed(ev);
+                } catch(Exception ex)
+                {
+                    log.LogRulliera("DEBUG_ERROR", "0", ex.Message, new TimeSpan());
+
+                }
+
+            }
+        }
+
+
+        private void _watcher_Created_Nesting(Event ev)
         {
 
-            while (!IsFileReady(e.FullPath)) ;
-
             XmlDocument doc = new XmlDocument();
-            doc.Load(e.FullPath);
+            doc.LoadXml(ev.xml);
 
             var nodes = doc.DocumentElement.SelectNodes("//PartReference");
 
+            log.LogRulliera("DEBUG_NESTING", "0", ev._id.ToString(), new TimeSpan());
+
             foreach (XmlNode node in nodes)
             {
-                var v = new Vector3();
-                v.X = (float) Double.Parse(node.Attributes["RotationX"]?.InnerText.Replace(".", "."));
-                v.Y = (float)Double.Parse(node.Attributes["RotationY"]?.InnerText.Replace(".", "."));
-                v.Z = (float)Double.Parse(node.Attributes["RotationZ"]?.InnerText.Replace(".", "."));
                 String referenceKey = node.Attributes["ReferenceKey"]?.InnerText;
+                if (referenceKey != null)
+                {
+                    var v = new Vector3();
+                    v.X = (float) Double.Parse(node.Attributes["RotationX"]?.InnerText.Replace(".", "."));
+                    v.Y = (float)Double.Parse(node.Attributes["RotationY"]?.InnerText.Replace(".", "."));
+                    v.Z = (float)Double.Parse(node.Attributes["RotationZ"]?.InnerText.Replace(".", "."));
+                    rullieraDB.logNesting(referenceKey, (int)v.X, (int)v.Y, (int)v.Z);
 
-                if (rotations.ContainsKey(referenceKey))
-                    rotations.Remove(referenceKey);
+                    log.LogRulliera("DEBUG_NESTING_" + referenceKey, "0", v.X + " " + v.Y + " " + v.Z, new TimeSpan());
 
-                rotations.Add(referenceKey, v);
+                }
             }
-
-            var files = new DirectoryInfo(ConfigurationSettings.AppSettings.Get("Folder")).GetFiles("*.xml");
-
 
         }
 
-        private void _watcher_Created_Anticipo(object sender, FileSystemEventArgs e)
+        private void _watcher_Created_Anticipo(Event ev)
         {
-            while (!IsFileReady(e.FullPath)) ;
-
+          
             XmlDocument doc = new XmlDocument();
-            doc.Load(e.FullPath);
+            doc.LoadXml(ev.xml);
 
             XmlNode node = doc.DocumentElement.SelectSingleNode("/RectangularPart");
-            // Double x = Double.Parse(node.Attributes["DimensionX"]?.InnerText.Replace(".", ","));
-            // Double y = Double.Parse(node.Attributes["DimensionY"]?.InnerText.Replace(".", ","));
-            // Double z = Double.Parse(node.Attributes["DimensionZ"]?.InnerText.Replace(".", ","));
-
 
             Double x = Double.Parse(node.Attributes["DimensionX"]?.InnerText.Replace(".", "."));
             Double y = Double.Parse(node.Attributes["DimensionY"]?.InnerText.Replace(".", "."));
             Double z = Double.Parse(node.Attributes["DimensionZ"]?.InnerText.Replace(".", "."));
 
-            if (x < 500)
+            if (x < 600)
                 return;
 
 
@@ -220,6 +225,8 @@ namespace GalimbertiHMIgl
                     int frame = int.Parse(nodes[0].Attributes["FrameId"].InnerText);
                     Vector3 reference = new Vector3();
 
+                    log.LogRulliera("DEBUG_PART_"+ key, "0", "ROTATION FRAME part " +  frame.ToString(), new TimeSpan());
+
                     if (frame == 1)
                     {
                         reference = new Vector3(0, 0, 1);
@@ -238,14 +245,21 @@ namespace GalimbertiHMIgl
                     }
 
                     int ret = 99;
-                    if (this.rotations.ContainsKey(key))
+                    var nesting = this.rullieraDB.getNesting(key);
+                    if (nesting != null)
                     {
-                        ret = calculateFinalRotation(reference, this.rotations[key]);
-                        rotations.Remove(key);
+                        log.LogRulliera("DEBUG_PART_" + key, nesting.id, "FINDED ROTATION", new TimeSpan());
+
+                        ret = calculateFinalRotation(reference, new Vector3(nesting.x,nesting.y,nesting.z));
                     }else
                     {
+                        log.LogRulliera("DEBUG_PART_" + key, "0", "ROTATION NOT FINDED!", new TimeSpan());
+
                         ret = calculateFinalRotation(reference, new Vector3(0,0,0));
+
                     }
+                    log.LogRulliera("DEBUG_PART_" + key, "0", "ROTATION PLC RESULT is " + ret, new TimeSpan());
+
                     return ret;
                 }
             }
@@ -261,18 +275,23 @@ namespace GalimbertiHMIgl
             return (float) (Math.PI / 180) * angle;
         }
 
+        public Vector3 rotate(Vector3 point, Vector3 rotation)
+        {
+            if (rotation != null)
+            {
+                point = Vector3.Transform(point, Matrix4x4.CreateRotationX(ConvertToRadians(rotation.X)));
+                point = Vector3.Transform(point, Matrix4x4.CreateRotationY(ConvertToRadians(rotation.Y)));
+                point = Vector3.Transform(point, Matrix4x4.CreateRotationZ(ConvertToRadians(rotation.Z)));
+            }
+            return point;
+        }
+
         public int calculateFinalRotation(Vector3 point, Vector3 rotation)
         {
             try
             {
 
-                if (rotation != null)
-                {
-                    point = Vector3.Transform(point, Matrix4x4.CreateRotationX(ConvertToRadians(rotation.X)));
-                    point = Vector3.Transform(point, Matrix4x4.CreateRotationY(ConvertToRadians(rotation.Y)));
-                    point = Vector3.Transform(point, Matrix4x4.CreateRotationZ(ConvertToRadians(rotation.Z)));
-                }
-
+                point = rotate(point, rotation);
 
                 int resultFrame = 0;
 
@@ -293,8 +312,11 @@ namespace GalimbertiHMIgl
                     resultFrame = 4;
                 }
 
-              
+                log.LogRulliera("DEBUG_ROTATION_CALC" , "0", "ROTATION FRAME CALCULATED " + resultFrame, new TimeSpan());
+
+
                 String setting = ConfigurationSettings.AppSettings.Get("FrameId" + resultFrame);
+               
                 return int.Parse(setting);
                
             }
