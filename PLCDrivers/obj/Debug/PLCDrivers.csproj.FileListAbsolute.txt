@@ -4,6 +4,6 @@ C:\Users\RedRoom\Documents\Visual Studio 2015\Projects\GalimbertiHMIgl\PLCDriver
 C:\Users\RedRoom\Documents\Visual Studio 2015\Projects\GalimbertiHMIgl\PLCDrivers\bin\Debug\EasyModbus.dll
 C:\Users\RedRoom\Documents\Visual Studio 2015\Projects\GalimbertiHMIgl\PLCDrivers\bin\Debug\TwinCAT.Ads.dll
 C:\Users\RedRoom\Documents\Visual Studio 2015\Projects\GalimbertiHMIgl\PLCDrivers\bin\Debug\TwinCAT.Ads.xml
-C:\Users\RedRoom\Documents\Visual Studio 2015\Projects\GalimbertiHMIgl\PLCDrivers\obj\Debug\PLCDrivers.csprojResolveAssemblyReference.cache
 C:\Users\RedRoom\Documents\Visual Studio 2015\Projects\GalimbertiHMIgl\PLCDrivers\obj\Debug\PLCDrivers.dll
 C:\Users\RedRoom\Documents\Visual Studio 2015\Projects\GalimbertiHMIgl\PLCDrivers\obj\Debug\PLCDrivers.pdb
+C:\Users\RedRoom\Documents\Visual Studio 2015\Projects\GalimbertiHMIgl\PLCDrivers\obj\Debug\PLCDrivers.csprojResolveAssemblyReference.cache

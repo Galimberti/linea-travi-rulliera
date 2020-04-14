@@ -44,7 +44,23 @@ namespace GalimbertiHMIgl
             this.registerAlarm("RULLI_CENTRO_TAGLI.All55_Inverter_Salita_R1");
 
             this.registerAlarm("RULLI_CENTRO_TAGLI.All100_Emergenza");
-          
+
+
+            this.registerAlarm("RULLI_CENTRO_TAGLI.All60_C1P1_Pls_Eme");
+            this.registerAlarm("RULLI_CENTRO_TAGLI.All61_R1P1_Pls_Eme");
+            this.registerAlarm("RULLI_CENTRO_TAGLI.All61_R1P1_Pls_Eme");
+            this.registerAlarm("RULLI_CENTRO_TAGLI.All62_R1P2_Pls_Eme");
+            this.registerAlarm("RULLI_CENTRO_TAGLI.All63_R1P3_Pls_Eme");
+            this.registerAlarm("RULLI_CENTRO_TAGLI.All64_R1P4_Pls_Eme");
+            this.registerAlarm("RULLI_CENTRO_TAGLI.All65_R1P5_Pls_Eme");
+            this.registerAlarm("RULLI_CENTRO_TAGLI.All66_R1P6_Pls_Eme");
+            this.registerAlarm("RULLI_CENTRO_TAGLI.All67_R3P4_Pls_Eme");
+            this.registerAlarm("RULLI_CENTRO_TAGLI.All68_R3P1_Pls_Eme");
+            this.registerAlarm("RULLI_CENTRO_TAGLI.All69_R3P2_Pls_Eme");
+            this.registerAlarm("RULLI_CENTRO_TAGLI.All70_R3P3_Pls_Eme");
+            this.registerAlarm("RULLI_CENTRO_TAGLI.All71_C4P1_Pls_Eme");
+            this.registerAlarm("RULLI_CENTRO_TAGLI.All72_PB_Eme_Macinatore");
+
             base.init();
 
         }

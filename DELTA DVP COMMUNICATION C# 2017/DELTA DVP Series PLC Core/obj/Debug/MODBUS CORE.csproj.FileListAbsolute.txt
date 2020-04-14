@@ -1,0 +1,12 @@
+D:\4. Projects\8. Modbus\2016\MODBUS SOLUTION 2016 R1\MODBUS CORE\obj\Debug\Industrial.Networks.Modbus.Core.Properties.Resources.resources
+D:\4. Projects\8. Modbus\2016\MODBUS SOLUTION 2016 R1\MODBUS CORE\obj\Debug\MODBUS CORE.csproj.GenerateResource.Cache
+D:\4. Projects\8. Modbus\2016\MODBUS SOLUTION 2016 R1\MODBUS CORE\bin\Debug\Industrial.Networks.Modbus.Core.dll
+D:\4. Projects\8. Modbus\2016\MODBUS SOLUTION 2016 R1\MODBUS CORE\bin\Debug\Industrial.Networks.Modbus.Core.pdb
+D:\4. Projects\8. Modbus\2016\MODBUS SOLUTION 2016 R1\MODBUS CORE\obj\Debug\Industrial.Networks.Modbus.Core.dll
+D:\4. Projects\8. Modbus\2016\MODBUS SOLUTION 2016 R1\MODBUS CORE\obj\Debug\Industrial.Networks.Modbus.Core.pdb
+C:\Users\HOANG LUU\Downloads\MODBUS SOLUTION 2016 R1\MODBUS CORE\bin\Debug\Industrial.Networks.Modbus.Core.dll
+C:\Users\HOANG LUU\Downloads\MODBUS SOLUTION 2016 R1\MODBUS CORE\bin\Debug\Industrial.Networks.Modbus.Core.pdb
+C:\Users\HOANG LUU\Downloads\MODBUS SOLUTION 2016 R1\MODBUS CORE\obj\Debug\Industrial.Networks.Modbus.Core.Properties.Resources.resources
+C:\Users\HOANG LUU\Downloads\MODBUS SOLUTION 2016 R1\MODBUS CORE\obj\Debug\MODBUS CORE.csproj.GenerateResource.Cache
+C:\Users\HOANG LUU\Downloads\MODBUS SOLUTION 2016 R1\MODBUS CORE\obj\Debug\Industrial.Networks.Modbus.Core.dll
+C:\Users\HOANG LUU\Downloads\MODBUS SOLUTION 2016 R1\MODBUS CORE\obj\Debug\Industrial.Networks.Modbus.Core.pdb

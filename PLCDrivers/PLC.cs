@@ -73,6 +73,14 @@ namespace PLCDrivers
             }
         }
 
+        public void connect()
+        {
+            if (!this.driver.isConnected())
+            {
+               this.driver.connect();
+            }
+        }
+
 
         public void readWriteError(string message)
         {

@@ -48,7 +48,7 @@ namespace PLCDrivers.Beckhoff
             lock (this.syncLock)
             {
                 return (Boolean)this.client.ReadSymbol(
-                       var, typeof(Boolean),
+                       var.Trim(), typeof(Boolean),
                        reloadSymbolInfo: false);
             }
          
@@ -59,7 +59,7 @@ namespace PLCDrivers.Beckhoff
             lock (this.syncLock)
             {
                 return (Double)this.client.ReadSymbol(
-                    var, typeof(Double),
+                    var.Trim(), typeof(Double),
                     reloadSymbolInfo: false);
             }
         }
@@ -69,7 +69,7 @@ namespace PLCDrivers.Beckhoff
             lock (this.syncLock)
             {
                 return (Int16)this.client.ReadSymbol(
-                   var, typeof(Int16),
+                   var.Trim(), typeof(Int16),
                    reloadSymbolInfo: false);
             }
         }
@@ -78,7 +78,7 @@ namespace PLCDrivers.Beckhoff
         {
             lock (this.syncLock)
             {
-                this.client.WriteSymbol(var,
+                this.client.WriteSymbol(var.Trim(),
                      value,
                       reloadSymbolInfo: false);
             }
@@ -88,7 +88,7 @@ namespace PLCDrivers.Beckhoff
         {
             lock (this.syncLock)
             {
-                this.client.WriteSymbol(var,
+                this.client.WriteSymbol(var.Trim(),
                     value,
                      reloadSymbolInfo: false);
             }
@@ -98,7 +98,7 @@ namespace PLCDrivers.Beckhoff
         {
             lock (this.syncLock)
             {
-                this.client.WriteSymbol(var,
+                this.client.WriteSymbol(var.Trim(),
                     value,
                      reloadSymbolInfo: false);
             }
@@ -109,7 +109,7 @@ namespace PLCDrivers.Beckhoff
             lock (this.syncLock)
             {
                 return (Int16)this.client.ReadSymbol(
-                   var, typeof(Int32),
+                   var.Trim(), typeof(Int32),
                    reloadSymbolInfo: false);
             }
         }
@@ -118,10 +118,20 @@ namespace PLCDrivers.Beckhoff
         {
             lock (this.syncLock)
             {
-                this.client.WriteSymbol(var,
+                this.client.WriteSymbol(var.Trim(),
                     value,
                      reloadSymbolInfo: false);
             }
+        }
+
+        public override float readFloat(string var)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void writeFloat(string var, float value)
+        {
+            throw new NotImplementedException();
         }
     }
    

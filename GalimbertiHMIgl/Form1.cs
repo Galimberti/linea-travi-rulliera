@@ -31,6 +31,8 @@ namespace GalimbertiHMIgl
         private PLC plcRulliera;
         private PLC plcBricc;
         private PLC plcAspirazione;
+        private PLC plcVelmecMain;
+        private VelmecCycle velmec = new VelmecCycle();
         private CycleHundegger hundegger = new CycleHundegger();
         private readonly PlcAlarmListAspirazione plcAlarmListAspirazione = new PlcAlarmListAspirazione();
         private readonly PlcAlarmListRulliera1 plcAlarmListRulliera1 = new PlcAlarmListRulliera1();
@@ -51,6 +53,7 @@ namespace GalimbertiHMIgl
         }
 
         System.Timers.Timer timerRulliera = null;
+        System.Timers.Timer timerVelmec = null;
         System.Timers.Timer timerAspirazione = null;
         System.Timers.Timer timerBricc = null;
         System.Timers.Timer timerDatabse = null;
@@ -195,13 +198,14 @@ namespace GalimbertiHMIgl
             for (int i = 1; i <= number; i++)
             {
                 String varB = baseVar + "[" + i + "]";
-                list.push(210, 220, true);
+                list.push(210, 240, true);
                 list.addBool("Busy", varB+ ".Busy");
                 list.addNumberEdit("R", varB+ ".Rotazione");
-                list.addNumberEdit("Z", varB + ".Larghezza");
-                list.addNumberEdit("Y", varB + ".Altezza");
-                list.addNumberEdit("L", varB + ".Lunghezza");
+                list.addNumberEdit("L", varB + ".Larghezza");
+                list.addNumberEdit("H", varB + ".Altezza");
+                list.addNumberEdit("X", varB + ".Lunghezza");
                 list.addNumberEdit("Scar", varB + ".Lato_scarico");
+                list.addNumberEdit("Ric", varB + ".Nr_Ricetta");
                 list.addButton("Reset", "").OnUIChanges += (control, e) =>
                 {
                     control.PLC.doWithPLC((p) =>
@@ -212,6 +216,7 @@ namespace GalimbertiHMIgl
                         p.writeDouble(varB + ".Altezza", 0.0);
                         p.writeDouble(varB + ".Lunghezza", 0.0);
                         p.writeInt16(varB + ".Rotazione", 0);
+                        p.writeInt16(varB + ".Nr_Ricetta", 0);
                     });
                 };
  
@@ -236,15 +241,15 @@ namespace GalimbertiHMIgl
         {
 
             this.plcTracking1.Vertical = true;
-            this.plcTracking1.push(1200, 240, false, "C1");
+            this.plcTracking1.push(1200, 260, false, "C1");
             createTrackingItem(this.plcTracking1, ".Buffer_C1", 6);
             this.plcTracking1.pop();
 
-            this.plcTracking1.push(1200, 240, false, "C2");
+            this.plcTracking1.push(1200, 260, false, "C2");
             createTrackingItem(this.plcTracking1, ".Buffer_C2", 6);
             this.plcTracking1.pop();
 
-            this.plcTracking1.push(1200, 240, false, "R1");
+            this.plcTracking1.push(1200, 260, false, "R1");
             createTrackingItem(this.plcTracking1, ".Buffer_R1", 6);
             this.plcTracking1.pop();
          
@@ -264,21 +269,37 @@ namespace GalimbertiHMIgl
                 this.plcTracking2.pop();
             this.plcTracking2.pop();
 
-            this.plcTracking2.push(1200, 240, false, "C3");
+            this.plcTracking2.push(1200, 260, false, "C3");
             createTrackingItem(this.plcTracking2, ".Buffer_C3", 6);
             this.plcTracking2.pop();
-            this.plcTracking2.push(1200, 240, false, "C4");
+            this.plcTracking2.push(1200, 260, false, "C4");
             createTrackingItem(this.plcTracking2, ".Buffer_C4", 6);
             this.plcTracking2.pop();
-            this.plcTracking2.push(1200, 240, false, "C5");
+            this.plcTracking2.push(1200, 260, false, "C5");
             createTrackingItem(this.plcTracking2, ".Buffer_C5", 6);
             this.plcTracking2.pop();
-            this.plcTracking2.push(1200, 240, false, "C6");
+            this.plcTracking2.push(1200, 260, false, "C6");
             createTrackingItem(this.plcTracking2, ".Buffer_C6", 6);
             this.plcTracking2.pop();
 
+            this.plcListTrkVelmec.Vertical = true;
+            this.plcListTrkVelmec.push(300, 260, false, "Rulliera R3");
+            createTrackingItem(this.plcListTrkVelmec, ".Buffer_R3", 1);
+            this.plcListTrkVelmec.pop();
 
 
+            this.plcVelmec.Vertical = true;
+
+            this.plcVelmec.push(300, 260, true, "Velmec");
+            this.plcVelmec.addBool("Run", "M0");
+            this.plcVelmec.addNumber("Ricetta", "M0");
+            this.plcVelmec.addNumber("Altezza", "D408");
+            this.plcVelmec.addNumber("Larghezza", "D410");
+            this.plcVelmec.addButton("Stop", "").OnUIChanges += (control, e) =>
+            {
+                this.velmec.stopCycle();
+            };
+            this.plcVelmec.pop();
 
         }
 
@@ -298,6 +319,9 @@ namespace GalimbertiHMIgl
             this.plcBricc = new PLC(new DriverModBus(ConfigurationSettings.AppSettings.Get("Bricc_IP"), int.Parse(ConfigurationSettings.AppSettings.Get("Bricc_Port"))));
             this.plcBricc.tryConnect();
 
+            this.plcVelmecMain = new PLC(new DriverDELTA("192.168.30.160", 502));
+            this.plcVelmecMain.tryConnect();
+
             plcAlarmAsp.register(this.plcAspirazione);
             this.initTrackingZ1();
             this.initTrackingZ2();
@@ -309,6 +333,8 @@ namespace GalimbertiHMIgl
             PLCControlUtils.RegisterAll(this.plcRulliera, this.groupBox25);
             PLCControlUtils.RegisterAll(this.plcAspirazione, this.Valvole);
             PLCControlUtils.RegisterAll(this.plcBricc, this.tabPage12);
+            PLCControlUtils.RegisterAll(this.plcRulliera, this.plcListTrkVelmec);
+            PLCControlUtils.RegisterAll(this.plcVelmecMain, this.plcVelmec);
 
             this.plcAlarmListAspirazione.comm = this.plcAspirazione;
             this.plcAlarmListAspirazione.init();
@@ -373,6 +399,19 @@ namespace GalimbertiHMIgl
             listViewStoricoAlarmZ2.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
 
             this.hundegger.init(this.plcRulliera);
+            this.velmec.init(this.plcRulliera);
+
+            timerDB = new System.Timers.Timer();
+            timerDB.Interval = 500;
+            timerDB.Enabled = true;
+            timerDB.Elapsed += (s, e) =>
+            {
+                timerDB.Enabled = false;
+                this.hundegger.processDB();
+                timerDB.Enabled = true;
+            };
+            timerDB.Start();
+
 
             timerRulliera = new System.Timers.Timer();
             timerRulliera.Interval = 50;
@@ -383,6 +422,16 @@ namespace GalimbertiHMIgl
                 timerRulliera.Enabled = true;
             };
             timerRulliera.Start();
+
+            timerVelmec = new System.Timers.Timer();
+            timerVelmec.Interval = 1000;
+            timerVelmec.Elapsed += (s, e) =>
+            {
+                timerVelmec.Enabled = false;
+                doLoopVelmec();
+                timerVelmec.Enabled = true;
+            };
+            timerVelmec.Start();
 
 
             timerAspirazione = new System.Timers.Timer();
@@ -397,6 +446,7 @@ namespace GalimbertiHMIgl
 
             timerBricc = new System.Timers.Timer();
             timerBricc.Interval = 500;
+            timerBricc.Enabled = true;
             timerBricc.Elapsed += (s, e) =>
             {
                 timerBricc.Enabled = false;
@@ -404,16 +454,6 @@ namespace GalimbertiHMIgl
                 timerBricc.Enabled = true;
             };
             timerBricc.Start();
-
-            timerDB = new System.Timers.Timer();
-            timerDB.Interval = 500;
-            timerDB.Elapsed += (s, e) =>
-            {
-                timerDB.Enabled = false;
-                this.hundegger.processDB();
-                timerDB.Enabled = true;
-            };
-            timerDB.Start();
 
             plcAspSelManMode.OnUIChanges += PlcAspSelManMode_OnUIChanges;
 
@@ -494,6 +534,17 @@ namespace GalimbertiHMIgl
                  aggiornaAllarmiZ2();
              }));
 
+        }
+
+        private void doLoopVelmec()
+        {
+            try
+            {
+                this.plcVelmecMain.Poll();
+            }
+            catch (Exception ex)
+            {
+            }
         }
 
         private void doLoopBricc()

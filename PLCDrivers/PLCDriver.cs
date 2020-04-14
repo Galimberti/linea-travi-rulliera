@@ -21,6 +21,9 @@ namespace PLCDrivers
         public abstract Int32 readInt32(string var);
         public abstract void writeInt32(string var, Int32 value);
 
+        public abstract float readFloat(string var);
+        public abstract void  writeFloat(string var, float value);
+
         public abstract bool isConnected();
         public abstract void connect();
 

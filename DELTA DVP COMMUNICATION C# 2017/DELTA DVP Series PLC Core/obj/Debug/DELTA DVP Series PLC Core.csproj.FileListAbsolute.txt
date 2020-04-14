@@ -1,0 +1,12 @@
+D:\2. TRAINING\DELTA DVP Series PLC\DELTA DVP Series PLC\MODBUS PROTOCOL CORE\bin\Debug\IndustrialNetworks.ModbusCore.dll
+D:\2. TRAINING\DELTA DVP Series PLC\DELTA DVP Series PLC\MODBUS PROTOCOL CORE\bin\Debug\IndustrialNetworks.ModbusCore.pdb
+D:\2. TRAINING\DELTA DVP Series PLC\DELTA DVP Series PLC\MODBUS PROTOCOL CORE\obj\Debug\IndustrialNetworks.ModbusCore.Properties.Resources.resources
+D:\2. TRAINING\DELTA DVP Series PLC\DELTA DVP Series PLC\MODBUS PROTOCOL CORE\obj\Debug\DELTA DVP Series PLC Core.csproj.GenerateResource.Cache
+D:\2. TRAINING\DELTA DVP Series PLC\DELTA DVP Series PLC\MODBUS PROTOCOL CORE\obj\Debug\IndustrialNetworks.ModbusCore.dll
+D:\2. TRAINING\DELTA DVP Series PLC\DELTA DVP Series PLC\MODBUS PROTOCOL CORE\obj\Debug\IndustrialNetworks.ModbusCore.pdb
+D:\2. TRAINING\DELTA DVP Series PLC\DELTA DVP Series PLC\DELTA DVP Series PLC Core\bin\Debug\IndustrialNetworks.ModbusCore.dll
+D:\2. TRAINING\DELTA DVP Series PLC\DELTA DVP Series PLC\DELTA DVP Series PLC Core\bin\Debug\IndustrialNetworks.ModbusCore.pdb
+D:\2. TRAINING\DELTA DVP Series PLC\DELTA DVP Series PLC\DELTA DVP Series PLC Core\obj\Debug\IndustrialNetworks.ModbusCore.Properties.Resources.resources
+D:\2. TRAINING\DELTA DVP Series PLC\DELTA DVP Series PLC\DELTA DVP Series PLC Core\obj\Debug\DELTA DVP Series PLC Core.csproj.GenerateResource.Cache
+D:\2. TRAINING\DELTA DVP Series PLC\DELTA DVP Series PLC\DELTA DVP Series PLC Core\obj\Debug\IndustrialNetworks.ModbusCore.dll
+D:\2. TRAINING\DELTA DVP Series PLC\DELTA DVP Series PLC\DELTA DVP Series PLC Core\obj\Debug\IndustrialNetworks.ModbusCore.pdb

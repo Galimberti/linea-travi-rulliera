@@ -1,0 +1,19 @@
+D:\2. TRAINING\DELTA DVP Series PLC\DELTA DVP Series PLC\DELTA DVP Series PLC\bin\Debug\DELTA DVP Series PLC.exe.config
+D:\2. TRAINING\DELTA DVP Series PLC\DELTA DVP Series PLC\DELTA DVP Series PLC\bin\Debug\DELTA DVP Series PLC.exe
+D:\2. TRAINING\DELTA DVP Series PLC\DELTA DVP Series PLC\DELTA DVP Series PLC\bin\Debug\DELTA DVP Series PLC.pdb
+D:\2. TRAINING\DELTA DVP Series PLC\DELTA DVP Series PLC\DELTA DVP Series PLC\obj\Debug\DELTA DVP Series PLC.csprojResolveAssemblyReference.cache
+D:\2. TRAINING\DELTA DVP Series PLC\DELTA DVP Series PLC\DELTA DVP Series PLC\obj\Debug\IndustrialNetworks.DVPSeries.Properties.Resources.resources
+D:\2. TRAINING\DELTA DVP Series PLC\DELTA DVP Series PLC\DELTA DVP Series PLC\obj\Debug\DELTA DVP Series PLC.csproj.GenerateResource.Cache
+D:\2. TRAINING\DELTA DVP Series PLC\DELTA DVP Series PLC\DELTA DVP Series PLC\obj\Debug\DELTA DVP Series PLC.exe
+D:\2. TRAINING\DELTA DVP Series PLC\DELTA DVP Series PLC\DELTA DVP Series PLC\obj\Debug\DELTA DVP Series PLC.pdb
+D:\2. TRAINING\DELTA DVP Series PLC\DELTA DVP Series PLC\DELTA DVP Series PLC\bin\Debug\IndustrialNetworks.ModbusCore.dll
+D:\2. TRAINING\DELTA DVP Series PLC\DELTA DVP Series PLC\DELTA DVP Series PLC\bin\Debug\IndustrialNetworks.ModbusCore.pdb
+D:\2. TRAINING\DELTA DVP Series PLC\DELTA DVP Series PLC\DELTA DVP Series PLC\obj\Debug\IndustrialNetworks.DVPSeries.FormReportSlaveID.resources
+D:\2. TRAINING\DELTA DVP Series PLC\DELTA DVP Series PLC\DELTA DVP Series PLC\obj\Debug\IndustrialNetworks.DVPSeries.FormReadingContactY0ToY5FromSlaveDevice02.resources
+D:\2. TRAINING\DELTA DVP Series PLC\DELTA DVP Series PLC\DELTA DVP Series PLC\obj\Debug\IndustrialNetworks.DVPSeries.FormReadingCoilsT0ToT2FromSlaveDevice02.resources
+D:\2. TRAINING\DELTA DVP Series PLC\DELTA DVP Series PLC\DELTA DVP Series PLC\obj\Debug\IndustrialNetworks.DVPSeries.FormReadingD0ToD9FromSlaveDevice02.resources
+D:\2. TRAINING\DELTA DVP Series PLC\DELTA DVP Series PLC\DELTA DVP Series PLC\obj\Debug\IndustrialNetworks.DVPSeries.FormReading3CountersFromSlaveDevice_02.resources
+D:\2. TRAINING\DELTA DVP Series PLC\DELTA DVP Series PLC\DELTA DVP Series PLC\obj\Debug\IndustrialNetworks.DVPSeries.FormForcingCoilY000ON.resources
+D:\2. TRAINING\DELTA DVP Series PLC\DELTA DVP Series PLC\DELTA DVP Series PLC\obj\Debug\IndustrialNetworks.DVPSeries.FormWriteSingleRegisterToSlaveDevice02.resources
+D:\2. TRAINING\DELTA DVP Series PLC\DELTA DVP Series PLC\DELTA DVP Series PLC\obj\Debug\IndustrialNetworks.DVPSeries.FormForceMultipleCoilsY0ToY15FromSlaveDevice02.resources
+D:\2. TRAINING\DELTA DVP Series PLC\DELTA DVP Series PLC\DELTA DVP Series PLC\obj\Debug\IndustrialNetworks.DVPSeries.FormWriteMultipleRegistersD0ToD15ToSlaveDevice02.resources

@@ -1,0 +1,37 @@
+D:\4. Projects\7. HMI Builder\HMI Professional Edition7\HMI Professional Edition\Modbus Protocol\bin\Debug\Industrial.Networks.Modbus.Core.dll
+D:\4. Projects\7. HMI Builder\HMI Professional Edition7\HMI Professional Edition\Modbus Protocol\bin\Debug\Industrial.Networks.Modbus.Core.pdb
+D:\4. Projects\7. HMI Builder\HMI Professional Edition7\HMI Professional Edition\Modbus Protocol\obj\Debug\Industrial.Networks.Modbus.Core.Properties.Resources.resources
+D:\4. Projects\7. HMI Builder\HMI Professional Edition7\HMI Professional Edition\Modbus Protocol\obj\Debug\Modbus Protocol.csproj.GenerateResource.Cache
+D:\4. Projects\7. HMI Builder\HMI Professional Edition7\HMI Professional Edition\Modbus Protocol\obj\Debug\Industrial.Networks.Modbus.Core.dll
+D:\4. Projects\7. HMI Builder\HMI Professional Edition7\HMI Professional Edition\Modbus Protocol\obj\Debug\Industrial.Networks.Modbus.Core.pdb
+D:\4. Projects\7. HMI Builder\HMI Professional Edition\Modbus Protocol\bin\Debug\Industrial.Networks.Modbus.Core.dll
+D:\4. Projects\7. HMI Builder\HMI Professional Edition\Modbus Protocol\bin\Debug\Industrial.Networks.Modbus.Core.pdb
+D:\4. Projects\7. HMI Builder\HMI Professional Edition\Modbus Protocol\obj\Debug\Industrial.Networks.Modbus.Core.Properties.Resources.resources
+D:\4. Projects\7. HMI Builder\HMI Professional Edition\Modbus Protocol\obj\Debug\Modbus Protocol.csproj.GenerateResource.Cache
+D:\4. Projects\7. HMI Builder\HMI Professional Edition\Modbus Protocol\obj\Debug\Industrial.Networks.Modbus.Core.dll
+D:\4. Projects\7. HMI Builder\HMI Professional Edition\Modbus Protocol\obj\Debug\Industrial.Networks.Modbus.Core.pdb
+E:\4. Projects\7. HMI Builder\HMI Professional Edition\Modbus Protocol\bin\Debug\Industrial.Networks.Modbus.Core.dll
+E:\4. Projects\7. HMI Builder\HMI Professional Edition\Modbus Protocol\bin\Debug\Industrial.Networks.Modbus.Core.pdb
+E:\4. Projects\7. HMI Builder\HMI Professional Edition\Modbus Protocol\obj\Debug\Modbus Protocol.csprojResolveAssemblyReference.cache
+E:\4. Projects\7. HMI Builder\HMI Professional Edition\Modbus Protocol\obj\Debug\Industrial.Networks.Modbus.Core.Properties.Resources.resources
+E:\4. Projects\7. HMI Builder\HMI Professional Edition\Modbus Protocol\obj\Debug\Modbus Protocol.csproj.GenerateResource.Cache
+E:\4. Projects\7. HMI Builder\HMI Professional Edition\Modbus Protocol\obj\Debug\Industrial.Networks.Modbus.Core.dll
+E:\4. Projects\7. HMI Builder\HMI Professional Edition\Modbus Protocol\obj\Debug\Industrial.Networks.Modbus.Core.pdb
+E:\02. Projects\02. LuuHV\Modbus 2017\THINH TAM PHAT\HMI Professional Edition\Modbus Protocol\bin\Debug\Industrial.Networks.Modbus.Core.dll
+E:\02. Projects\02. LuuHV\Modbus 2017\THINH TAM PHAT\HMI Professional Edition\Modbus Protocol\bin\Debug\Industrial.Networks.Modbus.Core.pdb
+E:\02. Projects\02. LuuHV\Modbus 2017\THINH TAM PHAT\HMI Professional Edition\Modbus Protocol\obj\Debug\Industrial.Networks.Modbus.Core.Properties.Resources.resources
+E:\02. Projects\02. LuuHV\Modbus 2017\THINH TAM PHAT\HMI Professional Edition\Modbus Protocol\obj\Debug\Modbus Protocol.csproj.GenerateResource.Cache
+E:\02. Projects\02. LuuHV\Modbus 2017\THINH TAM PHAT\HMI Professional Edition\Modbus Protocol\obj\Debug\Industrial.Networks.Modbus.Core.dll
+E:\02. Projects\02. LuuHV\Modbus 2017\THINH TAM PHAT\HMI Professional Edition\Modbus Protocol\obj\Debug\Industrial.Networks.Modbus.Core.pdb
+D:\1. PROJECTS\5. HOANG LUU\HMI Professional Edition Training for Singapore\HMI Professional Edition\Modbus Protocol\bin\Debug\Industrial.Networks.Modbus.Core.dll
+D:\1. PROJECTS\5. HOANG LUU\HMI Professional Edition Training for Singapore\HMI Professional Edition\Modbus Protocol\bin\Debug\Industrial.Networks.Modbus.Core.pdb
+D:\1. PROJECTS\5. HOANG LUU\HMI Professional Edition Training for Singapore\HMI Professional Edition\Modbus Protocol\obj\Debug\Industrial.Networks.Modbus.Core.Properties.Resources.resources
+D:\1. PROJECTS\5. HOANG LUU\HMI Professional Edition Training for Singapore\HMI Professional Edition\Modbus Protocol\obj\Debug\Modbus Protocol.csproj.GenerateResource.Cache
+D:\1. PROJECTS\5. HOANG LUU\HMI Professional Edition Training for Singapore\HMI Professional Edition\Modbus Protocol\obj\Debug\Industrial.Networks.Modbus.Core.dll
+D:\1. PROJECTS\5. HOANG LUU\HMI Professional Edition Training for Singapore\HMI Professional Edition\Modbus Protocol\obj\Debug\Industrial.Networks.Modbus.Core.pdb
+D:\1. PROJECTS\5. HOANG LUU\MODBUS DRIVER SERVER CLIENT\MODBUS SERVER SOLUTION\MODBUS PROTOCOL\bin\Debug\Industrial.Networks.Modbus.Core.dll
+D:\1. PROJECTS\5. HOANG LUU\MODBUS DRIVER SERVER CLIENT\MODBUS SERVER SOLUTION\MODBUS PROTOCOL\bin\Debug\Industrial.Networks.Modbus.Core.pdb
+D:\1. PROJECTS\5. HOANG LUU\MODBUS DRIVER SERVER CLIENT\MODBUS SERVER SOLUTION\MODBUS PROTOCOL\obj\Debug\Industrial.Networks.Modbus.Core.Properties.Resources.resources
+D:\1. PROJECTS\5. HOANG LUU\MODBUS DRIVER SERVER CLIENT\MODBUS SERVER SOLUTION\MODBUS PROTOCOL\obj\Debug\MODBUS PROTOCOL.csproj.GenerateResource.Cache
+D:\1. PROJECTS\5. HOANG LUU\MODBUS DRIVER SERVER CLIENT\MODBUS SERVER SOLUTION\MODBUS PROTOCOL\obj\Debug\Industrial.Networks.Modbus.Core.dll
+D:\1. PROJECTS\5. HOANG LUU\MODBUS DRIVER SERVER CLIENT\MODBUS SERVER SOLUTION\MODBUS PROTOCOL\obj\Debug\Industrial.Networks.Modbus.Core.pdb
