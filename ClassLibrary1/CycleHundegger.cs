@@ -179,7 +179,7 @@ namespace GalimbertiHMIgl
                 }
 
                 c.writeBool("RULLI_CENTRO_TAGLI.RD_Presenza_Pz_Da_Hundegger", true);
-                c.writeInt16("RULLI_CENTRO_TAGLI.RD_Ricetta",  ricettaLevigatura);
+                c.writeInt16("RULLI_CENTRO_TAGLI.RD_Nr_Ricetta_Da_Hundegger",  ricettaLevigatura);
 
                 filelog.log("***************************************************************");
                 lastSent = DateTime.Now;

@@ -67,7 +67,7 @@ namespace GalimbertiHMIgl
 
                   
 
-                   if (ricetta != 0)
+                   if (ricetta != 0 && ricetta !=9999)
                    {
                        if (presenza && !ready && !dataSent)
                        {
