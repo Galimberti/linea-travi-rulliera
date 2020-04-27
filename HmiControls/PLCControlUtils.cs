@@ -33,6 +33,10 @@ namespace HmiControls
                 {
                     (c as PLCControl<Double>).register(plc);
                 }
+                if (c is PLCControl<float>)
+                {
+                    (c as PLCControl<float>).register(plc);
+                }
             }
         }
     }

@@ -16,41 +16,12 @@ namespace test
     {
         static void Main(string[] args)
         {
+            PLC d1 = new PLC(new DriverDELTA("192.168.30.160", 502));
+            d1.tryConnect();
+            var result =  d1.driver.readInt16("D420");
 
-            ValmecCycle cycle = new ValmecCycle();
-          // cycle.connect();
+            Console.Out.WriteLine(result);
 
-            var t = cycle.readRecipe();
-            //max 600h
-            //  80-  300h
-            cycle.sendReceipe(3,250, 250);
-
-            /*
-            DriverDELTA mb = new DriverDELTA("192.168.30.160", 502);
-            mb.connect();
-            var read1 =  mb.readInt16("D580");
-
-
-
-            string ipAddress = "192.168.30.160"; //use TCP for example
-            int tcpPort = 502;
-            TcpClient tcpClient = new TcpClient("192.168.30.160", 502);
-           
-            ModbusIpMaster master = ModbusIpMaster.CreateIp(tcpClient);
-            master.Transport.Retries = 0;
-            var read = master.ReadHoldingRegisters(0, 4676, 1);
-            for (byte i = 0; i < 255; i++) {
-              
-                Console.WriteLine("***************************************" + i);
-                foreach (ushort r in read){
-                    Console.WriteLine(r);
-
-                }
-            }
-           
-
-    */
-           
 
             // output: 
             // Input 100=0

@@ -22,9 +22,13 @@ namespace PLCDrivers
 
         public void Poll()
         {
-            foreach (var action in this.pollActions)
+            this.tryConnect();
+            if (this.IsConnected)
             {
-                action();
+                foreach (var action in this.pollActions)
+                {
+                    action();
+                }
             }
         }
 
@@ -93,6 +97,7 @@ namespace PLCDrivers
 
         public void Dispose()
         {
+           
             this.driver.Dispose();
         }
     }

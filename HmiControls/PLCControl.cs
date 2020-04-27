@@ -169,6 +169,11 @@ namespace GalimbertiHMIgl
                         var value = Convert.ToInt16((object)e);
                         this._plc.driver.writeInt16(VariableName, value);
                     }
+                    else if (this is PLCControl<float>)
+                    {
+                        var value = Convert.ToDouble((object)e);
+                        this._plc.driver.writeFloat(VariableName, (float)value);
+                    }
 
                     this.PLCError = false;
 
@@ -205,6 +210,10 @@ namespace GalimbertiHMIgl
                     else if (this is PLCControl<Int16>)
                     {
                         result = this._plc.driver.readInt16(this.VariableName);
+                    }
+                    else if (this is PLCControl<float>)
+                    {
+                        result = this._plc.driver.readFloat(this.VariableName);
                     }
 
                     if (result != null)

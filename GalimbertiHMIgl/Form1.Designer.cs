@@ -36,97 +36,22 @@
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
+            this.plcBoolean81 = new GalimbertiHMIgl.PLCBoolean();
+            this.plcBooleanButton2 = new GalimbertiHMIgl.PLCBooleanButton();
             this.groupBox23 = new System.Windows.Forms.GroupBox();
+            this.plcBooleanButton12 = new GalimbertiHMIgl.PLCBooleanButton();
             this.groupBox14 = new System.Windows.Forms.GroupBox();
+            this.plcBooleanSwitch4 = new GalimbertiHMIgl.PLCBooleanSwitch();
             this.groupBox15 = new System.Windows.Forms.GroupBox();
+            this.plcBoolean16 = new GalimbertiHMIgl.PLCBoolean();
+            this.plcBooleanButton6 = new GalimbertiHMIgl.PLCBooleanButton();
+            this.plcBooleanButton7 = new GalimbertiHMIgl.PLCBooleanButton();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.plcBooleanSwitch1 = new GalimbertiHMIgl.PLCBooleanSwitch();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.groupBox26 = new System.Windows.Forms.GroupBox();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.groupBox22 = new System.Windows.Forms.GroupBox();
-            this.groupBox21 = new System.Windows.Forms.GroupBox();
-            this.groupBox20 = new System.Windows.Forms.GroupBox();
-            this.Tracking = new System.Windows.Forms.TabPage();
-            this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.groupBox19 = new System.Windows.Forms.GroupBox();
-            this.groupBox18 = new System.Windows.Forms.GroupBox();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.groupBox35 = new System.Windows.Forms.GroupBox();
-            this.groupBox17 = new System.Windows.Forms.GroupBox();
-            this.groupBox16 = new System.Windows.Forms.GroupBox();
-            this.groupBox12 = new System.Windows.Forms.GroupBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.listViewAlZ1 = new System.Windows.Forms.ListView();
-            this.tabPage17 = new System.Windows.Forms.TabPage();
-            this.listViewStoricoAlarmZ1 = new System.Windows.Forms.ListView();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tracking2 = new System.Windows.Forms.TabControl();
-            this.tabPage13 = new System.Windows.Forms.TabPage();
-            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.groupBox9 = new System.Windows.Forms.GroupBox();
-            this.groupBox32 = new System.Windows.Forms.GroupBox();
-            this.groupBox31 = new System.Windows.Forms.GroupBox();
-            this.groupBox33 = new System.Windows.Forms.GroupBox();
-            this.groupBox34 = new System.Windows.Forms.GroupBox();
-            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.groupBox37 = new System.Windows.Forms.GroupBox();
-            this.groupBox38 = new System.Windows.Forms.GroupBox();
-            this.groupBox39 = new System.Windows.Forms.GroupBox();
-            this.tabPage18 = new System.Windows.Forms.TabPage();
-            this.tabPage16 = new System.Windows.Forms.TabPage();
-            this.groupBox41 = new System.Windows.Forms.GroupBox();
-            this.tabPage15 = new System.Windows.Forms.TabPage();
-            this.listAlarmZ2 = new System.Windows.Forms.ListView();
-            this.tabPage19 = new System.Windows.Forms.TabPage();
-            this.listViewStoricoAlarmZ2 = new System.Windows.Forms.ListView();
-            this.Aspirazione = new System.Windows.Forms.TabPage();
-            this.Valvole = new System.Windows.Forms.TabControl();
-            this.tabPage10 = new System.Windows.Forms.TabPage();
-            this.groupBox10 = new System.Windows.Forms.GroupBox();
-            this.groupBox30 = new System.Windows.Forms.GroupBox();
-            this.groupBox29 = new System.Windows.Forms.GroupBox();
-            this.Ciclone = new System.Windows.Forms.GroupBox();
-            this.groupBox27 = new System.Windows.Forms.GroupBox();
-            this.groupBox24 = new System.Windows.Forms.GroupBox();
-            this.groupBox44 = new System.Windows.Forms.GroupBox();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.tabPage8 = new System.Windows.Forms.TabPage();
-            this.tabPage9 = new System.Windows.Forms.TabPage();
-            this.tabPage11 = new System.Windows.Forms.TabPage();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.tabPage7 = new System.Windows.Forms.TabPage();
-            this.listView2 = new System.Windows.Forms.ListView();
-            this.tabPage14 = new System.Windows.Forms.TabPage();
-            this.tabPage12 = new System.Windows.Forms.TabPage();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.groupBox28 = new System.Windows.Forms.GroupBox();
-            this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.groupBox25 = new System.Windows.Forms.GroupBox();
-            this.groupBox13 = new System.Windows.Forms.GroupBox();
-            this.hundFile = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.tabPage20 = new System.Windows.Forms.TabPage();
-            this.plcBooleanButton2 = new GalimbertiHMIgl.PLCBooleanButton();
-            this.plcBooleanButton12 = new GalimbertiHMIgl.PLCBooleanButton();
-            this.plcBooleanSwitch4 = new GalimbertiHMIgl.PLCBooleanSwitch();
-            this.plcBoolean16 = new GalimbertiHMIgl.PLCBoolean();
-            this.plcBooleanButton6 = new GalimbertiHMIgl.PLCBooleanButton();
-            this.plcBooleanButton7 = new GalimbertiHMIgl.PLCBooleanButton();
-            this.plcBooleanSwitch1 = new GalimbertiHMIgl.PLCBooleanSwitch();
             this.plcBoolean1 = new GalimbertiHMIgl.PLCBoolean();
             this.plcBoolean7 = new GalimbertiHMIgl.PLCBoolean();
             this.plcBoolean8 = new GalimbertiHMIgl.PLCBoolean();
@@ -158,6 +83,8 @@
             this.plcBoolean57 = new GalimbertiHMIgl.PLCBoolean();
             this.plcBoolean58 = new GalimbertiHMIgl.PLCBoolean();
             this.plcBoolean59 = new GalimbertiHMIgl.PLCBoolean();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.groupBox26 = new System.Windows.Forms.GroupBox();
             this.plcBooleanButton13 = new GalimbertiHMIgl.PLCBooleanButton();
             this.plcBoolean71 = new GalimbertiHMIgl.PLCBoolean();
             this.plcBoolean70 = new GalimbertiHMIgl.PLCBoolean();
@@ -190,9 +117,12 @@
             this.plcBoolean4 = new GalimbertiHMIgl.PLCBoolean();
             this.plcBoolean3 = new GalimbertiHMIgl.PLCBoolean();
             this.plcBoolean15 = new GalimbertiHMIgl.PLCBoolean();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.groupBox22 = new System.Windows.Forms.GroupBox();
             this.plcBooleanButton10 = new GalimbertiHMIgl.PLCBooleanButton();
             this.plcBooleanButton9 = new GalimbertiHMIgl.PLCBooleanButton();
             this.plcBooleanButton8 = new GalimbertiHMIgl.PLCBooleanButton();
+            this.groupBox21 = new System.Windows.Forms.GroupBox();
             this.plcBoolean2 = new GalimbertiHMIgl.PLCBoolean();
             this.plcBoolean6 = new GalimbertiHMIgl.PLCBoolean();
             this.plcBoolean13 = new GalimbertiHMIgl.PLCBoolean();
@@ -200,29 +130,40 @@
             this.plcBoolean63 = new GalimbertiHMIgl.PLCBoolean();
             this.plcBoolean64 = new GalimbertiHMIgl.PLCBoolean();
             this.plcBoolean65 = new GalimbertiHMIgl.PLCBoolean();
+            this.groupBox20 = new System.Windows.Forms.GroupBox();
             this.plcNumber11 = new GalimbertiHMIgl.PLCNumber();
             this.plcNumber7 = new GalimbertiHMIgl.PLCNumber();
             this.plcNumber8 = new GalimbertiHMIgl.PLCNumber();
             this.plcNumber9 = new GalimbertiHMIgl.PLCNumber();
             this.plcNumber10 = new GalimbertiHMIgl.PLCNumber();
+            this.Tracking = new System.Windows.Forms.TabPage();
             this.plcTracking1 = new GalimbertiHMIgl.PLCList();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.groupBox19 = new System.Windows.Forms.GroupBox();
             this.plcNumberEdit29 = new GalimbertiHMIgl.PLCNumberEdit();
             this.plcBooleanSwitchSimple3 = new GalimbertiHMIgl.PLCBooleanSwitchSimple();
             this.plcNumberEdit30 = new GalimbertiHMIgl.PLCNumberEdit();
             this.plcNumberEdit31 = new GalimbertiHMIgl.PLCNumberEdit();
             this.plcBoolean61 = new GalimbertiHMIgl.PLCBoolean();
+            this.groupBox18 = new System.Windows.Forms.GroupBox();
             this.plcNumberEdit26 = new GalimbertiHMIgl.PLCNumberEdit();
             this.plcBooleanSwitchSimple2 = new GalimbertiHMIgl.PLCBooleanSwitchSimple();
             this.plcNumberEdit27 = new GalimbertiHMIgl.PLCNumberEdit();
             this.plcNumberEdit28 = new GalimbertiHMIgl.PLCNumberEdit();
             this.plcBoolean60 = new GalimbertiHMIgl.PLCBoolean();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.groupBox35 = new System.Windows.Forms.GroupBox();
             this.plcNumberEdit41 = new GalimbertiHMIgl.PLCNumberEdit();
+            this.groupBox17 = new System.Windows.Forms.GroupBox();
             this.plcNumberEdit18 = new GalimbertiHMIgl.PLCNumberEdit();
             this.plcNumberEdit19 = new GalimbertiHMIgl.PLCNumberEdit();
             this.plcNumberEdit20 = new GalimbertiHMIgl.PLCNumberEdit();
             this.plcNumberEdit21 = new GalimbertiHMIgl.PLCNumberEdit();
+            this.groupBox16 = new System.Windows.Forms.GroupBox();
             this.plcNumberEdit11 = new GalimbertiHMIgl.PLCNumberEdit();
+            this.groupBox12 = new System.Windows.Forms.GroupBox();
             this.plcNumberEdit16 = new GalimbertiHMIgl.PLCNumberEdit();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.plcBooleanButton5 = new GalimbertiHMIgl.PLCBooleanButton();
             this.plcBooleanButton4 = new GalimbertiHMIgl.PLCBooleanButton();
             this.plcNumberEdit17 = new GalimbertiHMIgl.PLCNumberEdit();
@@ -230,47 +171,92 @@
             this.plcNumberEdit12 = new GalimbertiHMIgl.PLCNumberEdit();
             this.plcNumberEdit13 = new GalimbertiHMIgl.PLCNumberEdit();
             this.plcNumberEdit14 = new GalimbertiHMIgl.PLCNumberEdit();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.plcNumberEdit23 = new GalimbertiHMIgl.PLCNumberEdit();
             this.plcNumberEdit10 = new GalimbertiHMIgl.PLCNumberEdit();
             this.plcNumberEdit9 = new GalimbertiHMIgl.PLCNumberEdit();
             this.plcNumberEdit5 = new GalimbertiHMIgl.PLCNumberEdit();
             this.plcNumberEdit6 = new GalimbertiHMIgl.PLCNumberEdit();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.plcNumberEdit25 = new GalimbertiHMIgl.PLCNumberEdit();
             this.plcNumberEdit24 = new GalimbertiHMIgl.PLCNumberEdit();
             this.plcNumberEdit22 = new GalimbertiHMIgl.PLCNumberEdit();
             this.plcNumberEdit3 = new GalimbertiHMIgl.PLCNumberEdit();
             this.plcNumberEdit1 = new GalimbertiHMIgl.PLCNumberEdit();
             this.plcNumberEdit2 = new GalimbertiHMIgl.PLCNumberEdit();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.listViewAlZ1 = new System.Windows.Forms.ListView();
+            this.tabPage17 = new System.Windows.Forms.TabPage();
+            this.listViewStoricoAlarmZ1 = new System.Windows.Forms.ListView();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tracking2 = new System.Windows.Forms.TabControl();
+            this.tabPage13 = new System.Windows.Forms.TabPage();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.plcBooleanSwitch5 = new GalimbertiHMIgl.PLCBooleanSwitch();
+            this.groupBox32 = new System.Windows.Forms.GroupBox();
             this.plcBooleanButton20 = new GalimbertiHMIgl.PLCBooleanButton();
+            this.groupBox31 = new System.Windows.Forms.GroupBox();
             this.plcBooleanButton11 = new GalimbertiHMIgl.PLCBooleanButton();
+            this.groupBox33 = new System.Windows.Forms.GroupBox();
             this.plcBoolean80 = new GalimbertiHMIgl.PLCBoolean();
             this.plcBooleanButton18 = new GalimbertiHMIgl.PLCBooleanButton();
             this.plcBooleanButton19 = new GalimbertiHMIgl.PLCBooleanButton();
+            this.groupBox34 = new System.Windows.Forms.GroupBox();
             this.plcBooleanSwitch6 = new GalimbertiHMIgl.PLCBooleanSwitch();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.groupBox37 = new System.Windows.Forms.GroupBox();
+            this.groupBox38 = new System.Windows.Forms.GroupBox();
+            this.groupBox39 = new System.Windows.Forms.GroupBox();
+            this.tabPage18 = new System.Windows.Forms.TabPage();
             this.plcTracking2 = new GalimbertiHMIgl.PLCList();
+            this.tabPage16 = new System.Windows.Forms.TabPage();
+            this.groupBox41 = new System.Windows.Forms.GroupBox();
             this.plcNumberEdit39 = new GalimbertiHMIgl.PLCNumberEdit();
+            this.tabPage15 = new System.Windows.Forms.TabPage();
+            this.listAlarmZ2 = new System.Windows.Forms.ListView();
+            this.tabPage19 = new System.Windows.Forms.TabPage();
+            this.listViewStoricoAlarmZ2 = new System.Windows.Forms.ListView();
+            this.Aspirazione = new System.Windows.Forms.TabPage();
+            this.Valvole = new System.Windows.Forms.TabControl();
+            this.tabPage10 = new System.Windows.Forms.TabPage();
+            this.groupBox40 = new System.Windows.Forms.GroupBox();
+            this.plcBooleanButton22 = new GalimbertiHMIgl.PLCBooleanButton();
+            this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.groupBox36 = new System.Windows.Forms.GroupBox();
+            this.plcNumberEdit42 = new GalimbertiHMIgl.PLCNumberEdit();
+            this.plcBoolean82 = new GalimbertiHMIgl.PLCBoolean();
+            this.plcBooleanButton3 = new GalimbertiHMIgl.PLCBooleanButton();
             this.plcNumberEdit40 = new GalimbertiHMIgl.PLCNumberEdit();
             this.plcBoolean79 = new GalimbertiHMIgl.PLCBoolean();
             this.plcBooleanButton1 = new GalimbertiHMIgl.PLCBooleanButton();
+            this.groupBox30 = new System.Windows.Forms.GroupBox();
             this.plcBooleanSwitchSimple7 = new GalimbertiHMIgl.PLCBooleanSwitchSimple();
             this.plcBooleanButton17 = new GalimbertiHMIgl.PLCBooleanButton();
-            this.plcBooleanSwitchSimple8 = new GalimbertiHMIgl.PLCBooleanSwitchSimple();
+            this.plcInContainer = new GalimbertiHMIgl.PLCBooleanSwitchSimple();
+            this.groupBox29 = new System.Windows.Forms.GroupBox();
             this.plcBooleanSwitchSimple4 = new GalimbertiHMIgl.PLCBooleanSwitchSimple();
             this.plcBooleanButton16 = new GalimbertiHMIgl.PLCBooleanButton();
-            this.plcBooleanSwitchSimple6 = new GalimbertiHMIgl.PLCBooleanSwitchSimple();
+            this.plcInBricchettatrice = new GalimbertiHMIgl.PLCBooleanSwitchSimple();
+            this.Ciclone = new System.Windows.Forms.GroupBox();
             this.plcNumberEdit38 = new GalimbertiHMIgl.PLCNumberEdit();
             this.plcNumberEdit37 = new GalimbertiHMIgl.PLCNumberEdit();
             this.plcNumberEdit36 = new GalimbertiHMIgl.PLCNumberEdit();
             this.plcBooleanSwitch3 = new GalimbertiHMIgl.PLCBooleanSwitch();
             this.plcAspSelManMode = new GalimbertiHMIgl.PLCBooleanSwitch();
+            this.groupBox27 = new System.Windows.Forms.GroupBox();
             this.plcNumberEdit35 = new GalimbertiHMIgl.PLCNumberEdit();
             this.plcNumber2 = new GalimbertiHMIgl.PLCNumber();
             this.plcNumber1 = new GalimbertiHMIgl.PLCNumber();
             this.plcNumberEdit33 = new GalimbertiHMIgl.PLCNumberEdit();
             this.plcNumberEdit34 = new GalimbertiHMIgl.PLCNumberEdit();
+            this.groupBox24 = new System.Windows.Forms.GroupBox();
             this.plcNumberEdit32 = new GalimbertiHMIgl.PLCNumberEdit();
             this.plcNumberEdit8 = new GalimbertiHMIgl.PLCNumberEdit();
+            this.groupBox44 = new System.Windows.Forms.GroupBox();
             this.plcNumberEdit7 = new GalimbertiHMIgl.PLCNumberEdit();
             this.plcNumberEdit4 = new GalimbertiHMIgl.PLCNumberEdit();
             this.plcNumberEdit51 = new GalimbertiHMIgl.PLCNumberEdit();
@@ -279,6 +265,7 @@
             this.plcNumberEdit54 = new GalimbertiHMIgl.PLCNumberEdit();
             this.plcNumberEdit55 = new GalimbertiHMIgl.PLCNumberEdit();
             this.plcNumberEdit56 = new GalimbertiHMIgl.PLCNumberEdit();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
             this.duT_Motori8 = new HmiControls.DUT_Motori();
             this.duT_Motori7 = new HmiControls.DUT_Motori();
             this.duT_Motori6 = new HmiControls.DUT_Motori();
@@ -287,9 +274,17 @@
             this.duT_Motori3 = new HmiControls.DUT_Motori();
             this.duT_Motori2 = new HmiControls.DUT_Motori();
             this.duT_Motori1 = new HmiControls.DUT_Motori();
+            this.tabPage8 = new System.Windows.Forms.TabPage();
             this.duT_Filtri1 = new HmiControls.DUT_Filtri();
+            this.tabPage9 = new System.Windows.Forms.TabPage();
             this.duT_Asp_Comandi1 = new HmiControls.DUT_Asp_Comandi();
+            this.tabPage11 = new System.Windows.Forms.TabPage();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.listView2 = new System.Windows.Forms.ListView();
+            this.tabPage14 = new System.Windows.Forms.TabPage();
             this.plcGridIOAsp = new GalimbertiHMIgl.PLCList();
+            this.tabPage12 = new System.Windows.Forms.TabPage();
             this.plcBoolean78 = new GalimbertiHMIgl.PLCBoolean();
             this.plcBoolean77 = new GalimbertiHMIgl.PLCBoolean();
             this.plcBoolean76 = new GalimbertiHMIgl.PLCBoolean();
@@ -304,23 +299,36 @@
             this.plcInt163 = new GalimbertiHMIgl.PLCInt16();
             this.plcInt162 = new GalimbertiHMIgl.PLCInt16();
             this.plcInt161 = new GalimbertiHMIgl.PLCInt16();
+            this.tabPage20 = new System.Windows.Forms.TabPage();
+            this.plcVelmec = new GalimbertiHMIgl.PLCList();
             this.plcListTrkVelmec = new GalimbertiHMIgl.PLCList();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.plcAllarBricch = new GalimbertiHMIgl.PLCBoolean();
             this.plcAlarmAsp = new GalimbertiHMIgl.PLCBoolean();
             this.plcAlarmZ2 = new GalimbertiHMIgl.PLCBoolean();
             this.plcAlarmZ1 = new GalimbertiHMIgl.PLCBoolean();
+            this.groupBox28 = new System.Windows.Forms.GroupBox();
             this.plcAnomaliaBricc = new GalimbertiHMIgl.PLCBoolean();
             this.plcCiclicaBricc = new GalimbertiHMIgl.PLCBoolean();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.plcAnomaliaAsp = new GalimbertiHMIgl.PLCBoolean();
             this.plcCiclicaAsp = new GalimbertiHMIgl.PLCBoolean();
+            this.groupBox25 = new System.Windows.Forms.GroupBox();
             this.plcBooleanSwitch2 = new GalimbertiHMIgl.PLCBooleanSwitch();
+            this.groupBox13 = new System.Windows.Forms.GroupBox();
+            this.hundFile = new System.Windows.Forms.Label();
             this.hundElab = new GalimbertiHMIgl.PLCBoolean();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.plcAnomalia = new GalimbertiHMIgl.PLCBoolean();
             this.plcCiclica = new GalimbertiHMIgl.PLCBoolean();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.plcConnessioneBricc = new GalimbertiHMIgl.PLCBoolean();
             this.plcConnessioneAsp = new GalimbertiHMIgl.PLCBoolean();
             this.plcConnessione = new GalimbertiHMIgl.PLCBoolean();
-            this.plcVelmec = new GalimbertiHMIgl.PLCList();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.plcNumberEdit43 = new GalimbertiHMIgl.PLCNumberEdit();
             tabControlAsp = new System.Windows.Forms.TabControl();
             tabControlAsp.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -377,7 +385,9 @@
             this.Aspirazione.SuspendLayout();
             this.Valvole.SuspendLayout();
             this.tabPage10.SuspendLayout();
+            this.groupBox40.SuspendLayout();
             this.groupBox10.SuspendLayout();
+            this.groupBox36.SuspendLayout();
             this.groupBox30.SuspendLayout();
             this.groupBox29.SuspendLayout();
             this.Ciclone.SuspendLayout();
@@ -391,6 +401,7 @@
             this.tabPage7.SuspendLayout();
             this.tabPage14.SuspendLayout();
             this.tabPage12.SuspendLayout();
+            this.tabPage20.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox28.SuspendLayout();
@@ -399,7 +410,6 @@
             this.groupBox13.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.tabPage20.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControlAsp
@@ -489,6 +499,7 @@
             // 
             // groupBox11
             // 
+            this.groupBox11.Controls.Add(this.plcBoolean81);
             this.groupBox11.Controls.Add(this.plcBooleanButton2);
             this.groupBox11.Location = new System.Drawing.Point(732, 5);
             this.groupBox11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -498,6 +509,37 @@
             this.groupBox11.TabIndex = 11;
             this.groupBox11.TabStop = false;
             this.groupBox11.Text = "Svuotamento Hundegger";
+            // 
+            // plcBoolean81
+            // 
+            this.plcBoolean81.BackColor = System.Drawing.Color.Transparent;
+            this.plcBoolean81.GreenMode = true;
+            this.plcBoolean81.Location = new System.Drawing.Point(15, 16);
+            this.plcBoolean81.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.plcBoolean81.Name = "plcBoolean81";
+            this.plcBoolean81.NotMode = false;
+            this.plcBoolean81.PLC = null;
+            this.plcBoolean81.PLCDescription = "Ciclo";
+            this.plcBoolean81.PLCError = false;
+            this.plcBoolean81.PLCValue = false;
+            this.plcBoolean81.Size = new System.Drawing.Size(167, 25);
+            this.plcBoolean81.TabIndex = 18;
+            this.plcBoolean81.VariableName = "EVACUAZIONE_SCARTI.M_Ciclo_Svuotamento_Hdd_RUN";
+            // 
+            // plcBooleanButton2
+            // 
+            this.plcBooleanButton2.GreenMode = true;
+            this.plcBooleanButton2.Location = new System.Drawing.Point(15, 47);
+            this.plcBooleanButton2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.plcBooleanButton2.Name = "plcBooleanButton2";
+            this.plcBooleanButton2.NotMode = false;
+            this.plcBooleanButton2.PLC = null;
+            this.plcBooleanButton2.PLCDescription = "Start";
+            this.plcBooleanButton2.PLCError = false;
+            this.plcBooleanButton2.PLCValue = false;
+            this.plcBooleanButton2.Size = new System.Drawing.Size(167, 25);
+            this.plcBooleanButton2.TabIndex = 15;
+            this.plcBooleanButton2.VariableName = ".PB_Start_Svuotamento_Hundegger";
             // 
             // groupBox23
             // 
@@ -511,6 +553,21 @@
             this.groupBox23.TabStop = false;
             this.groupBox23.Text = "Allarmi";
             // 
+            // plcBooleanButton12
+            // 
+            this.plcBooleanButton12.GreenMode = true;
+            this.plcBooleanButton12.Location = new System.Drawing.Point(15, 47);
+            this.plcBooleanButton12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.plcBooleanButton12.Name = "plcBooleanButton12";
+            this.plcBooleanButton12.NotMode = false;
+            this.plcBooleanButton12.PLC = null;
+            this.plcBooleanButton12.PLCDescription = "Reset";
+            this.plcBooleanButton12.PLCError = false;
+            this.plcBooleanButton12.PLCValue = false;
+            this.plcBooleanButton12.Size = new System.Drawing.Size(167, 25);
+            this.plcBooleanButton12.TabIndex = 15;
+            this.plcBooleanButton12.VariableName = "RULLI_CENTRO_TAGLI.Hmi_Pls_Rst_Allarmi";
+            // 
             // groupBox14
             // 
             this.groupBox14.Controls.Add(this.plcBooleanSwitch4);
@@ -522,6 +579,21 @@
             this.groupBox14.TabIndex = 9;
             this.groupBox14.TabStop = false;
             this.groupBox14.Text = "Abilita Polmone";
+            // 
+            // plcBooleanSwitch4
+            // 
+            this.plcBooleanSwitch4.DescriptionOff = "Disabilitato";
+            this.plcBooleanSwitch4.DescriptionOn = "Abilitato";
+            this.plcBooleanSwitch4.Location = new System.Drawing.Point(5, 21);
+            this.plcBooleanSwitch4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.plcBooleanSwitch4.Name = "plcBooleanSwitch4";
+            this.plcBooleanSwitch4.PLC = null;
+            this.plcBooleanSwitch4.PLCDescription = null;
+            this.plcBooleanSwitch4.PLCError = false;
+            this.plcBooleanSwitch4.PLCValue = false;
+            this.plcBooleanSwitch4.Size = new System.Drawing.Size(217, 54);
+            this.plcBooleanSwitch4.TabIndex = 1;
+            this.plcBooleanSwitch4.VariableName = ".C1_Ciclo_Polmone_Sel";
             // 
             // groupBox15
             // 
@@ -537,6 +609,52 @@
             this.groupBox15.TabStop = false;
             this.groupBox15.Text = "Start Ciclo";
             // 
+            // plcBoolean16
+            // 
+            this.plcBoolean16.BackColor = System.Drawing.Color.Transparent;
+            this.plcBoolean16.GreenMode = true;
+            this.plcBoolean16.Location = new System.Drawing.Point(15, 18);
+            this.plcBoolean16.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.plcBoolean16.Name = "plcBoolean16";
+            this.plcBoolean16.NotMode = false;
+            this.plcBoolean16.PLC = null;
+            this.plcBoolean16.PLCDescription = "Ciclo";
+            this.plcBoolean16.PLCError = false;
+            this.plcBoolean16.PLCValue = false;
+            this.plcBoolean16.Size = new System.Drawing.Size(206, 25);
+            this.plcBoolean16.TabIndex = 17;
+            this.plcBoolean16.VariableName = "RULLI_CENTRO_TAGLI.Auto_Cycle_Run";
+            // 
+            // plcBooleanButton6
+            // 
+            this.plcBooleanButton6.GreenMode = true;
+            this.plcBooleanButton6.Location = new System.Drawing.Point(121, 47);
+            this.plcBooleanButton6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.plcBooleanButton6.Name = "plcBooleanButton6";
+            this.plcBooleanButton6.NotMode = false;
+            this.plcBooleanButton6.PLC = null;
+            this.plcBooleanButton6.PLCDescription = "Stop";
+            this.plcBooleanButton6.PLCError = false;
+            this.plcBooleanButton6.PLCValue = false;
+            this.plcBooleanButton6.Size = new System.Drawing.Size(100, 25);
+            this.plcBooleanButton6.TabIndex = 16;
+            this.plcBooleanButton6.VariableName = "RULLI_CENTRO_TAGLI.Pls_Stop_Ciclo";
+            // 
+            // plcBooleanButton7
+            // 
+            this.plcBooleanButton7.GreenMode = true;
+            this.plcBooleanButton7.Location = new System.Drawing.Point(15, 47);
+            this.plcBooleanButton7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.plcBooleanButton7.Name = "plcBooleanButton7";
+            this.plcBooleanButton7.NotMode = false;
+            this.plcBooleanButton7.PLC = null;
+            this.plcBooleanButton7.PLCDescription = "Start";
+            this.plcBooleanButton7.PLCError = false;
+            this.plcBooleanButton7.PLCValue = false;
+            this.plcBooleanButton7.Size = new System.Drawing.Size(100, 25);
+            this.plcBooleanButton7.TabIndex = 15;
+            this.plcBooleanButton7.VariableName = "RULLI_CENTRO_TAGLI.Pls_Start_Ciclo";
+            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.plcBooleanSwitch1);
@@ -548,6 +666,21 @@
             this.groupBox3.TabIndex = 3;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Modo";
+            // 
+            // plcBooleanSwitch1
+            // 
+            this.plcBooleanSwitch1.DescriptionOff = "Manuale";
+            this.plcBooleanSwitch1.DescriptionOn = "Automatico";
+            this.plcBooleanSwitch1.Location = new System.Drawing.Point(5, 21);
+            this.plcBooleanSwitch1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.plcBooleanSwitch1.Name = "plcBooleanSwitch1";
+            this.plcBooleanSwitch1.PLC = null;
+            this.plcBooleanSwitch1.PLCDescription = null;
+            this.plcBooleanSwitch1.PLCError = false;
+            this.plcBooleanSwitch1.PLCValue = true;
+            this.plcBooleanSwitch1.Size = new System.Drawing.Size(217, 54);
+            this.plcBooleanSwitch1.TabIndex = 1;
+            this.plcBooleanSwitch1.VariableName = "RULLI_CENTRO_TAGLI.Sel_Auto";
             // 
             // tableLayoutPanel3
             // 
@@ -629,1125 +762,6 @@
             this.groupBox7.TabIndex = 73;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Buffer C2";
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel5.Controls.Add(this.groupBox26);
-            this.panel5.Controls.Add(this.plcBoolean30);
-            this.panel5.Controls.Add(this.plcBoolean31);
-            this.panel5.Controls.Add(this.plcBoolean32);
-            this.panel5.Controls.Add(this.plcBoolean33);
-            this.panel5.Controls.Add(this.plcBoolean34);
-            this.panel5.Controls.Add(this.plcBoolean35);
-            this.panel5.Controls.Add(this.plcBoolean24);
-            this.panel5.Controls.Add(this.plcBoolean25);
-            this.panel5.Controls.Add(this.plcBoolean26);
-            this.panel5.Controls.Add(this.plcBoolean27);
-            this.panel5.Controls.Add(this.plcBoolean28);
-            this.panel5.Controls.Add(this.plcBoolean29);
-            this.panel5.Controls.Add(this.plcBoolean18);
-            this.panel5.Controls.Add(this.plcBoolean19);
-            this.panel5.Controls.Add(this.plcBoolean20);
-            this.panel5.Controls.Add(this.plcBoolean21);
-            this.panel5.Controls.Add(this.plcBoolean22);
-            this.panel5.Controls.Add(this.plcBoolean23);
-            this.panel5.Controls.Add(this.plcBoolean5);
-            this.panel5.Controls.Add(this.plcBoolean14);
-            this.panel5.Controls.Add(this.plcBoolean17);
-            this.panel5.Controls.Add(this.plcBoolean4);
-            this.panel5.Controls.Add(this.plcBoolean3);
-            this.panel5.Controls.Add(this.plcBoolean15);
-            this.panel5.Location = new System.Drawing.Point(37, 187);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(992, 208);
-            this.panel5.TabIndex = 49;
-            // 
-            // groupBox26
-            // 
-            this.groupBox26.BackColor = System.Drawing.Color.LightGreen;
-            this.groupBox26.Controls.Add(this.plcBooleanButton13);
-            this.groupBox26.Controls.Add(this.plcBoolean71);
-            this.groupBox26.Controls.Add(this.plcBoolean70);
-            this.groupBox26.Controls.Add(this.plcBoolean69);
-            this.groupBox26.Controls.Add(this.plcBoolean68);
-            this.groupBox26.Controls.Add(this.plcBoolean67);
-            this.groupBox26.Controls.Add(this.plcBoolean66);
-            this.groupBox26.Controls.Add(this.plcBooleanButton15);
-            this.groupBox26.Location = new System.Drawing.Point(669, 16);
-            this.groupBox26.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox26.Name = "groupBox26";
-            this.groupBox26.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox26.Size = new System.Drawing.Size(209, 169);
-            this.groupBox26.TabIndex = 49;
-            this.groupBox26.TabStop = false;
-            this.groupBox26.Text = "Buffer C1";
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.SystemColors.Control;
-            this.panel4.Controls.Add(this.groupBox22);
-            this.panel4.Controls.Add(this.groupBox21);
-            this.panel4.Controls.Add(this.groupBox20);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(3, 3);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(205, 688);
-            this.panel4.TabIndex = 2;
-            // 
-            // groupBox22
-            // 
-            this.groupBox22.Controls.Add(this.plcBooleanButton10);
-            this.groupBox22.Controls.Add(this.plcBooleanButton9);
-            this.groupBox22.Controls.Add(this.plcBooleanButton8);
-            this.groupBox22.Location = new System.Drawing.Point(3, 499);
-            this.groupBox22.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox22.Name = "groupBox22";
-            this.groupBox22.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox22.Size = new System.Drawing.Size(200, 141);
-            this.groupBox22.TabIndex = 10;
-            this.groupBox22.TabStop = false;
-            this.groupBox22.Text = "Buffer";
-            // 
-            // groupBox21
-            // 
-            this.groupBox21.Controls.Add(this.plcBoolean2);
-            this.groupBox21.Controls.Add(this.plcBoolean6);
-            this.groupBox21.Controls.Add(this.plcBoolean13);
-            this.groupBox21.Controls.Add(this.plcBoolean62);
-            this.groupBox21.Controls.Add(this.plcBoolean63);
-            this.groupBox21.Controls.Add(this.plcBoolean64);
-            this.groupBox21.Controls.Add(this.plcBoolean65);
-            this.groupBox21.Location = new System.Drawing.Point(3, 241);
-            this.groupBox21.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox21.Name = "groupBox21";
-            this.groupBox21.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox21.Size = new System.Drawing.Size(200, 254);
-            this.groupBox21.TabIndex = 9;
-            this.groupBox21.TabStop = false;
-            this.groupBox21.Text = "Emergenze";
-            // 
-            // groupBox20
-            // 
-            this.groupBox20.Controls.Add(this.plcNumber11);
-            this.groupBox20.Controls.Add(this.plcNumber7);
-            this.groupBox20.Controls.Add(this.plcNumber8);
-            this.groupBox20.Controls.Add(this.plcNumber9);
-            this.groupBox20.Controls.Add(this.plcNumber10);
-            this.groupBox20.Location = new System.Drawing.Point(2, 2);
-            this.groupBox20.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox20.Name = "groupBox20";
-            this.groupBox20.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox20.Size = new System.Drawing.Size(200, 225);
-            this.groupBox20.TabIndex = 8;
-            this.groupBox20.TabStop = false;
-            this.groupBox20.Text = "Step Cicliche";
-            // 
-            // Tracking
-            // 
-            this.Tracking.BackColor = System.Drawing.SystemColors.Control;
-            this.Tracking.Controls.Add(this.plcTracking1);
-            this.Tracking.Location = new System.Drawing.Point(4, 25);
-            this.Tracking.Name = "Tracking";
-            this.Tracking.Padding = new System.Windows.Forms.Padding(3);
-            this.Tracking.Size = new System.Drawing.Size(1713, 814);
-            this.Tracking.TabIndex = 5;
-            this.Tracking.Text = "Tracking";
-            // 
-            // tabPage6
-            // 
-            this.tabPage6.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage6.Controls.Add(this.groupBox19);
-            this.tabPage6.Controls.Add(this.groupBox18);
-            this.tabPage6.Location = new System.Drawing.Point(4, 25);
-            this.tabPage6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage6.Size = new System.Drawing.Size(1713, 814);
-            this.tabPage6.TabIndex = 4;
-            this.tabPage6.Text = "Hundegger";
-            // 
-            // groupBox19
-            // 
-            this.groupBox19.Controls.Add(this.plcNumberEdit29);
-            this.groupBox19.Controls.Add(this.plcBooleanSwitchSimple3);
-            this.groupBox19.Controls.Add(this.plcNumberEdit30);
-            this.groupBox19.Controls.Add(this.plcNumberEdit31);
-            this.groupBox19.Controls.Add(this.plcBoolean61);
-            this.groupBox19.Location = new System.Drawing.Point(350, 21);
-            this.groupBox19.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox19.Name = "groupBox19";
-            this.groupBox19.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox19.Size = new System.Drawing.Size(323, 298);
-            this.groupBox19.TabIndex = 6;
-            this.groupBox19.TabStop = false;
-            this.groupBox19.Text = "Pezzo In Scarico";
-            // 
-            // groupBox18
-            // 
-            this.groupBox18.Controls.Add(this.plcNumberEdit26);
-            this.groupBox18.Controls.Add(this.plcBooleanSwitchSimple2);
-            this.groupBox18.Controls.Add(this.plcNumberEdit27);
-            this.groupBox18.Controls.Add(this.plcNumberEdit28);
-            this.groupBox18.Controls.Add(this.plcBoolean60);
-            this.groupBox18.Location = new System.Drawing.Point(15, 21);
-            this.groupBox18.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox18.Name = "groupBox18";
-            this.groupBox18.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox18.Size = new System.Drawing.Size(323, 298);
-            this.groupBox18.TabIndex = 5;
-            this.groupBox18.TabStop = false;
-            this.groupBox18.Text = "Pezzo In Lavorazione";
-            // 
-            // tabPage5
-            // 
-            this.tabPage5.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage5.Controls.Add(this.groupBox35);
-            this.tabPage5.Controls.Add(this.groupBox17);
-            this.tabPage5.Controls.Add(this.groupBox16);
-            this.tabPage5.Controls.Add(this.groupBox12);
-            this.tabPage5.Controls.Add(this.groupBox4);
-            this.tabPage5.Controls.Add(this.groupBox6);
-            this.tabPage5.Controls.Add(this.groupBox5);
-            this.tabPage5.Location = new System.Drawing.Point(4, 25);
-            this.tabPage5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage5.Size = new System.Drawing.Size(1713, 814);
-            this.tabPage5.TabIndex = 2;
-            this.tabPage5.Text = "Impostazioni";
-            // 
-            // groupBox35
-            // 
-            this.groupBox35.Controls.Add(this.plcNumberEdit41);
-            this.groupBox35.Location = new System.Drawing.Point(391, 445);
-            this.groupBox35.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox35.Name = "groupBox35";
-            this.groupBox35.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox35.Size = new System.Drawing.Size(382, 141);
-            this.groupBox35.TabIndex = 10;
-            this.groupBox35.TabStop = false;
-            this.groupBox35.Text = "Svuotamento Hundegger";
-            // 
-            // groupBox17
-            // 
-            this.groupBox17.Controls.Add(this.plcNumberEdit18);
-            this.groupBox17.Controls.Add(this.plcNumberEdit19);
-            this.groupBox17.Controls.Add(this.plcNumberEdit20);
-            this.groupBox17.Controls.Add(this.plcNumberEdit21);
-            this.groupBox17.Location = new System.Drawing.Point(784, 14);
-            this.groupBox17.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox17.Name = "groupBox17";
-            this.groupBox17.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox17.Size = new System.Drawing.Size(382, 282);
-            this.groupBox17.TabIndex = 9;
-            this.groupBox17.TabStop = false;
-            this.groupBox17.Text = "Posizioni Sollevamento Catenaria 1";
-            // 
-            // groupBox16
-            // 
-            this.groupBox16.Controls.Add(this.plcNumberEdit11);
-            this.groupBox16.Location = new System.Drawing.Point(779, 300);
-            this.groupBox16.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox16.Name = "groupBox16";
-            this.groupBox16.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox16.Size = new System.Drawing.Size(387, 141);
-            this.groupBox16.TabIndex = 8;
-            this.groupBox16.TabStop = false;
-            this.groupBox16.Text = "R 1";
-            // 
-            // groupBox12
-            // 
-            this.groupBox12.Controls.Add(this.plcNumberEdit16);
-            this.groupBox12.Location = new System.Drawing.Point(391, 300);
-            this.groupBox12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox12.Name = "groupBox12";
-            this.groupBox12.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox12.Size = new System.Drawing.Size(382, 141);
-            this.groupBox12.TabIndex = 7;
-            this.groupBox12.TabStop = false;
-            this.groupBox12.Text = "Catenaria 2";
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.plcBooleanButton5);
-            this.groupBox4.Controls.Add(this.plcBooleanButton4);
-            this.groupBox4.Controls.Add(this.plcNumberEdit17);
-            this.groupBox4.Controls.Add(this.plcNumberEdit15);
-            this.groupBox4.Controls.Add(this.plcNumberEdit12);
-            this.groupBox4.Controls.Add(this.plcNumberEdit13);
-            this.groupBox4.Controls.Add(this.plcNumberEdit14);
-            this.groupBox4.Location = new System.Drawing.Point(3, 300);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox4.Size = new System.Drawing.Size(382, 306);
-            this.groupBox4.TabIndex = 6;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Catenaria 1";
-            // 
-            // groupBox6
-            // 
-            this.groupBox6.Controls.Add(this.plcNumberEdit23);
-            this.groupBox6.Controls.Add(this.plcNumberEdit10);
-            this.groupBox6.Controls.Add(this.plcNumberEdit9);
-            this.groupBox6.Controls.Add(this.plcNumberEdit5);
-            this.groupBox6.Controls.Add(this.plcNumberEdit6);
-            this.groupBox6.Location = new System.Drawing.Point(391, 14);
-            this.groupBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox6.Size = new System.Drawing.Size(382, 282);
-            this.groupBox6.TabIndex = 5;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "Posizioni Sollevamento Catenaria 2";
-            // 
-            // groupBox5
-            // 
-            this.groupBox5.Controls.Add(this.plcNumberEdit25);
-            this.groupBox5.Controls.Add(this.plcNumberEdit24);
-            this.groupBox5.Controls.Add(this.plcNumberEdit22);
-            this.groupBox5.Controls.Add(this.plcNumberEdit3);
-            this.groupBox5.Controls.Add(this.plcNumberEdit1);
-            this.groupBox5.Controls.Add(this.plcNumberEdit2);
-            this.groupBox5.Location = new System.Drawing.Point(5, 14);
-            this.groupBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox5.Size = new System.Drawing.Size(380, 282);
-            this.groupBox5.TabIndex = 4;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Posizioni Rotazione Catenaria 1";
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage3.Controls.Add(this.listViewAlZ1);
-            this.tabPage3.Location = new System.Drawing.Point(4, 25);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1713, 814);
-            this.tabPage3.TabIndex = 7;
-            this.tabPage3.Text = "Allarmi";
-            // 
-            // listViewAlZ1
-            // 
-            this.listViewAlZ1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listViewAlZ1.Location = new System.Drawing.Point(3, 3);
-            this.listViewAlZ1.Name = "listViewAlZ1";
-            this.listViewAlZ1.Size = new System.Drawing.Size(1707, 808);
-            this.listViewAlZ1.TabIndex = 0;
-            this.listViewAlZ1.UseCompatibleStateImageBehavior = false;
-            // 
-            // tabPage17
-            // 
-            this.tabPage17.Controls.Add(this.listViewStoricoAlarmZ1);
-            this.tabPage17.Location = new System.Drawing.Point(4, 25);
-            this.tabPage17.Name = "tabPage17";
-            this.tabPage17.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage17.Size = new System.Drawing.Size(1713, 814);
-            this.tabPage17.TabIndex = 8;
-            this.tabPage17.Text = "Storico Allarmi";
-            this.tabPage17.UseVisualStyleBackColor = true;
-            // 
-            // listViewStoricoAlarmZ1
-            // 
-            this.listViewStoricoAlarmZ1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listViewStoricoAlarmZ1.Location = new System.Drawing.Point(3, 3);
-            this.listViewStoricoAlarmZ1.Name = "listViewStoricoAlarmZ1";
-            this.listViewStoricoAlarmZ1.Size = new System.Drawing.Size(1707, 808);
-            this.listViewStoricoAlarmZ1.TabIndex = 1;
-            this.listViewStoricoAlarmZ1.UseCompatibleStateImageBehavior = false;
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.Controls.Add(this.tracking2);
-            this.tabPage1.Location = new System.Drawing.Point(4, 25);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1727, 847);
-            this.tabPage1.TabIndex = 5;
-            this.tabPage1.Text = "Zona 2";
-            this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // tracking2
-            // 
-            this.tracking2.Controls.Add(this.tabPage13);
-            this.tracking2.Controls.Add(this.tabPage18);
-            this.tracking2.Controls.Add(this.tabPage16);
-            this.tracking2.Controls.Add(this.tabPage15);
-            this.tracking2.Controls.Add(this.tabPage19);
-            this.tracking2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tracking2.Location = new System.Drawing.Point(3, 3);
-            this.tracking2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tracking2.Name = "tracking2";
-            this.tracking2.SelectedIndex = 0;
-            this.tracking2.Size = new System.Drawing.Size(1721, 841);
-            this.tracking2.TabIndex = 2;
-            // 
-            // tabPage13
-            // 
-            this.tabPage13.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.tabPage13.Controls.Add(this.tableLayoutPanel4);
-            this.tabPage13.Location = new System.Drawing.Point(4, 25);
-            this.tabPage13.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage13.Name = "tabPage13";
-            this.tabPage13.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage13.Size = new System.Drawing.Size(1713, 812);
-            this.tabPage13.TabIndex = 3;
-            this.tabPage13.Text = "Sinottico";
-            // 
-            // tableLayoutPanel4
-            // 
-            this.tableLayoutPanel4.ColumnCount = 1;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.Controls.Add(this.panel7, 0, 0);
-            this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel5, 0, 1);
-            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 2);
-            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.RowCount = 2;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 110F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(1707, 808);
-            this.tableLayoutPanel4.TabIndex = 1;
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.SystemColors.Control;
-            this.panel7.Controls.Add(this.groupBox9);
-            this.panel7.Controls.Add(this.groupBox32);
-            this.panel7.Controls.Add(this.groupBox31);
-            this.panel7.Controls.Add(this.groupBox33);
-            this.panel7.Controls.Add(this.groupBox34);
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel7.Location = new System.Drawing.Point(3, 3);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(1701, 104);
-            this.panel7.TabIndex = 1;
-            // 
-            // groupBox9
-            // 
-            this.groupBox9.Controls.Add(this.plcBooleanSwitch5);
-            this.groupBox9.Location = new System.Drawing.Point(489, 5);
-            this.groupBox9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox9.Size = new System.Drawing.Size(237, 91);
-            this.groupBox9.TabIndex = 12;
-            this.groupBox9.TabStop = false;
-            this.groupBox9.Text = "Ciclo Insermento manuale C4";
-            // 
-            // groupBox32
-            // 
-            this.groupBox32.Controls.Add(this.plcBooleanButton20);
-            this.groupBox32.Location = new System.Drawing.Point(732, 5);
-            this.groupBox32.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox32.Name = "groupBox32";
-            this.groupBox32.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox32.Size = new System.Drawing.Size(237, 91);
-            this.groupBox32.TabIndex = 11;
-            this.groupBox32.TabStop = false;
-            this.groupBox32.Text = "Buffer R2";
-            // 
-            // groupBox31
-            // 
-            this.groupBox31.Controls.Add(this.plcBooleanButton11);
-            this.groupBox31.Location = new System.Drawing.Point(975, 7);
-            this.groupBox31.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox31.Name = "groupBox31";
-            this.groupBox31.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox31.Size = new System.Drawing.Size(232, 91);
-            this.groupBox31.TabIndex = 10;
-            this.groupBox31.TabStop = false;
-            this.groupBox31.Text = " Allarmi";
-            // 
-            // groupBox33
-            // 
-            this.groupBox33.Controls.Add(this.plcBoolean80);
-            this.groupBox33.Controls.Add(this.plcBooleanButton18);
-            this.groupBox33.Controls.Add(this.plcBooleanButton19);
-            this.groupBox33.Location = new System.Drawing.Point(246, 5);
-            this.groupBox33.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox33.Name = "groupBox33";
-            this.groupBox33.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox33.Size = new System.Drawing.Size(237, 91);
-            this.groupBox33.TabIndex = 8;
-            this.groupBox33.TabStop = false;
-            this.groupBox33.Text = "Start Ciclo";
-            // 
-            // groupBox34
-            // 
-            this.groupBox34.Controls.Add(this.plcBooleanSwitch6);
-            this.groupBox34.Location = new System.Drawing.Point(3, 5);
-            this.groupBox34.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox34.Name = "groupBox34";
-            this.groupBox34.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox34.Size = new System.Drawing.Size(237, 91);
-            this.groupBox34.TabIndex = 3;
-            this.groupBox34.TabStop = false;
-            this.groupBox34.Text = "Modo";
-            // 
-            // tableLayoutPanel5
-            // 
-            this.tableLayoutPanel5.ColumnCount = 2;
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 211F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.Controls.Add(this.panel8, 0, 0);
-            this.tableLayoutPanel5.Controls.Add(this.panel11, 0, 0);
-            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 113);
-            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
-            this.tableLayoutPanel5.RowCount = 1;
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(1701, 692);
-            this.tableLayoutPanel5.TabIndex = 2;
-            // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.panel8.BackgroundImage = global::GalimbertiHMIgl.Properties.Resources.ScarcioGalimbertiparte2;
-            this.panel8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel8.Location = new System.Drawing.Point(214, 3);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(1484, 686);
-            this.panel8.TabIndex = 3;
-            // 
-            // panel11
-            // 
-            this.panel11.BackColor = System.Drawing.SystemColors.Control;
-            this.panel11.Controls.Add(this.groupBox37);
-            this.panel11.Controls.Add(this.groupBox38);
-            this.panel11.Controls.Add(this.groupBox39);
-            this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel11.Location = new System.Drawing.Point(3, 3);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(205, 686);
-            this.panel11.TabIndex = 2;
-            // 
-            // groupBox37
-            // 
-            this.groupBox37.Location = new System.Drawing.Point(3, 499);
-            this.groupBox37.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox37.Name = "groupBox37";
-            this.groupBox37.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox37.Size = new System.Drawing.Size(200, 141);
-            this.groupBox37.TabIndex = 10;
-            this.groupBox37.TabStop = false;
-            this.groupBox37.Text = "Buffer";
-            // 
-            // groupBox38
-            // 
-            this.groupBox38.Location = new System.Drawing.Point(3, 241);
-            this.groupBox38.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox38.Name = "groupBox38";
-            this.groupBox38.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox38.Size = new System.Drawing.Size(200, 254);
-            this.groupBox38.TabIndex = 9;
-            this.groupBox38.TabStop = false;
-            this.groupBox38.Text = "Emergenze";
-            // 
-            // groupBox39
-            // 
-            this.groupBox39.Location = new System.Drawing.Point(2, 12);
-            this.groupBox39.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox39.Name = "groupBox39";
-            this.groupBox39.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox39.Size = new System.Drawing.Size(200, 225);
-            this.groupBox39.TabIndex = 8;
-            this.groupBox39.TabStop = false;
-            this.groupBox39.Text = "Step Cicliche";
-            // 
-            // tabPage18
-            // 
-            this.tabPage18.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage18.Controls.Add(this.plcTracking2);
-            this.tabPage18.Location = new System.Drawing.Point(4, 25);
-            this.tabPage18.Name = "tabPage18";
-            this.tabPage18.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage18.Size = new System.Drawing.Size(1713, 812);
-            this.tabPage18.TabIndex = 4;
-            this.tabPage18.Text = "Tracking";
-            // 
-            // tabPage16
-            // 
-            this.tabPage16.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage16.Controls.Add(this.groupBox41);
-            this.tabPage16.Location = new System.Drawing.Point(4, 25);
-            this.tabPage16.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage16.Name = "tabPage16";
-            this.tabPage16.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage16.Size = new System.Drawing.Size(1713, 812);
-            this.tabPage16.TabIndex = 2;
-            this.tabPage16.Text = "Impostazioni";
-            // 
-            // groupBox41
-            // 
-            this.groupBox41.Controls.Add(this.plcNumberEdit39);
-            this.groupBox41.Location = new System.Drawing.Point(11, 4);
-            this.groupBox41.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox41.Name = "groupBox41";
-            this.groupBox41.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox41.Size = new System.Drawing.Size(382, 79);
-            this.groupBox41.TabIndex = 8;
-            this.groupBox41.TabStop = false;
-            this.groupBox41.Text = "C5";
-            // 
-            // tabPage15
-            // 
-            this.tabPage15.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage15.Controls.Add(this.listAlarmZ2);
-            this.tabPage15.Location = new System.Drawing.Point(4, 25);
-            this.tabPage15.Name = "tabPage15";
-            this.tabPage15.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage15.Size = new System.Drawing.Size(1713, 812);
-            this.tabPage15.TabIndex = 8;
-            this.tabPage15.Text = "Allarmi";
-            // 
-            // listAlarmZ2
-            // 
-            this.listAlarmZ2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listAlarmZ2.Location = new System.Drawing.Point(3, 3);
-            this.listAlarmZ2.Name = "listAlarmZ2";
-            this.listAlarmZ2.Size = new System.Drawing.Size(1707, 806);
-            this.listAlarmZ2.TabIndex = 0;
-            this.listAlarmZ2.UseCompatibleStateImageBehavior = false;
-            // 
-            // tabPage19
-            // 
-            this.tabPage19.Controls.Add(this.listViewStoricoAlarmZ2);
-            this.tabPage19.Location = new System.Drawing.Point(4, 25);
-            this.tabPage19.Name = "tabPage19";
-            this.tabPage19.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage19.Size = new System.Drawing.Size(1713, 812);
-            this.tabPage19.TabIndex = 9;
-            this.tabPage19.Text = "Storico Allarmi";
-            this.tabPage19.UseVisualStyleBackColor = true;
-            // 
-            // listViewStoricoAlarmZ2
-            // 
-            this.listViewStoricoAlarmZ2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listViewStoricoAlarmZ2.Location = new System.Drawing.Point(3, 3);
-            this.listViewStoricoAlarmZ2.Name = "listViewStoricoAlarmZ2";
-            this.listViewStoricoAlarmZ2.Size = new System.Drawing.Size(1707, 806);
-            this.listViewStoricoAlarmZ2.TabIndex = 1;
-            this.listViewStoricoAlarmZ2.UseCompatibleStateImageBehavior = false;
-            // 
-            // Aspirazione
-            // 
-            this.Aspirazione.Controls.Add(this.Valvole);
-            this.Aspirazione.Location = new System.Drawing.Point(4, 25);
-            this.Aspirazione.Name = "Aspirazione";
-            this.Aspirazione.Padding = new System.Windows.Forms.Padding(3);
-            this.Aspirazione.Size = new System.Drawing.Size(1727, 847);
-            this.Aspirazione.TabIndex = 3;
-            this.Aspirazione.Text = "Aspirazione";
-            this.Aspirazione.UseVisualStyleBackColor = true;
-            // 
-            // Valvole
-            // 
-            this.Valvole.Controls.Add(this.tabPage10);
-            this.Valvole.Controls.Add(this.tabPage4);
-            this.Valvole.Controls.Add(this.tabPage8);
-            this.Valvole.Controls.Add(this.tabPage9);
-            this.Valvole.Controls.Add(this.tabPage11);
-            this.Valvole.Controls.Add(this.tabPage7);
-            this.Valvole.Controls.Add(this.tabPage14);
-            this.Valvole.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.Valvole.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Valvole.Location = new System.Drawing.Point(3, 3);
-            this.Valvole.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Valvole.Name = "Valvole";
-            this.Valvole.SelectedIndex = 0;
-            this.Valvole.Size = new System.Drawing.Size(1721, 841);
-            this.Valvole.TabIndex = 2;
-            // 
-            // tabPage10
-            // 
-            this.tabPage10.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage10.Controls.Add(this.groupBox10);
-            this.tabPage10.Controls.Add(this.groupBox30);
-            this.tabPage10.Controls.Add(this.groupBox29);
-            this.tabPage10.Controls.Add(this.Ciclone);
-            this.tabPage10.Controls.Add(this.plcBooleanSwitch3);
-            this.tabPage10.Controls.Add(this.plcAspSelManMode);
-            this.tabPage10.Controls.Add(this.groupBox27);
-            this.tabPage10.Controls.Add(this.groupBox24);
-            this.tabPage10.Controls.Add(this.groupBox44);
-            this.tabPage10.Location = new System.Drawing.Point(4, 25);
-            this.tabPage10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage10.Name = "tabPage10";
-            this.tabPage10.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage10.Size = new System.Drawing.Size(1713, 812);
-            this.tabPage10.TabIndex = 2;
-            this.tabPage10.Text = "Impostazioni";
-            this.tabPage10.Click += new System.EventHandler(this.tabPage10_Click);
-            // 
-            // groupBox10
-            // 
-            this.groupBox10.Controls.Add(this.plcNumberEdit40);
-            this.groupBox10.Controls.Add(this.plcBoolean79);
-            this.groupBox10.Controls.Add(this.plcBooleanButton1);
-            this.groupBox10.Location = new System.Drawing.Point(8, 171);
-            this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Size = new System.Drawing.Size(441, 100);
-            this.groupBox10.TabIndex = 22;
-            this.groupBox10.TabStop = false;
-            this.groupBox10.Text = "Ciclo Manuale Aspirazione Ciclone";
-            // 
-            // groupBox30
-            // 
-            this.groupBox30.Controls.Add(this.plcBooleanSwitchSimple7);
-            this.groupBox30.Controls.Add(this.plcBooleanButton17);
-            this.groupBox30.Controls.Add(this.plcBooleanSwitchSimple8);
-            this.groupBox30.Location = new System.Drawing.Point(8, 67);
-            this.groupBox30.Name = "groupBox30";
-            this.groupBox30.Size = new System.Drawing.Size(441, 100);
-            this.groupBox30.TabIndex = 21;
-            this.groupBox30.TabStop = false;
-            this.groupBox30.Text = "Scarico Container";
-            // 
-            // groupBox29
-            // 
-            this.groupBox29.Controls.Add(this.plcBooleanSwitchSimple4);
-            this.groupBox29.Controls.Add(this.plcBooleanButton16);
-            this.groupBox29.Controls.Add(this.plcBooleanSwitchSimple6);
-            this.groupBox29.Location = new System.Drawing.Point(455, 67);
-            this.groupBox29.Name = "groupBox29";
-            this.groupBox29.Size = new System.Drawing.Size(441, 100);
-            this.groupBox29.TabIndex = 20;
-            this.groupBox29.TabStop = false;
-            this.groupBox29.Text = "Scarico Bricchettatrice";
-            // 
-            // Ciclone
-            // 
-            this.Ciclone.Controls.Add(this.plcNumberEdit38);
-            this.Ciclone.Controls.Add(this.plcNumberEdit37);
-            this.Ciclone.Controls.Add(this.plcNumberEdit36);
-            this.Ciclone.Location = new System.Drawing.Point(414, 487);
-            this.Ciclone.Name = "Ciclone";
-            this.Ciclone.Size = new System.Drawing.Size(380, 159);
-            this.Ciclone.TabIndex = 17;
-            this.Ciclone.TabStop = false;
-            this.Ciclone.Text = "Ciclone";
-            // 
-            // groupBox27
-            // 
-            this.groupBox27.Controls.Add(this.plcNumberEdit35);
-            this.groupBox27.Controls.Add(this.plcNumber2);
-            this.groupBox27.Controls.Add(this.plcNumber1);
-            this.groupBox27.Controls.Add(this.plcNumberEdit33);
-            this.groupBox27.Controls.Add(this.plcNumberEdit34);
-            this.groupBox27.Location = new System.Drawing.Point(414, 279);
-            this.groupBox27.Name = "groupBox27";
-            this.groupBox27.Size = new System.Drawing.Size(380, 205);
-            this.groupBox27.TabIndex = 12;
-            this.groupBox27.TabStop = false;
-            this.groupBox27.Text = "Impostazioni";
-            // 
-            // groupBox24
-            // 
-            this.groupBox24.Controls.Add(this.plcNumberEdit32);
-            this.groupBox24.Controls.Add(this.plcNumberEdit8);
-            this.groupBox24.Location = new System.Drawing.Point(10, 592);
-            this.groupBox24.Name = "groupBox24";
-            this.groupBox24.Size = new System.Drawing.Size(380, 110);
-            this.groupBox24.TabIndex = 11;
-            this.groupBox24.TabStop = false;
-            this.groupBox24.Text = "Tempi Motori";
-            // 
-            // groupBox44
-            // 
-            this.groupBox44.Controls.Add(this.plcNumberEdit7);
-            this.groupBox44.Controls.Add(this.plcNumberEdit4);
-            this.groupBox44.Controls.Add(this.plcNumberEdit51);
-            this.groupBox44.Controls.Add(this.plcNumberEdit52);
-            this.groupBox44.Controls.Add(this.plcNumberEdit53);
-            this.groupBox44.Controls.Add(this.plcNumberEdit54);
-            this.groupBox44.Controls.Add(this.plcNumberEdit55);
-            this.groupBox44.Controls.Add(this.plcNumberEdit56);
-            this.groupBox44.Location = new System.Drawing.Point(10, 276);
-            this.groupBox44.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox44.Name = "groupBox44";
-            this.groupBox44.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox44.Size = new System.Drawing.Size(380, 311);
-            this.groupBox44.TabIndex = 4;
-            this.groupBox44.TabStop = false;
-            this.groupBox44.Text = "Velocità motori";
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage4.Controls.Add(this.duT_Motori8);
-            this.tabPage4.Controls.Add(this.duT_Motori7);
-            this.tabPage4.Controls.Add(this.duT_Motori6);
-            this.tabPage4.Controls.Add(this.duT_Motori5);
-            this.tabPage4.Controls.Add(this.duT_Motori4);
-            this.tabPage4.Controls.Add(this.duT_Motori3);
-            this.tabPage4.Controls.Add(this.duT_Motori2);
-            this.tabPage4.Controls.Add(this.duT_Motori1);
-            this.tabPage4.Location = new System.Drawing.Point(4, 25);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(1713, 812);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Motori";
-            this.tabPage4.Click += new System.EventHandler(this.tabPage4_Click);
-            // 
-            // tabPage8
-            // 
-            this.tabPage8.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage8.Controls.Add(this.duT_Filtri1);
-            this.tabPage8.Location = new System.Drawing.Point(4, 25);
-            this.tabPage8.Name = "tabPage8";
-            this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage8.Size = new System.Drawing.Size(1713, 812);
-            this.tabPage8.TabIndex = 4;
-            this.tabPage8.Text = "Puliz Filtri";
-            // 
-            // tabPage9
-            // 
-            this.tabPage9.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage9.Controls.Add(this.duT_Asp_Comandi1);
-            this.tabPage9.Location = new System.Drawing.Point(4, 25);
-            this.tabPage9.Name = "tabPage9";
-            this.tabPage9.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage9.Size = new System.Drawing.Size(1713, 812);
-            this.tabPage9.TabIndex = 5;
-            this.tabPage9.Text = "Comandi Mauali";
-            // 
-            // tabPage11
-            // 
-            this.tabPage11.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage11.Controls.Add(this.listView1);
-            this.tabPage11.Location = new System.Drawing.Point(4, 25);
-            this.tabPage11.Name = "tabPage11";
-            this.tabPage11.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage11.Size = new System.Drawing.Size(1713, 812);
-            this.tabPage11.TabIndex = 6;
-            this.tabPage11.Text = "Allarmi";
-            // 
-            // listView1
-            // 
-            this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listView1.Location = new System.Drawing.Point(3, 3);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(1707, 806);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            // 
-            // tabPage7
-            // 
-            this.tabPage7.Controls.Add(this.listView2);
-            this.tabPage7.Location = new System.Drawing.Point(4, 25);
-            this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage7.Size = new System.Drawing.Size(1713, 812);
-            this.tabPage7.TabIndex = 7;
-            this.tabPage7.Text = "Storico Allarmi";
-            this.tabPage7.UseVisualStyleBackColor = true;
-            // 
-            // listView2
-            // 
-            this.listView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listView2.Location = new System.Drawing.Point(3, 3);
-            this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(1707, 806);
-            this.listView2.TabIndex = 1;
-            this.listView2.UseCompatibleStateImageBehavior = false;
-            // 
-            // tabPage14
-            // 
-            this.tabPage14.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage14.Controls.Add(this.plcGridIOAsp);
-            this.tabPage14.Location = new System.Drawing.Point(4, 25);
-            this.tabPage14.Name = "tabPage14";
-            this.tabPage14.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage14.Size = new System.Drawing.Size(1713, 812);
-            this.tabPage14.TabIndex = 8;
-            this.tabPage14.Text = "I/O";
-            // 
-            // tabPage12
-            // 
-            this.tabPage12.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage12.Controls.Add(this.plcBoolean78);
-            this.tabPage12.Controls.Add(this.plcBoolean77);
-            this.tabPage12.Controls.Add(this.plcBoolean76);
-            this.tabPage12.Controls.Add(this.plcBoolean75);
-            this.tabPage12.Controls.Add(this.plcBoolean74);
-            this.tabPage12.Controls.Add(this.plcBoolean73);
-            this.tabPage12.Controls.Add(this.plcBoolean72);
-            this.tabPage12.Controls.Add(this.plcBoolean12);
-            this.tabPage12.Controls.Add(this.plcInt166);
-            this.tabPage12.Controls.Add(this.plcInt165);
-            this.tabPage12.Controls.Add(this.plcInt164);
-            this.tabPage12.Controls.Add(this.plcInt163);
-            this.tabPage12.Controls.Add(this.plcInt162);
-            this.tabPage12.Controls.Add(this.plcInt161);
-            this.tabPage12.Location = new System.Drawing.Point(4, 25);
-            this.tabPage12.Name = "tabPage12";
-            this.tabPage12.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage12.Size = new System.Drawing.Size(1727, 847);
-            this.tabPage12.TabIndex = 4;
-            this.tabPage12.Text = "Bricchettatrice";
-            this.tabPage12.Click += new System.EventHandler(this.tabPage12_Click);
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel1.BackColor = System.Drawing.SystemColors.Control;
-            this.tableLayoutPanel1.ColumnCount = 1;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Controls.Add(tabControlAsp, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 1);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1741, 980);
-            this.tableLayoutPanel1.TabIndex = 0;
-            this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.Control;
-            this.panel1.Controls.Add(this.plcAllarBricch);
-            this.panel1.Controls.Add(this.plcAlarmAsp);
-            this.panel1.Controls.Add(this.plcAlarmZ2);
-            this.panel1.Controls.Add(this.plcAlarmZ1);
-            this.panel1.Controls.Add(this.groupBox28);
-            this.panel1.Controls.Add(this.groupBox8);
-            this.panel1.Controls.Add(this.groupBox25);
-            this.panel1.Controls.Add(this.groupBox13);
-            this.panel1.Controls.Add(this.groupBox2);
-            this.panel1.Controls.Add(this.groupBox1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(3, 2);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1735, 96);
-            this.panel1.TabIndex = 1;
-            // 
-            // groupBox28
-            // 
-            this.groupBox28.Controls.Add(this.plcAnomaliaBricc);
-            this.groupBox28.Controls.Add(this.plcCiclicaBricc);
-            this.groupBox28.Location = new System.Drawing.Point(410, 2);
-            this.groupBox28.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox28.Name = "groupBox28";
-            this.groupBox28.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox28.Size = new System.Drawing.Size(121, 94);
-            this.groupBox28.TabIndex = 8;
-            this.groupBox28.TabStop = false;
-            this.groupBox28.Text = "Ciclica Bricc.";
-            // 
-            // groupBox8
-            // 
-            this.groupBox8.Controls.Add(this.plcAnomaliaAsp);
-            this.groupBox8.Controls.Add(this.plcCiclicaAsp);
-            this.groupBox8.Location = new System.Drawing.Point(283, 2);
-            this.groupBox8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox8.Size = new System.Drawing.Size(121, 94);
-            this.groupBox8.TabIndex = 7;
-            this.groupBox8.TabStop = false;
-            this.groupBox8.Text = "Ciclica Aspiraz.";
-            // 
-            // groupBox25
-            // 
-            this.groupBox25.Controls.Add(this.plcBooleanSwitch2);
-            this.groupBox25.Location = new System.Drawing.Point(743, 4);
-            this.groupBox25.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox25.Name = "groupBox25";
-            this.groupBox25.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox25.Size = new System.Drawing.Size(237, 92);
-            this.groupBox25.TabIndex = 6;
-            this.groupBox25.TabStop = false;
-            this.groupBox25.Text = "Silos";
-            // 
-            // groupBox13
-            // 
-            this.groupBox13.Controls.Add(this.hundFile);
-            this.groupBox13.Controls.Add(this.hundElab);
-            this.groupBox13.Location = new System.Drawing.Point(537, 4);
-            this.groupBox13.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox13.Name = "groupBox13";
-            this.groupBox13.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox13.Size = new System.Drawing.Size(200, 90);
-            this.groupBox13.TabIndex = 5;
-            this.groupBox13.TabStop = false;
-            this.groupBox13.Text = "Hundegger";
-            this.groupBox13.Enter += new System.EventHandler(this.groupBox13_Enter);
-            // 
-            // hundFile
-            // 
-            this.hundFile.AutoSize = true;
-            this.hundFile.Location = new System.Drawing.Point(7, 53);
-            this.hundFile.Name = "hundFile";
-            this.hundFile.Size = new System.Drawing.Size(0, 17);
-            this.hundFile.TabIndex = 7;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.plcAnomalia);
-            this.groupBox2.Controls.Add(this.plcCiclica);
-            this.groupBox2.Location = new System.Drawing.Point(157, 2);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox2.Size = new System.Drawing.Size(121, 94);
-            this.groupBox2.TabIndex = 4;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Ciclica Rulliera";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.plcConnessioneBricc);
-            this.groupBox1.Controls.Add(this.plcConnessioneAsp);
-            this.groupBox1.Controls.Add(this.plcConnessione);
-            this.groupBox1.Location = new System.Drawing.Point(4, 2);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(147, 94);
-            this.groupBox1.TabIndex = 3;
-            this.groupBox1.TabStop = false;
-            // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Interval = 50;
-            // 
-            // timer2
-            // 
-            this.timer2.Enabled = true;
-            this.timer2.Interval = 50;
-            // 
-            // tabPage20
-            // 
-            this.tabPage20.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage20.Controls.Add(this.plcVelmec);
-            this.tabPage20.Controls.Add(this.plcListTrkVelmec);
-            this.tabPage20.Location = new System.Drawing.Point(4, 25);
-            this.tabPage20.Name = "tabPage20";
-            this.tabPage20.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage20.Size = new System.Drawing.Size(1727, 847);
-            this.tabPage20.TabIndex = 6;
-            this.tabPage20.Text = "Velmec";
-            // 
-            // plcBooleanButton2
-            // 
-            this.plcBooleanButton2.GreenMode = true;
-            this.plcBooleanButton2.Location = new System.Drawing.Point(15, 47);
-            this.plcBooleanButton2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.plcBooleanButton2.Name = "plcBooleanButton2";
-            this.plcBooleanButton2.NotMode = false;
-            this.plcBooleanButton2.PLC = null;
-            this.plcBooleanButton2.PLCDescription = "Start";
-            this.plcBooleanButton2.PLCError = false;
-            this.plcBooleanButton2.PLCValue = false;
-            this.plcBooleanButton2.Size = new System.Drawing.Size(167, 25);
-            this.plcBooleanButton2.TabIndex = 15;
-            this.plcBooleanButton2.VariableName = ".PB_Start_Svuotamento_Hundegger";
-            // 
-            // plcBooleanButton12
-            // 
-            this.plcBooleanButton12.GreenMode = true;
-            this.plcBooleanButton12.Location = new System.Drawing.Point(15, 47);
-            this.plcBooleanButton12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.plcBooleanButton12.Name = "plcBooleanButton12";
-            this.plcBooleanButton12.NotMode = false;
-            this.plcBooleanButton12.PLC = null;
-            this.plcBooleanButton12.PLCDescription = "Reset";
-            this.plcBooleanButton12.PLCError = false;
-            this.plcBooleanButton12.PLCValue = false;
-            this.plcBooleanButton12.Size = new System.Drawing.Size(167, 25);
-            this.plcBooleanButton12.TabIndex = 15;
-            this.plcBooleanButton12.VariableName = "RULLI_CENTRO_TAGLI.Hmi_Pls_Rst_Allarmi";
-            // 
-            // plcBooleanSwitch4
-            // 
-            this.plcBooleanSwitch4.DescriptionOff = "Disabilitato";
-            this.plcBooleanSwitch4.DescriptionOn = "Abilitato";
-            this.plcBooleanSwitch4.Location = new System.Drawing.Point(5, 21);
-            this.plcBooleanSwitch4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.plcBooleanSwitch4.Name = "plcBooleanSwitch4";
-            this.plcBooleanSwitch4.PLC = null;
-            this.plcBooleanSwitch4.PLCDescription = null;
-            this.plcBooleanSwitch4.PLCError = false;
-            this.plcBooleanSwitch4.PLCValue = false;
-            this.plcBooleanSwitch4.Size = new System.Drawing.Size(217, 54);
-            this.plcBooleanSwitch4.TabIndex = 1;
-            this.plcBooleanSwitch4.VariableName = ".C1_Ciclo_Polmone_Sel";
-            // 
-            // plcBoolean16
-            // 
-            this.plcBoolean16.BackColor = System.Drawing.Color.Transparent;
-            this.plcBoolean16.GreenMode = true;
-            this.plcBoolean16.Location = new System.Drawing.Point(15, 18);
-            this.plcBoolean16.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.plcBoolean16.Name = "plcBoolean16";
-            this.plcBoolean16.NotMode = false;
-            this.plcBoolean16.PLC = null;
-            this.plcBoolean16.PLCDescription = "Ciclo";
-            this.plcBoolean16.PLCError = false;
-            this.plcBoolean16.PLCValue = false;
-            this.plcBoolean16.Size = new System.Drawing.Size(206, 25);
-            this.plcBoolean16.TabIndex = 17;
-            this.plcBoolean16.VariableName = "RULLI_CENTRO_TAGLI.Auto_Cycle_Run";
-            // 
-            // plcBooleanButton6
-            // 
-            this.plcBooleanButton6.GreenMode = true;
-            this.plcBooleanButton6.Location = new System.Drawing.Point(121, 47);
-            this.plcBooleanButton6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.plcBooleanButton6.Name = "plcBooleanButton6";
-            this.plcBooleanButton6.NotMode = false;
-            this.plcBooleanButton6.PLC = null;
-            this.plcBooleanButton6.PLCDescription = "Stop";
-            this.plcBooleanButton6.PLCError = false;
-            this.plcBooleanButton6.PLCValue = false;
-            this.plcBooleanButton6.Size = new System.Drawing.Size(100, 25);
-            this.plcBooleanButton6.TabIndex = 16;
-            this.plcBooleanButton6.VariableName = "RULLI_CENTRO_TAGLI.Pls_Stop_Ciclo";
-            // 
-            // plcBooleanButton7
-            // 
-            this.plcBooleanButton7.GreenMode = true;
-            this.plcBooleanButton7.Location = new System.Drawing.Point(15, 47);
-            this.plcBooleanButton7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.plcBooleanButton7.Name = "plcBooleanButton7";
-            this.plcBooleanButton7.NotMode = false;
-            this.plcBooleanButton7.PLC = null;
-            this.plcBooleanButton7.PLCDescription = "Start";
-            this.plcBooleanButton7.PLCError = false;
-            this.plcBooleanButton7.PLCValue = false;
-            this.plcBooleanButton7.Size = new System.Drawing.Size(100, 25);
-            this.plcBooleanButton7.TabIndex = 15;
-            this.plcBooleanButton7.VariableName = "RULLI_CENTRO_TAGLI.Pls_Start_Ciclo";
-            // 
-            // plcBooleanSwitch1
-            // 
-            this.plcBooleanSwitch1.DescriptionOff = "Manuale";
-            this.plcBooleanSwitch1.DescriptionOn = "Automatico";
-            this.plcBooleanSwitch1.Location = new System.Drawing.Point(5, 21);
-            this.plcBooleanSwitch1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.plcBooleanSwitch1.Name = "plcBooleanSwitch1";
-            this.plcBooleanSwitch1.PLC = null;
-            this.plcBooleanSwitch1.PLCDescription = null;
-            this.plcBooleanSwitch1.PLCError = false;
-            this.plcBooleanSwitch1.PLCValue = true;
-            this.plcBooleanSwitch1.Size = new System.Drawing.Size(217, 54);
-            this.plcBooleanSwitch1.TabIndex = 1;
-            this.plcBooleanSwitch1.VariableName = "RULLI_CENTRO_TAGLI.Sel_Auto";
             // 
             // plcBoolean1
             // 
@@ -2243,6 +1257,60 @@
             this.plcBoolean59.Size = new System.Drawing.Size(34, 24);
             this.plcBoolean59.TabIndex = 49;
             this.plcBoolean59.VariableName = ".C2_Ftc1_Fila1_Presenza";
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel5.Controls.Add(this.groupBox26);
+            this.panel5.Controls.Add(this.plcBoolean30);
+            this.panel5.Controls.Add(this.plcBoolean31);
+            this.panel5.Controls.Add(this.plcBoolean32);
+            this.panel5.Controls.Add(this.plcBoolean33);
+            this.panel5.Controls.Add(this.plcBoolean34);
+            this.panel5.Controls.Add(this.plcBoolean35);
+            this.panel5.Controls.Add(this.plcBoolean24);
+            this.panel5.Controls.Add(this.plcBoolean25);
+            this.panel5.Controls.Add(this.plcBoolean26);
+            this.panel5.Controls.Add(this.plcBoolean27);
+            this.panel5.Controls.Add(this.plcBoolean28);
+            this.panel5.Controls.Add(this.plcBoolean29);
+            this.panel5.Controls.Add(this.plcBoolean18);
+            this.panel5.Controls.Add(this.plcBoolean19);
+            this.panel5.Controls.Add(this.plcBoolean20);
+            this.panel5.Controls.Add(this.plcBoolean21);
+            this.panel5.Controls.Add(this.plcBoolean22);
+            this.panel5.Controls.Add(this.plcBoolean23);
+            this.panel5.Controls.Add(this.plcBoolean5);
+            this.panel5.Controls.Add(this.plcBoolean14);
+            this.panel5.Controls.Add(this.plcBoolean17);
+            this.panel5.Controls.Add(this.plcBoolean4);
+            this.panel5.Controls.Add(this.plcBoolean3);
+            this.panel5.Controls.Add(this.plcBoolean15);
+            this.panel5.Location = new System.Drawing.Point(37, 187);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(992, 208);
+            this.panel5.TabIndex = 49;
+            // 
+            // groupBox26
+            // 
+            this.groupBox26.BackColor = System.Drawing.Color.LightGreen;
+            this.groupBox26.Controls.Add(this.plcBooleanButton13);
+            this.groupBox26.Controls.Add(this.plcBoolean71);
+            this.groupBox26.Controls.Add(this.plcBoolean70);
+            this.groupBox26.Controls.Add(this.plcBoolean69);
+            this.groupBox26.Controls.Add(this.plcBoolean68);
+            this.groupBox26.Controls.Add(this.plcBoolean67);
+            this.groupBox26.Controls.Add(this.plcBoolean66);
+            this.groupBox26.Controls.Add(this.plcBooleanButton15);
+            this.groupBox26.Location = new System.Drawing.Point(669, 16);
+            this.groupBox26.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox26.Name = "groupBox26";
+            this.groupBox26.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox26.Size = new System.Drawing.Size(209, 169);
+            this.groupBox26.TabIndex = 49;
+            this.groupBox26.TabStop = false;
+            this.groupBox26.Text = "Buffer C1";
             // 
             // plcBooleanButton13
             // 
@@ -2754,6 +1822,32 @@
             this.plcBoolean15.TabIndex = 25;
             this.plcBoolean15.VariableName = ".C1_Ftc1_Fila1_Presenza";
             // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.SystemColors.Control;
+            this.panel4.Controls.Add(this.groupBox22);
+            this.panel4.Controls.Add(this.groupBox21);
+            this.panel4.Controls.Add(this.groupBox20);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(3, 3);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(205, 688);
+            this.panel4.TabIndex = 2;
+            // 
+            // groupBox22
+            // 
+            this.groupBox22.Controls.Add(this.plcBooleanButton10);
+            this.groupBox22.Controls.Add(this.plcBooleanButton9);
+            this.groupBox22.Controls.Add(this.plcBooleanButton8);
+            this.groupBox22.Location = new System.Drawing.Point(3, 499);
+            this.groupBox22.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox22.Name = "groupBox22";
+            this.groupBox22.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox22.Size = new System.Drawing.Size(200, 141);
+            this.groupBox22.TabIndex = 10;
+            this.groupBox22.TabStop = false;
+            this.groupBox22.Text = "Buffer";
+            // 
             // plcBooleanButton10
             // 
             this.plcBooleanButton10.GreenMode = true;
@@ -2798,6 +1892,24 @@
             this.plcBooleanButton8.Size = new System.Drawing.Size(188, 25);
             this.plcBooleanButton8.TabIndex = 16;
             this.plcBooleanButton8.VariableName = "RULLI_CENTRO_TAGLI.C1_Pls_Svuota_Buffer";
+            // 
+            // groupBox21
+            // 
+            this.groupBox21.Controls.Add(this.plcBoolean2);
+            this.groupBox21.Controls.Add(this.plcBoolean6);
+            this.groupBox21.Controls.Add(this.plcBoolean13);
+            this.groupBox21.Controls.Add(this.plcBoolean62);
+            this.groupBox21.Controls.Add(this.plcBoolean63);
+            this.groupBox21.Controls.Add(this.plcBoolean64);
+            this.groupBox21.Controls.Add(this.plcBoolean65);
+            this.groupBox21.Location = new System.Drawing.Point(3, 241);
+            this.groupBox21.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox21.Name = "groupBox21";
+            this.groupBox21.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox21.Size = new System.Drawing.Size(200, 254);
+            this.groupBox21.TabIndex = 9;
+            this.groupBox21.TabStop = false;
+            this.groupBox21.Text = "Emergenze";
             // 
             // plcBoolean2
             // 
@@ -2911,6 +2023,22 @@
             this.plcBoolean65.TabIndex = 6;
             this.plcBoolean65.VariableName = ".C1P1_Pls_Eme";
             // 
+            // groupBox20
+            // 
+            this.groupBox20.Controls.Add(this.plcNumber11);
+            this.groupBox20.Controls.Add(this.plcNumber7);
+            this.groupBox20.Controls.Add(this.plcNumber8);
+            this.groupBox20.Controls.Add(this.plcNumber9);
+            this.groupBox20.Controls.Add(this.plcNumber10);
+            this.groupBox20.Location = new System.Drawing.Point(2, 2);
+            this.groupBox20.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox20.Name = "groupBox20";
+            this.groupBox20.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox20.Size = new System.Drawing.Size(200, 225);
+            this.groupBox20.TabIndex = 8;
+            this.groupBox20.TabStop = false;
+            this.groupBox20.Text = "Step Cicliche";
+            // 
             // plcNumber11
             // 
             this.plcNumber11.Location = new System.Drawing.Point(6, 149);
@@ -2976,6 +2104,17 @@
             this.plcNumber10.TabIndex = 0;
             this.plcNumber10.VariableName = "RULLI_CENTRO_TAGLI.Act_Step_Ciclo_C1_Polmone_Auto";
             // 
+            // Tracking
+            // 
+            this.Tracking.BackColor = System.Drawing.SystemColors.Control;
+            this.Tracking.Controls.Add(this.plcTracking1);
+            this.Tracking.Location = new System.Drawing.Point(4, 25);
+            this.Tracking.Name = "Tracking";
+            this.Tracking.Padding = new System.Windows.Forms.Padding(3);
+            this.Tracking.Size = new System.Drawing.Size(1713, 814);
+            this.Tracking.TabIndex = 5;
+            this.Tracking.Text = "Tracking";
+            // 
             // plcTracking1
             // 
             this.plcTracking1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -2985,6 +2124,35 @@
             this.plcTracking1.Size = new System.Drawing.Size(1707, 808);
             this.plcTracking1.TabIndex = 0;
             this.plcTracking1.Vertical = false;
+            // 
+            // tabPage6
+            // 
+            this.tabPage6.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage6.Controls.Add(this.groupBox19);
+            this.tabPage6.Controls.Add(this.groupBox18);
+            this.tabPage6.Location = new System.Drawing.Point(4, 25);
+            this.tabPage6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage6.Size = new System.Drawing.Size(1713, 814);
+            this.tabPage6.TabIndex = 4;
+            this.tabPage6.Text = "Hundegger";
+            // 
+            // groupBox19
+            // 
+            this.groupBox19.Controls.Add(this.plcNumberEdit29);
+            this.groupBox19.Controls.Add(this.plcBooleanSwitchSimple3);
+            this.groupBox19.Controls.Add(this.plcNumberEdit30);
+            this.groupBox19.Controls.Add(this.plcNumberEdit31);
+            this.groupBox19.Controls.Add(this.plcBoolean61);
+            this.groupBox19.Location = new System.Drawing.Point(350, 21);
+            this.groupBox19.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox19.Name = "groupBox19";
+            this.groupBox19.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox19.Size = new System.Drawing.Size(323, 298);
+            this.groupBox19.TabIndex = 6;
+            this.groupBox19.TabStop = false;
+            this.groupBox19.Text = "Pezzo In Scarico";
             // 
             // plcNumberEdit29
             // 
@@ -3055,6 +2223,22 @@
             this.plcBoolean61.Size = new System.Drawing.Size(293, 26);
             this.plcBoolean61.TabIndex = 5;
             this.plcBoolean61.VariableName = "RULLI_CENTRO_TAGLI.WR_En_Scarico_Hundegger";
+            // 
+            // groupBox18
+            // 
+            this.groupBox18.Controls.Add(this.plcNumberEdit26);
+            this.groupBox18.Controls.Add(this.plcBooleanSwitchSimple2);
+            this.groupBox18.Controls.Add(this.plcNumberEdit27);
+            this.groupBox18.Controls.Add(this.plcNumberEdit28);
+            this.groupBox18.Controls.Add(this.plcBoolean60);
+            this.groupBox18.Location = new System.Drawing.Point(15, 21);
+            this.groupBox18.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox18.Name = "groupBox18";
+            this.groupBox18.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox18.Size = new System.Drawing.Size(323, 298);
+            this.groupBox18.TabIndex = 5;
+            this.groupBox18.TabStop = false;
+            this.groupBox18.Text = "Pezzo In Lavorazione";
             // 
             // plcNumberEdit26
             // 
@@ -3128,6 +2312,36 @@
             this.plcBoolean60.TabIndex = 5;
             this.plcBoolean60.VariableName = "RULLI_CENTRO_TAGLI.WR_En_Anticipo_Pz_Hundegger";
             // 
+            // tabPage5
+            // 
+            this.tabPage5.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage5.Controls.Add(this.groupBox35);
+            this.tabPage5.Controls.Add(this.groupBox17);
+            this.tabPage5.Controls.Add(this.groupBox16);
+            this.tabPage5.Controls.Add(this.groupBox12);
+            this.tabPage5.Controls.Add(this.groupBox4);
+            this.tabPage5.Controls.Add(this.groupBox6);
+            this.tabPage5.Controls.Add(this.groupBox5);
+            this.tabPage5.Location = new System.Drawing.Point(4, 25);
+            this.tabPage5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage5.Size = new System.Drawing.Size(1713, 814);
+            this.tabPage5.TabIndex = 2;
+            this.tabPage5.Text = "Impostazioni";
+            // 
+            // groupBox35
+            // 
+            this.groupBox35.Controls.Add(this.plcNumberEdit41);
+            this.groupBox35.Location = new System.Drawing.Point(391, 445);
+            this.groupBox35.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox35.Name = "groupBox35";
+            this.groupBox35.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox35.Size = new System.Drawing.Size(382, 141);
+            this.groupBox35.TabIndex = 10;
+            this.groupBox35.TabStop = false;
+            this.groupBox35.Text = "Svuotamento Hundegger";
+            // 
             // plcNumberEdit41
             // 
             this.plcNumberEdit41.Location = new System.Drawing.Point(5, 31);
@@ -3140,6 +2354,21 @@
             this.plcNumberEdit41.Size = new System.Drawing.Size(351, 30);
             this.plcNumberEdit41.TabIndex = 1;
             this.plcNumberEdit41.VariableName = ".Tempo_Svuotamento_Hdd ";
+            // 
+            // groupBox17
+            // 
+            this.groupBox17.Controls.Add(this.plcNumberEdit18);
+            this.groupBox17.Controls.Add(this.plcNumberEdit19);
+            this.groupBox17.Controls.Add(this.plcNumberEdit20);
+            this.groupBox17.Controls.Add(this.plcNumberEdit21);
+            this.groupBox17.Location = new System.Drawing.Point(784, 14);
+            this.groupBox17.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox17.Name = "groupBox17";
+            this.groupBox17.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox17.Size = new System.Drawing.Size(382, 282);
+            this.groupBox17.TabIndex = 9;
+            this.groupBox17.TabStop = false;
+            this.groupBox17.Text = "Posizioni Sollevamento Catenaria 1";
             // 
             // plcNumberEdit18
             // 
@@ -3193,6 +2422,18 @@
             this.plcNumberEdit21.TabIndex = 1;
             this.plcNumberEdit21.VariableName = ".C1_Solleva_Up_Position";
             // 
+            // groupBox16
+            // 
+            this.groupBox16.Controls.Add(this.plcNumberEdit11);
+            this.groupBox16.Location = new System.Drawing.Point(779, 300);
+            this.groupBox16.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox16.Name = "groupBox16";
+            this.groupBox16.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox16.Size = new System.Drawing.Size(387, 141);
+            this.groupBox16.TabIndex = 8;
+            this.groupBox16.TabStop = false;
+            this.groupBox16.Text = "R 1";
+            // 
             // plcNumberEdit11
             // 
             this.plcNumberEdit11.Location = new System.Drawing.Point(5, 31);
@@ -3206,6 +2447,18 @@
             this.plcNumberEdit11.TabIndex = 1;
             this.plcNumberEdit11.VariableName = ".R1_Solleva_Jog_Speed";
             // 
+            // groupBox12
+            // 
+            this.groupBox12.Controls.Add(this.plcNumberEdit16);
+            this.groupBox12.Location = new System.Drawing.Point(391, 300);
+            this.groupBox12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox12.Name = "groupBox12";
+            this.groupBox12.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox12.Size = new System.Drawing.Size(382, 141);
+            this.groupBox12.TabIndex = 7;
+            this.groupBox12.TabStop = false;
+            this.groupBox12.Text = "Catenaria 2";
+            // 
             // plcNumberEdit16
             // 
             this.plcNumberEdit16.Location = new System.Drawing.Point(5, 31);
@@ -3218,6 +2471,24 @@
             this.plcNumberEdit16.Size = new System.Drawing.Size(351, 30);
             this.plcNumberEdit16.TabIndex = 1;
             this.plcNumberEdit16.VariableName = ".C2_Rotazione_Jog_Speed";
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.plcBooleanButton5);
+            this.groupBox4.Controls.Add(this.plcBooleanButton4);
+            this.groupBox4.Controls.Add(this.plcNumberEdit17);
+            this.groupBox4.Controls.Add(this.plcNumberEdit15);
+            this.groupBox4.Controls.Add(this.plcNumberEdit12);
+            this.groupBox4.Controls.Add(this.plcNumberEdit13);
+            this.groupBox4.Controls.Add(this.plcNumberEdit14);
+            this.groupBox4.Location = new System.Drawing.Point(3, 300);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox4.Size = new System.Drawing.Size(382, 306);
+            this.groupBox4.TabIndex = 6;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Catenaria 1";
             // 
             // plcBooleanButton5
             // 
@@ -3314,6 +2585,22 @@
             this.plcNumberEdit14.TabIndex = 1;
             this.plcNumberEdit14.VariableName = ".C1_Rotazione_Jog_Speed";
             // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.plcNumberEdit23);
+            this.groupBox6.Controls.Add(this.plcNumberEdit10);
+            this.groupBox6.Controls.Add(this.plcNumberEdit9);
+            this.groupBox6.Controls.Add(this.plcNumberEdit5);
+            this.groupBox6.Controls.Add(this.plcNumberEdit6);
+            this.groupBox6.Location = new System.Drawing.Point(391, 14);
+            this.groupBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox6.Size = new System.Drawing.Size(382, 282);
+            this.groupBox6.TabIndex = 5;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Posizioni Sollevamento Catenaria 2";
+            // 
             // plcNumberEdit23
             // 
             this.plcNumberEdit23.Location = new System.Drawing.Point(6, 236);
@@ -3378,6 +2665,23 @@
             this.plcNumberEdit6.Size = new System.Drawing.Size(351, 30);
             this.plcNumberEdit6.TabIndex = 1;
             this.plcNumberEdit6.VariableName = ".C1_Solleva_Up_Position";
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.plcNumberEdit25);
+            this.groupBox5.Controls.Add(this.plcNumberEdit24);
+            this.groupBox5.Controls.Add(this.plcNumberEdit22);
+            this.groupBox5.Controls.Add(this.plcNumberEdit3);
+            this.groupBox5.Controls.Add(this.plcNumberEdit1);
+            this.groupBox5.Controls.Add(this.plcNumberEdit2);
+            this.groupBox5.Location = new System.Drawing.Point(5, 14);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox5.Size = new System.Drawing.Size(380, 282);
+            this.groupBox5.TabIndex = 4;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Posizioni Rotazione Catenaria 1";
             // 
             // plcNumberEdit25
             // 
@@ -3457,6 +2761,126 @@
             this.plcNumberEdit2.TabIndex = 1;
             this.plcNumberEdit2.VariableName = ".C1_Ribalta_Rot_0_Position";
             // 
+            // tabPage3
+            // 
+            this.tabPage3.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage3.Controls.Add(this.listViewAlZ1);
+            this.tabPage3.Location = new System.Drawing.Point(4, 25);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(1713, 814);
+            this.tabPage3.TabIndex = 7;
+            this.tabPage3.Text = "Allarmi";
+            // 
+            // listViewAlZ1
+            // 
+            this.listViewAlZ1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listViewAlZ1.Location = new System.Drawing.Point(3, 3);
+            this.listViewAlZ1.Name = "listViewAlZ1";
+            this.listViewAlZ1.Size = new System.Drawing.Size(1707, 808);
+            this.listViewAlZ1.TabIndex = 0;
+            this.listViewAlZ1.UseCompatibleStateImageBehavior = false;
+            // 
+            // tabPage17
+            // 
+            this.tabPage17.Controls.Add(this.listViewStoricoAlarmZ1);
+            this.tabPage17.Location = new System.Drawing.Point(4, 25);
+            this.tabPage17.Name = "tabPage17";
+            this.tabPage17.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage17.Size = new System.Drawing.Size(1713, 814);
+            this.tabPage17.TabIndex = 8;
+            this.tabPage17.Text = "Storico Allarmi";
+            this.tabPage17.UseVisualStyleBackColor = true;
+            // 
+            // listViewStoricoAlarmZ1
+            // 
+            this.listViewStoricoAlarmZ1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listViewStoricoAlarmZ1.Location = new System.Drawing.Point(3, 3);
+            this.listViewStoricoAlarmZ1.Name = "listViewStoricoAlarmZ1";
+            this.listViewStoricoAlarmZ1.Size = new System.Drawing.Size(1707, 808);
+            this.listViewStoricoAlarmZ1.TabIndex = 1;
+            this.listViewStoricoAlarmZ1.UseCompatibleStateImageBehavior = false;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.tracking2);
+            this.tabPage1.Location = new System.Drawing.Point(4, 25);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(192, 71);
+            this.tabPage1.TabIndex = 5;
+            this.tabPage1.Text = "Zona 2";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tracking2
+            // 
+            this.tracking2.Controls.Add(this.tabPage13);
+            this.tracking2.Controls.Add(this.tabPage18);
+            this.tracking2.Controls.Add(this.tabPage16);
+            this.tracking2.Controls.Add(this.tabPage15);
+            this.tracking2.Controls.Add(this.tabPage19);
+            this.tracking2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tracking2.Location = new System.Drawing.Point(3, 3);
+            this.tracking2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tracking2.Name = "tracking2";
+            this.tracking2.SelectedIndex = 0;
+            this.tracking2.Size = new System.Drawing.Size(186, 65);
+            this.tracking2.TabIndex = 2;
+            // 
+            // tabPage13
+            // 
+            this.tabPage13.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.tabPage13.Controls.Add(this.tableLayoutPanel4);
+            this.tabPage13.Location = new System.Drawing.Point(4, 25);
+            this.tabPage13.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage13.Name = "tabPage13";
+            this.tabPage13.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage13.Size = new System.Drawing.Size(178, 36);
+            this.tabPage13.TabIndex = 3;
+            this.tabPage13.Text = "Sinottico";
+            // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.ColumnCount = 1;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel4.Controls.Add(this.panel7, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel5, 0, 1);
+            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 2);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 2;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 110F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(172, 32);
+            this.tableLayoutPanel4.TabIndex = 1;
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.SystemColors.Control;
+            this.panel7.Controls.Add(this.groupBox9);
+            this.panel7.Controls.Add(this.groupBox32);
+            this.panel7.Controls.Add(this.groupBox31);
+            this.panel7.Controls.Add(this.groupBox33);
+            this.panel7.Controls.Add(this.groupBox34);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel7.Location = new System.Drawing.Point(3, 3);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(166, 104);
+            this.panel7.TabIndex = 1;
+            // 
+            // groupBox9
+            // 
+            this.groupBox9.Controls.Add(this.plcBooleanSwitch5);
+            this.groupBox9.Location = new System.Drawing.Point(489, 5);
+            this.groupBox9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox9.Size = new System.Drawing.Size(237, 91);
+            this.groupBox9.TabIndex = 12;
+            this.groupBox9.TabStop = false;
+            this.groupBox9.Text = "Ciclo Insermento manuale C4";
+            // 
             // plcBooleanSwitch5
             // 
             this.plcBooleanSwitch5.DescriptionOff = "Manuale";
@@ -3471,6 +2895,18 @@
             this.plcBooleanSwitch5.Size = new System.Drawing.Size(217, 54);
             this.plcBooleanSwitch5.TabIndex = 2;
             this.plcBooleanSwitch5.VariableName = ".C4_Ciclo_Rientro_Man_Sel";
+            // 
+            // groupBox32
+            // 
+            this.groupBox32.Controls.Add(this.plcBooleanButton20);
+            this.groupBox32.Location = new System.Drawing.Point(732, 5);
+            this.groupBox32.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox32.Name = "groupBox32";
+            this.groupBox32.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox32.Size = new System.Drawing.Size(237, 91);
+            this.groupBox32.TabIndex = 11;
+            this.groupBox32.TabStop = false;
+            this.groupBox32.Text = "Buffer R2";
             // 
             // plcBooleanButton20
             // 
@@ -3487,6 +2923,18 @@
             this.plcBooleanButton20.TabIndex = 16;
             this.plcBooleanButton20.VariableName = "RULLI_CENTRO_TAGLI.R2_Pls_Svuota_Buffer";
             // 
+            // groupBox31
+            // 
+            this.groupBox31.Controls.Add(this.plcBooleanButton11);
+            this.groupBox31.Location = new System.Drawing.Point(975, 7);
+            this.groupBox31.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox31.Name = "groupBox31";
+            this.groupBox31.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox31.Size = new System.Drawing.Size(232, 91);
+            this.groupBox31.TabIndex = 10;
+            this.groupBox31.TabStop = false;
+            this.groupBox31.Text = " Allarmi";
+            // 
             // plcBooleanButton11
             // 
             this.plcBooleanButton11.GreenMode = true;
@@ -3501,6 +2949,20 @@
             this.plcBooleanButton11.Size = new System.Drawing.Size(202, 25);
             this.plcBooleanButton11.TabIndex = 15;
             this.plcBooleanButton11.VariableName = "RULLI_CENTRO_TAGLI.Hmi_Pls_Rst_Allarmi";
+            // 
+            // groupBox33
+            // 
+            this.groupBox33.Controls.Add(this.plcBoolean80);
+            this.groupBox33.Controls.Add(this.plcBooleanButton18);
+            this.groupBox33.Controls.Add(this.plcBooleanButton19);
+            this.groupBox33.Location = new System.Drawing.Point(246, 5);
+            this.groupBox33.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox33.Name = "groupBox33";
+            this.groupBox33.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox33.Size = new System.Drawing.Size(237, 91);
+            this.groupBox33.TabIndex = 8;
+            this.groupBox33.TabStop = false;
+            this.groupBox33.Text = "Start Ciclo";
             // 
             // plcBoolean80
             // 
@@ -3548,6 +3010,18 @@
             this.plcBooleanButton19.TabIndex = 15;
             this.plcBooleanButton19.VariableName = "RULLI_CENTRO_TAGLI.Pls_Start_Ciclo_Zona_2";
             // 
+            // groupBox34
+            // 
+            this.groupBox34.Controls.Add(this.plcBooleanSwitch6);
+            this.groupBox34.Location = new System.Drawing.Point(3, 5);
+            this.groupBox34.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox34.Name = "groupBox34";
+            this.groupBox34.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox34.Size = new System.Drawing.Size(237, 91);
+            this.groupBox34.TabIndex = 3;
+            this.groupBox34.TabStop = false;
+            this.groupBox34.Text = "Modo";
+            // 
             // plcBooleanSwitch6
             // 
             this.plcBooleanSwitch6.DescriptionOff = "Manuale";
@@ -3563,15 +3037,121 @@
             this.plcBooleanSwitch6.TabIndex = 1;
             this.plcBooleanSwitch6.VariableName = "RULLI_CENTRO_TAGLI.Sel_Auto_Zona_2";
             // 
+            // tableLayoutPanel5
+            // 
+            this.tableLayoutPanel5.ColumnCount = 2;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 211F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel5.Controls.Add(this.panel8, 0, 0);
+            this.tableLayoutPanel5.Controls.Add(this.panel11, 0, 0);
+            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 113);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.RowCount = 1;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(166, 1);
+            this.tableLayoutPanel5.TabIndex = 2;
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panel8.BackgroundImage = global::GalimbertiHMIgl.Properties.Resources.ScarcioGalimbertiparte2;
+            this.panel8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel8.Location = new System.Drawing.Point(214, 3);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(1, 1);
+            this.panel8.TabIndex = 3;
+            // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.SystemColors.Control;
+            this.panel11.Controls.Add(this.groupBox37);
+            this.panel11.Controls.Add(this.groupBox38);
+            this.panel11.Controls.Add(this.groupBox39);
+            this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel11.Location = new System.Drawing.Point(3, 3);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(205, 1);
+            this.panel11.TabIndex = 2;
+            // 
+            // groupBox37
+            // 
+            this.groupBox37.Location = new System.Drawing.Point(3, 499);
+            this.groupBox37.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox37.Name = "groupBox37";
+            this.groupBox37.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox37.Size = new System.Drawing.Size(200, 141);
+            this.groupBox37.TabIndex = 10;
+            this.groupBox37.TabStop = false;
+            this.groupBox37.Text = "Buffer";
+            // 
+            // groupBox38
+            // 
+            this.groupBox38.Location = new System.Drawing.Point(3, 241);
+            this.groupBox38.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox38.Name = "groupBox38";
+            this.groupBox38.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox38.Size = new System.Drawing.Size(200, 254);
+            this.groupBox38.TabIndex = 9;
+            this.groupBox38.TabStop = false;
+            this.groupBox38.Text = "Emergenze";
+            // 
+            // groupBox39
+            // 
+            this.groupBox39.Location = new System.Drawing.Point(2, 12);
+            this.groupBox39.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox39.Name = "groupBox39";
+            this.groupBox39.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox39.Size = new System.Drawing.Size(200, 225);
+            this.groupBox39.TabIndex = 8;
+            this.groupBox39.TabStop = false;
+            this.groupBox39.Text = "Step Cicliche";
+            // 
+            // tabPage18
+            // 
+            this.tabPage18.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage18.Controls.Add(this.plcTracking2);
+            this.tabPage18.Location = new System.Drawing.Point(4, 25);
+            this.tabPage18.Name = "tabPage18";
+            this.tabPage18.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage18.Size = new System.Drawing.Size(178, 36);
+            this.tabPage18.TabIndex = 4;
+            this.tabPage18.Text = "Tracking";
+            // 
             // plcTracking2
             // 
             this.plcTracking2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.plcTracking2.Location = new System.Drawing.Point(3, 3);
             this.plcTracking2.Margin = new System.Windows.Forms.Padding(0);
             this.plcTracking2.Name = "plcTracking2";
-            this.plcTracking2.Size = new System.Drawing.Size(1707, 806);
+            this.plcTracking2.Size = new System.Drawing.Size(172, 30);
             this.plcTracking2.TabIndex = 1;
             this.plcTracking2.Vertical = false;
+            // 
+            // tabPage16
+            // 
+            this.tabPage16.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage16.Controls.Add(this.groupBox41);
+            this.tabPage16.Location = new System.Drawing.Point(4, 25);
+            this.tabPage16.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage16.Name = "tabPage16";
+            this.tabPage16.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage16.Size = new System.Drawing.Size(178, 36);
+            this.tabPage16.TabIndex = 2;
+            this.tabPage16.Text = "Impostazioni";
+            // 
+            // groupBox41
+            // 
+            this.groupBox41.Controls.Add(this.plcNumberEdit39);
+            this.groupBox41.Location = new System.Drawing.Point(11, 4);
+            this.groupBox41.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox41.Name = "groupBox41";
+            this.groupBox41.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox41.Size = new System.Drawing.Size(382, 79);
+            this.groupBox41.TabIndex = 8;
+            this.groupBox41.TabStop = false;
+            this.groupBox41.Text = "C5";
             // 
             // plcNumberEdit39
             // 
@@ -3585,6 +3165,192 @@
             this.plcNumberEdit39.Size = new System.Drawing.Size(351, 30);
             this.plcNumberEdit39.TabIndex = 1;
             this.plcNumberEdit39.VariableName = ".C5_Gap_Pezzi";
+            // 
+            // tabPage15
+            // 
+            this.tabPage15.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage15.Controls.Add(this.listAlarmZ2);
+            this.tabPage15.Location = new System.Drawing.Point(4, 25);
+            this.tabPage15.Name = "tabPage15";
+            this.tabPage15.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage15.Size = new System.Drawing.Size(178, 36);
+            this.tabPage15.TabIndex = 8;
+            this.tabPage15.Text = "Allarmi";
+            // 
+            // listAlarmZ2
+            // 
+            this.listAlarmZ2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listAlarmZ2.Location = new System.Drawing.Point(3, 3);
+            this.listAlarmZ2.Name = "listAlarmZ2";
+            this.listAlarmZ2.Size = new System.Drawing.Size(172, 30);
+            this.listAlarmZ2.TabIndex = 0;
+            this.listAlarmZ2.UseCompatibleStateImageBehavior = false;
+            // 
+            // tabPage19
+            // 
+            this.tabPage19.Controls.Add(this.listViewStoricoAlarmZ2);
+            this.tabPage19.Location = new System.Drawing.Point(4, 25);
+            this.tabPage19.Name = "tabPage19";
+            this.tabPage19.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage19.Size = new System.Drawing.Size(178, 36);
+            this.tabPage19.TabIndex = 9;
+            this.tabPage19.Text = "Storico Allarmi";
+            this.tabPage19.UseVisualStyleBackColor = true;
+            // 
+            // listViewStoricoAlarmZ2
+            // 
+            this.listViewStoricoAlarmZ2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listViewStoricoAlarmZ2.Location = new System.Drawing.Point(3, 3);
+            this.listViewStoricoAlarmZ2.Name = "listViewStoricoAlarmZ2";
+            this.listViewStoricoAlarmZ2.Size = new System.Drawing.Size(172, 30);
+            this.listViewStoricoAlarmZ2.TabIndex = 1;
+            this.listViewStoricoAlarmZ2.UseCompatibleStateImageBehavior = false;
+            // 
+            // Aspirazione
+            // 
+            this.Aspirazione.Controls.Add(this.Valvole);
+            this.Aspirazione.Location = new System.Drawing.Point(4, 25);
+            this.Aspirazione.Name = "Aspirazione";
+            this.Aspirazione.Padding = new System.Windows.Forms.Padding(3);
+            this.Aspirazione.Size = new System.Drawing.Size(1727, 847);
+            this.Aspirazione.TabIndex = 3;
+            this.Aspirazione.Text = "Aspirazione";
+            this.Aspirazione.UseVisualStyleBackColor = true;
+            // 
+            // Valvole
+            // 
+            this.Valvole.Controls.Add(this.tabPage10);
+            this.Valvole.Controls.Add(this.tabPage4);
+            this.Valvole.Controls.Add(this.tabPage8);
+            this.Valvole.Controls.Add(this.tabPage9);
+            this.Valvole.Controls.Add(this.tabPage11);
+            this.Valvole.Controls.Add(this.tabPage7);
+            this.Valvole.Controls.Add(this.tabPage14);
+            this.Valvole.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.Valvole.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Valvole.Location = new System.Drawing.Point(3, 3);
+            this.Valvole.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Valvole.Name = "Valvole";
+            this.Valvole.SelectedIndex = 0;
+            this.Valvole.Size = new System.Drawing.Size(1721, 841);
+            this.Valvole.TabIndex = 2;
+            // 
+            // tabPage10
+            // 
+            this.tabPage10.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage10.Controls.Add(this.groupBox40);
+            this.tabPage10.Controls.Add(this.groupBox10);
+            this.tabPage10.Controls.Add(this.groupBox30);
+            this.tabPage10.Controls.Add(this.groupBox29);
+            this.tabPage10.Controls.Add(this.Ciclone);
+            this.tabPage10.Controls.Add(this.plcBooleanSwitch3);
+            this.tabPage10.Controls.Add(this.plcAspSelManMode);
+            this.tabPage10.Controls.Add(this.groupBox27);
+            this.tabPage10.Controls.Add(this.groupBox24);
+            this.tabPage10.Controls.Add(this.groupBox44);
+            this.tabPage10.Location = new System.Drawing.Point(4, 25);
+            this.tabPage10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage10.Name = "tabPage10";
+            this.tabPage10.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage10.Size = new System.Drawing.Size(1713, 812);
+            this.tabPage10.TabIndex = 2;
+            this.tabPage10.Text = "Impostazioni";
+            this.tabPage10.Click += new System.EventHandler(this.tabPage10_Click);
+            // 
+            // groupBox40
+            // 
+            this.groupBox40.Controls.Add(this.plcNumberEdit43);
+            this.groupBox40.Controls.Add(this.plcBooleanButton22);
+            this.groupBox40.Location = new System.Drawing.Point(455, 171);
+            this.groupBox40.Name = "groupBox40";
+            this.groupBox40.Size = new System.Drawing.Size(441, 102);
+            this.groupBox40.TabIndex = 23;
+            this.groupBox40.TabStop = false;
+            this.groupBox40.Text = "Aperura Serrande Hundegger";
+            // 
+            // plcBooleanButton22
+            // 
+            this.plcBooleanButton22.GreenMode = true;
+            this.plcBooleanButton22.Location = new System.Drawing.Point(4, 22);
+            this.plcBooleanButton22.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.plcBooleanButton22.Name = "plcBooleanButton22";
+            this.plcBooleanButton22.NotMode = false;
+            this.plcBooleanButton22.PLC = null;
+            this.plcBooleanButton22.PLCDescription = "Start Ciclo";
+            this.plcBooleanButton22.PLCError = false;
+            this.plcBooleanButton22.PLCValue = false;
+            this.plcBooleanButton22.Size = new System.Drawing.Size(411, 31);
+            this.plcBooleanButton22.TabIndex = 21;
+            this.plcBooleanButton22.VariableName = "MAIN.HMI_PB_Apertura_Serrande_Hundegger";
+            // 
+            // groupBox10
+            // 
+            this.groupBox10.Controls.Add(this.groupBox36);
+            this.groupBox10.Controls.Add(this.plcNumberEdit40);
+            this.groupBox10.Controls.Add(this.plcBoolean79);
+            this.groupBox10.Controls.Add(this.plcBooleanButton1);
+            this.groupBox10.Location = new System.Drawing.Point(8, 171);
+            this.groupBox10.Name = "groupBox10";
+            this.groupBox10.Size = new System.Drawing.Size(441, 100);
+            this.groupBox10.TabIndex = 22;
+            this.groupBox10.TabStop = false;
+            this.groupBox10.Text = "Ciclo Manuale Aspirazione Ciclone";
+            // 
+            // groupBox36
+            // 
+            this.groupBox36.Controls.Add(this.plcNumberEdit42);
+            this.groupBox36.Controls.Add(this.plcBoolean82);
+            this.groupBox36.Controls.Add(this.plcBooleanButton3);
+            this.groupBox36.Location = new System.Drawing.Point(447, 2);
+            this.groupBox36.Name = "groupBox36";
+            this.groupBox36.Size = new System.Drawing.Size(441, 100);
+            this.groupBox36.TabIndex = 23;
+            this.groupBox36.TabStop = false;
+            this.groupBox36.Text = "Ciclo Manuale Aspirazione Ciclone";
+            // 
+            // plcNumberEdit42
+            // 
+            this.plcNumberEdit42.Location = new System.Drawing.Point(8, 51);
+            this.plcNumberEdit42.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.plcNumberEdit42.Name = "plcNumberEdit42";
+            this.plcNumberEdit42.PLC = null;
+            this.plcNumberEdit42.PLCDescription = "Durata ciclo asp Manuale";
+            this.plcNumberEdit42.PLCError = false;
+            this.plcNumberEdit42.PLCValue = 0D;
+            this.plcNumberEdit42.Size = new System.Drawing.Size(409, 30);
+            this.plcNumberEdit42.TabIndex = 2;
+            this.plcNumberEdit42.VariableName = ".Set_Durata_Ciclo_Man_Asp_Ciclone";
+            // 
+            // plcBoolean82
+            // 
+            this.plcBoolean82.BackColor = System.Drawing.Color.Transparent;
+            this.plcBoolean82.GreenMode = false;
+            this.plcBoolean82.Location = new System.Drawing.Point(8, 22);
+            this.plcBoolean82.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.plcBoolean82.Name = "plcBoolean82";
+            this.plcBoolean82.NotMode = false;
+            this.plcBoolean82.PLC = null;
+            this.plcBoolean82.PLCDescription = "Ciclo Manuale Run";
+            this.plcBoolean82.PLCError = false;
+            this.plcBoolean82.PLCValue = false;
+            this.plcBoolean82.Size = new System.Drawing.Size(255, 21);
+            this.plcBoolean82.TabIndex = 23;
+            this.plcBoolean82.VariableName = "MAIN.HMI_Ciclo_Man_Asp_Ciclone_Run";
+            // 
+            // plcBooleanButton3
+            // 
+            this.plcBooleanButton3.GreenMode = true;
+            this.plcBooleanButton3.Location = new System.Drawing.Point(269, 22);
+            this.plcBooleanButton3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.plcBooleanButton3.Name = "plcBooleanButton3";
+            this.plcBooleanButton3.NotMode = false;
+            this.plcBooleanButton3.PLC = null;
+            this.plcBooleanButton3.PLCDescription = "Start Ciclo";
+            this.plcBooleanButton3.PLCError = false;
+            this.plcBooleanButton3.PLCValue = false;
+            this.plcBooleanButton3.Size = new System.Drawing.Size(149, 21);
+            this.plcBooleanButton3.TabIndex = 21;
+            this.plcBooleanButton3.VariableName = "MAIN.HMI_PB_Start_Ciclo_Man_Asp_Ciclone";
             // 
             // plcNumberEdit40
             // 
@@ -3626,9 +3392,21 @@
             this.plcBooleanButton1.PLCDescription = "Start Ciclo";
             this.plcBooleanButton1.PLCError = false;
             this.plcBooleanButton1.PLCValue = false;
-            this.plcBooleanButton1.Size = new System.Drawing.Size(149, 21);
+            this.plcBooleanButton1.Size = new System.Drawing.Size(149, 31);
             this.plcBooleanButton1.TabIndex = 21;
             this.plcBooleanButton1.VariableName = "MAIN.HMI_PB_Start_Ciclo_Man_Asp_Ciclone";
+            // 
+            // groupBox30
+            // 
+            this.groupBox30.Controls.Add(this.plcBooleanSwitchSimple7);
+            this.groupBox30.Controls.Add(this.plcBooleanButton17);
+            this.groupBox30.Controls.Add(this.plcInContainer);
+            this.groupBox30.Location = new System.Drawing.Point(8, 67);
+            this.groupBox30.Name = "groupBox30";
+            this.groupBox30.Size = new System.Drawing.Size(441, 100);
+            this.groupBox30.TabIndex = 21;
+            this.groupBox30.TabStop = false;
+            this.groupBox30.Text = "Scarico Container";
             // 
             // plcBooleanSwitchSimple7
             // 
@@ -3660,20 +3438,32 @@
             this.plcBooleanButton17.TabIndex = 20;
             this.plcBooleanButton17.VariableName = "";
             // 
-            // plcBooleanSwitchSimple8
+            // plcInContainer
             // 
-            this.plcBooleanSwitchSimple8.DescriptionOff = "Scaric. Container";
-            this.plcBooleanSwitchSimple8.DescriptionOn = "Scaric. Container";
-            this.plcBooleanSwitchSimple8.Location = new System.Drawing.Point(6, 20);
-            this.plcBooleanSwitchSimple8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.plcBooleanSwitchSimple8.Name = "plcBooleanSwitchSimple8";
-            this.plcBooleanSwitchSimple8.PLC = null;
-            this.plcBooleanSwitchSimple8.PLCDescription = "Man Mode";
-            this.plcBooleanSwitchSimple8.PLCError = false;
-            this.plcBooleanSwitchSimple8.PLCValue = false;
-            this.plcBooleanSwitchSimple8.Size = new System.Drawing.Size(256, 25);
-            this.plcBooleanSwitchSimple8.TabIndex = 19;
-            this.plcBooleanSwitchSimple8.VariableName = ".HMI_Sel_Scarico_In_Container";
+            this.plcInContainer.DescriptionOff = "Scaric. Container";
+            this.plcInContainer.DescriptionOn = "Scaric. Container";
+            this.plcInContainer.Location = new System.Drawing.Point(6, 20);
+            this.plcInContainer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.plcInContainer.Name = "plcInContainer";
+            this.plcInContainer.PLC = null;
+            this.plcInContainer.PLCDescription = "Man Mode";
+            this.plcInContainer.PLCError = false;
+            this.plcInContainer.PLCValue = false;
+            this.plcInContainer.Size = new System.Drawing.Size(256, 25);
+            this.plcInContainer.TabIndex = 19;
+            this.plcInContainer.VariableName = ".HMI_Sel_Scarico_In_Container";
+            // 
+            // groupBox29
+            // 
+            this.groupBox29.Controls.Add(this.plcBooleanSwitchSimple4);
+            this.groupBox29.Controls.Add(this.plcBooleanButton16);
+            this.groupBox29.Controls.Add(this.plcInBricchettatrice);
+            this.groupBox29.Location = new System.Drawing.Point(455, 67);
+            this.groupBox29.Name = "groupBox29";
+            this.groupBox29.Size = new System.Drawing.Size(441, 100);
+            this.groupBox29.TabIndex = 20;
+            this.groupBox29.TabStop = false;
+            this.groupBox29.Text = "Scarico Bricchettatrice";
             // 
             // plcBooleanSwitchSimple4
             // 
@@ -3705,20 +3495,32 @@
             this.plcBooleanButton16.TabIndex = 21;
             this.plcBooleanButton16.VariableName = "";
             // 
-            // plcBooleanSwitchSimple6
+            // plcInBricchettatrice
             // 
-            this.plcBooleanSwitchSimple6.DescriptionOff = "Scaric. Bricchettatrice";
-            this.plcBooleanSwitchSimple6.DescriptionOn = "Man Mode ON";
-            this.plcBooleanSwitchSimple6.Location = new System.Drawing.Point(8, 22);
-            this.plcBooleanSwitchSimple6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.plcBooleanSwitchSimple6.Name = "plcBooleanSwitchSimple6";
-            this.plcBooleanSwitchSimple6.PLC = null;
-            this.plcBooleanSwitchSimple6.PLCDescription = "Man Mode";
-            this.plcBooleanSwitchSimple6.PLCError = false;
-            this.plcBooleanSwitchSimple6.PLCValue = false;
-            this.plcBooleanSwitchSimple6.Size = new System.Drawing.Size(255, 25);
-            this.plcBooleanSwitchSimple6.TabIndex = 20;
-            this.plcBooleanSwitchSimple6.VariableName = ".HMI_Sel_Scarico_In_Bricchettatrice";
+            this.plcInBricchettatrice.DescriptionOff = "Scaric. Bricchettatrice";
+            this.plcInBricchettatrice.DescriptionOn = "Scaric. Bricchettatrice";
+            this.plcInBricchettatrice.Location = new System.Drawing.Point(8, 22);
+            this.plcInBricchettatrice.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.plcInBricchettatrice.Name = "plcInBricchettatrice";
+            this.plcInBricchettatrice.PLC = null;
+            this.plcInBricchettatrice.PLCDescription = "Man Mode";
+            this.plcInBricchettatrice.PLCError = false;
+            this.plcInBricchettatrice.PLCValue = false;
+            this.plcInBricchettatrice.Size = new System.Drawing.Size(255, 25);
+            this.plcInBricchettatrice.TabIndex = 20;
+            this.plcInBricchettatrice.VariableName = ".HMI_Sel_Scarico_In_Bricchettatrice";
+            // 
+            // Ciclone
+            // 
+            this.Ciclone.Controls.Add(this.plcNumberEdit38);
+            this.Ciclone.Controls.Add(this.plcNumberEdit37);
+            this.Ciclone.Controls.Add(this.plcNumberEdit36);
+            this.Ciclone.Location = new System.Drawing.Point(414, 487);
+            this.Ciclone.Name = "Ciclone";
+            this.Ciclone.Size = new System.Drawing.Size(380, 159);
+            this.Ciclone.TabIndex = 17;
+            this.Ciclone.TabStop = false;
+            this.Ciclone.Text = "Ciclone";
             // 
             // plcNumberEdit38
             // 
@@ -3761,8 +3563,8 @@
             // 
             // plcBooleanSwitch3
             // 
-            this.plcBooleanSwitch3.DescriptionOff = "Disabilita PID Aspirazione";
-            this.plcBooleanSwitch3.DescriptionOn = "Abilita PID Aspirazione";
+            this.plcBooleanSwitch3.DescriptionOff = "Abilita PID Aspirazione";
+            this.plcBooleanSwitch3.DescriptionOn = "Disabilita PID Aspirazione";
             this.plcBooleanSwitch3.Location = new System.Drawing.Point(277, 11);
             this.plcBooleanSwitch3.Margin = new System.Windows.Forms.Padding(0);
             this.plcBooleanSwitch3.Name = "plcBooleanSwitch3";
@@ -3788,6 +3590,20 @@
             this.plcAspSelManMode.Size = new System.Drawing.Size(256, 62);
             this.plcAspSelManMode.TabIndex = 15;
             this.plcAspSelManMode.VariableName = ".HMI_Sel_Auto_Mode";
+            // 
+            // groupBox27
+            // 
+            this.groupBox27.Controls.Add(this.plcNumberEdit35);
+            this.groupBox27.Controls.Add(this.plcNumber2);
+            this.groupBox27.Controls.Add(this.plcNumber1);
+            this.groupBox27.Controls.Add(this.plcNumberEdit33);
+            this.groupBox27.Controls.Add(this.plcNumberEdit34);
+            this.groupBox27.Location = new System.Drawing.Point(414, 279);
+            this.groupBox27.Name = "groupBox27";
+            this.groupBox27.Size = new System.Drawing.Size(380, 205);
+            this.groupBox27.TabIndex = 12;
+            this.groupBox27.TabStop = false;
+            this.groupBox27.Text = "Impostazioni";
             // 
             // plcNumberEdit35
             // 
@@ -3854,6 +3670,17 @@
             this.plcNumberEdit34.TabIndex = 11;
             this.plcNumberEdit34.VariableName = ".HMI_SetPoint_Prs_Aspirazione";
             // 
+            // groupBox24
+            // 
+            this.groupBox24.Controls.Add(this.plcNumberEdit32);
+            this.groupBox24.Controls.Add(this.plcNumberEdit8);
+            this.groupBox24.Location = new System.Drawing.Point(10, 592);
+            this.groupBox24.Name = "groupBox24";
+            this.groupBox24.Size = new System.Drawing.Size(380, 110);
+            this.groupBox24.TabIndex = 11;
+            this.groupBox24.TabStop = false;
+            this.groupBox24.Text = "Tempi Motori";
+            // 
             // plcNumberEdit32
             // 
             this.plcNumberEdit32.Location = new System.Drawing.Point(6, 58);
@@ -3879,6 +3706,25 @@
             this.plcNumberEdit8.Size = new System.Drawing.Size(352, 30);
             this.plcNumberEdit8.TabIndex = 11;
             this.plcNumberEdit8.VariableName = ".HMI_Tempo_Lavoro_Pulizia_Filtri";
+            // 
+            // groupBox44
+            // 
+            this.groupBox44.Controls.Add(this.plcNumberEdit7);
+            this.groupBox44.Controls.Add(this.plcNumberEdit4);
+            this.groupBox44.Controls.Add(this.plcNumberEdit51);
+            this.groupBox44.Controls.Add(this.plcNumberEdit52);
+            this.groupBox44.Controls.Add(this.plcNumberEdit53);
+            this.groupBox44.Controls.Add(this.plcNumberEdit54);
+            this.groupBox44.Controls.Add(this.plcNumberEdit55);
+            this.groupBox44.Controls.Add(this.plcNumberEdit56);
+            this.groupBox44.Location = new System.Drawing.Point(10, 276);
+            this.groupBox44.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox44.Name = "groupBox44";
+            this.groupBox44.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox44.Size = new System.Drawing.Size(380, 311);
+            this.groupBox44.TabIndex = 4;
+            this.groupBox44.TabStop = false;
+            this.groupBox44.Text = "Velocità motori";
             // 
             // plcNumberEdit7
             // 
@@ -3984,6 +3830,25 @@
             this.plcNumberEdit56.TabIndex = 1;
             this.plcNumberEdit56.VariableName = ".Ventilatore_Aspirazione1_Set_Speed";
             // 
+            // tabPage4
+            // 
+            this.tabPage4.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage4.Controls.Add(this.duT_Motori8);
+            this.tabPage4.Controls.Add(this.duT_Motori7);
+            this.tabPage4.Controls.Add(this.duT_Motori6);
+            this.tabPage4.Controls.Add(this.duT_Motori5);
+            this.tabPage4.Controls.Add(this.duT_Motori4);
+            this.tabPage4.Controls.Add(this.duT_Motori3);
+            this.tabPage4.Controls.Add(this.duT_Motori2);
+            this.tabPage4.Controls.Add(this.duT_Motori1);
+            this.tabPage4.Location = new System.Drawing.Point(4, 25);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(1713, 812);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Motori";
+            this.tabPage4.Click += new System.EventHandler(this.tabPage4_Click);
+            // 
             // duT_Motori8
             // 
             this.duT_Motori8.Label = "Valvola_Ciclone";
@@ -4056,6 +3921,17 @@
             this.duT_Motori1.TabIndex = 11;
             this.duT_Motori1.VariableName = "MAIN.Ventilatore_Aspirazione1";
             // 
+            // tabPage8
+            // 
+            this.tabPage8.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage8.Controls.Add(this.duT_Filtri1);
+            this.tabPage8.Location = new System.Drawing.Point(4, 25);
+            this.tabPage8.Name = "tabPage8";
+            this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage8.Size = new System.Drawing.Size(1713, 812);
+            this.tabPage8.TabIndex = 4;
+            this.tabPage8.Text = "Puliz Filtri";
+            // 
             // duT_Filtri1
             // 
             this.duT_Filtri1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -4063,6 +3939,17 @@
             this.duT_Filtri1.Name = "duT_Filtri1";
             this.duT_Filtri1.Size = new System.Drawing.Size(1707, 806);
             this.duT_Filtri1.TabIndex = 0;
+            // 
+            // tabPage9
+            // 
+            this.tabPage9.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage9.Controls.Add(this.duT_Asp_Comandi1);
+            this.tabPage9.Location = new System.Drawing.Point(4, 25);
+            this.tabPage9.Name = "tabPage9";
+            this.tabPage9.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage9.Size = new System.Drawing.Size(1713, 812);
+            this.tabPage9.TabIndex = 5;
+            this.tabPage9.Text = "Comandi Mauali";
             // 
             // duT_Asp_Comandi1
             // 
@@ -4072,6 +3959,57 @@
             this.duT_Asp_Comandi1.Size = new System.Drawing.Size(1707, 806);
             this.duT_Asp_Comandi1.TabIndex = 0;
             this.duT_Asp_Comandi1.VariableName = "";
+            // 
+            // tabPage11
+            // 
+            this.tabPage11.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage11.Controls.Add(this.listView1);
+            this.tabPage11.Location = new System.Drawing.Point(4, 25);
+            this.tabPage11.Name = "tabPage11";
+            this.tabPage11.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage11.Size = new System.Drawing.Size(1713, 812);
+            this.tabPage11.TabIndex = 6;
+            this.tabPage11.Text = "Allarmi";
+            // 
+            // listView1
+            // 
+            this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listView1.Location = new System.Drawing.Point(3, 3);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(1707, 806);
+            this.listView1.TabIndex = 0;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            // 
+            // tabPage7
+            // 
+            this.tabPage7.Controls.Add(this.listView2);
+            this.tabPage7.Location = new System.Drawing.Point(4, 25);
+            this.tabPage7.Name = "tabPage7";
+            this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage7.Size = new System.Drawing.Size(1713, 812);
+            this.tabPage7.TabIndex = 7;
+            this.tabPage7.Text = "Storico Allarmi";
+            this.tabPage7.UseVisualStyleBackColor = true;
+            // 
+            // listView2
+            // 
+            this.listView2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listView2.Location = new System.Drawing.Point(3, 3);
+            this.listView2.Name = "listView2";
+            this.listView2.Size = new System.Drawing.Size(1707, 806);
+            this.listView2.TabIndex = 1;
+            this.listView2.UseCompatibleStateImageBehavior = false;
+            // 
+            // tabPage14
+            // 
+            this.tabPage14.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage14.Controls.Add(this.plcGridIOAsp);
+            this.tabPage14.Location = new System.Drawing.Point(4, 25);
+            this.tabPage14.Name = "tabPage14";
+            this.tabPage14.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage14.Size = new System.Drawing.Size(1713, 812);
+            this.tabPage14.TabIndex = 8;
+            this.tabPage14.Text = "I/O";
             // 
             // plcGridIOAsp
             // 
@@ -4084,6 +4022,31 @@
             this.plcGridIOAsp.Size = new System.Drawing.Size(1707, 806);
             this.plcGridIOAsp.TabIndex = 0;
             this.plcGridIOAsp.Vertical = false;
+            // 
+            // tabPage12
+            // 
+            this.tabPage12.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage12.Controls.Add(this.plcBoolean78);
+            this.tabPage12.Controls.Add(this.plcBoolean77);
+            this.tabPage12.Controls.Add(this.plcBoolean76);
+            this.tabPage12.Controls.Add(this.plcBoolean75);
+            this.tabPage12.Controls.Add(this.plcBoolean74);
+            this.tabPage12.Controls.Add(this.plcBoolean73);
+            this.tabPage12.Controls.Add(this.plcBoolean72);
+            this.tabPage12.Controls.Add(this.plcBoolean12);
+            this.tabPage12.Controls.Add(this.plcInt166);
+            this.tabPage12.Controls.Add(this.plcInt165);
+            this.tabPage12.Controls.Add(this.plcInt164);
+            this.tabPage12.Controls.Add(this.plcInt163);
+            this.tabPage12.Controls.Add(this.plcInt162);
+            this.tabPage12.Controls.Add(this.plcInt161);
+            this.tabPage12.Location = new System.Drawing.Point(4, 25);
+            this.tabPage12.Name = "tabPage12";
+            this.tabPage12.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage12.Size = new System.Drawing.Size(192, 71);
+            this.tabPage12.TabIndex = 4;
+            this.tabPage12.Text = "Bricchettatrice";
+            this.tabPage12.Click += new System.EventHandler(this.tabPage12_Click);
             // 
             // plcBoolean78
             // 
@@ -4291,6 +4254,27 @@
             this.plcInt161.TabIndex = 0;
             this.plcInt161.VariableName = "1000";
             // 
+            // tabPage20
+            // 
+            this.tabPage20.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage20.Controls.Add(this.plcVelmec);
+            this.tabPage20.Controls.Add(this.plcListTrkVelmec);
+            this.tabPage20.Location = new System.Drawing.Point(4, 25);
+            this.tabPage20.Name = "tabPage20";
+            this.tabPage20.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage20.Size = new System.Drawing.Size(192, 71);
+            this.tabPage20.TabIndex = 6;
+            this.tabPage20.Text = "Velmec";
+            // 
+            // plcVelmec
+            // 
+            this.plcVelmec.Location = new System.Drawing.Point(317, 0);
+            this.plcVelmec.Margin = new System.Windows.Forms.Padding(0);
+            this.plcVelmec.Name = "plcVelmec";
+            this.plcVelmec.Size = new System.Drawing.Size(292, 524);
+            this.plcVelmec.TabIndex = 3;
+            this.plcVelmec.Vertical = false;
+            // 
             // plcListTrkVelmec
             // 
             this.plcListTrkVelmec.Location = new System.Drawing.Point(3, 3);
@@ -4299,6 +4283,46 @@
             this.plcListTrkVelmec.Size = new System.Drawing.Size(292, 524);
             this.plcListTrkVelmec.TabIndex = 2;
             this.plcListTrkVelmec.Vertical = false;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel1.BackColor = System.Drawing.SystemColors.Control;
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Controls.Add(tabControlAsp, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 1);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1741, 980);
+            this.tableLayoutPanel1.TabIndex = 0;
+            this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.Control;
+            this.panel1.Controls.Add(this.plcAllarBricch);
+            this.panel1.Controls.Add(this.plcAlarmAsp);
+            this.panel1.Controls.Add(this.plcAlarmZ2);
+            this.panel1.Controls.Add(this.plcAlarmZ1);
+            this.panel1.Controls.Add(this.groupBox28);
+            this.panel1.Controls.Add(this.groupBox8);
+            this.panel1.Controls.Add(this.groupBox25);
+            this.panel1.Controls.Add(this.groupBox13);
+            this.panel1.Controls.Add(this.groupBox2);
+            this.panel1.Controls.Add(this.groupBox1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(3, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1735, 96);
+            this.panel1.TabIndex = 1;
             // 
             // plcAllarBricch
             // 
@@ -4366,6 +4390,19 @@
             this.plcAlarmZ1.VariableName = "MAIN.Alarm_On";
             this.plcAlarmZ1.Load += new System.EventHandler(this.plcBoolean81_Load);
             // 
+            // groupBox28
+            // 
+            this.groupBox28.Controls.Add(this.plcAnomaliaBricc);
+            this.groupBox28.Controls.Add(this.plcCiclicaBricc);
+            this.groupBox28.Location = new System.Drawing.Point(410, 2);
+            this.groupBox28.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox28.Name = "groupBox28";
+            this.groupBox28.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox28.Size = new System.Drawing.Size(121, 94);
+            this.groupBox28.TabIndex = 8;
+            this.groupBox28.TabStop = false;
+            this.groupBox28.Text = "Ciclica Bricc.";
+            // 
             // plcAnomaliaBricc
             // 
             this.plcAnomaliaBricc.BackColor = System.Drawing.Color.Transparent;
@@ -4397,6 +4434,19 @@
             this.plcCiclicaBricc.Size = new System.Drawing.Size(113, 26);
             this.plcCiclicaBricc.TabIndex = 6;
             this.plcCiclicaBricc.VariableName = null;
+            // 
+            // groupBox8
+            // 
+            this.groupBox8.Controls.Add(this.plcAnomaliaAsp);
+            this.groupBox8.Controls.Add(this.plcCiclicaAsp);
+            this.groupBox8.Location = new System.Drawing.Point(283, 2);
+            this.groupBox8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox8.Size = new System.Drawing.Size(121, 94);
+            this.groupBox8.TabIndex = 7;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "Ciclica Aspiraz.";
             // 
             // plcAnomaliaAsp
             // 
@@ -4430,6 +4480,18 @@
             this.plcCiclicaAsp.TabIndex = 6;
             this.plcCiclicaAsp.VariableName = null;
             // 
+            // groupBox25
+            // 
+            this.groupBox25.Controls.Add(this.plcBooleanSwitch2);
+            this.groupBox25.Location = new System.Drawing.Point(743, 4);
+            this.groupBox25.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox25.Name = "groupBox25";
+            this.groupBox25.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox25.Size = new System.Drawing.Size(237, 92);
+            this.groupBox25.TabIndex = 6;
+            this.groupBox25.TabStop = false;
+            this.groupBox25.Text = "Silos";
+            // 
             // plcBooleanSwitch2
             // 
             this.plcBooleanSwitch2.DescriptionOff = "Normale";
@@ -4444,6 +4506,28 @@
             this.plcBooleanSwitch2.Size = new System.Drawing.Size(217, 54);
             this.plcBooleanSwitch2.TabIndex = 1;
             this.plcBooleanSwitch2.VariableName = null;
+            // 
+            // groupBox13
+            // 
+            this.groupBox13.Controls.Add(this.hundFile);
+            this.groupBox13.Controls.Add(this.hundElab);
+            this.groupBox13.Location = new System.Drawing.Point(537, 4);
+            this.groupBox13.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox13.Name = "groupBox13";
+            this.groupBox13.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox13.Size = new System.Drawing.Size(200, 90);
+            this.groupBox13.TabIndex = 5;
+            this.groupBox13.TabStop = false;
+            this.groupBox13.Text = "Hundegger";
+            this.groupBox13.Enter += new System.EventHandler(this.groupBox13_Enter);
+            // 
+            // hundFile
+            // 
+            this.hundFile.AutoSize = true;
+            this.hundFile.Location = new System.Drawing.Point(7, 53);
+            this.hundFile.Name = "hundFile";
+            this.hundFile.Size = new System.Drawing.Size(0, 17);
+            this.hundFile.TabIndex = 7;
             // 
             // hundElab
             // 
@@ -4460,6 +4544,19 @@
             this.hundElab.Size = new System.Drawing.Size(170, 26);
             this.hundElab.TabIndex = 6;
             this.hundElab.VariableName = null;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.plcAnomalia);
+            this.groupBox2.Controls.Add(this.plcCiclica);
+            this.groupBox2.Location = new System.Drawing.Point(157, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox2.Size = new System.Drawing.Size(121, 94);
+            this.groupBox2.TabIndex = 4;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Ciclica Rulliera";
             // 
             // plcAnomalia
             // 
@@ -4492,6 +4589,19 @@
             this.plcCiclica.Size = new System.Drawing.Size(120, 26);
             this.plcCiclica.TabIndex = 6;
             this.plcCiclica.VariableName = null;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.plcConnessioneBricc);
+            this.groupBox1.Controls.Add(this.plcConnessioneAsp);
+            this.groupBox1.Controls.Add(this.plcConnessione);
+            this.groupBox1.Location = new System.Drawing.Point(4, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Size = new System.Drawing.Size(147, 94);
+            this.groupBox1.TabIndex = 3;
+            this.groupBox1.TabStop = false;
             // 
             // plcConnessioneBricc
             // 
@@ -4541,14 +4651,28 @@
             this.plcConnessione.TabIndex = 3;
             this.plcConnessione.VariableName = null;
             // 
-            // plcVelmec
+            // timer1
             // 
-            this.plcVelmec.Location = new System.Drawing.Point(317, 0);
-            this.plcVelmec.Margin = new System.Windows.Forms.Padding(0);
-            this.plcVelmec.Name = "plcVelmec";
-            this.plcVelmec.Size = new System.Drawing.Size(292, 524);
-            this.plcVelmec.TabIndex = 3;
-            this.plcVelmec.Vertical = false;
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 50;
+            // 
+            // timer2
+            // 
+            this.timer2.Enabled = true;
+            this.timer2.Interval = 50;
+            // 
+            // plcNumberEdit43
+            // 
+            this.plcNumberEdit43.Location = new System.Drawing.Point(6, 52);
+            this.plcNumberEdit43.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.plcNumberEdit43.Name = "plcNumberEdit43";
+            this.plcNumberEdit43.PLC = null;
+            this.plcNumberEdit43.PLCDescription = "Durata ";
+            this.plcNumberEdit43.PLCError = false;
+            this.plcNumberEdit43.PLCValue = 0D;
+            this.plcNumberEdit43.Size = new System.Drawing.Size(409, 30);
+            this.plcNumberEdit43.TabIndex = 22;
+            this.plcNumberEdit43.VariableName = ".HMI_Tempo_Apertura_Serranda_Hundegger";
             // 
             // Form1
             // 
@@ -4616,7 +4740,9 @@
             this.Aspirazione.ResumeLayout(false);
             this.Valvole.ResumeLayout(false);
             this.tabPage10.ResumeLayout(false);
+            this.groupBox40.ResumeLayout(false);
             this.groupBox10.ResumeLayout(false);
+            this.groupBox36.ResumeLayout(false);
             this.groupBox30.ResumeLayout(false);
             this.groupBox29.ResumeLayout(false);
             this.Ciclone.ResumeLayout(false);
@@ -4630,6 +4756,7 @@
             this.tabPage7.ResumeLayout(false);
             this.tabPage14.ResumeLayout(false);
             this.tabPage12.ResumeLayout(false);
+            this.tabPage20.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.groupBox28.ResumeLayout(false);
@@ -4639,7 +4766,6 @@
             this.groupBox13.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
-            this.tabPage20.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -4877,11 +5003,11 @@
         private System.Windows.Forms.GroupBox groupBox30;
         private PLCBooleanSwitchSimple plcBooleanSwitchSimple7;
         private PLCBooleanButton plcBooleanButton17;
-        private PLCBooleanSwitchSimple plcBooleanSwitchSimple8;
+        private PLCBooleanSwitchSimple plcInContainer;
         private System.Windows.Forms.GroupBox groupBox29;
         private PLCBooleanSwitchSimple plcBooleanSwitchSimple4;
         private PLCBooleanButton plcBooleanButton16;
-        private PLCBooleanSwitchSimple plcBooleanSwitchSimple6;
+        private PLCBooleanSwitchSimple plcInBricchettatrice;
         private System.Windows.Forms.ListView listView2;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabControl tracking2;
@@ -4938,6 +5064,14 @@
         private System.Windows.Forms.TabPage tabPage20;
         private PLCList plcListTrkVelmec;
         private PLCList plcVelmec;
+        private PLCBoolean plcBoolean81;
+        private System.Windows.Forms.GroupBox groupBox40;
+        private PLCBooleanButton plcBooleanButton22;
+        private System.Windows.Forms.GroupBox groupBox36;
+        private PLCNumberEdit plcNumberEdit42;
+        private PLCBoolean plcBoolean82;
+        private PLCBooleanButton plcBooleanButton3;
+        private PLCNumberEdit plcNumberEdit43;
     }
 }
 

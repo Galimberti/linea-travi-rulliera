@@ -132,6 +132,27 @@ namespace GalimbertiHMIgl
             return control;
         }
 
+        public PLCInt16 addInt16(String desc, String var)
+        {
+            var control = new PLCInt16();
+            control.PLCDescription = desc;
+            control.VariableName = var;
+            setSize(control, this.CurrList.Width - 45, 25);
+            this.CurrList.currentLayout().Controls.Add(control);
+            return control;
+        }
+
+
+
+        public PLCNumberFloat addNumberFloat(String desc, String var)
+        {
+            var control = new PLCNumberFloat();
+            control.PLCDescription = desc;
+            control.VariableName = var;
+            setSize(control, this.CurrList.Width - 45, 25);
+            this.CurrList.currentLayout().Controls.Add(control);
+            return control;
+        }
 
         public PLCNumberEdit addNumberEdit(String desc, String var)
         {

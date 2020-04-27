@@ -19,13 +19,14 @@ namespace GalimbertiHMIgl
 
         private PLC plcRulliera;
         PostgresLog log = new PostgresLog();
-        FileLog filelog = new FileLog();
+
+        FileLog filelog;
 
         DateTime lastSendPiece = new DateTime(); 
 
-        public void init(PLC plc)
+        public void init(PLC plc, FileLog log)
         {
-
+            this.filelog = log;
             this.plcRulliera = plc;
 
             this.plcRulliera.pollActions.Add(
@@ -94,6 +95,18 @@ namespace GalimbertiHMIgl
             Double x = Double.Parse(node.Attributes["DimensionX"]?.InnerText.Replace(".", "."));
             Double y = Double.Parse(node.Attributes["DimensionY"]?.InnerText.Replace(".", "."));
             Double z = Double.Parse(node.Attributes["DimensionZ"]?.InnerText.Replace(".", "."));
+
+            Int16 ricettaLevigatura = 0;
+            
+            try
+            {
+                ricettaLevigatura = Int16.Parse(node.Attributes["User_Attribut_5"]?.InnerText.Replace(".", "."));
+                filelog.log("RICETTA LEVIGATURA:" + ricettaLevigatura);
+            } catch (Exception ex)
+            {
+                filelog.log("ERRORE RICETTA LEVIGATURA:" + ex.Message);
+            }
+           
 
             String ordiginKey = node.Attributes["Key"]?.InnerText;
             String name = node.Attributes["Name"]?.InnerText;
@@ -166,6 +179,7 @@ namespace GalimbertiHMIgl
                 }
 
                 c.writeBool("RULLI_CENTRO_TAGLI.RD_Presenza_Pz_Da_Hundegger", true);
+                c.writeInt16("RULLI_CENTRO_TAGLI.RD_Ricetta",  ricettaLevigatura);
 
                 filelog.log("***************************************************************");
                 lastSent = DateTime.Now;

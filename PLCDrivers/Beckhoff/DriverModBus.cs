@@ -40,37 +40,87 @@ namespace PLCDrivers.Beckhoff
 
         public override bool readBool(string var)
         {
-            var read = this.client.ReadCoils(int.Parse(var), 1);
-            return read[0];
-        }
+            try
+            {
+                var read = this.client.ReadCoils(int.Parse(var), 1);
+                return read[0];
+            }
+            catch (Exception ex)
+            {
+                this.client.Disconnect();
+                throw ex;
+            }
+}
 
         public override double readDouble(string var)
         {
-            int[] readHoldingRegisters = this.client.ReadHoldingRegisters(int.Parse(var),4);    //Read 10 Holding Registers from Server, starting with Address 1
-            return ModbusClient.ConvertRegistersToDouble(readHoldingRegisters);
+
+            try
+            {
+                int[] readHoldingRegisters = this.client.ReadHoldingRegisters(int.Parse(var),4);    //Read 10 Holding Registers from Server, starting with Address 1
+                return ModbusClient.ConvertRegistersToDouble(readHoldingRegisters);
+            }
+            catch (Exception ex)
+            {
+                this.client.Disconnect();
+                throw ex;
+            }
         }
 
         public override short readInt16(string var)
         {
-            int[] readHoldingRegisters = this.client.ReadHoldingRegisters(int.Parse(var), 2);    //Read 10 Holding Registers from Server, starting with Address 1
-            return  (short)ModbusClient.ConvertRegistersToInt(readHoldingRegisters);
-        }
+            try
+            {
+                int[] readHoldingRegisters = this.client.ReadHoldingRegisters(int.Parse(var), 2);    //Read 10 Holding Registers from Server, starting with Address 1
+                return (short)ModbusClient.ConvertRegistersToInt(readHoldingRegisters);
+
+            } catch (Exception ex)
+            {
+                this.client.Disconnect();
+                throw ex;
+            }
+       }
 
         public override void writeBool(string var, bool value)
         {
-            this.client.WriteSingleCoil(int.Parse(var), value);
+            try
+            {
+                this.client.WriteSingleCoil(int.Parse(var), value);
+            }
+            catch (Exception ex)
+            {
+                this.client.Disconnect();
+                throw ex;
+            }
         }
 
         public override void writeDouble(string var, double value)
         {
-            var reg = ModbusClient.ConvertDoubleToRegisters(value);
+            try
+            {
+                var reg = ModbusClient.ConvertDoubleToRegisters(value);
             this.client.WriteMultipleRegisters(int.Parse(var), reg);    //Read 10 Holding Registers from Server, starting with Address 1
-        }
+            }
+            catch (Exception ex)
+            {
+                this.client.Disconnect();
+                throw ex;
+            }
+       }
 
         public override void writeInt16(string var, short value)
         {
-            var reg = ModbusClient.ConvertIntToRegisters(value);
+
+            try
+            {
+                var reg = ModbusClient.ConvertIntToRegisters(value);
             this.client.WriteMultipleRegisters(int.Parse(var), reg);    //Read 10 Holding Registers from Server, starting with Address 1
+            }
+            catch (Exception ex)
+            {
+                this.client.Disconnect();
+                throw ex;
+            }
         }
 
         public override int readInt32(string var)
@@ -85,15 +135,34 @@ namespace PLCDrivers.Beckhoff
 
         public override float readFloat(string var)
         {
-            int[] readHoldingRegisters = this.client.ReadHoldingRegisters(int.Parse(var), 2);    //Read 10 Holding Registers from Server, starting with Address 1
-            return ModbusClient.ConvertRegistersToFloat(readHoldingRegisters, ModbusClient.RegisterOrder.LowHigh);
+            try
+            {
+                int[] readHoldingRegisters = this.client.ReadHoldingRegisters(int.Parse(var), 2);    //Read 10 Holding Registers from Server, starting with Address 1
+                return ModbusClient.ConvertRegistersToFloat(readHoldingRegisters, ModbusClient.RegisterOrder.LowHigh);
 
-        }
+            }
+
+            catch (Exception ex)
+            {
+                this.client.Disconnect();
+                throw ex;
+            }
+}
 
         public override void writeFloat(string var, float value)
         {
-            var reg = ModbusClient.ConvertFloatToRegisters(value);
-            this.client.WriteMultipleRegisters(int.Parse(var), reg);    //Read 10 Holding Registers from Server, starting with Address 1
+            try
+            {
+                var reg = ModbusClient.ConvertFloatToRegisters(value);
+                this.client.WriteMultipleRegisters(int.Parse(var), reg);    //Read 10 Holding Registers from Server, starting with Address 1
+
+            }
+            catch (Exception ex)
+            {
+                this.client.Disconnect();
+                throw ex;
+            }
+
 
         }
     }

@@ -54,7 +54,7 @@ namespace GalimbertiHMIgl
             this.plcTrackingAspirazione.log = this.log;
             this.plcTrackingAspirazione.Init();
 
-            this.hundegger.init(this.plcRulliera);
+            this.hundegger.init(this.plcRulliera, null);
 
             timerRulliera = new System.Timers.Timer();
             timerRulliera.Interval = 50;

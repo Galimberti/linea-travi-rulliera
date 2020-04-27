@@ -132,6 +132,12 @@
     <Compile Include="PLCInt16.Designer.cs">
       <DependentUpon>PLCInt16.cs</DependentUpon>
     </Compile>
+    <Compile Include="PLCNumberFloat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PLCNumberFloat.Designer.cs">
+      <DependentUpon>PLCNumberFloat.cs</DependentUpon>
+    </Compile>
     <Compile Include="PLCNumber.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -215,6 +221,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PLCInt16.resx">
       <DependentUpon>PLCInt16.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PLCNumberFloat.resx">
+      <DependentUpon>PLCNumberFloat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PLCNumber.resx">
       <DependentUpon>PLCNumber.cs</DependentUpon>

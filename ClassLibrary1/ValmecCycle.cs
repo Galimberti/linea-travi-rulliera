@@ -1,4 +1,5 @@
-﻿using PLCDrivers;
+﻿using DatabaseInterface;
+using PLCDrivers;
 using PLCDrivers.Beckhoff;
 using System;
 using System.Collections.Generic;
@@ -12,23 +13,41 @@ namespace GalimbertiHMIgl
 
     public class  VelmecCycle
     {
-        PLC d1 = new PLC(new DriverDELTA("192.168.30.160", 502));
-        PLC d2 = new PLC(new DriverDELTA("192.168.30.161", 502));
-        PLC d3 = new PLC(new DriverDELTA("192.168.30.162", 502));
-        PLC d4 = new PLC(new DriverDELTA("192.168.30.163", 502));
-        PLC d5 = new PLC(new DriverDELTA("192.168.30.164", 502));
+        public PLC d1 = new PLC(new DriverDELTA("192.168.30.160", 502));
+        public PLC d2 = new PLC(new DriverDELTA("192.168.30.161", 502));
+        public PLC d3 = new PLC(new DriverDELTA("192.168.30.162", 502));
+        public PLC d4 = new PLC(new DriverDELTA("192.168.30.163", 502));
+        public PLC d5 = new PLC(new DriverDELTA("192.168.30.164", 502));
         private PLC plcRulliera;
 
+        FileLog log;
 
-        bool sentData = false;
-        public void init(PLC plc)
+        public bool dataSent = false;
+        public void init(PLC plc, FileLog log)
         {
             this.plcRulliera = plc;
-            d1.connect();
-            d2.connect();
-            d3.connect();
-            d4.connect();
-            d5.connect();
+            this.log = log;
+
+            this.d1.pollActions.Add( () =>
+                {
+
+                    this.d1.doWithPLC(c =>
+                    {
+                        var status = c.readBool("M0");
+                        var speed = c.readInt16("D420");
+
+                        this.plcRulliera.doWithPLC((r) =>
+                        {
+                            r.writeBool("RULLI_CENTRO_TAGLI.RD_Levigatrice_Run", status);
+                            r.writeInt16("RULLI_CENTRO_TAGLI.RD_Levigatrice_Act_Speed", speed);
+                        });
+                    });
+
+                }
+               
+            );
+
+          
 
            this.plcRulliera.pollActions.Add(
            () => {
@@ -36,20 +55,59 @@ namespace GalimbertiHMIgl
                {
                    bool presenza = c.readBool(".Buffer_R3[1].Busy");
                    var ricetta = c.readInt16(".Buffer_R3[1].Nr_Ricetta");
+                   bool ready = c.readBool("RULLI_CENTRO_TAGLI.RD_Levigatrice_Ready");
+                   double altezza = c.readDouble(".Buffer_R3[1].Altezza");
+                   double larghezza = c.readDouble(".Buffer_R3[1].Larghezza");
+
+                   if (!presenza)
+                   {
+                       c.writeBool("RULLI_CENTRO_TAGLI.RD_Levigatrice_Ready", false);
+                       dataSent = false;
+                   }
+
+                  
 
                    if (ricetta != 0)
                    {
-                       if (presenza && !sentData)
+                       if (presenza && !ready && !dataSent)
                        {
-                           stopCycle();
-                           sendReceipe(ricetta, c.readDouble(".Buffer_R3[1].Altezza"), c.readDouble(".Buffer_R3[1].Larghezza"));
-                           startCycle();
-                           sentData = true;
-                       }
-                       else
-                       {
-                           sentData = false;
-                       }
+                         
+                           log.log("VALMEC AVVIO INVIO DATI");
+
+                           this.d1.doWithPLC((p) =>
+                           {
+                               try
+                               {
+                                  
+                                   d2.tryConnect();
+                                   d3.tryConnect();
+                                   d4.tryConnect();
+                                   d5.tryConnect();
+
+                                   stopCycle();
+                                   sendReceipe(ricetta, altezza, larghezza);
+                                   startCycle();
+
+                               
+                                   d2.Dispose();
+                                   d3.Dispose();
+                                   d4.Dispose();
+                                   d5.Dispose();
+
+                                   dataSent = true;
+
+                                   this.plcRulliera.doWithPLC(r =>
+                                   {
+                                       r.writeBool("RULLI_CENTRO_TAGLI.RD_Levigatrice_Ready", true);
+                                   });
+                               } catch (Exception ex)
+                               {
+                                   log.log("VALMEC ERRORE :" + ex.Message);
+                               }
+                               
+                           });
+                           
+                       }                     
                    }
                });
            }
@@ -58,6 +116,11 @@ namespace GalimbertiHMIgl
 
         }
 
+
+        public void sendReceipe()
+        {
+
+        }
 
         public void startCycle()
         {
@@ -82,7 +145,7 @@ namespace GalimbertiHMIgl
 
             stopCycle();
 
-            Thread.Sleep(300);
+            Thread.Sleep(3000);
 
             d1.driver.writeInt16("D580", recipe);
             d2.driver.writeInt16("D580", recipe);
@@ -159,7 +222,9 @@ namespace GalimbertiHMIgl
                 stable = Enumerable.SequenceEqual(old, newValues);
                 old = newValues;
             }
-     
+
+            Thread.Sleep(1500);
+
         }
 
         public int readRecipe()

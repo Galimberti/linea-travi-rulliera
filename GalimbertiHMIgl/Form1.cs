@@ -31,7 +31,6 @@ namespace GalimbertiHMIgl
         private PLC plcRulliera;
         private PLC plcBricc;
         private PLC plcAspirazione;
-        private PLC plcVelmecMain;
         private VelmecCycle velmec = new VelmecCycle();
         private CycleHundegger hundegger = new CycleHundegger();
         private readonly PlcAlarmListAspirazione plcAlarmListAspirazione = new PlcAlarmListAspirazione();
@@ -292,9 +291,10 @@ namespace GalimbertiHMIgl
 
             this.plcVelmec.push(300, 260, true, "Velmec");
             this.plcVelmec.addBool("Run", "M0");
-            this.plcVelmec.addNumber("Ricetta", "M0");
-            this.plcVelmec.addNumber("Altezza", "D408");
-            this.plcVelmec.addNumber("Larghezza", "D410");
+            this.plcVelmec.addInt16("Velocita", "D420");
+            this.plcVelmec.addInt16("Ricetta", "D580");
+            this.plcVelmec.addNumberFloat("Altezza", "D408");
+            this.plcVelmec.addNumberFloat("Larghezza", "D410");
             this.plcVelmec.addButton("Stop", "").OnUIChanges += (control, e) =>
             {
                 this.velmec.stopCycle();
@@ -305,7 +305,7 @@ namespace GalimbertiHMIgl
 
 
 
-
+        FileLog filelog = new FileLog();
 
         private void Form1_Load(object sender, EventArgs ev)
         {
@@ -319,9 +319,6 @@ namespace GalimbertiHMIgl
             this.plcBricc = new PLC(new DriverModBus(ConfigurationSettings.AppSettings.Get("Bricc_IP"), int.Parse(ConfigurationSettings.AppSettings.Get("Bricc_Port"))));
             this.plcBricc.tryConnect();
 
-            this.plcVelmecMain = new PLC(new DriverDELTA("192.168.30.160", 502));
-            this.plcVelmecMain.tryConnect();
-
             plcAlarmAsp.register(this.plcAspirazione);
             this.initTrackingZ1();
             this.initTrackingZ2();
@@ -334,7 +331,7 @@ namespace GalimbertiHMIgl
             PLCControlUtils.RegisterAll(this.plcAspirazione, this.Valvole);
             PLCControlUtils.RegisterAll(this.plcBricc, this.tabPage12);
             PLCControlUtils.RegisterAll(this.plcRulliera, this.plcListTrkVelmec);
-            PLCControlUtils.RegisterAll(this.plcVelmecMain, this.plcVelmec);
+            PLCControlUtils.RegisterAll(this.velmec.d1, this.plcVelmec);
 
             this.plcAlarmListAspirazione.comm = this.plcAspirazione;
             this.plcAlarmListAspirazione.init();
@@ -398,8 +395,8 @@ namespace GalimbertiHMIgl
             listViewStoricoAlarmZ2.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
             listViewStoricoAlarmZ2.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
 
-            this.hundegger.init(this.plcRulliera);
-            this.velmec.init(this.plcRulliera);
+            this.hundegger.init(this.plcRulliera, this.filelog);
+            this.velmec.init(this.plcRulliera, this.filelog);
 
             timerDB = new System.Timers.Timer();
             timerDB.Interval = 500;
@@ -457,8 +454,26 @@ namespace GalimbertiHMIgl
 
             plcAspSelManMode.OnUIChanges += PlcAspSelManMode_OnUIChanges;
 
+            plcInBricchettatrice.OnUIChanges += (c, e) =>
+            {
+                this.plcAspirazione.doWithPLC((plc) =>
+                {
+                    plc.writeBool(".HMI_Sel_Scarico_In_Container", !e);
+                });
 
-        
+            };
+
+            plcInContainer.OnUIChanges += (c, e) =>
+            {
+                this.plcAspirazione.doWithPLC((plc) =>
+                {
+                    plc.writeBool(".HMI_Sel_Scarico_In_Bricchettatrice", !e);
+                });
+            };
+
+
+
+            aggiornaStoricoAllarmi();
 
             timerDatabse = new System.Timers.Timer();
             timerDatabse.Interval = 60*1000;
@@ -468,7 +483,14 @@ namespace GalimbertiHMIgl
                 this.listView1.Invoke(new Action(
                   () =>
                   {
-                      aggiornaStoricoAllarmi();
+                      try
+                      {
+                          aggiornaStoricoAllarmi();
+                      }catch (Exception ex)
+                      {
+                          
+                      }
+                       
                       
                   }
                 ));
@@ -540,7 +562,13 @@ namespace GalimbertiHMIgl
         {
             try
             {
-                this.plcVelmecMain.Poll();
+                
+                this.velmec.d1.Poll();
+                this.velmec.d2.Poll();
+                this.velmec.d3.Poll();
+                this.velmec.d4.Poll();
+                this.velmec.d5.Poll();
+               
             }
             catch (Exception ex)
             {
