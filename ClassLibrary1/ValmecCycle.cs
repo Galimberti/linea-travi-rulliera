@@ -19,13 +19,17 @@ namespace GalimbertiHMIgl
         public PLC d4 = new PLC(new DriverDELTA("192.168.30.163", 502));
         public PLC d5 = new PLC(new DriverDELTA("192.168.30.164", 502));
         private PLC plcRulliera;
+        private PLC plcAspirazione;
 
         FileLog log;
 
         public bool dataSent = false;
-        public void init(PLC plc, FileLog log)
+        bool m2, m3, m4, m5, m6, m7, m8, m9, m10, m11, m12, m13, m14, m15, m16, m17, m18, m19;
+
+        public void init(PLC plc, PLC plcAsp, FileLog log)
         {
             this.plcRulliera = plc;
+            this.plcAspirazione = plcAsp;
             this.log = log;
 
             this.d1.pollActions.Add( () =>
@@ -40,6 +44,14 @@ namespace GalimbertiHMIgl
                         {
                             r.writeBool("RULLI_CENTRO_TAGLI.RD_Levigatrice_Run", status);
                             r.writeInt16("RULLI_CENTRO_TAGLI.RD_Levigatrice_Act_Speed", speed);
+
+                            if (this.dataSent)
+                            {
+
+                              r.writeBool("RULLI_CENTRO_TAGLI.RD_Levigatrice_Ready", true);
+                              
+                            }
+
                         });
                     });
 
@@ -47,17 +59,127 @@ namespace GalimbertiHMIgl
                
             );
 
-          
+            this.d1.pollActions.Add(() =>
+            {
+
+                this.d1.doWithPLC(c =>
+                {
+                    m2 = c.readBool("M513");
+                    m3= m4 = c.readBool("M514");
+                });
+            }
+
+            );
+
+
+            this.d2.pollActions.Add(() =>
+            {
+                this.d2.doWithPLC(c =>
+                {
+                    m7 = m8 = c.readBool("M515");
+                    m5 = m6 = c.readBool("M513");
+                });
+            }
+
+            );
+
+
+
+            this.d3.pollActions.Add(() =>
+            {
+
+                this.d3.doWithPLC(c =>
+                {
+                    m9= c.readBool("M513");
+                    m10 = m11 = c.readBool("M514");
+                });
+
+            }
+
+           );
+
+
+
+
+            this.d4.pollActions.Add(() =>
+            {
+
+                this.d4.doWithPLC(c =>
+                {
+                    m12 = c.readBool("M513");
+                    m13 = c.readBool("M514");
+                    m14 = m15 = c.readBool("M515");
+                });
+
+            }
+
+           );
+
+
+            this.d5.pollActions.Add(() =>
+            {
+
+                this.d5.doWithPLC(c =>
+                {
+                    m16 = m17= c.readBool("M513");
+                    m18 = c.readBool("M515");
+                    m19 = c.readBool("M516");
+                });
+
+            }
+
+         );
+
+        this.plcAspirazione.pollActions.Add(() =>
+            {
+                this.plcAspirazione.doWithPLC(c =>
+                {
+                    try
+                    {
+                    
+                        c.writeBool("MAIN.RD_Levigatrice_Serranda_1", m2 || m3 || m4);
+                        c.writeBool("MAIN.RD_Levigatrice_Serranda_2", m6 || m5 || m9);
+                        c.writeBool("MAIN.RD_Levigatrice_Serranda_3", m7 || m8 || m12);
+                        c.writeBool("MAIN.RD_Levigatrice_Serranda_4", m11 || m10 || m13);
+                        c.writeBool("MAIN.RD_Levigatrice_Serranda_5", m15 || m14 || m18);
+                        c.writeBool("MAIN.RD_Levigatrice_Serranda_6", m16 || m17 || m18);
+                    }
+                    catch (Exception ex)
+                    {
+                        log.log("scrittura dati serrande " + ex.Message);
+                    }
+                });
+            });
 
            this.plcRulliera.pollActions.Add(
            () => {
                this.plcRulliera.doWithPLC(c =>
                {
+
+                   try
+                   {
+                       c.writeBool("M.RD_Levigatrice_Serranda_1", m2 || m3 || m4);
+                       c.writeBool("RULLI_CENTRO_TAGLI.RD_Levigatrice_Serranda_2", m6 || m5 || m9);
+                       c.writeBool("RULLI_CENTRO_TAGLI.RD_Levigatrice_Serranda_3", m7 || m8 || m12);
+                       c.writeBool("RULLI_CENTRO_TAGLI.RD_Levigatrice_Serranda_4", m11 || m10 || m13);
+                       c.writeBool("RULLI_CENTRO_TAGLI.RD_Levigatrice_Serranda_5", m15 || m14 || m18);
+                       c.writeBool("RULLI_CENTRO_TAGLI.RD_Levigatrice_Serranda_6", m16 || m17 || m18);
+                   } catch (Exception ex)
+                   {
+
+                   }
+                  
+
+
+
+
+
                    bool presenza = c.readBool(".Buffer_R3[1].Busy");
                    var ricetta = c.readInt16(".Buffer_R3[1].Nr_Ricetta");
                    bool ready = c.readBool("RULLI_CENTRO_TAGLI.RD_Levigatrice_Ready");
                    double altezza = c.readDouble(".Buffer_R3[1].Altezza");
                    double larghezza = c.readDouble(".Buffer_R3[1].Larghezza");
+                   bool richiesta = c.readBool("RULLI_CENTRO_TAGLI.WR_Levigatrice_Pos_Req");
 
                    if (!presenza)
                    {
@@ -65,11 +187,17 @@ namespace GalimbertiHMIgl
                        dataSent = false;
                    }
 
-                  
+                   if (!richiesta)
+                   {
+                       c.writeBool("RULLI_CENTRO_TAGLI.RD_Levigatrice_Ready", false);
+                       dataSent = false;
+                   }
+
+
 
                    if (ricetta != 0 && ricetta !=9999)
                    {
-                       if (presenza && !ready && !dataSent)
+                       if (richiesta && presenza && !ready && !dataSent)
                        {
                          
                            log.log("VALMEC AVVIO INVIO DATI");
@@ -86,7 +214,7 @@ namespace GalimbertiHMIgl
 
                                    stopCycle();
                                    sendReceipe(ricetta, altezza, larghezza);
-                                   startCycle();
+                                   //startCycle();
 
                                
                                    d2.Dispose();
@@ -96,10 +224,12 @@ namespace GalimbertiHMIgl
 
                                    dataSent = true;
 
+                                   /*
                                    this.plcRulliera.doWithPLC(r =>
                                    {
                                        r.writeBool("RULLI_CENTRO_TAGLI.RD_Levigatrice_Ready", true);
                                    });
+                                   */
                                } catch (Exception ex)
                                {
                                    log.log("VALMEC ERRORE :" + ex.Message);
@@ -184,6 +314,7 @@ namespace GalimbertiHMIgl
             d4.driver.writeFloat("D410", (float)l);
             d5.driver.writeFloat("D410", (float)l);
 
+       
             d1.driver.writeBool("M200", true);
             d2.driver.writeBool("M200", true);
             d3.driver.writeBool("M200", true);
@@ -198,32 +329,42 @@ namespace GalimbertiHMIgl
             d4.driver.writeBool("M200", false);
             d5.driver.writeBool("M200", false);
 
+            /*
             bool stable = false;
-            float[] old = new float[12];
-            float[] newValues = new float[12];
+            float[] old = new float[18];
+            float[] newValues = new float[18];
             while (!stable)
             {
+
+                Thread.Sleep(5000); 
                 newValues[0]= d1.driver.readFloat("D2");
-                newValues[1] = d1.driver.readFloat("D82");
+                newValues[1] = d1.driver.readFloat("D42");
+                newValues[2] = d1.driver.readFloat("D82");
 
-                newValues[2] = d2.driver.readFloat("D42");
-                newValues[3] = d2.driver.readFloat("D122");
+                newValues[3] = d2.driver.readFloat("D42");
+                newValues[4] = d2.driver.readFloat("D2");
+                newValues[5] = d2.driver.readFloat("D122");
+                newValues[6] = d2.driver.readFloat("D82");
 
-                newValues[4] = d3.driver.readFloat("D2");
-                newValues[5] = d3.driver.readFloat("D82");
+                newValues[7] = d3.driver.readFloat("D2");
+                newValues[8] = d3.driver.readFloat("D82");
+                newValues[9] = d3.driver.readFloat("D42");
 
-                newValues[6] = d4.driver.readFloat("D2");
-                newValues[7] = d4.driver.readFloat("D42");
-                newValues[8] = d4.driver.readFloat("D122");
+                newValues[10] = d4.driver.readFloat("D2");
+                newValues[11] = d4.driver.readFloat("D42");
+                newValues[12] = d4.driver.readFloat("D122");
+                newValues[13] = d4.driver.readFloat("D82");
 
-                newValues[9] = d5.driver.readFloat("D42");
-                newValues[10] = d5.driver.readFloat("D82");
-                newValues[11] = d5.driver.readFloat("D122");
+                newValues[14] = d5.driver.readFloat("D2");
+                newValues[15] = d5.driver.readFloat("D42");
+                newValues[16] = d5.driver.readFloat("D82");
+                newValues[17] = d5.driver.readFloat("D122");
                 stable = Enumerable.SequenceEqual(old, newValues);
                 old = newValues;
-            }
 
-            Thread.Sleep(1500);
+                
+            }
+            */
 
         }
 

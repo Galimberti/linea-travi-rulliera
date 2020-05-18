@@ -23,6 +23,27 @@ namespace GalimbertiHMIgl
 
         }
 
+        public void doSnapshot()
+        {
+            for (int i = 0; i < this.logCurr.Count; i++ )
+            {
+                List<Int16> values = this.logCurr[i];
+
+                long mid = 0;
+                if (values.Count != 0)
+                {
+                    foreach (Int16 v in values)
+                    {
+                        mid += v;
+                    }
+                    mid = (long)(mid / values.Count);
+                    values.Clear();
+                }
+
+                this.log.LogAspirazioneEC("EC_AVG_" + (i + 1), variables[i], new TimeSpan(), (int) mid);
+            }
+        }
+            List<List<Int16>> logCurr = new List<List<Int16>>();
         public void Init()
         {
 
@@ -33,6 +54,14 @@ namespace GalimbertiHMIgl
             this.variables.Add("MAIN.Inverter_14U1_Act_Current");
             this.variables.Add("MAIN.Inverter_15U1_Act_Current");
             this.variables.Add("MAIN.Inverter_16U1_Act_Current");
+
+            this.logCurr.Add(new List<Int16>());
+            this.logCurr.Add(new List<Int16>());
+            this.logCurr.Add(new List<Int16>());
+            this.logCurr.Add(new List<Int16>());
+            this.logCurr.Add(new List<Int16>());
+            this.logCurr.Add(new List<Int16>());
+            this.logCurr.Add(new List<Int16>());
 
 
             foreach (string al in variables)
@@ -65,10 +94,12 @@ namespace GalimbertiHMIgl
 
                         for (int i = 0; i < this.values.Count; i++)
                         {
+                            this.logCurr[i].Add(this.values[i]);
+
                             double d = Math.Abs(this.values[i] - newList[i]);
                             double f = this.values[i];
-                            if (  (  d/ f) > 0.1 ) {
-                                this.log.LogAspirazioneEC("EC_CHANGE_" + (i + 1), "Corrente modificata", new TimeSpan(), newList[i]);
+                            if (  (  d/ f) > 0.3 ) {
+                                this.log.LogAspirazioneEC("EC_CHANGE_" + (i + 1), variables[i], new TimeSpan(), newList[i]);
                                 this.values[i] = newList[i];
                             }
 

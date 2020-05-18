@@ -55,6 +55,7 @@ namespace GalimbertiHMIgl
         System.Timers.Timer timerVelmec = null;
         System.Timers.Timer timerAspirazione = null;
         System.Timers.Timer timerBricc = null;
+        System.Timers.Timer timerCurrent = null;
         System.Timers.Timer timerDatabse = null;
         System.Timers.Timer timerDB = null;
 
@@ -192,6 +193,19 @@ namespace GalimbertiHMIgl
 
         }
 
+        public void initRientroR1()
+        {
+
+            this.plcListRientroR1.Vertical = false;
+
+            this.plcListRientroR1.push(360, 800, true, "Rientro R1");
+            this.plcListRientroR1.CurrList.addNumberEdit("Larghezza", ".R1_Set_Larghezza");
+            this.plcListRientroR1.CurrList.addNumberEdit("Altezza",".R1_Set_Altezza");
+            this.plcListRientroR1.CurrList.addNumberEdit("Ricetta", ".R1_Set_Nr_Ricetta");
+
+
+        }
+
         public void createTrackingItem(PLCList list, String baseVar, int number)
         {
             for (int i = 1; i <= number; i++)
@@ -323,7 +337,8 @@ namespace GalimbertiHMIgl
             this.initTrackingZ1();
             this.initTrackingZ2();
             this.initIOAspirazione();
-         
+            this.initRientroR1();
+
 
             PLCControlUtils.RegisterAll(this.plcRulliera, this.tabControl3);
             PLCControlUtils.RegisterAll(this.plcRulliera, this.tracking2);
@@ -396,7 +411,7 @@ namespace GalimbertiHMIgl
             listViewStoricoAlarmZ2.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
 
             this.hundegger.init(this.plcRulliera, this.filelog);
-            this.velmec.init(this.plcRulliera, this.filelog);
+            this.velmec.init(this.plcRulliera, this.plcAspirazione,  this.filelog);
 
             timerDB = new System.Timers.Timer();
             timerDB.Interval = 500;
@@ -451,6 +466,20 @@ namespace GalimbertiHMIgl
                 timerBricc.Enabled = true;
             };
             timerBricc.Start();
+
+
+
+
+            timerCurrent = new System.Timers.Timer();
+            timerCurrent.Interval = 2*60*1000;
+            timerCurrent.Enabled = true;
+            timerCurrent.Elapsed += (s, e) =>
+            {
+                timerCurrent.Enabled = false;
+                this.plcTrackingAspirazione.doSnapshot();
+                timerCurrent.Enabled = true;
+            };
+            timerCurrent.Start();
 
             plcAspSelManMode.OnUIChanges += PlcAspSelManMode_OnUIChanges;
 
