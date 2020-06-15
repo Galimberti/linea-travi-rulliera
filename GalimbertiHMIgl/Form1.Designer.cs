@@ -136,6 +136,8 @@
             this.plcNumber8 = new GalimbertiHMIgl.PLCNumber();
             this.plcNumber9 = new GalimbertiHMIgl.PLCNumber();
             this.plcNumber10 = new GalimbertiHMIgl.PLCNumber();
+            this.tabRientroR1 = new System.Windows.Forms.TabPage();
+            this.plcListRientroR1 = new GalimbertiHMIgl.PLCList();
             this.Tracking = new System.Windows.Forms.TabPage();
             this.plcTracking1 = new GalimbertiHMIgl.PLCList();
             this.tabPage6 = new System.Windows.Forms.TabPage();
@@ -303,6 +305,8 @@
             this.tabPage20 = new System.Windows.Forms.TabPage();
             this.plcVelmec = new GalimbertiHMIgl.PLCList();
             this.plcListTrkVelmec = new GalimbertiHMIgl.PLCList();
+            this.tabPage21 = new System.Windows.Forms.TabPage();
+            this.plcList1 = new GalimbertiHMIgl.PLCList();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.plcAllarBricch = new GalimbertiHMIgl.PLCBoolean();
@@ -329,10 +333,7 @@
             this.plcConnessione = new GalimbertiHMIgl.PLCBoolean();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.tabPage21 = new System.Windows.Forms.TabPage();
-            this.plcList1 = new GalimbertiHMIgl.PLCList();
-            this.tabRientroR1 = new System.Windows.Forms.TabPage();
-            this.plcListRientroR1 = new GalimbertiHMIgl.PLCList();
+            this.plcNumberEdit44 = new GalimbertiHMIgl.PLCNumberEdit();
             tabControlAsp = new System.Windows.Forms.TabControl();
             tabControlAsp.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -355,6 +356,7 @@
             this.groupBox22.SuspendLayout();
             this.groupBox21.SuspendLayout();
             this.groupBox20.SuspendLayout();
+            this.tabRientroR1.SuspendLayout();
             this.Tracking.SuspendLayout();
             this.tabPage6.SuspendLayout();
             this.groupBox19.SuspendLayout();
@@ -406,6 +408,7 @@
             this.tabPage14.SuspendLayout();
             this.tabPage12.SuspendLayout();
             this.tabPage20.SuspendLayout();
+            this.tabPage21.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox28.SuspendLayout();
@@ -414,8 +417,6 @@
             this.groupBox13.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.tabPage21.SuspendLayout();
-            this.tabRientroR1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControlAsp
@@ -455,7 +456,6 @@
             this.tabControl3.Controls.Add(this.tabPage5);
             this.tabControl3.Controls.Add(this.tabPage3);
             this.tabControl3.Controls.Add(this.tabPage17);
-            
             this.tabControl3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl3.Location = new System.Drawing.Point(3, 2);
             this.tabControl3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -2113,6 +2113,27 @@
             this.plcNumber10.TabIndex = 0;
             this.plcNumber10.VariableName = "RULLI_CENTRO_TAGLI.Act_Step_Ciclo_C1_Polmone_Auto";
             // 
+            // tabRientroR1
+            // 
+            this.tabRientroR1.BackColor = System.Drawing.SystemColors.Control;
+            this.tabRientroR1.Controls.Add(this.plcListRientroR1);
+            this.tabRientroR1.Location = new System.Drawing.Point(4, 25);
+            this.tabRientroR1.Name = "tabRientroR1";
+            this.tabRientroR1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabRientroR1.Size = new System.Drawing.Size(1713, 814);
+            this.tabRientroR1.TabIndex = 9;
+            this.tabRientroR1.Text = "Rientro R1";
+            // 
+            // plcListRientroR1
+            // 
+            this.plcListRientroR1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.plcListRientroR1.Location = new System.Drawing.Point(3, 3);
+            this.plcListRientroR1.Margin = new System.Windows.Forms.Padding(0);
+            this.plcListRientroR1.Name = "plcListRientroR1";
+            this.plcListRientroR1.Size = new System.Drawing.Size(1707, 808);
+            this.plcListRientroR1.TabIndex = 1;
+            this.plcListRientroR1.Vertical = false;
+            // 
             // Tracking
             // 
             this.Tracking.BackColor = System.Drawing.SystemColors.Control;
@@ -3124,7 +3145,7 @@
             this.tabPage18.Location = new System.Drawing.Point(4, 25);
             this.tabPage18.Name = "tabPage18";
             this.tabPage18.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage18.Size = new System.Drawing.Size(178, 36);
+            this.tabPage18.Size = new System.Drawing.Size(1713, 812);
             this.tabPage18.TabIndex = 4;
             this.tabPage18.Text = "Tracking";
             // 
@@ -3134,7 +3155,7 @@
             this.plcTracking2.Location = new System.Drawing.Point(3, 3);
             this.plcTracking2.Margin = new System.Windows.Forms.Padding(0);
             this.plcTracking2.Name = "plcTracking2";
-            this.plcTracking2.Size = new System.Drawing.Size(172, 30);
+            this.plcTracking2.Size = new System.Drawing.Size(1707, 806);
             this.plcTracking2.TabIndex = 1;
             this.plcTracking2.Vertical = false;
             // 
@@ -3146,7 +3167,7 @@
             this.tabPage16.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage16.Name = "tabPage16";
             this.tabPage16.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage16.Size = new System.Drawing.Size(178, 36);
+            this.tabPage16.Size = new System.Drawing.Size(1713, 812);
             this.tabPage16.TabIndex = 2;
             this.tabPage16.Text = "Impostazioni";
             // 
@@ -3182,7 +3203,7 @@
             this.tabPage15.Location = new System.Drawing.Point(4, 25);
             this.tabPage15.Name = "tabPage15";
             this.tabPage15.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage15.Size = new System.Drawing.Size(178, 36);
+            this.tabPage15.Size = new System.Drawing.Size(1713, 812);
             this.tabPage15.TabIndex = 8;
             this.tabPage15.Text = "Allarmi";
             // 
@@ -3191,7 +3212,7 @@
             this.listAlarmZ2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listAlarmZ2.Location = new System.Drawing.Point(3, 3);
             this.listAlarmZ2.Name = "listAlarmZ2";
-            this.listAlarmZ2.Size = new System.Drawing.Size(172, 30);
+            this.listAlarmZ2.Size = new System.Drawing.Size(1707, 806);
             this.listAlarmZ2.TabIndex = 0;
             this.listAlarmZ2.UseCompatibleStateImageBehavior = false;
             // 
@@ -3201,7 +3222,7 @@
             this.tabPage19.Location = new System.Drawing.Point(4, 25);
             this.tabPage19.Name = "tabPage19";
             this.tabPage19.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage19.Size = new System.Drawing.Size(178, 36);
+            this.tabPage19.Size = new System.Drawing.Size(1713, 812);
             this.tabPage19.TabIndex = 9;
             this.tabPage19.Text = "Storico Allarmi";
             this.tabPage19.UseVisualStyleBackColor = true;
@@ -3211,7 +3232,7 @@
             this.listViewStoricoAlarmZ2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listViewStoricoAlarmZ2.Location = new System.Drawing.Point(3, 3);
             this.listViewStoricoAlarmZ2.Name = "listViewStoricoAlarmZ2";
-            this.listViewStoricoAlarmZ2.Size = new System.Drawing.Size(172, 30);
+            this.listViewStoricoAlarmZ2.Size = new System.Drawing.Size(1707, 806);
             this.listViewStoricoAlarmZ2.TabIndex = 1;
             this.listViewStoricoAlarmZ2.UseCompatibleStateImageBehavior = false;
             // 
@@ -3537,9 +3558,9 @@
             this.Ciclone.Controls.Add(this.plcNumberEdit38);
             this.Ciclone.Controls.Add(this.plcNumberEdit37);
             this.Ciclone.Controls.Add(this.plcNumberEdit36);
-            this.Ciclone.Location = new System.Drawing.Point(414, 487);
+            this.Ciclone.Location = new System.Drawing.Point(414, 572);
             this.Ciclone.Name = "Ciclone";
-            this.Ciclone.Size = new System.Drawing.Size(380, 159);
+            this.Ciclone.Size = new System.Drawing.Size(380, 130);
             this.Ciclone.TabIndex = 17;
             this.Ciclone.TabStop = false;
             this.Ciclone.Text = "Ciclone";
@@ -3615,6 +3636,7 @@
             // 
             // groupBox27
             // 
+            this.groupBox27.Controls.Add(this.plcNumberEdit44);
             this.groupBox27.Controls.Add(this.plcNumberEdit35);
             this.groupBox27.Controls.Add(this.plcNumber2);
             this.groupBox27.Controls.Add(this.plcNumber1);
@@ -3622,7 +3644,7 @@
             this.groupBox27.Controls.Add(this.plcNumberEdit34);
             this.groupBox27.Location = new System.Drawing.Point(414, 279);
             this.groupBox27.Name = "groupBox27";
-            this.groupBox27.Size = new System.Drawing.Size(380, 205);
+            this.groupBox27.Size = new System.Drawing.Size(380, 236);
             this.groupBox27.TabIndex = 12;
             this.groupBox27.TabStop = false;
             this.groupBox27.Text = "Impostazioni";
@@ -4065,7 +4087,7 @@
             this.tabPage12.Location = new System.Drawing.Point(4, 25);
             this.tabPage12.Name = "tabPage12";
             this.tabPage12.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage12.Size = new System.Drawing.Size(1727, 847);
+            this.tabPage12.Size = new System.Drawing.Size(192, 71);
             this.tabPage12.TabIndex = 4;
             this.tabPage12.Text = "Bricchettatrice";
             this.tabPage12.Click += new System.EventHandler(this.tabPage12_Click);
@@ -4284,7 +4306,7 @@
             this.tabPage20.Location = new System.Drawing.Point(4, 25);
             this.tabPage20.Name = "tabPage20";
             this.tabPage20.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage20.Size = new System.Drawing.Size(1727, 847);
+            this.tabPage20.Size = new System.Drawing.Size(192, 71);
             this.tabPage20.TabIndex = 6;
             this.tabPage20.Text = "Velmec";
             // 
@@ -4305,6 +4327,26 @@
             this.plcListTrkVelmec.Size = new System.Drawing.Size(292, 524);
             this.plcListTrkVelmec.TabIndex = 2;
             this.plcListTrkVelmec.Vertical = false;
+            // 
+            // tabPage21
+            // 
+            this.tabPage21.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage21.Controls.Add(this.plcList1);
+            this.tabPage21.Location = new System.Drawing.Point(4, 25);
+            this.tabPage21.Name = "tabPage21";
+            this.tabPage21.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage21.Size = new System.Drawing.Size(192, 71);
+            this.tabPage21.TabIndex = 7;
+            this.tabPage21.Text = "Vidali";
+            // 
+            // plcList1
+            // 
+            this.plcList1.Location = new System.Drawing.Point(0, 0);
+            this.plcList1.Margin = new System.Windows.Forms.Padding(0);
+            this.plcList1.Name = "plcList1";
+            this.plcList1.Size = new System.Drawing.Size(292, 572);
+            this.plcList1.TabIndex = 3;
+            this.plcList1.Vertical = false;
             // 
             // tableLayoutPanel1
             // 
@@ -4683,46 +4725,18 @@
             this.timer2.Enabled = true;
             this.timer2.Interval = 50;
             // 
-            // tabPage21
+            // plcNumberEdit44
             // 
-            this.tabPage21.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage21.Controls.Add(this.plcList1);
-            this.tabPage21.Location = new System.Drawing.Point(4, 25);
-            this.tabPage21.Name = "tabPage21";
-            this.tabPage21.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage21.Size = new System.Drawing.Size(1727, 847);
-            this.tabPage21.TabIndex = 7;
-            this.tabPage21.Text = "Vidali";
-            // 
-            // plcList1
-            // 
-            this.plcList1.Location = new System.Drawing.Point(0, 0);
-            this.plcList1.Margin = new System.Windows.Forms.Padding(0);
-            this.plcList1.Name = "plcList1";
-            this.plcList1.Size = new System.Drawing.Size(292, 572);
-            this.plcList1.TabIndex = 3;
-            this.plcList1.Vertical = false;
-            // 
-            // tabRientroR1
-            // 
-            this.tabRientroR1.BackColor = System.Drawing.SystemColors.Control;
-            this.tabRientroR1.Controls.Add(this.plcListRientroR1);
-            this.tabRientroR1.Location = new System.Drawing.Point(4, 25);
-            this.tabRientroR1.Name = "tabRientroR1";
-            this.tabRientroR1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabRientroR1.Size = new System.Drawing.Size(1713, 814);
-            this.tabRientroR1.TabIndex = 9;
-            this.tabRientroR1.Text = "Rientro R1";
-            // 
-            // plcListRientroR1
-            // 
-            this.plcListRientroR1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.plcListRientroR1.Location = new System.Drawing.Point(3, 3);
-            this.plcListRientroR1.Margin = new System.Windows.Forms.Padding(0);
-            this.plcListRientroR1.Name = "plcListRientroR1";
-            this.plcListRientroR1.Size = new System.Drawing.Size(1707, 808);
-            this.plcListRientroR1.TabIndex = 1;
-            this.plcListRientroR1.Vertical = false;
+            this.plcNumberEdit44.Location = new System.Drawing.Point(6, 197);
+            this.plcNumberEdit44.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.plcNumberEdit44.Name = "plcNumberEdit44";
+            this.plcNumberEdit44.PLC = null;
+            this.plcNumberEdit44.PLCDescription = "Set.Point Stop Asp2 (Hz)";
+            this.plcNumberEdit44.PLCError = false;
+            this.plcNumberEdit44.PLCValue = 0D;
+            this.plcNumberEdit44.Size = new System.Drawing.Size(351, 30);
+            this.plcNumberEdit44.TabIndex = 18;
+            this.plcNumberEdit44.VariableName = ".Set_Diff_Pressione_Filtri";
             // 
             // Form1
             // 
@@ -4756,6 +4770,7 @@
             this.groupBox22.ResumeLayout(false);
             this.groupBox21.ResumeLayout(false);
             this.groupBox20.ResumeLayout(false);
+            this.tabRientroR1.ResumeLayout(false);
             this.Tracking.ResumeLayout(false);
             this.tabPage6.ResumeLayout(false);
             this.groupBox19.ResumeLayout(false);
@@ -4807,6 +4822,7 @@
             this.tabPage14.ResumeLayout(false);
             this.tabPage12.ResumeLayout(false);
             this.tabPage20.ResumeLayout(false);
+            this.tabPage21.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.groupBox28.ResumeLayout(false);
@@ -4816,8 +4832,6 @@
             this.groupBox13.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
-            this.tabPage21.ResumeLayout(false);
-            this.tabRientroR1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -5128,6 +5142,7 @@
         private PLCList plcList1;
         private System.Windows.Forms.TabPage tabRientroR1;
         private PLCList plcListRientroR1;
+        private PLCNumberEdit plcNumberEdit44;
     }
 }
 

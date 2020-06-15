@@ -377,7 +377,6 @@ namespace GalimbertiHMIgl
             listViewAlZ1.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
             listViewAlZ1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
 
-
             listAlarmZ2.View = View.Details;
             listAlarmZ2.Columns.Add("Allarme");
             listAlarmZ2.Columns[0].Width = -1;
@@ -597,10 +596,14 @@ namespace GalimbertiHMIgl
                 this.velmec.d3.Poll();
                 this.velmec.d4.Poll();
                 this.velmec.d5.Poll();
+
+                if (!this.velmec.d1.IsConnected)
+                    this.velmec.disableSerrande();
                
             }
             catch (Exception ex)
             {
+                this.velmec.disableSerrande();
             }
         }
 
@@ -735,21 +738,28 @@ namespace GalimbertiHMIgl
         }
 
         public void aggiornaStoricoAllarmi()
+
         {
+
+            var asp =this.log.GetLogAspirazione();
+            var z1 = this.log.GetLogRullieraZ1();
+            var z2 = this.log.GetLogRullieraZ2();
+
             listViewStoricoAlarmZ1.Items.Clear();
             listViewStoricoAlarmZ2.Items.Clear();
             listView2.Items.Clear();
-            foreach (var al in this.log.GetLogAspirazione())
+
+            foreach (var al in asp)
             {
                 var a = new ListViewItem(al);
                 listView2.Items.Add(a);
             }
-            foreach (var al in this.log.GetLogRullieraZ1())
+            foreach (var al in z1)
             {
                 var a = new ListViewItem(al);
                 listViewStoricoAlarmZ1.Items.Add(a);
             }
-            foreach (var al in this.log.GetLogRullieraZ2())
+            foreach (var al in z2)
             {
                 var a = new ListViewItem(al);
                 listViewStoricoAlarmZ2.Items.Add(a);

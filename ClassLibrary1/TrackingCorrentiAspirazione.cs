@@ -54,6 +54,7 @@ namespace GalimbertiHMIgl
             this.variables.Add("MAIN.Inverter_14U1_Act_Current");
             this.variables.Add("MAIN.Inverter_15U1_Act_Current");
             this.variables.Add("MAIN.Inverter_16U1_Act_Current");
+            this.variables.Add("MAIN.Inverter_17U1_Act_Current");
 
             this.logCurr.Add(new List<Int16>());
             this.logCurr.Add(new List<Int16>());
@@ -62,7 +63,7 @@ namespace GalimbertiHMIgl
             this.logCurr.Add(new List<Int16>());
             this.logCurr.Add(new List<Int16>());
             this.logCurr.Add(new List<Int16>());
-
+            this.logCurr.Add(new List<Int16>());
 
             foreach (string al in variables)
             {

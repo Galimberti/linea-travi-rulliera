@@ -24,7 +24,28 @@ namespace GalimbertiHMIgl
         FileLog log;
 
         public bool dataSent = false;
-        bool m2, m3, m4, m5, m6, m7, m8, m9, m10, m11, m12, m13, m14, m15, m16, m17, m18, m19;
+        bool m2, m3, m4, m5, m6, m7, m8, m9, m10, m11, m12, m13, m14, m15, m16, m17, m18, m19, run;
+
+        public void disableSerrande()
+        {
+            this.plcAspirazione.doWithPLC(c =>
+            {
+                try
+                {
+                    c.writeBool("MAIN.RD_Levigatrice_Serranda_1", false);
+                    c.writeBool("MAIN.RD_Levigatrice_Serranda_2", false);
+                    c.writeBool("MAIN.RD_Levigatrice_Serranda_3", false);
+                    c.writeBool("MAIN.RD_Levigatrice_Serranda_4", false);
+                    c.writeBool("MAIN.RD_Levigatrice_Serranda_5", false);
+                    c.writeBool("MAIN.RD_Levigatrice_Serranda_6", false);
+                }
+                catch (Exception ex)
+                {
+                    log.log("scrittura dati serrande disable " + ex.Message);
+                }
+            });
+            
+        }
 
         public void init(PLC plc, PLC plcAsp, FileLog log)
         {
@@ -64,6 +85,7 @@ namespace GalimbertiHMIgl
 
                 this.d1.doWithPLC(c =>
                 {
+                    run = c.readBool("M0");
                     m2 = c.readBool("M513");
                     m3= m4 = c.readBool("M514");
                 });
@@ -136,13 +158,26 @@ namespace GalimbertiHMIgl
                 {
                     try
                     {
+
+                        if (!run)
+                        {
+                            c.writeBool("MAIN.RD_Levigatrice_Serranda_1", false);
+                            c.writeBool("MAIN.RD_Levigatrice_Serranda_2", false);
+                            c.writeBool("MAIN.RD_Levigatrice_Serranda_3", false);
+                            c.writeBool("MAIN.RD_Levigatrice_Serranda_4", false);
+                            c.writeBool("MAIN.RD_Levigatrice_Serranda_5", false);
+                            c.writeBool("MAIN.RD_Levigatrice_Serranda_6", false);
+                        } else
+                        {
+
+                            c.writeBool("MAIN.RD_Levigatrice_Serranda_1", m2 || m3 || m4);
+                            c.writeBool("MAIN.RD_Levigatrice_Serranda_2", m6 || m5 || m9);
+                            c.writeBool("MAIN.RD_Levigatrice_Serranda_3", m7 || m8 || m12);
+                            c.writeBool("MAIN.RD_Levigatrice_Serranda_4", m11 || m10 || m13);
+                            c.writeBool("MAIN.RD_Levigatrice_Serranda_5", m15 || m14 || m18);
+                            c.writeBool("MAIN.RD_Levigatrice_Serranda_6", m16 || m17 || m18);
+                        }
                     
-                        c.writeBool("MAIN.RD_Levigatrice_Serranda_1", m2 || m3 || m4);
-                        c.writeBool("MAIN.RD_Levigatrice_Serranda_2", m6 || m5 || m9);
-                        c.writeBool("MAIN.RD_Levigatrice_Serranda_3", m7 || m8 || m12);
-                        c.writeBool("MAIN.RD_Levigatrice_Serranda_4", m11 || m10 || m13);
-                        c.writeBool("MAIN.RD_Levigatrice_Serranda_5", m15 || m14 || m18);
-                        c.writeBool("MAIN.RD_Levigatrice_Serranda_6", m16 || m17 || m18);
                     }
                     catch (Exception ex)
                     {
@@ -155,24 +190,6 @@ namespace GalimbertiHMIgl
            () => {
                this.plcRulliera.doWithPLC(c =>
                {
-
-                   try
-                   {
-                       c.writeBool("M.RD_Levigatrice_Serranda_1", m2 || m3 || m4);
-                       c.writeBool("RULLI_CENTRO_TAGLI.RD_Levigatrice_Serranda_2", m6 || m5 || m9);
-                       c.writeBool("RULLI_CENTRO_TAGLI.RD_Levigatrice_Serranda_3", m7 || m8 || m12);
-                       c.writeBool("RULLI_CENTRO_TAGLI.RD_Levigatrice_Serranda_4", m11 || m10 || m13);
-                       c.writeBool("RULLI_CENTRO_TAGLI.RD_Levigatrice_Serranda_5", m15 || m14 || m18);
-                       c.writeBool("RULLI_CENTRO_TAGLI.RD_Levigatrice_Serranda_6", m16 || m17 || m18);
-                   } catch (Exception ex)
-                   {
-
-                   }
-                  
-
-
-
-
 
                    bool presenza = c.readBool(".Buffer_R3[1].Busy");
                    var ricetta = c.readInt16(".Buffer_R3[1].Nr_Ricetta");
@@ -314,6 +331,7 @@ namespace GalimbertiHMIgl
             d4.driver.writeFloat("D410", (float)l);
             d5.driver.writeFloat("D410", (float)l);
 
+            /*
        
             d1.driver.writeBool("M200", true);
             d2.driver.writeBool("M200", true);
@@ -328,6 +346,7 @@ namespace GalimbertiHMIgl
             d3.driver.writeBool("M200", false);
             d4.driver.writeBool("M200", false);
             d5.driver.writeBool("M200", false);
+            */
 
             /*
             bool stable = false;

@@ -122,7 +122,7 @@ namespace GalimbertiHMIgl
             if (lastElapsed.TotalSeconds < 15)
             {
                 filelog.log("ATTESA 10 SECONDI");
-                Thread.Sleep(15*1000);
+                Thread.Sleep(6*1000);
             }
 
 
